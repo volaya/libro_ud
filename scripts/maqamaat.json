@@ -1,0 +1,93 @@
+[
+{
+"name": "rastdo",
+"title":"Rast Do",
+"ajnas":[
+	["Rast Do", "do re misb fa"],
+	["Rast Sol", "sol la sisb do"]
+]},
+{
+"name": "suznakdo",
+"title":"Suznak Do",
+"ajnas":[
+	["Rast Do", "do re misb fa"],
+	["Hijaz Sol", "sol lab si do"]
+]},
+{
+"name": "nahawanddo",
+"title":"Nahawand Do",
+"ajnas":[
+	["Nahawand Do", "do re mib fa sol"],
+	["Hijaz Sol", "sol lab si do"]
+]},
+{
+"name": "nahawanddo2",
+"title":"Nahawand Do 2",
+"ajnas":[
+	["Nahawand Do", "do re mib fa sol"],
+	["Kurd Sol", "sol lab sib do"]
+]},
+{
+"name": "hijazdo",
+"title":"Hijaz Do",
+"ajnas":[
+	["Hijaz Do", "do reb mi fa"],
+	["Nahawand Fa", "fa sol lab sib do"]
+]},
+{
+"name": "hijazkardo",
+"title":"Hijaz Kar Do",
+"ajnas":[
+	["Hijaz Do", "do reb mi fa"],
+	["Nikriz Fa", "fa sol lab si do"]
+]},
+{
+"name": "hijazkarkurddo",
+"title":"Hijaz Kar Kurd Do",
+"ajnas":[
+	["Kurd Do", "do reb mib fa"],
+	["Nahawand Fa", "fa sol lab sib do"]
+]},
+{
+"name": "nikrizdo",
+"title":"Nikriz Do",
+"ajnas":[
+	["Nikriz Do", "do re mib fad sol"],
+	["Nahawand Sol", "sol la sib do"]
+]},
+{
+"name": "nawaathardo",
+"title":"Nawa Athar Do",
+"ajnas":[
+	["Nikriz Do", "do re mib fad sol"],
+	["Hijaz sol", "sol la sib do"]
+]},
+{
+"name": "ajamdo",
+"title":"Ajam Do",
+"ajnas":[
+	["Ajam Do", "do re mi fa"],
+	["Ajam Sol", "sol la si do"]
+]},
+{
+"name": "bayatire",
+"title":"Bayati Re",
+"ajnas":[
+	["Bayati Re", "re misb fa sol"],
+	["Nahawand Sol", "sol la sib do re"]
+]},
+{
+"name": "sabare",
+"title":"Saba Re",
+"ajnas":[
+	["Saba Re", "re misb fa solb la"],
+	["Nahawand Sol", "si do reb re"]
+]},
+{
+"name": "kurdre",
+"title":"Kurd Re",
+"ajnas":[
+	["Kurd Re", "re misb fa sol"],
+	["Nahawand Sol", "sol la sib do re"]
+]}
+]
