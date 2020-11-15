@@ -26,26 +26,27 @@ diagram_template = r'''
 \end{center}
 '''
 diagram_note_template = r'''
-\draw[%s, fill=%s] (%s-%s) circle [radius=0.13] node[scale=.30] {};
+\draw[%s, fill=%s] (%s-%s) circle [radius=0.12] node[scale=.30] {};
 \node[ynode] at (%s-%s) {\textbf{%s}};
 '''
 
 lilypond_maqam_template = r'''
 \section{Maqam %s}
 \begin{center}
-\resizebox{.5\textwidth}{!}{
+\resizebox{.8\textwidth}{!}{
 \begin{lilypond}
-
 \include "arabic.ly"
 
+#(set-default-paper-size "half letter")
+
 left-bracket-path = #'(
-    (moveto 0 0)    
+    (moveto 0 0)
     (lineto 0 -2)
     )
 
 right-bracket-path = #'(
-    (moveto 0 0)    
-    (lineto 0 -2)        
+    (moveto 0 0)
+    (lineto 0 -2)
     )
 
 repeat-spanner-start-markup = \markup {
@@ -83,7 +84,7 @@ scale = \relative do {
     }
   \context {
       \Staff
-      \remove "Time_signature_engraver"           
+      \remove "Time_signature_engraver"
     }
 
 }
@@ -107,7 +108,7 @@ lilypond_jins_template = r'''
 %s
 \stopTextSpan
 '''
-allnotes = ["do", "rebsb", "reb", "resb", "re", "mibsb", "mib", "misb", "mi", "fasb", "fa", "solbsb", "solb", 
+allnotes = ["do", "rebsb", "reb", "resb", "re", "mibsb", "mib", "misb", "mi", "fasb", "fa", "solbsb", "solb",
 		"solsb", "sol", "labsb", "lab", "lasb", "la", "sibsb", "sib", "sisb", "si", "dosb"]
 alternative_names = {"solb":"fad"}
 
@@ -119,7 +120,7 @@ for maqam in maqamaat:
 	ajnas = maqam["ajnas"]
 	for ijins, jins in enumerate(ajnas):
 		jinsnotes = jins[1].split(" ")
-		maqamnotes.extend(["".join([c for c in n if c.isalpha()]) for n in jinsnotes])		
+		maqamnotes.extend(["".join([c for c in n if c.isalpha()]) for n in jinsnotes])
 		if ajnas[0][1].split(" ")[-1] == ajnas[1][1].split(" ")[0]:
 			paddingright = -5 if ijins == 0 else 0
 			paddingleft = 1 if ijins == 1 else 0
@@ -128,13 +129,13 @@ for maqam in maqamaat:
 		else:
 			paddingright = 0
 			paddingleft = 0
-		lilypond_maqam += (lilypond_jins_template % 
+		lilypond_maqam += (lilypond_jins_template %
 			(paddingright, paddingleft, f"{jinsnotes[0]}", jins[0], " ".join(jinsnotes[1:])))
 	for istring, string in enumerate(strings):
-		idx = allnotes.index(string)		
-		for fret in range(20):
+		idx = allnotes.index(string)
+		for fret in range(16):
 			pos = (idx + fret) % len(allnotes)
-			note = allnotes[pos]			
+			note = allnotes[pos]
 			if note in maqamnotes or alternative_names.get(note) in maqamnotes:
 				color = "red!50" if note == maqamnotes[0] else "blue!50"
 				if note in maqamnotes:

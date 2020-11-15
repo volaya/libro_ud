@@ -1,4 +1,4 @@
-\documentclass[11pt]{book}
+\documentclass[executivepaper, 11pt]{book}
 \input{def.tex}
 
 \begin{document}
@@ -7,13 +7,13 @@
 \mbox{}
 \setcounter{tocdepth}{2}
 
-\input{introduccion}
+\input{introduccion.tex}
 \begin{mainmatter}
 \pagestyle{fancy}
-\include{eloud}
-\include{tecnica}
-\include{teoria}
-\include{repertorio}
+\input{eloud.tex}
+\input{tecnica.tex}
+\input{teoria.tex}
+\input{repertorio.tex}
 \end{mainmatter}
 \end{document}
 

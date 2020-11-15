@@ -1,21 +1,35 @@
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{libertine}
 \usepackage{fancyhdr}
 \usepackage{geometry}
 \usepackage[raggedright]{titlesec}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows}
+\usepackage{ifthen}
 \usepackage[protrusion=true,expansion=true]{microtype}
+
+\usepackage{titlesec}
+\usepackage{blindtext}
+\usepackage{color}
+
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 
 \newcommand{\hflat}{\tikz [baseline] \node [anchor=base, inner sep=0pt] {\reflectbox{$\flat$}};}
 \newcommand{\dsharp}{\tikz [baseline] {%
     \clip (-0.2em,-1ex) rectangle (-0.01em,2ex);
     \node[anchor=base, inner sep=0pt] {$\sharp$};}}
 
-\newcommand{\fretboard} {\begin{scope}[xscale=-15,yscale=.3,line width=.5]
+\newcommand{\fretboard} {\begin{scope}[xscale=-15,yscale=.2,line width=.5]
 
     \xdef\x{1}
     %% Left line
     \draw[line width=1.5] (1,.56) -- (1,6.44);
-    \foreach \fret in {0,...,20}{
+    \foreach \fret in {0,...,15}{
       %% Set coordinate for each string
       \foreach \str in {1,...,6}{
         \coordinate (\str-\fret) at (\x,\str);
@@ -28,10 +42,10 @@
 
     %% Draw each string
     \foreach \str in {1,...,6}{
-      \draw (1,\str-.05) -- (0.97153194115*\x,\str-.05);
-      \draw (1,\str+.05) -- (0.97153194115*\x,\str+.05);
+      \draw [line width=0.2](1,\str-.05) -- (0.97153194115*\x,\str-.05);
+      \draw [line width=0.2](1,\str+.05) -- (0.97153194115*\x,\str+.05);
     }
-      \draw[line width=1.5] (1,0.65) -- (0.97153194115*\x,0.65);
-      \draw[line width=1.5] (1,6.35) -- (0.97153194115*\x,6.35);
+      \draw[line width=1] (1,0.65) -- (0.97153194115*\x,0.65);
+      \draw[line width=1] (1,6.35) -- (0.97153194115*\x,6.35);
   \end{scope}
 }
