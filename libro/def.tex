@@ -1,5 +1,11 @@
-\newcommand{\hflat}{\tikz [baseline] \node [anchor=base, inner sep=0pt] {\reflectbox{$\flat$}};}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage[raggedright]{titlesec}
+\usepackage[protrusion=true,expansion=true]{microtype}
 
+\newcommand{\hflat}{\tikz [baseline] \node [anchor=base, inner sep=0pt] {\reflectbox{$\flat$}};}
 \newcommand{\dsharp}{\tikz [baseline] {%
     \clip (-0.2em,-1ex) rectangle (-0.01em,2ex);
     \node[anchor=base, inner sep=0pt] {$\sharp$};}}
@@ -16,7 +22,7 @@
       }
       %% Compute the position of the fret
       \pgfmathsetmacro\x{\x * 0.97193715634}
-      \xdef\x{\x}      
+      \xdef\x{\x}
       \ifthenelse{\isodd{\fret}} {\draw (\x,.95) -- (\x,6.05);}{}
     }
 

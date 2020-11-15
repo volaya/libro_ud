@@ -1,18 +1,19 @@
-\documentclass{book}
-
-\usepackage{tikz}
-\usepackage{ifthen}
-\usetikzlibrary{calc,arrows}
-
+\documentclass[11pt]{book}
 \input{def.tex}
 
 \begin{document}
+\pagestyle{empty}
+\newpage
+\mbox{}
+\setcounter{tocdepth}{2}
 
-\include{prologo}
-\include{introduccion}
-\include{eloud}	
+\input{introduccion}
+\begin{mainmatter}
+\pagestyle{fancy}
+\include{eloud}
 \include{tecnica}
 \include{teoria}
 \include{repertorio}
-
+\end{mainmatter}
 \end{document}
+
