@@ -1,0 +1,36 @@
+\include "arabic.ly"
+
+song = \relative re {
+\key re \bayati
+\repeat volta 2{ 
+re8 la' sol la fa sol la16 sib la sib
+sol8 la sol la fa sol sol4
+re8 la' sol la fa sol la16 sib la sib
+sol8 sol fa sol16 fa fa misb misb re re4
+}
+\repeat volta 2{
+re8 sol fa misb re4 misb fa sol la sol
+r8 do8 la sib sol la fa sol misb sol fa misb misb4 misb8. re16
+do8 sol' fa misb re4 misb 
+fa sol la sol
+r8 la8 sisb do re4 sol,
+fa8 sol misb fa re4 misb8 re
+}
+}
+
+\layout {
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }  
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
