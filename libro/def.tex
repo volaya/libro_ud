@@ -10,10 +10,11 @@
 \usetikzlibrary{calc,arrows}
 \usepackage{ifthen}
 \usepackage[protrusion=true,expansion=true]{microtype}
-
 \usepackage{titlesec}
-\usepackage{blindtext}
 \usepackage{color}
+\usepackage{graphicx}
+
+\setkeys{Gin}{width=\linewidth}
 
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{20pt}}
@@ -24,8 +25,17 @@
     \clip (-0.2em,-1ex) rectangle (-0.01em,2ex);
     \node[anchor=base, inner sep=0pt] {$\sharp$};}}
 
-\newcommand{\fretboard} {\begin{scope}[xscale=-15,yscale=.2,line width=.5]
+\newcommand{\songheader}[3]{
+  \newpage
+  \begin{center}
+  {\Huge \textsc{ #1}}\\
+  {\large #2}\\
+  Maqam: {\large #3}
+  \end{center}
+}
 
+\newcommand{\fretboard} {
+\begin{scope}[xscale=-15,yscale=.2,line width=.5]
     \xdef\x{1}
     %% Left line
     \draw[line width=1.5] (1,.56) -- (1,6.44);
