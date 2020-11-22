@@ -5,6 +5,7 @@
 \usepackage{libertine}
 \usepackage{fancyhdr}
 \usepackage{geometry}
+\usepackage{paralist}
 \usepackage[raggedright]{titlesec}
 \usepackage{tikz}
 \usetikzlibrary{calc,arrows}
@@ -13,8 +14,16 @@
 \usepackage{titlesec}
 \usepackage{color}
 \usepackage{graphicx}
+\usepackage{fancyhdr}
 
-\setkeys{Gin}{width=\linewidth}
+\graphicspath{ {../imagenes/} }
+\pagestyle{empty}
+\fancyhf{}
+\fancyhead[LE,RO]{}
+\fancyhead[RE,LO]{}
+\fancyfoot[CE,CO]{\thepage}
+\fancyfoot[LE,RO]{}
+\renewcommand{\headrulewidth}{0pt}
 
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{20pt}}

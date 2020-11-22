@@ -1,10 +1,102 @@
-	\chapter{La mÃºsica Ã¡rabe}
-	\chapter{Los ritmos y formas musicales}
+	\chapter{La música árabe}
+
+		Eminentemente vocal
+		No hay armonía, es melódica
+
+
+	\section{Instrumentos}
+
+
 		\section{Ritmos}
+
+		La música árabe es muy rica en sus estructuras rítmicas. Existe una amplia colección de patrones rítmicos, conocidos como \emph{iqaat} (plural de \emph{iqa}), que se utilizan para crear formas musicales más complejas, con estructuras basadas en uno o varios de estos patrones.
+
+		Los instrumentos básicos de la percusión árabe, según ya hemos visto, son la \emph{darbuka} y el \emph{riqq}. Es en función de la primera que se acostumbran a definir los patrones rítmicos fundamentales, empleando para ello los dos sonidos básicos que produce el instrumento: un sonido grave obtenido al golpear el centro del parche tambor y un sonido agudo obtenido al golpear en el borde. Para el primero de ellos se usa la onomatopeya \emph{dum} (y se denota con una letra \emph{D}), mientras que para el segundo se emplea \emph{tak} (y se denota con una letra \emph{T}).
+
+		Las que se presentan a continuación son tan solo las formas fundamentales de los ritmos, que se enriquecen después en la interpretación de la misma manera que una melodía puede ornamentarse. Por ejemplo, a continuación se muestra la estructura básica del ritmo conocido como \emph{maksum}, recogida en el primer compás, y sucesivas versiones progresivamente más complejas de este mismo ritmo.
+
+
+
+
+		Algunos de los ritmos más importes son los siguientes:
+
+		\subsection{Masmudi Saghir}
+
+		También conocido como \emph{Baladi}, palabra que quiere decir <<del campo>> o <<del pueblo>>, ya que este ritmo proviene de las danzas folclóricas y músicas tradicionales. Existe un estilo de música conocido como \emph{baladi}, que aparece a principios del siglo XX, y que puede llevar a confusión. No son conceptos equivalentes, ya que en este estilo aparecen otros ritmos además del Masmudi Saguir, y este a su vez se emplea en formas musicales distintas.
+		Su estructura es la siguiente:
+
+		\begin{center}
+		\begin{lilypond}
+			<<
+			  \new DrumStaff \with{
+			    drumStyleTable = #percussion-style
+			    \override StaffSymbol.line-count = #1
+			  }
+
+			  \drummode{
+			  	bd8-D bd4-D bd8-T bd4-D bd4-T
+			  }
+			>>
+		\end{lilypond}
+		\end{center}
+
+		\subsection{Maksum}
+
+
+		\begin{center}
+		\begin{lilypond}
+			<<
+			  \new DrumStaff \with{
+			    drumStyleTable = #percussion-style
+			    \override StaffSymbol.line-count = #1
+			  }
+
+			  \drummode{
+			  	bd8-D bd4-T bd8-T bd4-D bd4-T
+			  }
+			>>
+		\end{lilypond}
+		\end{center}
+
+		\subsection{Malfuf}
+
+		\begin{center}
+		\begin{lilypond}
+			<<
+			  \new DrumStaff \with{
+			    drumStyleTable = #percussion-style
+			    \override StaffSymbol.line-count = #1
+			  }
+
+			  \drummode{
+			  	\time 3/4
+			  	bd8-D r8 r8 bd8-T r8 r8 bd8-T r8
+			  }
+			>>
+		\end{lilypond}
+		\end{center}
+
 		\section{Formas musicales}
+
 	\chapter{El \emph{maqam}}
-		\section{\emph{Ajnas} y \emph{maqaamat}}
-		\section{Principales \emph{maqaamat}}
-		\section{ModulaciÃ³n}
+		\section{\emph{Ajnas} y \emph{maqamat}}
+		\section{Principales \emph{maqamat}}
+
+		Se recogen en esta sección los principales \emph{maqamat}, agrupados for familias (\emph{fasilah}).
+
+		Para cada uno de ellos, se proporciona la estructura interválica y las notas que lo componen, la tablatura correspondiente a la octava básica, así como un esquema del diapasón del ud en el que se indica la posición de las notas del \emph{maqam} en cuestión. La nota tónica se representa en rojo, mientras que las restantes se representan en azul.
+
+
 		\input{maqam.tex}
+		\section{El aprendizaje de los \emph{maqamat}}
+			%
+			%Analisis
+			%https://www.youtube.com/watch?v=tm1QqdEW0FI&ab_channel=NizarRohan
+		\section{Desarrollo melódico y modulación}
+			%https://canvas-shaped-of-silence.blog/2017/03/27/example-3-research-part-3-modulations-of-the-arabic-maqamat/
+			%final de "music theory of makams"
+			%https://vdocuments.net/scott-modulation-music.html
+			%Poco espaciamineto entre notas (artículo Taqsim Nahawand: A Study of Sixteen Performances by Jihad Racy)
+		\section{Motivos melódicos}
+			%pag 713 de music theoy of arabs
 

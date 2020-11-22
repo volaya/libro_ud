@@ -18,39 +18,46 @@ def run_latex():
     call(["pdflatex", "libro.tex"])
 
 
-def generate_maqamat_snippets():
+diagram_template = r'''
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[
+    ynode/.style={scale=.35,inner sep=1pt}]
+  \fretboard
+%s
+\end{tikzpicture}
+}
+\end{center}
+'''
 
-    def _notetitle(n):
-        title = n.capitalize()
-        title = title.replace("sb", r"\hflat")
-        title = title.replace("b", r"$\flat$")
-        title = title.replace("s", r"$\sharp$")
-        return title
+diagram_note_template = r'''
+\draw[%s, fill=%s] (%s-%s) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (%s-%s) {\small %s};
+'''
+
+allnotes = ["do", "rebsb", "reb", "resb", "re", "mibsb", "mib", "misb", "mi", "fasb", "fa", "solbsb", "solb",
+            "solsb", "sol", "labsb", "lab", "lasb", "la", "sibsb", "sib", "sisb", "si", "dosb"]
+
+
+def _notetitle(n):
+    title = n.capitalize()
+    title = title.replace("sb", r"\hflat")
+    title = title.replace("b", r"$\flat$")
+    title = title.replace("s", r"$\sharp$")
+    return title
+
+
+snippetsfolder = os.path.join(os.path.dirname(os.path.dirname(__file__)), "libro", "snippets")
+
+
+def generate_maqamat_snippets():
 
     maqamaatfile = os.path.join(os.path.dirname(__file__), "maqamaat.json")
     with open(maqamaatfile) as f:
         maqamaat = json.load(f)
-    snippetsfolder = os.path.join(os.path.dirname(os.path.dirname(__file__)), "libro", "snippets")
-    os.makedirs(snippetsfolder, exist_ok=True)
-
-    diagram_template = r'''
-    \begin{center}
-    \resizebox{\textwidth}{!}{
-    \begin{tikzpicture}[
-        ynode/.style={scale=.35,inner sep=1pt}]
-      \fretboard
-    %s
-    \end{tikzpicture}
-    }
-    \end{center}
-    '''
-    diagram_note_template = r'''
-    \draw[%s, fill=%s] (%s-%s) circle [radius=0.12] node[scale=.30] {};
-    \node[ynode] at (%s-%s) {\textbf{%s}};
-    '''
 
     lilypond_maqam_template = r'''
-    \section{Maqam %s}
+    \subsection{Maqam %s}
     \begin{center}
     \resizebox{.8\textwidth}{!}{
     \begin{lilypond}
@@ -127,8 +134,6 @@ def generate_maqamat_snippets():
     %s
     \stopTextSpan
     '''
-    allnotes = ["do", "rebsb", "reb", "resb", "re", "mibsb", "mib", "misb", "mi", "fasb", "fa", "solbsb", "solb",
-            "solsb", "sol", "labsb", "lab", "lasb", "la", "sibsb", "sib", "sisb", "si", "dosb"]
     alternative_names = {"solb":"fad"}
 
     strings = ["do", "sol", "re", "la", "fa", "do"]
@@ -165,10 +170,31 @@ def generate_maqamat_snippets():
 
         name = maqam["name"]
         snippetfile = os.path.join(snippetsfolder, f"{name}.tex")
-        with open (snippetfile, "w") as f:
+        with open(snippetfile, "w") as f:
             f.write(lilypond_maqam_template % (maqam["title"], lilypond_maqam))
             f.write(diagram_template % (diagram))
 
+
+def generate_full_fretboard():
+    diagram = ""
+    strings = ["do", "sol", "re", "la", "fa", "do"]
+    for istring, string in enumerate(strings):
+        idx = allnotes.index(string)
+        for fret in range(16):
+            pos = (idx + fret) % len(allnotes)
+            note = allnotes[pos]
+            if not note.endswith("sb"):
+                color = "blue!50"
+                notetitle = _notetitle(note)
+                diagram += (diagram_note_template % (color, color, 6-istring, fret, 6-istring, fret, notetitle))
+
+    snippetfile = os.path.join(snippetsfolder, f"diapason.tex")
+    with open(snippetfile, "w") as f:
+        f.write(diagram_template % (diagram))
+
+
+os.makedirs(snippetsfolder, exist_ok=True)
 generate_maqamat_snippets()
+generate_full_fretboard()
 run_lilypond()
 run_latex()

@@ -21,13 +21,6 @@
 	["Hijaz Sol", "sol lab si do"]
 ]},
 {
-"name": "nahawanddo2",
-"title":"Nahawand Do 2",
-"ajnas":[
-	["Nahawand Do", "do re mib fa sol"],
-	["Kurd Sol", "sol lab sib do"]
-]},
-{
 "name": "hijazdo",
 "title":"Hijaz Do",
 "ajnas":[
@@ -75,6 +68,13 @@
 "ajnas":[
 	["Bayati Re", "re misb fa sol"],
 	["Nahawand Sol", "sol la sib do re"]
+]},
+{
+"name": "bayatishurire",
+"title":"Bayati Shuri Re",
+"ajnas":[
+	["Bayati Re", "re misb fa sol"],
+	["Nahawand Sol", "sol lab si do re"]
 ]},
 {
 "name": "sabare",
