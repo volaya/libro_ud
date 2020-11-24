@@ -1,0 +1,88 @@
+\songheader{Aziza}{Sayed Darwish}{Bayati Re}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+song = \relative do{
+\key sib \major
+\time 2/4
+\repeat volta 2{
+  re4 sol4 (sol16)
+la sib la sol8 fa16 mib
+mib4 re 16 mib re mib
+do4 sol' (sol8)
+la16 sol fad8 sol16 la
+sib8 la16 sib do8 sib16 do
+}
+\alternative{
+  {re8 do16 sib la sol fa mib^\markup { \musicglyph #"scripts.segno" }}
+  {<re sol re'>16 re'8 do16 do sib sib la}
+}
+la do8 sib16 sib la la sol
+la do8 sib16 sib la la sol
+sol sib8 la16 la sol sol fa
+la8 r16 sol (sol) fa8 mib16
+sol8 r16 fa (fa) mib8 do16
+re2 (re16)
+mib32 re do16 re mib mi fa fad^\markup { \musicglyph #"scripts.varcoda"}
+sol8 sol16 sol (sol) sol sol8
+re8 re sol r8
+re sol16 fa (fa) sol8 re16
+(re) sol la sol (sol) re8 fa16^\markup { \musicglyph #"scripts.coda" }
+
+sol16 sib32 la sol16 sol32 la sib16 sol32 la sib do re16
+re,8 sol16 fa (fa) sol8 re16
+(re) sol fa sol (sol) re8 fa16
+\repeat volta 2{
+ sol8 re' do sib mib8. re16 do8. sib16
+ la8 do sib la re8. do16 sib8. la16
+}
+sol8 sib la sol la16 la sol32 la sib16 (sib) la32 sib do16 do
+sib32 do re8 re32 mib re16 do sib la
+sol8. fa32 sol la16 fa fa16. mib32^\markup { \musicglyph #"scripts.coda" \musicglyph #"scripts.segno" } \bar "|."
+
+sol16 sib la sol la fa sol8
+re sol16 fa (fa) sol8 re16
+(re) sol fa sol (sol) re8 fa16
+\repeat volta 2{
+  sol sib32 sib sib16 la sib32 do sib la sol16 re
+  sol sib32 sib sib16 la sib32 do sib la sol16 re
+  sol sib32 sib sib16 la sib8 la16 sol
+  do8 sib16 la la re, fad sol
+  la do32 do do16 si do32 re do sib la16 re,
+  la' do32 do do16 si do32 re do sib la16 re,
+  la' do32 do do16 si do8 sib16 la
+  sib32 do la sib do re sib do re16 do32 sib la sol fa
+  mib^\markup {\musicglyph #"scripts.segno" \musicglyph #"scripts.varcoda"}
+}
+
+\repeat volta 2{
+  sol16 sol32 sol sol16 si32 do re16 do si la
+  si sol32 sol sol16 la32 si do16 si la sol
+  la fad32 fad fad16 sol32 la si16 la sol fad
+  sol sol32 sol sol16 sib32 do re16 do si la
+}
+
+sol8. sol32 sol sol8. sol32 sol
+sol8. sol32 sol sol16 sol sol sol
+sol8. sol32 sol sol8. sol32 fa mib2\fermata
+}
+
+\layout {
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
+\end{lilypond}
+\end{center}

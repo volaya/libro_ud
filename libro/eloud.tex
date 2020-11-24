@@ -35,9 +35,9 @@ La familia de instrumentos derivados o emparentados del ud es muy numerosa, e in
 
 Dos son los principales tipos de ud que pueden encontrarse en la actualidad: ud árabe y ud turco.
 
-El ud árabe es generalmente de tamaño algo mayor que el turco, y su sonido más profundo y con menos de \emph{sustain}. Su construcción es más robusta, siendo un instrumento más pesado. Los pares de cuerdas se disponen en el ud árabe a una distancia algo mayor que en el ud turco.
+El ud árabe es generalmente de tamaño algo mayor que el turco, y su sonido más profundo y con menos \emph{sustain}. Su construcción es más robusta, siendo un instrumento más pesado. Los pares de cuerdas se disponen en el ud árabe a una distancia algo mayor que en el ud turco.
 
-La mayor diferencia, no obstante, reside en la afinación, que en el ud arabe es más grave que en el turco, en general un tono por debajo. Esta afinación, y el hecho de que se utilicen para ello cuerdas de mayor calibre, contribuye a su vez a esa sonoridad más robusta, en oposición al timbre más brillante del ud turco.
+La mayor diferencia, no obstante, reside en la afinación, que en el ud árabe es más grave que en el turco, en general un tono por debajo. Esta afinación, y el hecho de que se utilicen para ello cuerdas de mayor calibre, contribuye a su vez a esa sonoridad más robusta, en oposición al timbre más brillante del ud turco.
 
 Pese a su nombre, el ud turco es un instrumento habitual en las músicas de otros países además de Turquía, y en especial en la música griega y de los países del Mediterráneo. Por su parte, el ud árabe predomina en Asia Occidental y en África de Norte.
 
@@ -310,7 +310,7 @@ El principal interprete histórico del estilo nubio fue Hamza El Din.
 \section{El ud en la cultura árabe}
 \subsection{El ud en la música árabe}
 
-
+  Solista a partir de mitad del siglo XX ****
 
 \section{La manera de tocar el ud}
 
@@ -387,14 +387,13 @@ Es habitual el variar la posición de la \emph{risha} para la realización del tré
 
 \subsubsection{Octavas}
 
-Otra técnica empleada con frecuencia en el ud es la duplicación de la línea melódica utilizando notas una octava por debajo (en cuyo caso recibe el nombre de \emph{qarar}) o por encima (\emph{jarar}). En el siguiente fragmento se muestra un ejemplo de la primera de estas técnicas. El primer compás representa la melodía sin ornamento, y el segundo, la misma melodía ornamentada.
+Otra técnica empleada con frecuencia en el ud es la duplicación de la línea melódica utilizando notas una octava por debajo (en cuyo caso recibe el nombre de \emph{qarar}) o por encima (\emph{jawab}). En el siguiente fragmento se muestra un ejemplo de la primera de estas técnicas. El primer compás representa la melodía sin ornamento, y el segundo, la misma melodía ornamentada.
 
 \begin{center}
 \begin{lilypond}
     \include "arabic.ly"
 
     notes = \relative do{
-        %\override Stem.direction = #down
         fa4 sol lab si
         fa,8 fa' sol, sol' lab, lab' si, si'
         \bar "||"
@@ -405,9 +404,6 @@ Otra técnica empleada con frecuencia en el ud es la duplicación de la línea meló
           \TabStaff
         stringTunings = \stringTuning <do, fa, la, re sol do'>
         }
-      \context {
-          \Staff
-        }
     }
 
     <<
@@ -417,9 +413,26 @@ Otra técnica empleada con frecuencia en el ud es la duplicación de la línea meló
 \end{lilypond}
 \end{center}
 
-Es frecuente utilizarlo para notas aisladas, en particular cuando se añade la nota una octava inferior y esta se toca mediante una cuerda al aire, de tal manera que no es necesario ningún movimiento adicional de la mano izquierda.
+Es frecuente utilizar esta técnica para notas aisladas, en particular cuando se añade la nota una octava inferior y esta se toca mediante una cuerda al aire, de tal manera que no es necesario ningún movimiento adicional de la mano izquierda.
+
+\subsubsection{Vibrato}
+
+El vibrato es una técnica fundamental en el ud, sin la cual resulta imposible lograr sus sonoridad característica.
+
+El vibrato consiste en un oscilación rapida de la altura de la nota, y se produce haciendo vibrar la mano izquierda sobre el mastil repetidamente, una vez la nota está pulsada.
+
+El movimiento que produce el vibrato se realiza principalmente con el codo, moviendo todo el antebrazo, ene special cuando el vibrato es intenso. No se realiza con la muñeca o los dedos, como es habitual en la guitarra. El movimiento de las yemas de los dedos se produce en la dirección que define la propia cuerda.
+
+El dedo pulgar debe situarse en una posición sólida en la parte superior del mastil, con el fin de tener buena sujeción.
+
+El vibrato puede hacerse con cualquiera de los dedos de la mano izquierda pisando la cuerda, pero cuantos más dedos estén apoyados, mayores serán la fuerza que puede aplicarse y la estabilidad del movimiento, y por tanto, mayor la intensidad del vibrato que puede obtenerse.
+
 
 \subsubsection{\emph{Glissando}}
+
+Al carecer de trastes, el oud permite la ejecución de \emph{glissandos} continuos.
+
+El \emph{glissando} se emplea tanto para hacer una transición ligada entre dos notas de la melodía como para ornamentar una sola nota, a la que se llega deslizando el dedo desde otra posición, por lo general más grave. Éste efecto es similar a una apoyatura.
 
 \subsubsection{Mordentes y trinos}
 
@@ -432,9 +445,71 @@ Una forma de mordiente particular muy empleado, y con una sonoridad muy caracter
 Este tipo de mordente deslizado solo se aplica entre una nota y la situada un semitono por encima.
 
 
-\subsubsection{Ligaduras}
+\subsubsection{\emph{Gruppetto}}
 
-***
+El \emph{gruppetto}, en la forma en que aparece como ornamento en el ud y la música árabe, consiste en la sustitución de la nota por un patron de cinco notas que utiliza las situadas inmediatamente por encima y por debajo de ella (siempre dentro del modo melódico en que se trabaje al igual que se dijo para el mordente). Si la nota en cuestión la denotamos como B, la anterior como A y la posterior como C, el \emph{gruppetto} tiene la forma BCBAB. Un ejemplo de \emph{gruppetto} es el mostrado a continuación, aplicado sobre la nota mi bemol.
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+
+    notes = \relative do{
+        mib8 \tuplet 3/2 {fa16 mib re} mib8 \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+      \context {
+          \Staff
+          \remove "Time_signature_engraver"
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+Es este ejemplo, la nota re se toca con la cuerda al aire, lo que facilita la digitación y ejecución del \emph{gruppeto}.
+
+Nótese que la primera nota tiene mayor duración, y es la frase ascendente la que representa el adorno como tal.
+
+La pulsación del motivo melódico admite diversas alternativas. La más habitual es tocar la primera nota con un golpe descendente de pua, la primera de las notas cortas con uno ascendente, ligar esta con las siguientes dos, y finalmente tocar la última nota con una nueva pulsación descendente. Es decir:
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+
+    notes = \relative do{
+        \override Stem.direction = #down
+        mib8\downbow \tuplet 3/2 {fa16\upbow (mib re)} mib8\downbow \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+      \context {
+          \Staff
+          \remove "Time_signature_engraver"
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+
+Otra opcion habitual es combinar la con un trémolo, de tal manera que se pulsan todas las notas. El patrón rápido ascendente se correspondería con un trémolo corto de tres notas.
 
 
 \subsubsection{Combinación de ornamentos}
@@ -467,9 +542,6 @@ Una técnica muy utilizada por Farid Al Atrash consiste en puntuar una melodía co
           \TabStaff
         stringTunings = \stringTuning <do, fa, la, re sol do'>
         }
-      \context {
-          \Staff
-        }
     }
 
     <<
@@ -479,7 +551,7 @@ Una técnica muy utilizada por Farid Al Atrash consiste en puntuar una melodía co
 \end{lilypond}
 \end{center}
 
-En este caso, la melodía se toca sobre las cuerda 2 y 3, y entre las notas de esta se intercalan las nota do de la primer cuerda al aire. Las dos primeras notas de cada tresillo se tocan con pulsaciones descendentes, y la última con pulsación ascendente.
+En este caso, la melodía se toca sobre las cuerdas 2 y 3, y entre las notas de esta se intercalan las nota do de la primer cuerda al aire. Las dos primeras notas de cada tresillo se tocan con pulsaciones descendentes, y la última con pulsación ascendente.
 
 Las notas dobles pueden sustituirse por trémolos de cuatro notas, lo cual crea un efecto similar al del trémolo en la guitarra flamenca.
 
@@ -499,9 +571,6 @@ Las notas dobles pueden sustituirse por trémolos de cuatro notas, lo cual crea u
       \context {
           \TabStaff
         stringTunings = \stringTuning <do, fa, la, re sol do'>
-        }
-      \context {
-          \Staff
         }
     }
 
