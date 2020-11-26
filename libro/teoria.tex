@@ -4,243 +4,340 @@
 		No hay armonía, es melódica
 
 
+	\section{Características}
+
+
 	\section{Instrumentos}
 
+		La música árabe emplea numerosos instrumentos, y en la actualidad a estos se suman la casi totalidad de los instrumentos occidentales. Sin embargo, en su forma tradicional está colección se puede reducir a un total de seis de ellos: dos melódicos y dos de percusión. Estos instrumentos forman lo que se conoce como el \emph{Tajt} o conjunto clásico.
 
-		\section{Ritmos}
+		\subsection{Instrumentos melódicos}
 
-		La música árabe es muy rica en sus estructuras rítmicas. Existe una amplia colección de patrones rítmicos, conocidos como \emph{iqaat} (plural de \emph{iqa}), que se utilizan para crear formas musicales más complejas, con estructuras basadas en uno o varios de estos patrones.
+		Además del propio ud, el \emph{Tajt} incluye el \emph{ney} o flauta árabe, el \emph{qanun} y el violín.
 
-		Los instrumentos básicos de la percusión árabe, según ya hemos visto, son la \emph{darbuka} y el \emph{riqq}. Es en función de la primera que se acostumbran a definir los patrones rítmicos fundamentales, empleando para ello los dos sonidos básicos que produce el instrumento: un sonido grave obtenido al golpear el centro del parche del tambor y un sonido agudo obtenido al golpear en el borde. Para el primero de ellos se usa la onomatopeya \emph{dum} (y se denota con una letra \emph{D}), mientras que para el segundo se emplea \emph{tak} (y se denota con una letra \emph{T}). A estos se le puede añadir un tercer sonido, \emph{ka} (\emph{K}), que representa el golpe sobre el borde con la mano opuesta a la empleada para el sonido \emph{tak}, con menos intensidad.
+		\subsubsection{Ney}
 
-		Las que se presentan a continuación son tan solo las formas fundamentales de los ritmos, que se enriquecen después en la interpretación de la misma manera que una melodía puede ornamentarse. Por ejemplo, a continuación se muestra la estructura básica del ritmo conocido como \emph{maksum}, recogida en la primera línea, y versiones más complejas de este mismo ritmo en las líneas restantes.
+		Flauta hecha de caña, con seis agujeros delanteros y uno trasero. A pesar de su simplicidad aparente, se trata de un instrumento difícil de tocar, ya que requiere una compleja técnica de embocadura.
 
-		\begin{center}
-		\begin{lilypond}
-			<<
-			  \new DrumStaff \with{
-			    drumStyleTable = #percussion-style
-			    \override StaffSymbol.line-count = #1
-			  }
+		Flautas de diferentes longitudes producen sonidos de distinta altura, y lo habitual es que el músico de \emph{nay} disponga de una colección de ellas de diferentes tamaños, que utilizará según la tonalidad  y el modo melódico de la pieza a tocar.
 
-			  \drummode{
-			  	bd8-D bd4-T bd8-T bd4-D bd4-T
-			  }
-			>>
-			<<
-			  \new DrumStaff \with{
-			    drumStyleTable = #percussion-style
-			    \override StaffSymbol.line-count = #1
-			  }
+		\subsubsection{Qanun}
 
-			  \drummode{
-			  	bd8-D bd8-T bd8-K bd8-T bd8-D bd8-K bd8-T bd16-T [bd16-K]
-			  }
-			>>
-			<<
-			  \new DrumStaff \with{
-			    drumStyleTable = #percussion-style
-			    \override StaffSymbol.line-count = #1
-			  }
+		Instrumento de cuerda pulsada, de la familia del salterio. Tiene forma trapezoidal, y las cuerdas se agrupan en grupos de tres cuerdas con el mismo sonido, salvo las más graves, que pueden estar en grupos de dos o ser cuerdas simples. Se toca plano sobre las piernas o sobre una mesa, pulsando las cuerdas mediante púas que se enganchan a los dedos.
 
-			  \drummode{
-			  	bd8-D bd8-D bd16-K bd16-K bd8-T bd8-D bd16-K bd16-K bd8-T bd16-K bd16-K
-			  }
-			>>
-		\end{lilypond}
-		\end{center}
+		En la parte izquierda tiene unas llaves fabricadas en latón que sirven para variar la altura de la nota dada por cada cuerda, lo cual permite la utilización de microtonos.
 
+		\subsubsection{Violín}
 
-		Algunos de los ritmos más importes son los siguientes:
+		El violín árabe no se diferencia del violín occidental. Originalmente se empleaban instrumentos tradicionales de cuerda frotada, tales como el violín egipcio de dos cuerdas, pero fueron reemplazados por el violín en la segunda mitad del siglo XIX.
 
-		\subsection{Ayub}
+		La afinación más extendida en la música árabe es sol-re-sol-re (de la cuerda más grave a la más aguda), distinta de la habitual sol-re-la-mi
 
+		Aunque suele tocarse en la posición habitual, sujeto entre el hombro y la barbilla, la postura clásica árabe es distinta: el violín se sitúa en vertical, con su base apoyada sobre el muslo o la rodilla del interprete. En esta posición, para cambiar de cuerdas no se varía el ángulo del arco, sino que se rota el violín sobre su apoyo en la pierna.
 
-		\begin{center}
-		\begin{lilypond}
-			<<
-			  \new DrumStaff \with{
-			    drumStyleTable = #percussion-style
-			    \override StaffSymbol.line-count = #1
-			  }
+		\subsection{Instrumentos de percusión}
 
-			  \drummode{
-			  \time 2/4
-			  	bd4-D bd8-D bd4-T
-			  }
-			>>
-		\end{lilypond}
-		\end{center}
+	\section{Sistema tonal}
 
-		\subsection{Malfuf}
+	\section{Ritmos}
 
-		\begin{center}
-		\begin{lilypond}
-			<<
-			  \new DrumStaff \with{
-			    drumStyleTable = #percussion-style
-			    \override StaffSymbol.line-count = #1
-			  }
+	La música árabe es muy rica en sus estructuras rítmicas. Existe una amplia colección de patrones rítmicos, conocidos como \emph{iqaat} (plural de \emph{iqa}), que se utilizan para crear formas musicales más complejas, con estructuras basadas en uno o varios de estos patrones.
 
-			  \drummode{
-			  	\time 2/4
-			  	bd8-D r16 bd8-T r16 bd8-T
-			  }
-			>>
-		\end{lilypond}
-		\end{center}
+	Los instrumentos básicos de la percusión árabe, según ya hemos visto, son la \emph{darbuka} y el \emph{riqq}. Es en función de la primera que se acostumbran a definir los patrones rítmicos fundamentales, empleando para ello los dos sonidos básicos que produce el instrumento: un sonido grave obtenido al golpear el centro del parche del tambor y un sonido agudo obtenido al golpear en el borde. Para el primero de ellos se usa la onomatopeya \emph{dum} (y se denota con una letra \emph{D}), mientras que para el segundo se emplea \emph{tak} (y se denota con una letra \emph{T}). A estos se le puede añadir un tercer sonido, \emph{ka} (\emph{K}), que representa el golpe sobre el borde con la mano opuesta a la empleada para el sonido \emph{tak}, con menos intensidad.
+
+	Las que se presentan a continuación son tan solo las formas fundamentales de los ritmos, que se enriquecen después en la interpretación de la misma manera que una melodía puede ornamentarse. Por ejemplo, a continuación se muestra la estructura básica del ritmo conocido como \emph{Maksum}, recogida en la primera línea, y versiones más complejas de este mismo ritmo en las líneas restantes.
+
+	\begin{center}
+	\begin{lilypond}
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
+
+		  \drummode{
+		  	bd8-D bd4-T bd8-T bd4-D bd4-T
+		  }
+		>>
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
+
+		  \drummode{
+		  	bd8-D bd8-T bd8-K bd8-T bd8-D bd8-K bd8-T bd16-T [bd16-K]
+		  }
+		>>
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
+
+		  \drummode{
+		  	bd8-D bd8-D bd16-K bd16-K bd8-T bd8-D bd16-K bd16-K bd8-T bd16-K bd16-K
+		  }
+		>>
+	\end{lilypond}
+	\end{center}
+
+	%\href{run:../audio/test.wav}{\includegraphics[width=.7cm]{play.png}[Ritmo y ornamentos]}
 
 
-		\subsection{Masmudi Saghir}
+	Es habitual que en una pieza se den modulaciones de un ritmo a otro de similar estructura, sustituyendo por espacio de unos compases el uno por el otro, para así crear un efecto de contraste.
 
-		También conocido como \emph{baladi}, palabra que quiere decir <<del campo>> o <<del pueblo>>, ya que este ritmo proviene de las danzas folclóricas y músicas tradicionales. Existe un estilo de música conocido como \emph{baladi}, que aparece a principios del siglo XX, y que puede llevar a confusión. No son conceptos equivalentes, ya que en este estilo aparecen otros ritmos además del Masmudi Saguir, y este a su vez se emplea en formas musicales distintas.
-		Su estructura es la siguiente:
+	Algunos de los ritmos más importantes son los siguientes:
 
-		\begin{center}
-		\begin{lilypond}
-			<<
-			  \new DrumStaff \with{
-			    drumStyleTable = #percussion-style
-			    \override StaffSymbol.line-count = #1
-			  }
+	\subsection{Ayub}
 
-			  \drummode{
-			  	bd8-D bd4-D bd8-T bd4-D bd4-T
-			  }
-			>>
-		\end{lilypond}
-		\end{center}
+	Ritmo utilizado en la música sufí y en la música popular árabe.
 
-		\subsection{Maksum}
+	\begin{center}
+	\begin{lilypond}
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
 
+		  \drummode{
+		  \time 2/4
+		  	bd4-D bd8-D bd4-T
+		  }
+		>>
+	\end{lilypond}
+	\end{center}
 
-		\begin{center}
-		\begin{lilypond}
-			<<
-			  \new DrumStaff \with{
-			    drumStyleTable = #percussion-style
-			    \override StaffSymbol.line-count = #1
-			  }
+	\subsection{Malfuf}
 
-			  \drummode{
-			  	bd8-D bd4-T bd8-T bd4-D bd4-T
-			  }
-			>>
-		\end{lilypond}
-		\end{center}
+	Uno de los ritmos más extendidos, especialmente en la música folclórica. Es habitual modular desde este ritmo al Ayub, así como al Maqsum.
 
-		\subsection{Saidi}
+	\begin{center}
+	\begin{lilypond}
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
 
-
-		\begin{center}
-		\begin{lilypond}
-			<<
-			  \new DrumStaff \with{
-			    drumStyleTable = #percussion-style
-			    \override StaffSymbol.line-count = #1
-			  }
-
-			  \drummode{
-			  	bd8-D bd8-T r4 bd8-D bd8-D r8 bd8-T r8
-			  }
-			>>
-		\end{lilypond}
-		\end{center}
-
-
-		\subsection{Masmudi Kabir}
-
-
-		\begin{center}
-		\begin{lilypond}
-			<<
-			  \new DrumStaff \with{
-			    drumStyleTable = #percussion-style
-			    \override StaffSymbol.line-count = #1
-			  }
-
-			  \drummode{
-			  \time 8/4
-			  	bd4-D bd4-D r4 bd4-T bd4-D r4 bd4-T bd4-T
-			  }
-			>>
-		\end{lilypond}
-		\end{center}
-
-
-		\subsection{Chiftetelli}
-
-
-		\begin{center}
-		\begin{lilypond}
-			<<
-			  \new DrumStaff \with{
-			    drumStyleTable = #percussion-style
-			    \override StaffSymbol.line-count = #1
-			  }
-
-			  \drummode{
-			  \time 8/4
-			  	bd4-D bd8-D bd4-T bd8-D bd4-D bd4-D bd4-D bd4-T
-			  }
-			>>
-		\end{lilypond}
-		\end{center}
-
-
-		\subsection{Samai Thaqil}
-
-		\begin{center}
-		\begin{lilypond}
-			<<
-			  \new DrumStaff \with{
-			    drumStyleTable = #percussion-style
-			    \override StaffSymbol.line-count = #1
-			  }
-
-			  \drummode{
-			  	\time 10/8
-			  	bd8-D r8 r8 bd8-T r8 bd8-D bd8-D bd8-T r8 r8
-			  }
-			>>
-		\end{lilypond}
-		\end{center}
+		  \drummode{
+		  	\time 2/4
+		  	bd8-D r16 bd8-T r16 bd8-T
+		  }
+		>>
+	\end{lilypond}
+	\end{center}
 
 
 
+	\subsection{Samai Darij}
 
-		\section{Formas musicales}
+	Se emplea en la última sección de las que componen la forma musical \emph{Samai}.
 
-	\label{maqam}
-	\chapter{El \emph{maqam}}
-		\section{\emph{Ajnas} y \emph{maqamat}}
-		\section{Principales \emph{maqamat}}
+	\begin{center}
+	\begin{lilypond}
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
 
-		Se recogen en esta sección los principales \emph{maqamat}, agrupados por familias (\emph{fasilah}).
-
-		Para cada uno de ellos, se proporciona la estructura interválica y las notas que lo componen, la tablatura correspondiente a la octava básica, así como un esquema del diapasón del ud en el que se indica la posición de las notas del \emph{maqam} en cuestión. La nota tónica se representa en rojo, mientras que las restantes se representan en azul.
-
-
-		\input{maqam.tex}
-		\section{El aprendizaje de los \emph{maqamat}}
-			%
-			%Analisis
-			%https://www.youtube.com/watch?v=tm1QqdEW0FI&ab_channel=NizarRohan
-			\subsection{el \emph{sayr}}
-			\subsection{La ornamentación y los \emph{maqamat}}
-
-				Vimos en la sección \ref{ornamentacion} las diversas maneras de ornamentar una melodía. Se comentó también entonces que el uso correcto de los ornamentos implica aprender en qué ocasiones es pertinente aplicarlos debe hacerse y cuándo no, habilidad que se adquiere a base de escuchar a otros interpretes e inferir de manera espontánea ese uso. Hay una relación directa entre este hecho y los distintos \emph{maqamat}, ya que, igual que un determinado ornamento puede o no ser adecuado en una parte de la melodía, también lo es en función de la nota del \emph{maqam} que se toque.
-
-				Por ejemplo, en \emph{maqam Bayati}, el vibrato sobre la tercera nota (fa) es casi obligatorio y suele tratarse de un vibrato fuerte, para enfatizarla lo más posible. Sin embargo, es muy poco común aplicar vibrato a la segunda nota (mi semibemol).
-
-				Cada \emph{maqam}, como ya se ha dicho, tiene una serie de notas con mayor importancia, y ello condiciona la forma en que los ornamentos se aplican sobre esas notas y las restantes.
+		  \drummode{
+		  	\time 3/4
+		  	bd4-D bd4-T bd4-T
+		  }
+		>>
+	\end{lilypond}
+	\end{center}
 
 
-		\section{Desarrollo melódico y modulación}
-			%https://canvas-shaped-of-silence.blog/2017/03/27/example-3-research-part-3-modulations-of-the-arabic-maqamat/
-			%final de "music theory of makams"
-			%https://vdocuments.net/scott-modulation-music.html
-			%Poco espaciamineto entre notas (artículo Taqsim Nahawand: A Study of Sixteen Performances by Jihad Racy)
-		\section{Motivos melódicos}
-			%pag 713 de music theoy of arabs
+	\subsection{Masmudi Saghir}
+
+	También conocido como \emph{Baladi}, palabra que quiere decir <<del campo>> o <<del pueblo>>, ya que este ritmo proviene de las danzas folclóricas y músicas tradicionales. Existe un estilo de música conocido como \emph{Baladi}, que aparece a principios del siglo XX, y que puede llevar a confusión. No son conceptos equivalentes, ya que en este estilo aparecen otros ritmos además del Masmudi Saguir, y este a su vez se emplea en formas musicales distintas.
+	Su estructura es la siguiente:
+
+	\begin{center}
+	\begin{lilypond}
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
+
+		  \drummode{
+		  	bd8-D bd4-D bd8-T bd4-D bd4-T
+		  }
+		>>
+	\end{lilypond}
+	\end{center}
+
+	\subsection{Maqsum}
+
+	El más extendido y reconocible de los ritmos árabes. Modula habitualmente a Malfuf, Baladi y Saidi.
+
+	\begin{center}
+	\begin{lilypond}
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
+
+		  \drummode{
+		  	bd8-D bd4-T bd8-T bd4-D bd4-T
+		  }
+		>>
+	\end{lilypond}
+	\end{center}
+
+	\subsection{Saidi}
+
+	\begin{center}
+	\begin{lilypond}
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
+
+		  \drummode{
+		  	bd8-D bd8-T r4 bd8-D bd8-D r8 bd8-T r8
+		  }
+		>>
+	\end{lilypond}
+	\end{center}
+
+	\subsection{Masmudi Kabir}
+
+	Ritmo de origen egipcio, se utiliza también en la música de danza. Tiene dos variantes principales: una con dos golpes \emph{Dum} y otra con tres:
+
+	\begin{center}
+	\begin{lilypond}
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
+
+		  \drummode{
+		  \time 8/4
+		  	bd4-D bd4-D r4 bd4-T bd4-D r4 bd4-T bd4-T
+		  }
+		>>
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
+
+		  \drummode{
+		  \time 8/4
+		  	bd4-D bd4-D bd4-D bd4-T bd4-D r4 bd4-T bd4-T
+		  }
+		>>
+	\end{lilypond}
+	\end{center}
+
+
+	\subsection{Chiftetelli}
+
+	Ritmo de origen turco, y uno de los más utilizados en la actualidad en la danza árabe.
+
+	\begin{center}
+	\begin{lilypond}
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
+
+		  \drummode{
+		  \time 8/4
+		  	bd4-D bd8-D bd4-T bd8-D bd4-D bd4-D bd4-D bd4-T
+		  }
+		>>
+	\end{lilypond}
+	\end{center}
+
+
+	\subsection{Samai Thaqil}
+
+	Ritmo de diez tiempos divididos en una estructura $3+2+2+3$. Se utiliza en la forma musical \emph{Samai} y en las denominadas \emph{Moaxajas}.
+
+	\begin{center}
+	\begin{lilypond}
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
+
+		  \drummode{
+		  	\time 10/8
+		  	bd8-D r8 r8 bd8-T r8 bd8-D bd8-D bd8-T r8 r8
+		  }
+		>>
+	\end{lilypond}
+	\end{center}
+
+
+	\subsection{Zarafat}
+
+	Ritmo popular empleado en las \emph{Moaxajas}.
+
+	\begin{center}
+	\begin{lilypond}
+		<<
+		  \new DrumStaff \with{
+		    drumStyleTable = #percussion-style
+		    \override StaffSymbol.line-count = #1
+		  }
+
+		  \drummode{
+		  	\time 10/8
+		  	bd8-D r8 r8 bd8-T r8 r8 bd8-D r8 bd8-D bd8-D bd8-T r8 r8
+		  }
+		>>
+	\end{lilypond}
+	\end{center}
+
+
+	\section{Formas musicales}
+
+		\subsection{Vocales}
+		\subsection{Instrumentales}
+
+\label{maqam}
+\chapter{El \emph{maqam}}
+	\section{\emph{Ajnas} y \emph{maqamat}}
+	\section{Principales \emph{maqamat}}
+
+	Se recogen en esta sección los principales \emph{maqamat}, agrupados por familias (\emph{fasilah}).
+
+	Para cada uno de ellos, se proporciona la estructura interválica y las notas que lo componen, la tablatura correspondiente a la octava básica, así como un esquema del diapasón del ud en el que se indica la posición de las notas del \emph{maqam} en cuestión. La nota tónica se representa en rojo, mientras que las restantes se representan en azul.
+
+
+	\input{maqam.tex}
+	\section{El aprendizaje de los \emph{maqamat}}
+		%
+		%Analisis
+		%https://www.youtube.com/watch?v=tm1QqdEW0FI&ab_channel=NizarRohan
+		\subsection{el \emph{sayr}}
+		\subsection{La ornamentación y los \emph{maqamat}}
+
+			Vimos en la sección \ref{ornamentacion} las diversas maneras de ornamentar una melodía. Se comentó también entonces que el uso correcto de los ornamentos implica aprender en qué ocasiones es pertinente aplicarlos debe hacerse y cuándo no, habilidad que se adquiere a base de escuchar a otros interpretes e inferir de manera espontánea ese uso. Hay una relación directa entre este hecho y los distintos \emph{maqamat}, ya que, igual que un determinado ornamento puede o no ser adecuado en una parte de la melodía, también lo es en función de la nota del \emph{maqam} que se toque.
+
+			Por ejemplo, en \emph{maqam Bayati}, el vibrato sobre la tercera nota (fa) es casi obligatorio y suele tratarse de un vibrato fuerte, para enfatizarla lo más posible. Sin embargo, es muy poco común aplicar vibrato a la segunda nota (mi semibemol).
+
+			Cada \emph{maqam}, como ya se ha dicho, tiene una serie de notas con mayor importancia, y ello condiciona la forma en que los ornamentos se aplican sobre esas notas y las restantes.
+
+
+	\section{Desarrollo melódico y modulación}
+		%https://canvas-shaped-of-silence.blog/2017/03/27/example-3-research-part-3-modulations-of-the-arabic-maqamat/
+		%final de "music theory of makams"
+		%https://vdocuments.net/scott-modulation-music.html
+		%Poco espaciamineto entre notas (artículo Taqsim Nahawand: A Study of Sixteen Performances by Jihad Racy)
+	\section{Motivos melódicos}
+		%pag 713 de music theoy of arabs
 
