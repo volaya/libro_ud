@@ -11,7 +11,7 @@ song =
 \time 2/4
 \key sib \major
 \repeat volta 2{
-re'4 sib
+re'4^"Jana 1" sib
 sol8 re sol sib
 re mib16 re do8 si
 do4 la
@@ -22,8 +22,9 @@ mib fa16 mib re8 do
 sib la r8 sol8
 fad4 mib8 re
 }
-
-sol, sib re sol
+\break
+\mark \markup { \musicglyph #"scripts.segno" }
+sol,^"Taslim" sib re sol
 sol, sib re sol
 \repeat volta 2{
   sib16 do sib8 do16 re do8
@@ -41,8 +42,9 @@ sol, sib re sol
  {sol16 r16 re8 mib re}
  {sol8 r8 r4}
 }
+\break
 \repeat volta 2{
- sol4 la sib la8 sol
+ sol4^"Jana 2" la sib la8 sol
  la8 la4 re,16 mib
  re dod re mib re dod re8
  sol4 la sib la8 sol
@@ -54,31 +56,11 @@ sol, sib re sol
  si8 si4 sol8
  la16 sib la sol fad sol fad mib
  re mib re do sib do sib la
+ sol8 r8 r4 \mark \markup { \musicglyph #"scripts.segno" }
 }
-\alternative{
- {sol8 r8 r4}
- {sol8 la re sol}
-
-}
-sol, la re sol
+\break
 \repeat volta 2{
-  sib16 do sib8 do16 re do8
-  r8 re16 mib re8 do
-  sib16 do sib8 do16 re do8
-  r8 re16 mib re8 do
- do8 sol' sol16 fa fa mib mib re re do do si la sol
-  la sib la la sib do sib8
-  r8 la16 sib la8 sol
-  la16 sib la la sib do sib8
-  r8 la16 sib la8 sol
-  la16 sib do mib re do sib la
-}
-\alternative{
- {sol16 r16 re8 mib re}
- {sol8 r8 r4}
-}
-\repeat volta 2{
-  re'2 re 4 re 4
+  re''2^"Jana 3" re4 re4
   re16 dod sib8 r8 re8
   re16 dod sib8 r8 re8
   re16 dod sib8 sib16 la sol8
@@ -86,11 +68,21 @@ sol, la re sol
   fa8 fa fa do16 re
   mib8 mib mib sib16 do
   re8 re16 mib re do sib la
+  sol4 r4 \mark \markup { \musicglyph #"scripts.segno" }
+}
+\break
+\time 3/4
+\repeat volta 2{
+    re8^"Jana 4" sol sol sib sib4
+    sol8 sol sol re' re4 
+    sol16 fa mib re do8 sib la sol
 }
 \alternative{
- {sol8 re sol sib}
- {sol8 r8 r4}
+    {do16 sib la sol fa8 mib re dod}
+    {do'16 sib la sol fad8 la sol4}
 }
+\mark \markup { \musicglyph #"scripts.segno" }
+\bar "|."
 }
 
 
@@ -105,7 +97,6 @@ sol, la re sol
     stringTunings = \stringTuning <do, fa, la, re sol do'>
     }
 }
-
 <<
   \new Staff << \clef "G_8" \song>>
   \new TabStaff <<\song>>
