@@ -17,6 +17,7 @@
 \usepackage{fancyhdr}
 \usepackage{hyperref}
 \usepackage{multimedia}
+\usepackage{tcolorbox}
 
 \graphicspath{ {../imagenes/} }
 \pagestyle{empty}
@@ -43,6 +44,12 @@
   {\large #2}\\
   Maqam: {\large #3}
   \end{center}
+}
+
+\newcommand{\audioclip}[2]{
+  \begin{tcolorbox}
+    \href{run:../audio/#1}{\includegraphics[width=.4cm]{play.png} \hspace{.5cm} #2}
+  \end{tcolorbox}
 }
 
 \newcommand{\fretboard} {
