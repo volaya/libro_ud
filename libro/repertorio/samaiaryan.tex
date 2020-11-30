@@ -1,0 +1,81 @@
+\songheader{Samai Bayati}{Ibrahim al-Ayran}{Bayati Re}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+#(set-global-staff-size 18)
+#(set-default-paper-size "pa5")
+song = \relative sol {
+\key re \bayati
+\time 10/8
+\set Timing.beamExceptions = #'()
+\set Timing.beatStructure = #'(3 2 2 3)
+sol4^"Jana 1" fa8 misb re16 misb fa sol misb fa re4 do8
+fa16 misb re do sisb la sol la' sol la misb sol fa misb re4 r8
+do4 re8 re4 la'16 sib la sol fa8. do16 re misb
+fa4 misb8 fa4 sol16 fa sol8 misb4 re8
+sib'8  la sol fa misb16 re la' sol fa misb re4 r8
+\repeat volta 2{
+ \mark \markup { \musicglyph #"scripts.segno" }\break
+ sib'4 sib16^"Taslim" la la8. sol16 sol la sol fa fa sol fa sol fa sol
+ la4 la16 sol sol8. la16 fa sol fa misb misb8. re16 misb fa
+sol4 sol16 fa fa8. misb16 misb fa misb re re8. misb16 do re
+misb8. fa16 re misb fa4 sol16 fa sol8 re16 misb fa sol la sib
+
+}
+\alternative{
+  {re do sib la sol8 fa8. misb16 misb fa misb re re misb fa sol la do}
+  {re do sib la sol8 fa8. misb16 misb fa misb re re4 r8}
+}
+\break
+sol4^"Jana 2" la8 la8. sol16 sisb do re8 la8. sol16 sisb la
+sol8. fasd16 mi fasd sol8. sisb16 la do sisb la sol4 re'16 do
+la4 re16 sib sisb8. re16 do re sisb do la do sisb la sol8
+fa'8 misb re do sisb16 la misb' re do sisb la4 sisb16do
+re8 do sib la sol fa misb16 re sol4 re8
+\mark \markup { \musicglyph #"scripts.segno"}
+\break
+do'4^"Jana 3" re8 re, misb16 fa sol la sisb do re8. do16 fa misb
+re8. do16 fa misb re8. do16 mib re do sib la4 \tuplet 3/2 {sib16 do re}
+mib4 re8 do sib re16 do sib la sib8 la16 sol fa mib
+re do sib do re mib fa sol la sib do sib la do sib8 misb re
+re8 do sib la sol fa misb16 re sol4 re8
+\mark \markup { \musicglyph #"scripts.segno" }
+\break
+\time 6/8
+\repeat volta 2{
+sib'16^"Jana 4" la sol la sib la sol re misb fa sol8
+la16 sol fa sol la sol fa do re misb fa8
+sol16 fa misb fa sol la misb sisb dao re misb8
+fa16 misb re misb fa misb re la sisb do re8
+}
+la'16 sib do sib la8 fa16 sol fa misb re8
+la'16 sib do sib la8 fa 16 sol fa misb re8
+\repeat volta 2{
+  sib'16 la sib la sib la sib8 la16 sol fa sol
+  la sol la sol la sol la8 sol16 fa misb fa
+  sol16 fa sol fa sol fa sol8 fa16 misb re8
+}
+re'8 do sib la sol fa misb re do re4 r8
+\mark \markup { \musicglyph #"scripts.segno" }
+\bar "|."
+}
+
+\layout {
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
+\end{lilypond}
+\end{center}

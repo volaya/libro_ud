@@ -18,6 +18,7 @@
 \usepackage{hyperref}
 \usepackage{multimedia}
 \usepackage{tcolorbox}
+\usepackage{scalerel}
 
 \graphicspath{ {../imagenes/} }
 \pagestyle{empty}
@@ -57,7 +58,7 @@
     \xdef\x{1}
     %% Left line
     \draw[line width=1.5] (1,.56) -- (1,6.44);
-    \foreach \fret in {0,...,15}{
+    \foreach \fret in {0,...,10}{
       %% Set coordinate for each string
       \foreach \str in {1,...,6}{
         \coordinate (\str-\fret) at (\x,\str);

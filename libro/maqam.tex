@@ -1,7 +1,185 @@
+\label{maqam}
+\chapter{El \emph{maqam}}
 
+
+\section{\emph{Yins}}
+
+La unidad melódica fundamental en la música árabe es el denominado \emph{yins} (en plural, \emph{ashnas}). Un \emph{yins} es un grupo de notas, generalmente cuatro, con una estructura interválica determinada. Existen también algunos \emph{ashnas} de tres y de cinco notas.
+
+La combinación de dos \emph{ashnas} (o en algunos casos más de dos) dará lugar a un \emph{maqam}, como en breve veremos.
+
+Aunque el número de \emph{ashnas} posibles es muy elevado, se considera que nueve son los principales, que son a su vez aquellos a partir de los cuales se construyen los \emph{maqamat} más habituales.
+
+Cinco de ellos emplean intervalos múltiplos de medio tono, y generan, por tanto, \emph{maqamat} compatibles con la escala cromática occidental. Son los mostrados a continuación.
+
+%\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    #(set-default-paper-size "half letter")
+
+    \paper {
+      #(define fonts
+        (set-global-fonts
+         #:roman "Linux Libertine O,serif"
+         #:sans "Linux Biolinum O,sans-serif"
+         #:typewriter "Linux Libertine Mono O,monospace"
+       ))
+    }
+
+    \layout {
+      ragged-right = ##t
+      indent = 5\cm
+      \context {
+        \Score
+      }
+      \context {
+          \Staff
+          \remove "Time_signature_engraver"
+          \override Staff.InstrumentName.self-alignment-X = #RIGHT
+        }
+
+    }
+
+    \new Staff {
+     \override Staff.InstrumentName.self-alignment-X = #LEFT
+    \set Staff.instrumentName = \markup { \column{
+      \line{\smaller "Ajam"}
+      \line{\smaller "(1 + 1 + 1)"}}}
+    \clef "G_8" \cadenzaOn sib,1 do re mib
+    }
+    \new Staff {
+     \override Staff.InstrumentName.self-alignment-X = #LEFT
+    \set Staff.instrumentName = \markup { \column{
+      \line{\smaller "Nahawand"}
+      \line{\smaller "(1 + 1/2 + 1)"}}}
+    \clef "G_8" \cadenzaOn do1 re mib fa
+    }
+          \new Staff {
+     \override Staff.InstrumentName.self-alignment-X = #LEFT
+    \set Staff.instrumentName = \markup { \column{
+      \line{\smaller "Nikriz"}
+      \line{\smaller "(1 + 1/2 + 3/2+ 1/2)"}}}
+    \clef "G_8" \cadenzaOn do1 re mib fad sol
+    }
+          \new Staff {
+     \override Staff.InstrumentName.self-alignment-X = #LEFT
+    \set Staff.instrumentName = \markup { \column{
+      \line{\smaller "Hijaz"}
+      \line{\smaller "(1/2 + 3/2+ 1/2)"}}}
+    \clef "G_8" \cadenzaOn re1 mib fad sol
+    }
+    \new Staff {
+      \override Staff.InstrumentName.self-alignment-X = #LEFT
+    \set Staff.instrumentName = \markup { \column{
+      \line{\smaller "Kurd"}
+      \line{\smaller "(1/2 + 1 + 1)"}}}
+    \clef "G_8" \cadenzaOn re1 mib fa sol
+    }
+
+\end{lilypond}
+
+Los restantes, mostrados seguidamente, contienen intervalos de 3/4 de tono.
+
+\begin{lilypond}
+    \include "arabic.ly"
+    #(set-default-paper-size "half letter")
+
+    \paper {
+      #(define fonts
+        (set-global-fonts
+         #:roman "Linux Libertine O,serif"
+         #:sans "Linux Biolinum O,sans-serif"
+         #:typewriter "Linux Libertine Mono O,monospace"
+       ))
+    }
+
+    \layout {
+      ragged-right = ##t
+      indent = 5\cm
+      \context {
+        \Score
+      }
+      \context {
+          \Staff
+          \remove "Time_signature_engraver"
+          \override Staff.InstrumentName.self-alignment-X = #RIGHT
+        }
+
+    }
+
+    \new Staff {
+     \override Staff.InstrumentName.self-alignment-X = #LEFT
+    \set Staff.instrumentName = \markup { \column{
+      \line{\smaller "Rast"}
+      \line{\smaller "(1 + 3/4 + 3/4)"}}}
+    \clef "G_8" \cadenzaOn do1 re misb fa
+    }
+    \new Staff {
+      \override Staff.InstrumentName.self-alignment-X = #LEFT
+    \set Staff.instrumentName = \markup { \column{
+      \line{\smaller "Bayati"}
+      \line{\smaller "(3/4 + 3/4 + 1)"}}}
+    \clef "G_8" \cadenzaOn re1 misb fa sol
+    }
+    \new Staff {
+      \override Staff.InstrumentName.self-alignment-X = #LEFT
+    \set Staff.instrumentName = \markup { \column{
+      \line{\smaller "Saba"}
+      \line{\smaller "(3/4 + 3/4 + 1/2)"}}}
+    \clef "G_8" \cadenzaOn re1 misb fa solb
+    }
+    \new Staff {
+      \override Staff.InstrumentName.self-alignment-X = #LEFT
+    \set Staff.instrumentName = \markup { \column{
+      \line{\smaller "Sikah"}
+      \line{\smaller "(3/4 + 1 + 1)"}}}
+    \clef "G_8" \cadenzaOn misb1 fa sol la
+    }
+\end{lilypond}
+
+Nótese que, aunque el intervalo mínimo que se considera en el sistema tonal árabe es de un cuarto de tono, este intervalo no aparece en ninguno de los anteriores \emph{ashnas}. En la práctica, el menor intervalo entre dos notas sigue siendo el medio tono, y el intervalo que se emplea para introducir la microtonalidad y las notas que no forman parte de la escala cromática occidental es el de 3/4 de tono.
+
+A la hora de presentar los principales \emph{ashnas}, puede verse que cada uno de ellos se muestra arrancando a partir de una nota particular, que no es la misma para todos ellos. Eso es así debido a que cada \emph{yins} tiene una nota tónica que resulta más habitual, y aunque es posible trasponerlo a otra nota distinta, en la práctica eso no sucede. Es comenzando en esa nota que aparece, o bien a partir de la última nota de otro \emph{yins} con el que se <<encadena>> para formar un \emph{maqam}.
+
+La razón de este hecho es de caracter histórico, y tiene que ver con la propia configuración de instrumentos tales como el ud. Determinadas tónicas dan lugar a conjuntos de notas más sencillos de tocar o con mejor sonoridad (por ejemplo, con mayor cantidad de notas en cuerdas al aire), y ello condiciona su uso más frecuente frente a otras. No es un fenómeno exclusivo de la música árabe. La guitarra condiciona que las tonalidades de la y mi sean más habituales en el \emph{blues} (por ser estas las notas de las dos cuerdas más graves), mientras que el violín es responsable de que una gran parte de las piezas tradicionales irlandesass estén en tono de re, entre otros ejemplos.
+
+***
+
+\section{\emph{Maqam}}
+
+A partir de un conjunto de \emph{ashnas} (dos en la gran mayoría de casos, y en todos los que veremos aquí), se crea la estructura de \emph{maqam}. Se tiene de este modo un conjunto de notas con unos determinados intervalos entre ellas, los cuales, por el tamaño de los yins, cubren habitualmente una octava. Entendido así, un \emph{maqam} puede asemejarse al concepto de \emph{escala}, pero es sin embargo más complejo que este, e implica más elementos. Podemos emplear el conjunto de notas de un \emph{maqam} a la manera de una escala para, por ejemplo, improvisar unas frases sobre un ritmo, pero ello no estaría en consonancia con el significado que este tiene dentro de la música árabe. En otras palabras, no estaríamos componiendo música árabe, de la misma forma que no estaríamos tocando un \emph{blues} solo por el hecho de utilizar una escala pentatónica.
+
+Las notas e intervalos de un \emph{maqam} son solo un parte de este, pero no su totalidad.
+
+Los otros elementos que componen un \emph{maqam} son los siguientes:
+
+\begin{compactitem}
+\item \textbf{Notas de mayor relevancia}.
+\item \textbf{Motivos melodicos}. ***
+\item \textbf{Desarrollo melódico}.
+\item \textbf{Modulaciones}.
+\end{compactitem}
+
+
+% sobre la transposicion de los maqamat
+
+\section{Principales \emph{maqamat}}
+
+Una manera habitual de agrupar los \emph{maqamat} es en base a su primer \emph{yins}. Se tienen así las familias conocidas como \emph{fasilah} (en singular, \emph{fasil}).
+
+Como veremos más adelante, la semejanza que existe entre los \emph{maqamat} que pertenecen a una misma \emph{fasil}, es de de gran relevancia para la modulacion, de tal manera que es interesante agruparlos con este criterio.
+
+A continuación se describen los \emph{maqamat} más frecuentes. Para cada uno de ellos, se proporciona la estructura interválica y las notas  y \emph{ashnas} que lo componen, la tablatura correspondiente a la octava básica, así como un esquema del diapasón del ud en el que se indica la posición de las notas del \emph{maqam} en cuestión. La nota tónica se representa en rojo, mientras que las restantes se representan en azul.
+
+Otros aspectos relativos a cada \emph{maqam}, tales como el desarrollo melódico o el vocabulario, se detallarán en secciones posteriores.
+
+
+\subsection{A partir del \emph{yins} Ajam}
+
+
+\subsection{A partir del \emph{yins} Nahawand}
 \input{snippets/rastdo.tex}
 \input{snippets/nahawanddo.tex}
-\input{snippets/nahawanddo2.tex}
 \input{snippets/suznakdo.tex}
 \input{snippets/hijazdo.tex}
 \input{snippets/hijazkardo.tex}
@@ -11,3 +189,46 @@
 \input{snippets/sabare.tex}
 \input{snippets/kurdre.tex}
 \input{snippets/bayatire.tex}
+
+
+
+\section{El aprendizaje de los \emph{Maqamat}}
+
+
+\section{Desarrollo melódico y modulación}
+	%https://canvas-shaped-of-silence.blog/2017/03/27/example-3-research-part-3-modulations-of-the-arabic-maqamat/
+	%final de "music theory of makams"
+	%https://vdocuments.net/scott-modulation-music.html
+	%Poco espaciamineto entre notas (artículo Taqsim Nahawand: A Study of Sixteen Performances by Jihad Racy)
+
+	%El sayr se sigue tambien en las improvisaciones cortas (no solo taqsim), como por ejemplo en los solos de la tahmila
+
+	%
+	%Analisis
+	%https://www.youtube.com/watch?v=tm1QqdEW0FI&ab_channel=NizarRohan
+	%http://www.mikeouds.com/messageboard/viewthread.php?tid=18230#pid118843
+
+
+
+	\label{taqsim2}
+	\subsection{El \emph{taqsim}}
+
+	Every phrase has the following features:
+		* a note of entry (starting note, but I say entry because people often mistake the first emphasized note as the "starting point")
+		* a note of emphasis (possibly more than one, but usually one per phrase)
+		* a high note
+		* a low note
+		* a general direction/countour (up, down, up/down, down/up, up/down/up, down/up/down, etc)
+		* a range/ambitus (how far apart the lowest and highest notes are)
+
+		You should note these features in phrases of taqasim that you listen to, as well as in your own taqasim
+
+		Phrases also have:
+		Rhythmic content
+		Relative space/density (are there few notes or a lot of notes)
+		Perceived tempo or lack thereof
+		Length (is the phrase long, medium, or short)
+		Space before and after (long, medium, or short)
+		Dynamics (how loud things are generally) and accents (how loud a note is in relation to its neighbors)
+
+		Listen to how master improvisers manipulate these characteristics to create repetition and contrast.

@@ -58,6 +58,7 @@
     }
 
     \layout {
+      indent = #0
       \context {
         \Score
         supportNonIntegerFret = ##t
@@ -83,7 +84,7 @@
 
     
 \begin{center}
-\resizebox{\textwidth}{!}{
+\resizebox{.8\textwidth}{!}{
 \begin{tikzpicture}[
     ynode/.style={scale=.35,inner sep=1pt}]
   \fretboard
@@ -103,9 +104,6 @@
 \draw[blue!50, fill=blue!50] (6-10) circle [radius=0.09] node[scale=.30] {};
 \node[ynode] at (6-10) {\small Fa};
 
-\draw[blue!50, fill=blue!50] (6-12) circle [radius=0.09] node[scale=.30] {};
-\node[ynode] at (6-12) {\small Sol$\flat$};
-
 \draw[blue!50, fill=blue!50] (5-4) circle [radius=0.09] node[scale=.30] {};
 \node[ynode] at (5-4) {\small La};
 
@@ -114,12 +112,6 @@
 
 \draw[blue!50, fill=blue!50] (5-10) circle [radius=0.09] node[scale=.30] {};
 \node[ynode] at (5-10) {\small Do};
-
-\draw[blue!50, fill=blue!50] (5-12) circle [radius=0.09] node[scale=.30] {};
-\node[ynode] at (5-12) {\small Re$\flat$};
-
-\draw[red!50, fill=red!50] (5-14) circle [radius=0.09] node[scale=.30] {};
-\node[ynode] at (5-14) {\small Re};
 
 \draw[red!50, fill=red!50] (4-0) circle [radius=0.09] node[scale=.30] {};
 \node[ynode] at (4-0) {\small Re};
@@ -132,9 +124,6 @@
 
 \draw[blue!50, fill=blue!50] (4-8) circle [radius=0.09] node[scale=.30] {};
 \node[ynode] at (4-8) {\small Sol$\flat$};
-
-\draw[blue!50, fill=blue!50] (4-14) circle [radius=0.09] node[scale=.30] {};
-\node[ynode] at (4-14) {\small La};
 
 \draw[blue!50, fill=blue!50] (3-0) circle [radius=0.09] node[scale=.30] {};
 \node[ynode] at (3-0) {\small La};
@@ -151,9 +140,6 @@
 \draw[red!50, fill=red!50] (3-10) circle [radius=0.09] node[scale=.30] {};
 \node[ynode] at (3-10) {\small Re};
 
-\draw[blue!50, fill=blue!50] (3-13) circle [radius=0.09] node[scale=.30] {};
-\node[ynode] at (3-13) {\small Mi\hflat};
-
 \draw[blue!50, fill=blue!50] (2-0) circle [radius=0.09] node[scale=.30] {};
 \node[ynode] at (2-0) {\small Fa};
 
@@ -162,12 +148,6 @@
 
 \draw[blue!50, fill=blue!50] (2-8) circle [radius=0.09] node[scale=.30] {};
 \node[ynode] at (2-8) {\small La};
-
-\draw[blue!50, fill=blue!50] (2-12) circle [radius=0.09] node[scale=.30] {};
-\node[ynode] at (2-12) {\small Si};
-
-\draw[blue!50, fill=blue!50] (2-14) circle [radius=0.09] node[scale=.30] {};
-\node[ynode] at (2-14) {\small Do};
 
 \draw[blue!50, fill=blue!50] (1-0) circle [radius=0.09] node[scale=.30] {};
 \node[ynode] at (1-0) {\small Do};
@@ -183,9 +163,6 @@
 
 \draw[blue!50, fill=blue!50] (1-10) circle [radius=0.09] node[scale=.30] {};
 \node[ynode] at (1-10) {\small Fa};
-
-\draw[blue!50, fill=blue!50] (1-12) circle [radius=0.09] node[scale=.30] {};
-\node[ynode] at (1-12) {\small Sol$\flat$};
 
 \end{tikzpicture}
 }

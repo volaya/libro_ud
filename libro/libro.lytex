@@ -16,6 +16,9 @@
 \pagestyle{fancy}
 \input{eloud.tex}
 \input{teoria.tex}
+\input{maqam.tex}
+\input{ornamentacion.tex}
+\input{vocabulario.tex}
 \input{repertorio.tex}
 \end{mainmatter}
 \end{document}
