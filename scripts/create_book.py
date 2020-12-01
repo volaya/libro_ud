@@ -7,6 +7,7 @@ PYTHONPATH = os.path.join(LILYPONDPATH, "python.exe")
 LILYPONBDBOOKPATH = os.path.join(LILYPONDPATH, "lilypond-book.py")
 BOOKPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "libro")
 
+FRETS = 11
 
 def run_lilypond():
     os.chdir(BOOKPATH)
@@ -20,7 +21,7 @@ def run_latex():
 
 diagram_template = r'''
 \begin{center}
-\resizebox{\textwidth}{!}{
+\resizebox{.8\textwidth}{!}{
 \begin{tikzpicture}[
     ynode/.style={scale=.35,inner sep=1pt}]
   \fretboard
@@ -100,6 +101,7 @@ def generate_maqamat_snippets():
     }
 
     \layout {
+      indent = #0
       \context {
         \Score
         supportNonIntegerFret = ##t
@@ -157,7 +159,7 @@ def generate_maqamat_snippets():
                 (paddingright, paddingleft, f"{jinsnotes[0]}", jins[0], " ".join(jinsnotes[1:])))
         for istring, string in enumerate(strings):
             idx = allnotes.index(string)
-            for fret in range(16):
+            for fret in range(FRETS):
                 pos = (idx + fret) % len(allnotes)
                 note = allnotes[pos]
                 if note in maqamnotes or alternative_names.get(note) in maqamnotes:
@@ -180,7 +182,7 @@ def generate_full_fretboard():
     strings = ["do", "sol", "re", "la", "fa", "do"]
     for istring, string in enumerate(strings):
         idx = allnotes.index(string)
-        for fret in range(16):
+        for fret in range(FRETS):
             pos = (idx + fret) % len(allnotes)
             note = allnotes[pos]
             if not note.endswith("sb"):

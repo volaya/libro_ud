@@ -1,0 +1,90 @@
+\songheader{Zikrayati}{ Mohamed El Qasabgi}{Nahawand Sol}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+#(set-default-paper-size "pa5")
+
+song = \relative do' {
+\key mib \major
+\repeat volta 2{
+do4 r8 sol'4 sol sol8 sol4 r8 lab4 sol4 fa8
+fa4 r8 sib4 lab sol8
+sol8. fa16 mib8. re16 do8. sib16 lab8. sol16
+sol4 r8 sol4 sol' sol8
+sol4 r8 lab4 sol fa8
+mi4 r8 lab4 sol mi8
+fa4 do re mi
+fa mib8 fa mib4 fa
+sol4 lab8 sib lab4 sol
+r8 fa8 sol la sol mib fa re
+do4 sib8 do sib4 lab
+sol do mib sol
+r4 re mib fa
+r4 si, do re
+}
+\alternative{
+  {do1^"Fine"}
+  { do4 re8 mib fa sol lab sib }
+}
+do1
+(do4) sib8 lab sol fa mib fa
+sol4 r4 sol2
+(sol8) fa sol lasb sib do sib lasb
+sol4 r4 sol2
+(sol8) fa sol lasb sib do sib lasb
+sol fa sol lasb sib do sib lasb
+sol4 r4 sol4 do4
+sol8. lasb32 sol fa8 sol lasb sib do4
+r4 do4 sob8. lasb32 sol fa8 sol
+lasb8 sib do8. lab16 sib8. sol16 lasb8. fa16
+sol1\fermata \bar "|."
+
+\time 2/4
+\repeat volta 2{
+ do,8 mib sol do
+ do, mib sol do
+}
+\repeat volta 2{
+  do,16 si do re mib re mib fa
+  sol fa sol lab do4
+  sib8 sol4 fa16 mib fa8 mib16 re mib re do8
+  sib16 do sib do sib8 lab16 sib
+  do4 mib sol do
+  sib8 sol4 do8
+  sib8 sol do sib
+  sol fa16 mib fa8 sol
+  sol2
+}
+\repeat volta 2{
+ mib4. (mib16) mi
+ fa4. fa16 mi
+ mib4. (mi16) mi
+ fa mi fa sol lab sol lab sib
+ do sib do re mib re mib fa
+ lab sol lab fa re do re do
+ sib reb do sib lab sol fa mib
+ mib' re do sib lab sol fa mib
+ \mark \markup { \musicglyph #"scripts.segno" }
+}
+
+
+}
+\layout {
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
+\end{lilypond}
+\end{center}
