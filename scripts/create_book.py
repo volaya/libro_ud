@@ -58,7 +58,6 @@ def generate_maqamat_snippets():
         maqamaat = json.load(f)
 
     lilypond_maqam_template = r'''
-    \subsection{Maqam %s}
     \begin{center}
     \resizebox{.8\textwidth}{!}{
     \begin{lilypond}
@@ -173,7 +172,7 @@ def generate_maqamat_snippets():
         name = maqam["name"]
         snippetfile = os.path.join(snippetsfolder, f"{name}.tex")
         with open(snippetfile, "w") as f:
-            f.write(lilypond_maqam_template % (maqam["title"], lilypond_maqam))
+            f.write(lilypond_maqam_template % (lilypond_maqam))
             f.write(diagram_template % (diagram))
 
 
