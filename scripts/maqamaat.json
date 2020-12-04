@@ -1,93 +1,93 @@
 [
 {
-"name": "rastdo",
-"title":"Rast Do",
+"name": "rast",
+"title":"Rast",
 "ajnas":[
-	["Rast Do", "do re misb fa"],
-	["Rast Sol", "sol la sisb do"]
+	["Rast do", "do re misb fa"],
+	["Rast sol", "sol la sisb do"]
 ]},
 {
-"name": "suznakdo",
-"title":"Suznak Do",
+"name": "suznak",
+"title":"Suznak",
 "ajnas":[
-	["Rast Do", "do re misb fa"],
-	["Hijaz Sol", "sol lab si do"]
+	["Rast do", "do re misb fa"],
+	["Hijaz sol", "sol lab si do"]
 ]},
 {
-"name": "nahawanddo",
-"title":"Nahawand Do",
+"name": "nahawand",
+"title":"Nahawand",
 "ajnas":[
-	["Nahawand Do", "do re mib fa sol"],
-	["Hijaz Sol", "sol lab si do"]
+	["Nahawand do", "do re mib fa sol"],
+	["Hiyaz sol", "sol lab si do"]
 ]},
 {
-"name": "hijazdo",
-"title":"Hijaz Do",
+"name": "hiyaz",
+"title":"Hiyaz",
 "ajnas":[
-	["Hijaz Do", "do reb mi fa"],
-	["Nahawand Fa", "fa sol lab sib do"]
+	["Hijaz re", "re mib fad sol"],
+	["Nahawand sol", "sol la sib do re"]
 ]},
 {
-"name": "hijazkardo",
-"title":"Hijaz Kar Do",
+"name": "hiyazkar",
+"title":"Hiyaz Kar",
 "ajnas":[
-	["Hijaz Do", "do reb mi fa"],
-	["Nikriz Fa", "fa sol lab si do"]
+	["Hiyaz re", "re mib fad sol"],
+	["Nikriz sol", "sol la si do re"]
 ]},
 {
-"name": "hijazkarkurddo",
-"title":"Hijaz Kar Kurd Do",
+"name": "hiyazkarkurd",
+"title":"Hiyaz Kar Kurd",
 "ajnas":[
-	["Kurd Do", "do reb mib fa"],
-	["Nahawand Fa", "fa sol lab sib do"]
+	["Kurd do", "do reb mib fa"],
+	["Nahawand fa", "fa sol lab sib do"]
 ]},
 {
-"name": "nikrizdo",
-"title":"Nikriz Do",
+"name": "nikriz",
+"title":"Nikriz",
 "ajnas":[
 	["Nikriz Do", "do re mib fad sol"],
 	["Nahawand Sol", "sol la sib do"]
 ]},
 {
-"name": "nawaathardo",
-"title":"Nawa Athar Do",
+"name": "nawaathar",
+"title":"Nawa Athar",
 "ajnas":[
-	["Nikriz Do", "do re mib fad sol"],
-	["Hijaz sol", "sol la sib do"]
+	["Nikriz do", "do re mib fad sol"],
+	["Hiyaz sol", "sol lab si do"]
 ]},
 {
-"name": "ajamdo",
-"title":"Ajam Do",
+"name": "ajam",
+"title":"Ajam",
 "ajnas":[
-	["Ajam Do", "do re mi fa"],
-	["Ajam Sol", "sol la si do"]
+	["Ajam do", "do re mi fa"],
+	["Ajam sol", "sol la si do"]
 ]},
 {
-"name": "bayatire",
-"title":"Bayati Re",
+"name": "bayati",
+"title":"Bayati",
 "ajnas":[
-	["Bayati Re", "re misb fa sol"],
-	["Nahawand Sol", "sol la sib do re"]
+	["Bayati re", "re misb fa sol"],
+	["Nahawand sol", "sol la sib do re"]
 ]},
 {
-"name": "bayatishurire",
-"title":"Bayati Shuri Re",
+"name": "bayatishuri",
+"title":"Bayati Shuri",
 "ajnas":[
-	["Bayati Re", "re misb fa sol"],
-	["Nahawand Sol", "sol lab si do re"]
+	["Bayati re", "re misb fa sol"],
+	["Hiyaz sol", "sol lab si do re"]
 ]},
 {
-"name": "sabare",
-"title":"Saba Re",
+"name": "saba",
+"title":"Saba",
 "ajnas":[
-	["Saba Re", "re misb fa solb la"],
-	["Nahawand Sol", "si do reb re"]
+	["Saba re", "re misb fa solb la"],
+	["Nahawand sol", "si do reb re"]
 ]},
 {
-"name": "kurdre",
-"title":"Kurd Re",
+"name": "kurd",
+"title":"Kurd",
 "ajnas":[
-	["Kurd Re", "re mib fa sol"],
-	["Nahawand Sol", "sol la sib do re"]
+	["Kurd re", "re mib fa sol"],
+	["Nahawand sol", "sol la sib do re"]
 ]}
 ]

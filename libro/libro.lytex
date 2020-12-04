@@ -7,11 +7,7 @@
 \mbox{}
 \setcounter{tocdepth}{2}
 
-\begin{frontmatter}
-\pagestyle{plain}
-\input{introduccion.tex}
-\tableofcontents
-\end{frontmatter}
+\input{front.tex}
 \begin{mainmatter}
 \pagestyle{fancy}
 \input{eloud.tex}

@@ -3,8 +3,8 @@
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
+#(set-global-staff-size 18)
 #(set-default-paper-size "pa5")
-
 song = \relative do {
 \key mib \major
 \repeat volta 2{
@@ -17,7 +17,7 @@ mi4 r8 lab4 sol mi8
 fa4 do re mi
 fa mib8 fa mib4 fa
 sol4 lab8 sib lab4 sol
-r8 fa8 sol la sol mib fa re
+r8 fa8 sol lab sol mib fa re
 do4 sib8 do sib4 lab
 sol do mib sol
 r4 re mib fa

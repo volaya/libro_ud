@@ -1,7 +1,5 @@
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
-\usepackage[T1]{fontenc}
-\usepackage[spanish]{babel}
 \usepackage{libertine}
 \usepackage{fancyhdr}
 \usepackage{geometry}
@@ -19,8 +17,10 @@
 \usepackage{multimedia}
 \usepackage{tcolorbox}
 \usepackage{scalerel}
+\usepackage{caption}
 
 \graphicspath{ {../imagenes/} }
+
 \pagestyle{empty}
 \fancyhf{}
 \fancyhead[LE,RO]{}
@@ -52,6 +52,17 @@
     \href{run:../audio/#1}{\includegraphics[width=.4cm]{play.png} \hspace{.5cm} #2}
   \end{tcolorbox}
 }
+
+\newcommand{\yins}{\emph{yins} }
+\newcommand{\yinsb}{\emph{yins}}
+\newcommand{\Yins}{\emph{Yins}}
+\newcommand{\ashnas}{\emph{ashnas} }
+\newcommand{\maqamaat}{\emph{maqamaat} }
+\newcommand{\maqamaatb}{\emph{maqamaat}}
+\newcommand{\maqam}{\emph{maqam} }
+\newcommand{\maqamb}{\emph{maqam}}
+\newcommand{\Maqam}{\emph{Maqam} }
+\newcommand{\taqsim}{\emph{taqsim} }
 
 \newcommand{\fretboard} {
 \begin{scope}[xscale=-15,yscale=.2,line width=.5]

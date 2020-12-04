@@ -130,7 +130,7 @@ def generate_maqamat_snippets():
     \once \override TextSpanner.bound-details.right.padding = #%i
     \once \override TextSpanner.bound-details.left.padding = #%i
     \textSpannerUp
-    \tweak color #grey %s1 ^ "  %s"
+    \tweak color #grey %s1 ^\markup{\smaller "  %s"}
     \startTextSpan
     %s
     \stopTextSpan
