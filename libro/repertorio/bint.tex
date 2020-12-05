@@ -16,6 +16,7 @@ r8 mib16 re do8 si16 lab
 sol fa mib re do8 r8
 }
 \repeat volta 2{
+\mark \markup { \musicglyph #"scripts.segno" }
 do8 sol' sol sol
 lab16 sol fa lab sol4
 r8 sol8 lab do16 si
@@ -32,7 +33,18 @@ do8 re16 mib fa8 mib16 re
   {re do do si do8 sol'16 mib}
   {re do do si do8 do}
 }
-re4 r8 si8
+mib4 r8 si8
+re4 r8 do8
+mib4 r8 re8
+fa4 r8 fa8
+\repeat volta 2{
+  lab4. sol8 fa4 mib8 fa
+  sol4 sol8 fa mib4 re8 mib
+}
+\alternative{
+ {fa4. mib8 re re do do sol'2. fa8 sol}
+ {fa4. mib8 re re do8 sib do4 r4}
+}
 \mark \markup { \musicglyph #"scripts.segno" }
 \bar "|."
 }
