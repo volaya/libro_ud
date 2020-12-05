@@ -1,9 +1,10 @@
-\songheader{Raqset Al Yamal}{Farid Al Atrash}{Nahawand Do}
+\songheader{Raqsat Al Yamal}{Farid Al Atrash}{Nahawand Do}
 
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
 #(set-default-paper-size "pa5")
+#(set-global-staff-size 18)
 
 song = \relative do {
 \time 2/4
@@ -14,7 +15,7 @@ song = \relative do {
 re 8 re'16 re dod8 re mib re r8 la16 sib
 do8 sib la sol
 la8. sol16 la sol la fad
-re8 do'16 do si8 do 
+re8 do'16 do si8 do
 re do r8 sol16 la
 sib8 la sol fad
 }
@@ -22,7 +23,7 @@ sib8 la sol fad
 	{sol4 la fad sol mib}
 	{sol4 sib4}
 }
-r8 sib16 sib sib8 do 
+r8 sib16 sib sib8 do
 sib do sib8. la16
 sol8 la16 la la8 sol
 sib sol fad mib
@@ -35,7 +36,7 @@ re re16 re (re) re re8
 do re re4
 do8 re16 re (re) re re8
 do 8 re re4
-do8 re16 re (re) re re8 
+do8 re16 re (re) re re8
 do8 re re4
 
 \mark \markup { \musicglyph #"scripts.segno" }
@@ -57,5 +58,6 @@ do8 re re4
 <<
   \new Staff << \clef "G_8" \song>>
   \new TabStaff <<\song>>
->>\end{lilypond}
+>>
+\end{lilypond}
 \end{center}
