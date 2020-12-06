@@ -31,7 +31,11 @@ re32 misb fa8. (fa16) misb32 re do8^"Fine" \bar "|."
 
 do4 misb8 fa misb re misb fa misb re misb fa
 sol16 lab sol fa misb fa misb re
-do8 sol' do, sol' sol, sol' fa sol lab sol16 fa misb re misb fa
+\override TextSpanner.bound-details.left.text = "Solo"
+do8
+\startTextSpan
+sol' do, sol' sol, sol' fa sol lab sol16 fa misb re misb fa
+\stopTextSpan
 sol8 fa16 misb re do re misb fa8 misb16 re re misb do re
 misb fa sol misb32 fa sol8 sol16 sol
 do8 sol16 sol (sol) fa sol8
@@ -40,61 +44,138 @@ r16 sol32 lab fa sol misb fa re16 do re misb
 fa16 sol misb re do8 sol'
 sol fa16 sol fa8 misb
 fa32 sol lab8 sol16 fa8. misb32 re
-do4 misb8 fa misb re misb fa
+
+\override TextSpanner.bound-details.left.text = "Grupo"
+do4 
+\startTextSpan
+misb8 fa misb re misb fa
 misb re  misb fa
 sol16 lab sol fa misb fa misb re
-do8 misb16 misb misb8 misb
+\stopTextSpan
+
+\override TextSpanner.bound-details.left.text = "Solo"
+do8
+\startTextSpan 
+misb16 misb misb8 misb
 fa8. misb16 re do fa sol
+\stopTextSpan
 
-misb8 misb16 misb misb8 misb fa8. misb16 re do fa sol
+\override TextSpanner.bound-details.left.text = "Grupo"
+misb8 
+\startTextSpan
+misb16 misb misb8 misb fa8. misb16 re do fa sol
+\stopTextSpan
 
-misb8 sol16 la sib8 la16 sol
+\override TextSpanner.bound-details.left.text = "Solo"
+misb8 
+\startTextSpan
+sol16 la sib8 la16 sol
 sib lab sol sol fa misb sol8
+\stopTextSpan
 
-misb8 misb16 misb misb8 misb fa8. misb16 re do fa sol
+\override TextSpanner.bound-details.left.text = "Grupo"
+misb8
+\startTextSpan 
+misb16 misb misb8 misb fa8. misb16 re do fa sol
+\stopTextSpan
 
-misb8 sol16 do re8 si
+\override TextSpanner.bound-details.left.text = "Solo"
+misb8
+\startTextSpan 
+sol16 do re8 si
 do8 si16 lab sol fa sol lab
+\stopTextSpan
 
-misb8 misb16 misb misb8 misb fa8. misb16 re do fa sol
+\override TextSpanner.bound-details.left.text = "Grupo"
+misb8 
+\startTextSpan
+misb16 misb misb8 misb fa8. misb16 re do fa sol
+\stopTextSpan
 
-misb8 fa fa fa
+\override TextSpanner.bound-details.left.text = "Solo"
+misb8
+\startTextSpan
+fa fa fa
 fa8. misb16 re do re misb
+\stopTextSpan
 
-fa8 fa fa fa
+\override TextSpanner.bound-details.left.text = "Grupo"
+fa8 
+\startTextSpan
+fa fa fa
 fa8. misb16 re do re misb
+\stopTextSpan
 
-fa8 la16 sib do8 si16 lab
+\override TextSpanner.bound-details.left.text = "Solo"
+fa8 
+\startTextSpan
+la16 sib do8 si16 lab
 sib16. lab32 sol16 lab sol fa sol lab
+\stopTextSpan
 
-fa8 fa fa fa
+\override TextSpanner.bound-details.left.text = "Grupo"
+fa8 
+\startTextSpan
+fa fa fa
 fa16 sol fa misb re do re misb
+\stopTextSpan
 
-fa8 sol sol sol
+\override TextSpanner.bound-details.left.text = "Solo"
+fa8 
+\startTextSpan
+sol sol sol
 sol16. lasb32 sol16 fa misb re misb fa
+\stopTextSpan
 
-sol8 sol sol sol
+\override TextSpanner.bound-details.left.text = "Grupo"
+sol8 
+\startTextSpan
+sol sol sol
 sol16 lasb sol fa misb re misb fa
+\stopTextSpan
 
-sol8 sol16 lasb si do si lasb
+\override TextSpanner.bound-details.left.text = "Solo"
+sol8 
+\startTextSpan
+sol16 lasb si do si lasb
 si16. lasb32 sol16 lab sol fa lab8
+\stopTextSpan
 
-sol8 sol sol sol
+\override TextSpanner.bound-details.left.text = "Grupo"
+sol8 
+\startTextSpan
+sol sol sol
 sol16 lasb sol fa misb re misb fa
+\stopTextSpan
 
-sol8 sib16 do re do do sib
+\override TextSpanner.bound-details.left.text = "Solo"
+sol8 
+\startTextSpan
+sib16 do re do do sib
 do8 sib16  do sib lasb do8
+\stopTextSpan
 
-sol8 sol sol sol
+\override TextSpanner.bound-details.left.text = "Grupo"
+sol8 
+\startTextSpan
+sol sol sol
 sol16 lasb sol fa misb re misb fa
+\stopTextSpan
 
-sol8 sib dob sib
+\override TextSpanner.bound-details.left.text = "Solo"
+sol8 
+\startTextSpan
+sib dob sib
 dob16. sib32 lasb16 sib lasb sol sib8
+\stopTextSpan
 
-sol8 sol sol sol
+\override TextSpanner.bound-details.left.text = "Grupo"
+sol8 
+\startTextSpan
+sol sol sol
 sol16 lasb sol fa misb re misb fa
-
 sol8 sol sol sol
+\stopTextSpan
 \mark \markup { \musicglyph #"scripts.segno" }
 \bar "|."
 }
