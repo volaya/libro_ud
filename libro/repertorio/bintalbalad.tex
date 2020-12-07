@@ -1,0 +1,97 @@
+\songheader{Bint Al Balad}{Mohammad Abdel Wahab}{Bayati Re}
+
+\begin{center}
+\begin{lilypond}
+
+\include "arabic.ly"
+#(set-global-staff-size 18)
+#(set-default-paper-size "pa5")
+
+song =
+\relative {
+\time 8/4
+\key re \bayati
+\repeat volta 2{
+fa4 sol la sib16 la sol fa sol4 (sol16) fa sol la fa misb re do re4
+misb fa sol la16 sol fa misb fa4. sol8 fa16 misb re do re4
+}
+\time 4/4
+sib'16 la (la) sib la re, do re la' sol (sol) la sol do, sisb do 
+\mark \markup { \musicglyph #"scripts.coda" }
+re4 misb sol16. fa 32 misb16 re32 do re8 r8
+do8 re16 re (re) re16 re8 do8 re re4
+do8 re16 re (re) re16 do8 do8 re re4
+\time 2/4
+r8 fa8 misb re 
+\repeat volta 2{
+	fa misb sol16. fa32 misb16. re 32 
+	do8 misb re do misb re fa 16. misb32 re16. do32
+	sisb8 re do sisb
+}
+\alternative{
+	{re8 do misb re 
+	do fa misb re}
+	{re' do16 sib la sol fa misb}
+}
+\mark \markup { \musicglyph #"scripts.segno" }
+re8 re16 re (re) re re8
+do8 re fa16 sol r8
+do,8 re16 re (re) re re8 
+do8 re fa16 sol r8
+\repeat volta 2{
+	fa8 re fa sol la do la sol
+	fa16 sol la sib la8 sol
+}
+\alternative{
+	{fa16 sol sol fa sol fa misb re}
+	{fa16 sol sol fa sol misb fa8
+	\mark \markup { \musicglyph #"scripts.segno" }
+	}
+}
+\repeat volta 2{
+re8 la'16 la la8 la
+sol4 la16 sib la sol
+fa4 sol16 fa sol misb
+re8 fa sol16 fa sol misb
+}
+\repeat volta 2{
+re8 la'16 la la8 sib
+do16 do8 do16 re16 re8 re16
+do16 do8 do16 la16 la8 la16
+sol4 la8. sol16
+fa4 sol16 fa sol misb
+re8 fa sol16 fa sol fa
+}
+\time 3/4
+\repeat volta 2{
+re8 do' sisb do re re
+r16 do16 re mib re do sisb do sib8 la
+r16 sol la sib la sol sol fad la8 sol
+r16 fad16 sol la sol fa^"D.C. al Coda" mi fa misb8 re
+}
+\mark \markup { \musicglyph #"scripts.segno" }
+\time 4/4
+re4 misb sol16. fa32 misb16 re32 do re16 la' sib do
+re4 r2
+\bar "|."
+}
+
+
+\layout {
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
+\end{lilypond}
+\end{center}
