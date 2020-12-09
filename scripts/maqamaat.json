@@ -21,6 +21,13 @@
 	["Hiyaz sol", "sol lab si do"]
 ]},
 {
+"name": "nahawandb",
+"title":"Nahawand",
+"ajnas":[
+	["Nahawand do", "do re mib fa sol"],
+	["Kurd sol", "sol lab sib do"]
+]},
+{
 "name": "hiyaz",
 "title":"Hiyaz",
 "ajnas":[
@@ -61,6 +68,13 @@
 "ajnas":[
 	["Ajam do", "do re mi fa"],
 	["Ajam sol", "sol la si do"]
+]},
+{
+"name": "shawkafza",
+"title":"Shawk Afza",
+"ajnas":[
+	["Ajam do", "do re mi fa"],
+	["Hiyaz sol", "sol lab si do"]
 ]},
 {
 "name": "bayati",
