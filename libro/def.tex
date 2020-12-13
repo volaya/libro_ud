@@ -1,3 +1,4 @@
+\usepackage{amsmath}
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
 \usepackage{libertine}
@@ -18,6 +19,7 @@
 \usepackage{tcolorbox}
 \usepackage{scalerel}
 \usepackage{caption}
+\usepackage{xcolor}
 
 %\setkeys{Gin}{width=\linewidth}
 
@@ -35,7 +37,8 @@
 \newcommand{\hsp}{\hspace{20pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 
-\newcommand{\hflat}{\tikz [baseline] \node [anchor=base, inner sep=0pt] {\reflectbox{$\flat$}};}
+\newcommand{\hflat}{\scalerel*{\includegraphics{semibemol.png}}{B}}
+%\newcommand{\hflat}{\tikz [baseline] \node [anchor=base, inner sep=0pt] {\reflectbox{$\flat$}};}
 \newcommand{\dsharp}{\tikz [baseline] {%
     \clip (-0.2em,-1ex) rectangle (-0.01em,2ex);
     \node[anchor=base, inner sep=0pt] {$\sharp$};}}
@@ -65,6 +68,9 @@
 \newcommand{\maqamb}{\emph{maqam}}
 \newcommand{\Maqam}{\emph{Maqam} }
 \newcommand{\taqsim}{\emph{taqsim} }
+\newcommand{\taqsimb}{\emph{taqsim}}
+\newcommand{\taqasim}{\emph{taqasim} }
+\newcommand{\taqasimb}{\emph{taqasim}}
 
 \newcommand{\fretboard} {
 \begin{scope}[xscale=-15,yscale=.2,line width=.5]

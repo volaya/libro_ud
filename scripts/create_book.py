@@ -1,6 +1,7 @@
 import json
 import os
 from subprocess import call
+from collections import defaultdict
 
 LILYPONDPATH = r"C:\Program Files (x86)\LilyPond\usr\bin"
 PYTHONPATH = os.path.join(LILYPONDPATH, "python.exe")
@@ -35,6 +36,7 @@ diagram_note_template = r'''
 \draw[%s, fill=%s] (%s-%s) circle [radius=0.09] node[scale=.30] {};
 \node[ynode] at (%s-%s) {\small %s};
 '''
+multicolor_diagram_note_template = r"\fill[%s] (%s-%s) -- ($(%s-%s) + (%s:.09)$) arc (%i:%i:0.09) -- cycle;"
 
 allnotes = ["do", "rebsb", "reb", "resb", "re", "mibsb", "mib", "misb", "mi", "fasb", "fa", "solbsb", "solb",
             "solsb", "sol", "labsb", "lab", "lasb", "la", "sibsb", "sib", "sisb", "si", "dosb"]
@@ -44,7 +46,7 @@ def _notetitle(n):
     title = n.capitalize()
     title = title.replace("sb", r"\hflat")
     title = title.replace("b", r"$\flat$")
-    title = title.replace("s", r"$\sharp$")
+    title = title.replace("d", r"$\sharp$")
     return title
 
 
@@ -189,13 +191,44 @@ def generate_full_fretboard():
                 notetitle = _notetitle(note)
                 diagram += (diagram_note_template % (color, color, 6-istring, fret, 6-istring, fret, notetitle))
 
+
     snippetfile = os.path.join(snippetsfolder, f"diapason.tex")
     with open(snippetfile, "w") as f:
         f.write(diagram_template % (diagram))
 
+def generate_maqam_analysis_fretboard():
+    file = os.path.join(os.path.dirname(__file__), "analysis.json")
+    with open(file) as f:
+        analysis = json.load(f)
+
+    diagram = ""
+    strings = ["do", "sol", "re", "la", "fa", "do"]
+    colors = ["black!50", "red!50", "blue!50", "green!50"]
+    for name, ajnas in analysis.items():
+        notes = defaultdict(list)
+        for i, jins in enumerate(ajnas):
+            for note in jins:
+                notes[note].append(colors[i])
+
+        for istring, string in enumerate(strings):
+            idx = allnotes.index(string)
+            for fret in range(FRETS):
+                pos = (idx + fret) % len(allnotes)
+                note = allnotes[pos]
+                if note in notes:
+                    colors = notes[note]
+                    for i, color in enumerate(colors):
+                        alpha = i / len(colors) * 360
+                        alpha2 = (i + 1) / len(colors) * 360
+                        diagram += multicolor_diagram_note_template % (color, 6-istring, fret, 6-istring, fret, alpha, alpha, alpha2)
+
+    snippetfile = os.path.join(snippetsfolder, f"analysis_{name}.tex")
+    with open(snippetfile, "w") as f:
+        f.write(diagram_template % (diagram))
 
 os.makedirs(snippetsfolder, exist_ok=True)
 generate_maqamat_snippets()
+generate_maqam_analysis_fretboard()
 generate_full_fretboard()
 run_lilypond()
 run_latex()
