@@ -1,0 +1,40 @@
+\begin{center}
+\textsc{Dulab Rast}
+\begin{lilypond}
+\include "arabic.ly"
+#(set-global-staff-size 18)
+#(set-default-paper-size "pa5")
+
+song = \relative {
+\key do \rast
+\repeat volta 2{
+r8 sol la sisb
+do4 sisb la sol la sol fa misb fa misb re do sol la sisb
+do4 sisb la sol la sol fa misb fa misb re do sol la sisb
+}
+\repeat volta 2{
+
+}
+\repeat volta 2{
+\bar "|."
+}
+
+\layout {
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
+
+\end{lilypond}
+\end{center}
