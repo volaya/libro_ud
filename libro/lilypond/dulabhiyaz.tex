@@ -1,0 +1,62 @@
+\begin{center}
+\textsc{Dulab Hiyaz}
+\vspace*{0.5cm}
+\begin{lilypond}
+\include "arabic.ly"
+#(set-global-staff-size 18)
+#(set-default-paper-size "pa5")
+
+song = \relative {
+\key re \hijaz
+\repeat volta 2{
+  re8 sol4 mib8 sol2
+  la8 sol fad mib fad2
+  sol8 fad mib re mib2
+  re8 mib fad sol mib4 sol
+  fad2 r2
+  la8 sol fad mib re do re mib fad sol fad mib re2
+  la'8 sol fad mib re do re mib fad sol fad mib re2
+}
+\repeat volta 2{
+la'1
+r4 do la sib la do la sib
+la8 sib do re do sib la sol
+}
+\alternative{
+  {la1}
+  {la2. r4}
+}
+\repeat volta 2{
+r8 sol8 la sib la sol fad mib re4 la'2.
+r8 fad8 sol la sol fad mib re
+}
+\alternative{
+  {do4 sib'2.}
+  {sol2 re4 mib}
+}
+do mib re2
+do re4 mib
+do mib re2
+\bar "|."
+}
+
+\layout {
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fad, la, re sol do'>
+    }
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
+
+\end{lilypond}
+\end{center}

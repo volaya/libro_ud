@@ -12,6 +12,12 @@
     \item Influencia occidental moderna. En especial desde la conquista de Egipto por parte de Napoleón. La música árabe recibe elementos de la música occidental, que van desde formas musicales a la propia notación empleada hoy día.
     \end{itemize}
 
+    Aunque la música árabe es muy variada y existen muchas formas regionales, lo que hoy día conocemos como música árabe es, fundamentalmente, la música que corresponde al periodo denominado <<Edad Dorada de la Música Árabe>>, que es en realidad una época de esplendor de la música egipcia. A lo largo de un periodo de 40 años centrados alrededor de la mitad del siglo \textsc{xx}, El Cairo se convirtió en la capital músical del mundo árabe, y durante este tiempo se produjo una evolución musical sin precedentes. Compositores como Sayed Darwish, Mohammad Al Qasabgi, Riad Al Sunbati y Mohammad Abdel Wahab fueron los principales impulsores de un cambio profundo en la música árabe. 
+
+    Siendo esta la época en la que el mercado discográfico comenzaba a instaurarse, y coincidiendo a su vez con un periodo también de esplendor del cine egipcio, las nuevas formas musicales se difundieron ampliamente por todo el mundo árabe. Gracias a cantantes como Umm Kalzum o Layla Murad, de inmensa popularidad, las composiciones y estilos de estos gigantes de la música árabe se establecieron como parte fundamental del repertorio de la música árabe contemporánea.
+
+    \section{Características}
+
     Los principales aspectos que definen la música árabe son los siguientes. Algunos de ellos son comunes a los de otras tradiciones musicales, mientras que otros son específicos.
 
     \begin{itemize}
@@ -48,8 +54,10 @@
         }
 
         \layout {
+          indent = #0
           \context {
             \Score
+            supportNonIntegerFret = ##t
           }
           \context {
               \TabStaff
@@ -59,12 +67,11 @@
               \Staff
               \remove "Time_signature_engraver"
             }
-
         }
 
         <<
-          \new Staff << \clef "G_8" \tuning >>
-          \new TabStaff << \tuning>>
+          \new Staff << \clef "G_8" \notes >>
+          \new TabStaff << \notes>>
         >>
     \end{lilypond}
     \end{center}
@@ -76,13 +83,13 @@
       \fretboard
 
     \draw[blue!50, fill=blue!50] (4-2) circle [radius=0.09] node[scale=.30] {};
-    \node[ynode] at (4-3) {\small Mi$\flat$};
+    \node[ynode] at (4-2) {\small Mi$\flat$};
 
     \draw[blue!50, fill=blue!50] (4-3) circle [radius=0.09] node[scale=.30] {};
     \node[ynode] at (4-3) {\small Mi\hflat};
 
     \draw[blue!50, fill=blue!50] (4-4) circle [radius=0.09] node[scale=.30] {};
-    \node[ynode] at (4-3) {\small Mi};
+    \node[ynode] at (4-4) {\small Mi};
 
     \end{tikzpicture}
     }
@@ -436,7 +443,7 @@ Considerado por algunos como la versión egipcia del ritmo \emph{chiftetelli}.
 
       \drummode{
       \time 8/4
-        bd.4-D bd4.-T bd4-T bd4-D r4 bd4-T r4 
+        bd4.-D bd4.-T bd4-T bd4-D r4 bd4-T r4 
       }
     >>
 \end{lilypond}
@@ -503,7 +510,7 @@ Ritmo popular empleado en las \emph{moaxajas}.
 
     La \emph{moaxaja} es una forma poético-musical surgida en Al-Ándalus a partir de la forma literaria del mismo nombre. Se trata de un canto estructurado en estrofas y estribillos, con una métrica (ritmo \emph{samai thaqil}) y rima definidas. 
 
-    A pesar de sus orígenes, la mayor parte de las moaxajas que se interpretan en la actualidad son recientes, del siglo \textsc{xix} y principios del \emph{xx}, ya que es un género que ha mantenido una cierta popularidad entre los compositores, y en especial en la región de Aleppo.
+    A pesar de sus orígenes, la mayor parte de las moaxajas que se interpretan en la actualidad son recientes, del siglo \textsc{xix} y principios del \textsc{xx}, ya que es un género que ha mantenido una cierta popularidad entre los compositores, y en especial en la región de Aleppo.
 
     \audioclip{lammabada.mp3}{Moaxaja: Lamma Bada Yatathanna}
 
