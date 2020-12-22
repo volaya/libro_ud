@@ -4,5 +4,17 @@
 		["sol", "la", "sib", "do"],
 		["sol", "la", "sisb", "do"],
 		["sol", "lab", "si", "do"]
+	],
+	"taqsimbayati":[
+		["re", "misb", "fa", "sol"],
+		["sol", "la", "sisb", "do"],
+		["sol", "la", "sib", "do"],
+		["sol", "lab", "si", "do"]
+	],
+	"taqsimnahawand":[
+		["do", "re", "mib", "fa", "sol"],
+		["sol", "lab", "si", "do"],
+		["sol", "lab", "sib", "do"],
+		["do", "re", "mib", "solb"]
 	]
 }

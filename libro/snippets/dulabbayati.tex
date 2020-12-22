@@ -1,0 +1,56 @@
+\begin{center}
+\textsc{Dulab Bayati}
+\vspace*{0.5cm}
+\nopagebreak
+\begin{lilypond}
+\include "arabic.ly"
+#(set-global-staff-size 18)
+#(set-default-paper-size "pa5")
+
+song = \relative {
+\key re \bayati
+\time 2/4
+\partial 8 {fa16 sol}
+\repeat volta 2{
+la8. la16 la4 sib8. la16 sol8 sib
+la8. sol16 fa8. misb16
+}
+\alternative{
+  {re8 re4 fa16 sol}
+  {re8 la' re,4}
+}
+re'4 do
+re8 re4 do8
+sib8. la16 sol8 sib
+la8. la16 la4 
+sib8. la16 sib8 do
+re16 do sib la sol4
+sol8. fa16 sol8 la8
+do16 sib la sol fa4
+fa8. misb16 fa8 sol
+la fa sol misb
+fa re misb do
+re4 r4
+\bar "|."
+}
+
+\layout {
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fad, la, re sol do'>
+    }
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
+
+\end{lilypond}
+\end{center}

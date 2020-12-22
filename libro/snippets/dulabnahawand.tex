@@ -1,0 +1,48 @@
+\begin{center}
+\textsc{Dulab Nahawand}
+\vspace*{0.5cm}
+\nopagebreak
+\begin{lilypond}
+\include "arabic.ly"
+#(set-global-staff-size 18)
+#(set-default-paper-size "pa5")
+
+song = \relative {
+\key do \minor
+\time 2/4
+do8 do16 re mib re do8
+do16 re mib fa sol4
+\repeat volta 2{
+sol16 fa sol lab sol8 fa8
+fa16 mib fa sol fa8 mib
+mib16 re mib fa mib8 re
+}
+\alternative{
+  {mib16 re do si do8 sol'
+  sol fa mib16 re do8}
+  {mib16 re do sib do8 sol'16 sol
+  sol8 sol sol mib16 re do8 si do4}
+}
+\bar "|."
+}
+
+\layout {
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fad, la, re sol do'>
+    }
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
+
+\end{lilypond}
+\end{center}

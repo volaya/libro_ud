@@ -10,8 +10,8 @@
 \input{front.tex}
 \begin{mainmatter}
 \pagestyle{fancy}
-\input{eloud.tex}
-\input{teoria.tex}
+\input{elud.tex}
+\input{musicaarabe.tex}
 \input{maqam.tex}
 \input{ornamentacion.tex}
 \input{taqsim.tex}

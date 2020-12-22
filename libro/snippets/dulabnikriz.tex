@@ -1,0 +1,45 @@
+\begin{center}
+\textsc{Dulab Nikriz}
+\vspace*{0.5cm}
+\nopagebreak
+\begin{lilypond}
+\include "arabic.ly"
+#(set-global-staff-size 18)
+#(set-default-paper-size "pa5")
+
+song = \relative {
+\key sol \minor
+\time 2/4
+\repeat volta 3 {
+sol8. fad16 sol8 la
+sib8. la16 sol8 mib
+fad8. mib16 fa8 sol8
+}
+\alternative{
+  {la16 sol8 fad16 mib8 do}
+  {re16 mib8 re16 re mib8 sisb16 do4 r4}
+  {re16 mib8 re16 re mib8 sisb16 do4 r4}
+}
+\bar "|."
+}
+
+\layout {
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
+
+\end{lilypond}
+\end{center}

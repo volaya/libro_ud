@@ -41,6 +41,8 @@ multicolor_diagram_note_template = r"\fill[%s] (%s-%s) -- ($(%s-%s) + (%s:.09)$)
 allnotes = ["do", "rebsb", "reb", "resb", "re", "mibsb", "mib", "misb", "mi", "fasb", "fa", "solbsb", "solb",
             "solsb", "sol", "labsb", "lab", "lasb", "la", "sibsb", "sib", "sisb", "si", "dosb"]
 
+alternative_names = {"solb":"fad"}
+
 
 def _notetitle(n):
     title = n.capitalize()
@@ -60,12 +62,12 @@ def generate_maqamat_snippets():
         maqamaat = json.load(f)
 
     lilypond_maqam_template = r'''
-    \begin{center}
-    \resizebox{.8\textwidth}{!}{
+    \begin{center}    
     \begin{lilypond}
     \include "arabic.ly"
 
-    #(set-default-paper-size "half letter")
+    #(set-global-staff-size 18)
+    #(set-default-paper-size "pa5")
 
     left-bracket-path = #'(
         (moveto 0 0)
@@ -123,7 +125,6 @@ def generate_maqamat_snippets():
       \new TabStaff << \scale>>
     >>
     \end{lilypond}
-    }
     \end{center}
 
     '''
@@ -132,12 +133,11 @@ def generate_maqamat_snippets():
     \once \override TextSpanner.bound-details.right.padding = #%i
     \once \override TextSpanner.bound-details.left.padding = #%i
     \textSpannerUp
-    \tweak color #grey %s1 ^\markup{\smaller "  %s"}
+    \tweak color #grey %s1 ^\markup{"  %s"}
     \startTextSpan
     %s
     \stopTextSpan
     '''
-    alternative_names = {"solb":"fad"}
 
     strings = ["do", "sol", "re", "la", "fa", "do"]
     for maqam in maqamaat:
@@ -148,14 +148,13 @@ def generate_maqamat_snippets():
         for ijins, jins in enumerate(ajnas):
             jinsnotes = jins[1].split(" ")
             maqamnotes.extend(["".join([c for c in n if c.isalpha()]) for n in jinsnotes])
-            if ajnas[0][1].split(" ")[-1] == ajnas[1][1].split(" ")[0]:
-                paddingright = -5 if ijins == 0 else 0
-                paddingleft = 1 if ijins == 1 else 0
-                if ijins == 0:
-                    jinsnotes = jinsnotes[:-1]
+            if ijins < len(ajnas)-1 and ajnas[ijins][1].split(" ")[-1] == ajnas[ijins+1][1].split(" ")[0]:
+                jinsnotes = jinsnotes[:-1]
+                paddingright = -5
+                paddingleft = 1                           
             else:
                 paddingright = 0
-                paddingleft = 0
+                paddingleft = 1
             lilypond_maqam += (lilypond_jins_template %
                 (paddingright, paddingleft, f"{jinsnotes[0]}", jins[0], " ".join(jinsnotes[1:])))
         for istring, string in enumerate(strings):
@@ -174,8 +173,10 @@ def generate_maqamat_snippets():
         name = maqam["name"]
         snippetfile = os.path.join(snippetsfolder, f"{name}.tex")
         with open(snippetfile, "w") as f:
+            f.write(r"\begin{samepage}")
             f.write(lilypond_maqam_template % (lilypond_maqam))
             f.write(diagram_template % (diagram))
+            f.write(r"\end{samepage}")
 
 
 def generate_full_fretboard():
@@ -201,14 +202,14 @@ def generate_maqam_analysis_fretboard():
     with open(file) as f:
         analysis = json.load(f)
 
-    diagram = ""
     strings = ["do", "sol", "re", "la", "fa", "do"]
-    colors = ["black!50", "red!50", "blue!50", "green!50"]
+    allcolors = ["black!50", "red!50", "blue!50", "green!50"]
     for name, ajnas in analysis.items():
+        diagram = ""
         notes = defaultdict(list)
         for i, jins in enumerate(ajnas):
             for note in jins:
-                notes[note].append(colors[i])
+                notes[note].append(allcolors[i])
 
         for istring, string in enumerate(strings):
             idx = allnotes.index(string)
@@ -222,9 +223,10 @@ def generate_maqam_analysis_fretboard():
                         alpha2 = (i + 1) / len(colors) * 360
                         diagram += multicolor_diagram_note_template % (color, 6-istring, fret, 6-istring, fret, alpha, alpha, alpha2)
 
-    snippetfile = os.path.join(snippetsfolder, f"analysis_{name}.tex")
-    with open(snippetfile, "w") as f:
-        f.write(diagram_template % (diagram))
+
+        snippetfile = os.path.join(snippetsfolder, f"analysis_{name}.tex")
+        with open(snippetfile, "w") as f:
+            f.write(diagram_template % (diagram))
 
 os.makedirs(snippetsfolder, exist_ok=True)
 generate_maqamat_snippets()

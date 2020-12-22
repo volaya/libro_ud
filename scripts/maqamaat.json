@@ -110,5 +110,13 @@
 "ajnas":[
 	["Kurd re", "re mib fa sol"],
 	["Nahawand sol", "sol la sib do re"]
+]},
+{
+"name": "huzam",
+"title":"huzam",
+"ajnas":[
+	["Sikah", "misb fa sol"],
+	["Hiyaz sol", "sol lab si do"],
+	["Rast do", "do re misb"]
 ]}
 ]

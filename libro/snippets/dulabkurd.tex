@@ -1,0 +1,45 @@
+\begin{center}
+\textsc{Dulab Kurd}
+\vspace*{0.5cm}
+\nopagebreak
+\begin{lilypond}
+\include "arabic.ly"
+#(set-global-staff-size 18)
+#(set-default-paper-size "pa5")
+
+song = \relative {
+\key re \kurd
+la8 sib la sol la4 sib4
+do re do sib
+la8 sib la sol fa4 sol
+fa8 sol fa mib re2
+re'8 do sib la sib do re4
+do8 sib la sol la sib do4
+sib8 la sol fa sol la sib4
+la8 sol fa sol fa mib re4
+ \tempo "Rall." do2 re8 mib16 fa mib8 re 
+re1
+
+\bar "|."
+}
+
+\layout {
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
+
+\end{lilypond}
+\end{center}
