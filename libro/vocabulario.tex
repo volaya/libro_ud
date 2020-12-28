@@ -338,7 +338,46 @@ Aun si el patrón es descendente, muchos cierres usan la nota inmediatamente inf
 
 Aunque menos frecuente, también es posible apoyarse en el \emph{ghammaz} en una octava inferior como nota previa antes de la tónica, que luego resuelve sobre esta.
 
-\audioclip{cierreghammazinferior_1.mp3}{Cierre con uso de \emph{ghammaz} en octava inferior}
+***
+
+\audioclip{cierreghammazinferior.mp3}{Cierre con uso de \emph{ghammaz} en octava inferior}
+
+Ampliando esta idea, otra alternativa habitual es llegar a la tónica mediante un motivo melódico ascendente, desde la octava inferior. El siguiente ejemplo combina un patrón melódico descendente que baja a la octava inferior, con otro ascendente que resuelve desde allí sobre la tónica.
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+    	\key do \rast
+    	\time 16/4
+        fa8:32 misb8:32 re8:32 do8:32 sisb8:32 la8:32 sol4 sol16 la sib do2
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\audioclip{cierrepatronascendente.mp3}{Cierre con patrón ascendente}
 
 En ocasiones, la \emph{qafla} tiene dos partes, o más bien se puede decir que se unen dos remates consecutivos, ambos acabando sobre la tónica. Por ejemplo:
 

@@ -1,0 +1,50 @@
+\begin{center}
+\textsc{Dulab Saba}
+\vspace*{.5cm}
+\begin{lilypond}
+\include "arabic.ly"
+#(set-global-staff-size 18)
+#(set-default-paper-size "pa5")
+
+song = \relative {
+\key do  #`((2 . ,SEMI-FLAT)
+            (4 . ,FLAT))
+\time 2/4
+
+\repeat volta 2{
+fa8. solb16 fa4
+fa8. solb16 fa4
+r8 solb16 solb solb8 fa
+misb re re do
+}
+la' solb fa misb re do re misb fa4 r4
+\repeat volta 2{
+r8 solb16 solb solb8 fa fa misb misb4
+r8 fa16 fa fa8 misb misb re re do
+}
+re8 misb fa8. misb16 misb8. re16 re8 do
+re fa fa16 misb8 re16 re4 r4
+\bar "|."
+}
+
+\layout {
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fad, la, re sol do'>
+    }
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
+
+
+\end{lilypond}
+\end{center}

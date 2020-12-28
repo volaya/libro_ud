@@ -16,6 +16,7 @@
 \input{ornamentacion.tex}
 \input{taqsim.tex}
 \input{vocabulario.tex}
+\input{ejercicios.tex}
 \input{repertorio.tex}
 \end{mainmatter}
 \end{document}

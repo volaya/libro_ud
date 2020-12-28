@@ -7,11 +7,18 @@
 	["Rast sol", "sol la sisb do"]
 ]},
 {
-"name": "rastb",
-"title":"Rast",
+"name": "suzdalar",
+"title":"Suzdalar",
 "ajnas":[
 	["Rast do", "do re misb fa"],
 	["Nahawand sol", "sol la sib do"]
+]},
+{
+"name": "mahur",
+"title":"Mahur",
+"ajnas":[
+	["Rast do", "do re misb fa"],
+	["Ayam sol", "sol la si do"]
 ]},
 {
 "name": "suznak",
@@ -45,8 +52,8 @@
 "name": "hiyazkar",
 "title":"Hiyaz Kar",
 "ajnas":[
-	["Hiyaz re", "do reb mi fa"],
-	["Nikriz sol", "fa sol lab si do"]
+	["Hiyaz do", "do reb mi fa"],
+	["Nikriz fa", "fa sol lab si do"]
 ]},
 {
 "name": "hiyazkarkurd",
