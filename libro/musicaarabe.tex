@@ -38,7 +38,7 @@
     La ausencia de armonía, por ejemplo, se refleja en los instrumentos típicos árabes, que son de tipo melódico, y con los que no es posible (o resulta muy complejo) el tocar acordes.
     \end{itemize}
 
-
+\label{sistema_tonal}
 \section{Sistema tonal}
 
     Mientras que la música occidental se basa en las 12 notas de la escala cromática (12 subdivisiones de una octava), en la música árabe la octava se divide en 24 notas. Es decir, aparece una nueva nota entre cada dos notas de la escala cromática, y la separación entre dos notas consecutivas no es de un semitono, sino de un cuarto de tono.
@@ -112,50 +112,64 @@
 \vspace*{0.5cm}
 \begin{center}
 \begin{lilypond}
-    \include "arabic.ly"
-    #(set-default-paper-size "half letter")
+\include "arabic.ly"
 
-    \paper {
-      #(define fonts
-        (set-global-fonts
-         #:roman "Linux Libertine O,serif"
-         #:sans "Linux Biolinum O,sans-serif"
-         #:typewriter "Linux Libertine Mono O,monospace"
-       ))
-    }
+\paper {
+  #(define fonts
+    (set-global-fonts
+     #:roman "Linux Libertine O,serif"
+     #:sans "Linux Biolinum O,sans-serif"
+     #:typewriter "Linux Libertine Mono O,monospace"
+   ))
+}
 
-    \layout {
-      \context {
-        \Score
-      }
-      \context {
-          \Staff
-          \remove "Time_signature_engraver"
-        }
-    }
+music =  \relative do {
+  \override Staff.TimeSignature #'stencil = ##f
+  \override Score.RehearsalMark #'self-alignment-X = #LEFT
+  \time 32/4
+sol1 la sib do re mib misb mi fa fad sol lab sib sisb do re
+}
 
-    \new Staff {
-    \clef "G_8" \cadenzaOn 
-    sol,1^\markup {\center-align \fontsize #-2 "Yakah"} 
-    la,^\markup {\center-align \fontsize #-2 "Ushayran"} 
-    sib,^\markup {\center-align \fontsize #-2 "qarar Ayam"} 
-    do^\markup {\center-align \fontsize #-2 "Rast"} 
-    re^\markup {\center-align \fontsize #-2 "Dukah"} 
-    mib^\markup {\center-align \fontsize #-2 "Kurd"} 
-    misb^\markup {\center-align \fontsize #-2 "Sikah"} 
-    mi^\markup {\center-align \fontsize #-2 "Buselik"}
-    fa^\markup {\center-align \fontsize #-2 "Yiharkah"}
-    }
-    \new Staff {
-    \clef "G_8" \cadenzaOn 
-    fad^\markup {\center-align \fontsize #-2 "Hiyaz"}
-    sol^\markup {\center-align \fontsize #-2 "Nawa"}
-    lab^\markup {\center-align \fontsize #-2 "Hisar"}
-    sib^\markup {\center-align \fontsize #-2 "Ayam"}
-    sisb^\markup {\center-align \fontsize #-2 "Awk"}
-    do'^\markup {\center-align \fontsize #-2 "Kirdan"}
-    re'^\markup {\center-align \fontsize #-2 "Muhayyer"}
-    }
+text = \lyricmode {
+\markup {\center-align \fontsize #-2 "Yakah  "} 1
+\markup {\center-align \fontsize #-2 "Ushayran  "} 1
+\markup {\center-align \fontsize #-2 "qarar Ayam  "}1 
+\markup {\center-align \fontsize #-2 "Rast  "} 1
+\markup {\center-align \fontsize #-2 "Dukah  "} 1
+\markup {\center-align \fontsize #-2 "Kurd  "} 1
+\markup {\center-align \fontsize #-2 "Sikah  "} 1
+\markup {\center-align \fontsize #-2 "Buselik  "}1
+\markup {\center-align \fontsize #-2 "Yiharkah  "}1
+\markup {\center-align \fontsize #-2 "Hiyaz"}1
+\markup {\center-align \fontsize #-2 "Nawa"}1
+\markup {\center-align \fontsize #-2 "Hisar"}1
+\markup {\center-align \fontsize #-2 "Ayam"}1
+\markup {\center-align \fontsize #-2 "Awk"}1
+\markup {\center-align \fontsize #-2 "Kirdan"}1
+\markup {\center-align \fontsize #-2 "Muhayyer"}1
+}
+
+\score {
+  <<
+  \new Lyrics \with {
+    \override LyricText #'self-alignment-X = #LEFT
+    \override LyricText #'font-size = #.2
+  }
+  { \text }
+  \new StaffGroup <<
+    \new Staff <<
+      \context Voice { \clef "G_8" \music }
+    >>
+  >>
+  >>
+  \layout {
+    indent = #0
+     \context {
+         \Score
+         \remove "Bar_number_engraver"
+     }
+  }
+}
 \end{lilypond}
 \end{center}
 
@@ -186,11 +200,15 @@ El sistema tonal árabe, en conjunto con la manera de utilizar sus elementos, co
 
     Flautas de diferentes longitudes producen sonidos de distinta altura, y lo habitual es que el músico de \emph{ney} disponga de una colección de ellas de diferentes tamaños, que utilizará según la tonalidad  y el modo melódico de la pieza a tocar.
 
+    \audioclip{taqsimney.mp3}{\emph{Ney}}
+
     \subsubsection{\emph{Qanun}}
 
     El \emph{qanun} es un instrumento de cuerda pulsada, de la familia del salterio. Tiene forma trapezoidal, y sus cuerdas se agrupan en grupos de tres de ellas con el mismo sonido, salvo las más graves, que pueden estar en grupos de dos o ser cuerdas simples. Se toca plano sobre las piernas o apoyado sobre una mesa, pulsando las cuerdas mediante púas que se enganchan a los dedos.
 
     En su parte izquierda, tiene unas llaves fabricadas en latón que sirven para variar la altura de la nota dada por cada cuerda, y mediante las cuales se pueden obtener los intervalos de cuarto de tono.
+
+    \audioclip{taqsimqanun.mp3}{\emph{Qanun}}
 
     \subsubsection{Violín}
 
@@ -199,6 +217,8 @@ El sistema tonal árabe, en conjunto con la manera de utilizar sus elementos, co
     La afinación más extendida en la música árabe es sol-re-sol-re (de la cuerda más grave a la más aguda), distinta de la afinación sol-re-la-mi de uso generalizado en el violín europeo.
 
     Aunque suele tocarse en la posición habitual, sujeto entre el hombro y la barbilla, la postura clásica árabe es distinta: el violín se sitúa en vertical, con su base apoyada sobre el muslo o la rodilla del interprete. En esta posición, para cambiar de cuerdas no se varía el ángulo del arco, sino que se rota el violín sobre su apoyo en la pierna.
+
+    \audioclip{taqsimviolin.mp3}{Violín}
 
     \subsection{Instrumentos de percusión}
 
@@ -214,11 +234,15 @@ El sistema tonal árabe, en conjunto con la manera de utilizar sus elementos, co
 
         Con la incorporación del \emph{derbake}, la técnica del \emph{riqq} experimentó una evolución para adaptar su sonoridad y presencia. En particular, el sonido de las sonajas tiene en la actualidad más importancia que el del parche, algo que previamente no sucedía.
 
+        \audioclip{riqq.mp3}{\emph{Riqq}}
+
         \subsubsection{\emph{Derbake}}
 
         El \emph{derbake} (también conocido como \emph{tabla} o \emph{darbuka}, entre otros nombres) es un instrumento de la familia de los tambores de copa. Originalmente se fabricaba en barro y con un parche de piel, pero en la actualidad es más habitual el uso de parches de plástico y cuerpo de fibra o metal.
 
         Se toca o bien sujetándolo bajo el brazo o bien sobre las piernas. Lo habitual es tocarlo con las manos, pero en algunos lugares y tradiciones se toca con los dedos de una mano y con un pequeño palo en la otra a modo de baqueta.
+
+        \audioclip{derbake.mp3}{\emph{Derbake}}
 
 
 \section{Ritmos}

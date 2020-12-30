@@ -10,6 +10,8 @@ Por sí solo, el contenido de este capítulo no sirve para elaborar un vocabular
 
 Dividiremos los patrones de este capítulo en tres grupos principales: inicios, cierres, y motivos melódicos.
 
+Los ejemplos comentados a continuación se presentan en el \maqam Rast, salvo cuando se indica lo contrario. Junto a ello, se incluyen secciones independientes con pequeñas colecciones de fragmentos, estos sin comentar, para algunos de los \maqamaat más habituales.
+
 \section{Inicios}
 
 En esta sección se recogen fragmentos con los que es habitual comenzar un \taqsim, y que siven de presentación de su \maqamb. La apertura y cierre de un \taqsim son las partes que más se prestan al uso de <<formulas>> predefinidas, y donde el conocimiento de estas es más necesario.
@@ -51,23 +53,141 @@ La manera más prototípica de empezar un \taqsim o una frase dentro de este es 
 \end{lilypond}
 \end{center}
 
+\audioclip{inicio_con_tónica.mp3}{Inicio con nota tónica.}
+
+
 Nótese que las distintas pulsaciones sobre la misma cuerda se hacen con una pulsación alterna, pero tanto la pulsación de la cuerda más grave como la de la nota sucesiva una octava por encima se han de hacer con pulsación descendente. Se aplica aquí el principio de que, siempre que se produzca un cambio de cuerda, la primera pulsación sobre esta nueva cuerda ha de ser en sentido descendente.
 
 En lugar de comenzar directamente con la nota tónica, es habitual llegar hasta ella tras una pequeña frase que presente el \yins en cuestión. El siguiente inicio es habitual en el \maqam Bayati:
 
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \key re \bayati
+      \time 16/4
+        fa8\downbow misb re do re re re re re re re re re,\downbow re'\downbow re re
+        \bar "||"
+    }
 
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\audioclip{inicio_con_frase_bayati.mp3}{Inicio con frase antes de llegar a tónica (Bayati).}
+
+Un ejemplo similar en \maqam Rast.
 
 ***
 
-Es frecuente que la frase utilice las notas por debajo de la tónica, como en el siguiente ejemplo el el \maqam Rast:
+\audioclip{inicio_con_frase_bayati.mp3}{Inicio con frase antes de llegar a tónica (Rast)}
 
-***
+Es frecuente que la frase de apertura utilice las notas por debajo de la tónica, como en el siguiente ejemplo:
 
-En el caso de \maqam Bayati, a pesar de que su segundo \yins es \yins Nahawand en sol, se suele utilizar en la octava inferior \yins Rast en sol (es decir, con si\hflat en lugar de si$\flat$). El siguiente es un ejemplo de arranque en \maqam Bayati utilizando las notas por debajo de la tónica.
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \key do \rast
+      \time 16/4
+        sol,8 la sib do do do do do, do' do do 
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\audioclip{inicio_octava_inferior.mp3}{Inicio llegando a tónica desde octava inferior.}
+
+En el caso de \maqam Bayati, a pesar de que su segundo \yins es \yins Nahawand en sol, se suele utilizar en la octava inferior \yins Rast en sol (es decir, con si\hflat\ en lugar de si$\flat$). El siguiente es un ejemplo de arranque en \maqam Bayati utilizando las notas por debajo de la tónica.
 
 ****
 
-Los patrones anteriores pueden emplearse no solo para arrancar un \taqsim, sino también para comenzar una frase dentro de este. Hay, sin embargo, algunos patrones que se utilizan habitualmente en este caso, pero que no aparecen como inicio del \taqsimb, tales como los que veremos a continuación.
+La primera frase de un \taqsim suele ser breve y presentar el primer \yins del \maqam, de tal modo que muchas veces no es apenas más que la combinación de una inicio y un cierre. Veáse el ejemplo siguiente:
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \key do \rast
+      \time 4/4
+      \omit Score.BarLine
+      do,8 do' do do do do do do sisb32 do sisb la sisb8 sisb do do re misb16 re do8
+      \undo \omit Score.BarLine
+      re misb fa fa misb misb re re 
+      \omit Score.BarLine
+      misb16 re 
+      \undo \omit Score.BarLine
+      do2
+      \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\audioclip{ejemplo_primera_frase.mp3}{Primera frase completa.}
+
+****
+Los patrones anteriores pueden emplearse no solo para arrancar un \taqsimb, sino también para comenzar una frase dentro de este. Hay, sin embargo, algunos patrones que se utilizan habitualmente en este caso, pero que no aparecen como inicio del \taqsimb, tales como los que veremos a continuación.
 
 Unos fragmentos de inicio de esta clase son los que arrancan de la tónica y ascienden hasta el \emph{ghammaz}, para allí dar inicio a una frase que se situa sobre el segundo \yins. Los siguientes son algunos ejemplos.
 
@@ -105,7 +225,7 @@ Unos fragmentos de inicio de esta clase son los que arrancan de la tónica y asc
 \end{lilypond}
 \end{center}
 
-\audioclip{inicio_a_ghammaz_1.mp3}{Inicio ascendente hasta \emph{ghammaz} 1}
+\audioclip{inicio_a_ghammaz_1.mp3}{Inicio ascendente hasta \emph{ghammaz} 1.}
 
 \begin{center}
 \begin{lilypond}
@@ -141,20 +261,14 @@ Unos fragmentos de inicio de esta clase son los que arrancan de la tónica y asc
 \end{lilypond}
 \end{center}
 
-\audioclip{inicio_a_ghammaz_1.mp3}{Inicio ascendente hasta \emph{ghammaz} 2}
+\audioclip{inicio_a_ghammaz_2.mp3}{Inicio ascendente hasta \emph{ghammaz} 2.}
 
 \section{Cierres}
 
 
 Esta sección contiene fragmentos empleados para concluir una frase o un \taqsimb, también conocidos como \emph{qafla}.
 
-
-***
-
-descenso a tonica
-descenso a tonica con motivo
-
-El descenso a tónica empleando un motivo melódico es muy habitual. Por ejemplo:
+El descenso a tónica empleando un motivo melódico es una de las opciones más habituales. Por ejemplo:
 
 \begin{center}
 \begin{lilypond}
@@ -298,6 +412,8 @@ El siguiente ejemplo en \maqam Bayati usa octavas y trémolo conjuntamente:
 \end{lilypond}
 \end{center}
 
+\audioclip{cierreoctavatremolo.mp3}{Cierre con octavas y trémolo.}
+
 Aun si el patrón es descendente, muchos cierres usan la nota inmediatamente inferior a la tónica como nota sensible desde la que resolver y concluir la \emph{qafla}, en dirección ascendente. El siguiente es un ejemplo de ello:
 
 
@@ -336,11 +452,42 @@ Aun si el patrón es descendente, muchos cierres usan la nota inmediatamente inf
 
 \audioclip{cierresensible.mp3}{Cierre con uso de nota sensible.}
 
-Aunque menos frecuente, también es posible apoyarse en el \emph{ghammaz} en una octava inferior como nota previa antes de la tónica, que luego resuelve sobre esta.
+Aunque menos frecuente, también es posible apoyarse en el \emph{ghammaz} como nota previa antes de la tónica, que luego resuelve sobre esta. El siguiente ejemplo combina esto con el uso de trémolo y octavas.
 
-***
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \key do \rast
+      \time 16/4
+        fa,8 fa'4.:32 sol,8 sol'4.:32 do,8 do'2
+        \bar "||"
+    }
 
-\audioclip{cierreghammazinferior.mp3}{Cierre con uso de \emph{ghammaz} en octava inferior}
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\audioclip{cierreghammazinferior.mp3}{Cierre con uso de \emph{ghammaz} en octava inferior.}
 
 Ampliando esta idea, otra alternativa habitual es llegar a la tónica mediante un motivo melódico ascendente, desde la octava inferior. El siguiente ejemplo combina un patrón melódico descendente que baja a la octava inferior, con otro ascendente que resuelve desde allí sobre la tónica.
 
@@ -377,7 +524,7 @@ Ampliando esta idea, otra alternativa habitual es llegar a la tónica mediante u
 \end{lilypond}
 \end{center}
 
-\audioclip{cierrepatronascendente.mp3}{Cierre con patrón ascendente}
+\audioclip{cierrepatronascendente.mp3}{Cierre con patrón ascendente.}
 
 En ocasiones, la \emph{qafla} tiene dos partes, o más bien se puede decir que se unen dos remates consecutivos, ambos acabando sobre la tónica. Por ejemplo:
 
@@ -416,7 +563,7 @@ En ocasiones, la \emph{qafla} tiene dos partes, o más bien se puede decir que s
 \end{lilypond}
 \end{center}
 
-\audioclip{cierredoble.mp3}{Dos cierres consecutivos}
+\audioclip{cierredoble.mp3}{Dos cierres consecutivos.}
 
 La siguiente frase se emplea con frecuencia como segundo cierre, aunque su caracter es más de ornamentación, y es el cierre previo el que deja la melodía concluida sobre la tónica. Se suele tocar con menos volumen que el de la frase anterior, y es habitual no en el cierre del \taqsimb, sino en el de frases intermedias.
 
@@ -453,7 +600,11 @@ La siguiente frase se emplea con frecuencia como segundo cierre, aunque su carac
 \end{lilypond}
 \end{center}
 
-\audioclip{cierredoble2.mp3}{Frase de doble cierre}
+\audioclip{cierredoble2.mp3}{Frase de doble cierre.}
+
+\subsection{Cierres en \maqam Rast}
+\subsection{Cierres en \maqam Bayati}
+\subsection{Cierres en \maqam Nahawand}
 
 \section{Motivos melódicos}
 
