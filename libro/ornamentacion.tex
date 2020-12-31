@@ -37,6 +37,32 @@ El trémolo puede ser corto, en cuyo caso no contiene más de tres notas, o más
 
 Es habitual variar la posición de la \emph{risha} para la realización del trémolo, situándola más perpendicular a las cuerdas, de forma que el contacto con estas se realice con la parte frontal de la púa.
 
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+
+    notes = \relative do{
+    \key do \minor
+        do8 do8:32 re8 re8:32 mib8 mib8:32 fa8 fa8:32 sol8 sol8:32 lab8 lab8:32 si8 si8:32 r4
+        si4:32 lab4:32 sol4:32 fa4:32 lab4:32 sol4:32 fa4:32 mib4:32 sol4:32 fa4:32 mib4:32 re4:32 do1
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+
 \audioclip{tremolo.mp3}{Ornamentación: trémolo}
 
 \label{octavas}
@@ -87,6 +113,38 @@ El movimiento que produce el vibrato se realiza principalmente con el codo, movi
 El dedo pulgar debe situarse en una posición firme en la parte superior del mástil, con el fin de tener buena sujeción.
 
 El vibrato puede hacerse con cualquiera de los dedos de la mano izquierda pisando la cuerda, pero cuantos más dedos estén apoyados, mayores serán la fuerza que puede aplicarse y la estabilidad del movimiento, y por tanto, mayor la intensidad del vibrato que puede obtenerse.
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+
+    notes = \relative do{
+    \key do \rast
+        \partial 4 re8 misb8 fa4^\prall fa4^\prall fa4^\prall fa4^\prall
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+      
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+
 
 \audioclip{vibrato.mp3}{Ornamentación: vibrato}
 
@@ -144,7 +202,7 @@ El \emph{gruppetto}, en la forma en que aparece como ornamento en el ud y la mú
 
 \audioclip{gruppeto.mp3}{Ornamentación: \emph{gruppeto}}
 
-Es este ejemplo, la nota re se toca con la cuerda al aire, lo que facilita la digitación y ejecución del \emph{gruppeto}.
+En este ejemplo, la nota re se toca con la cuerda al aire, lo que facilita la digitación y ejecución del \emph{gruppeto}.
 
 Nótese que la primera nota tiene mayor duración, y es la frase ascendente la que representa el adorno como tal.
 

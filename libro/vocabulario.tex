@@ -26,7 +26,7 @@ La manera más prototípica de empezar un \taqsim o una frase dentro de este es 
     notes = \relative {
     	\key do \rast
     	\time 16/4
-        do16\downbow do do do do do do do do, \downbow do'\downbow do do do do do do 
+        do8\downbow do do do do do do do do, \downbow do'\downbow do do do do do do 
         \bar "||"
     }
 
@@ -95,11 +95,42 @@ En lugar de comenzar directamente con la nota tónica, es habitual llegar hasta 
 
 \audioclip{inicio_con_frase_bayati.mp3}{Inicio con frase antes de llegar a tónica (Bayati).}
 
-Un ejemplo similar en \maqam Rast.
+Un ejemplo similar en \maqam Rast, que en este caso no llega a la tónica sino a la cuarta nota del \maqam (fa). Puede emplearse para arrancar una frase intermedia de un \taqsimb, en la que quiera enfatizarse esta nota.
 
-***
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \key do \rast
+      \time 16/4
+        do,8 do' re misb misb fa misb re misb fa fa fa fa fa fa fa
+        \bar "||"
+    }
 
-\audioclip{inicio_con_frase_bayati.mp3}{Inicio con frase antes de llegar a tónica (Rast)}
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\audioclip{inicio_con_frase_rast.mp3}{Inicio con frase hasta nota intermedia.}
 
 Es frecuente que la frase de apertura utilice las notas por debajo de la tónica, como en el siguiente ejemplo:
 
@@ -138,9 +169,42 @@ Es frecuente que la frase de apertura utilice las notas por debajo de la tónica
 
 \audioclip{inicio_octava_inferior.mp3}{Inicio llegando a tónica desde octava inferior.}
 
-En el caso de \maqam Bayati, a pesar de que su segundo \yins es \yins Nahawand en sol, se suele utilizar en la octava inferior \yins Rast en sol (es decir, con si\hflat\ en lugar de si$\flat$). El siguiente es un ejemplo de arranque en \maqam Bayati utilizando las notas por debajo de la tónica.
+En el caso de \maqam Bayati, a pesar de que su segundo \yins es \yins Nahawand en sol, se suele utilizar en la octava inferior \yins Rast en sol (es decir, con si\hflat\ en lugar de si$\flat$). El siguiente es un ejemplo de arranque en \maqam Bayati utilizando notas por debajo de la tónica.
 
-****
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \key re \bayati
+      \time 16/4
+        sol8 fa misb re do sisb do re re, re' re re, re' re re, re
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\audioclip{inicio_octava_inferior_bayati.mp3}{Inicio llegando a tónica desde octava inferior (Bayati).}
 
 La primera frase de un \taqsim suele ser breve y presentar el primer \yins del \maqam, de tal modo que muchas veces no es apenas más que la combinación de una inicio y un cierre. Veáse el ejemplo siguiente:
 
@@ -268,7 +332,7 @@ Unos fragmentos de inicio de esta clase son los que arrancan de la tónica y asc
 
 Esta sección contiene fragmentos empleados para concluir una frase o un \taqsimb, también conocidos como \emph{qafla}.
 
-El descenso a tónica empleando un motivo melódico es una de las opciones más habituales. Por ejemplo:
+Comencemos con una de las opciones más habituales: un descenso a tónica empleando un motivo melódico. Por ejemplo:
 
 \begin{center}
 \begin{lilypond}
@@ -303,7 +367,46 @@ El descenso a tónica empleando un motivo melódico es una de las opciones más 
 \end{lilypond}
 \end{center}
 
-El uso del trémolo para enfatizar un cierre es casi obligado en algunos estilos de ud como el árabe. El siguiente cierre combina el trémolo con un motivo melódico:
+\audioclip{cierredescensoconmotivo.mp3}{Cierre con descenso y motivo melódico.}
+
+El uso del trémolo para enfatizar un cierre es casi obligado en algunos estilos de ud como el árabe. El cierre más simple con uso de trémolo es un simple descenso a tónica siguiendo las notas del \maqamb.
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \key do \rast
+      \time 16/4
+        fa4:32 misb4:32 re4:32 do2
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\audioclip{cierretremolo.mp3}{Cierre simple con trémolo.}
+
+El siguiente cierre combina el trémolo con un motivo melódico:
 
 \begin{center}
 \begin{lilypond}
@@ -337,6 +440,8 @@ El uso del trémolo para enfatizar un cierre es casi obligado en algunos estilos
     >>
 \end{lilypond}
 \end{center}
+
+\audioclip{cierretremoloymotivo.mp3}{Cierre con trémolo y motivo melódico.}
 
 El uso de la tónica una octava por debajo es un recurso frecuente para dar solidez a un remate.
 
