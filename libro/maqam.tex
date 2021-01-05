@@ -18,17 +18,13 @@ El \yins es la unidad melódica fundamental en la música árabe. Un \yins es un
 
 La combinación de dos \ashnas (o en algunos casos más de dos) dará lugar a un \maqamb, como en breve veremos.
 
-Aunque el número de \ashnas posibles es muy elevado, se considera que nueve son los principales, que son a su vez aquellos a partir de los cuales se construyen los \maqamaat más habituales.
+Aunque el número de \ashnas posibles es muy elevado, se considera que nueve son los principales Estos son, a su vez, aquellos a partir de los cuales se construyen los \maqamaat más habituales.
 
-Cinco de ellos emplean intervalos múltiplos de un tono o un semitono, y generan, por tanto, \maqamaat compatibles con la escala cromática occidental. Son los mostrados a continuación.
+Cinco de estos \ashnas emplean intervalos múltiplos de un tono o un semitono, y generan, por tanto, \maqamaat compatibles con la escala cromática occidental. Son los mostrados a continuación.
 
-\vspace*{.5cm}
-
-%\begin{center}
 \begin{lilypond}
     \include "arabic.ly"
-    #(set-default-paper-size "half letter")
-
+    #(set-global-staff-size 18)
     \paper {
       #(define fonts
         (set-global-fonts
@@ -90,16 +86,11 @@ Cinco de ellos emplean intervalos múltiplos de un tono o un semitono, y generan
 
 \end{lilypond}
 
-\vspace*{.5cm}
-
-Los restantes, según se muestran seguidamente, contienen intervalos de 3/4 de tono.
-
-\vspace*{.5cm}
+Los restantes, mostrados seguidamente, contienen intervalos de 3/4 de tono.
 
 \begin{lilypond}
     \include "arabic.ly"
-    #(set-default-paper-size "half letter")
-
+    #(set-global-staff-size 18)
     \paper {
       #(define fonts
         (set-global-fonts
@@ -153,19 +144,42 @@ Los restantes, según se muestran seguidamente, contienen intervalos de 3/4 de t
     }
 \end{lilypond}
 
-\vspace*{.5cm}
-
 \audioclip{nueve_ashnas.wav}{Nueve \ashnas principales}
 
 Nótese que, aunque el intervalo mínimo que se considera en el sistema tonal árabe es de un cuarto de tono, este intervalo no aparece en ninguno de los anteriores \ashnas. En la práctica, el menor intervalo entre dos notas sigue siendo el medio tono, y el intervalo que se emplea para introducir la microtonalidad y las notas que no forman parte de la escala cromática occidental es el de 3/4 de tono.
 
-A la hora de presentar los principales \ashnasb, puede verse que cada uno de ellos se ha escrito arrancando a partir de una nota particular, que no es la misma para todos ellos. Eso es así debido a que cada \yins tiene una nota tónica que resulta más habitual, y aunque es posible trasponerlo a otra nota distinta, en la práctica eso no sucede. Es comenzando en esa nota que aparece, o bien a partir de la última nota de otro \yins con el que se <<encadena>> para formar un \maqamb.
+A la hora de presentar los principales \ashnasb, puede verse que cada uno de ellos se ha escrito arrancando a partir de una nota particular, que no es la misma para todos ellos. Eso es así debido a que cada \yins tiene una nota tónica que resulta más habitual, y aunque es posible trasponerlo a otra nota distinta, en la práctica eso no sucede más que con una serie reducida de ellas.
 
 La razón de este hecho es de caracter histórico, y tiene que ver con la propia configuración de instrumentos tales como el ud. Determinadas tónicas dan lugar a conjuntos de notas más sencillos de tocar o con mejor sonoridad (por ejemplo, con mayor cantidad de notas en cuerdas al aire), y ello condiciona su uso más frecuente frente a otras. No es un fenómeno exclusivo de la música árabe. La guitarra condiciona que las tonalidades de la y mi sean más habituales en el \emph{blues} (por ser estas las notas de las dos cuerdas más graves), mientras que el violín es responsable de que una gran parte de las piezas tradicionales irlandesas estén en tono de re, entre otros ejemplos.
 
+Para los \ashnas anteriores, las siguientes son las tónicas más habituales, incluyendo las ya mostradas anteriormente.
+
+\begin{center}
+\begin{minipage}{.4\textwidth}
+\begin{itemize}
+\item Ayam: do, sol y si$\flat$.
+\item Nahawand: do, sol, la y fa.
+\item Nikriz: do, re.
+\item Hiyaz: do, re, sol y la.
+\item Kurd: do, re, sol y la.
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{.4\textwidth}
+\begin{itemize}
+\item Rast: do, sol, re y fa.
+\item Bayati: re, sol y la.
+\item Saba: re y sol.
+\item Sikah: mi\hflat\ y si\hflat.
+\end{itemize}
+\end{minipage}
+\end{center}
+
+Buena parte de las notas anteriores son aquellas en las que otros \ashnas concluyen, o bien se sitúan a distancia de un tono de aquellas. Esto se comprende si sabemos que un \maqam está compuesto generalmente por dos \ashnas <<encadenados>>, con lo que el uso de esas notas como puntos de inicio se debe a que un \yins aparece no como primer grupo de notas de dicho \maqamb, sino como segundo, y arranca por tanto en la nota en la que termina el anterior.
+
 \section{\emph{Maqam}}
 
-A partir de un conjunto de \ashnas (dos en la gran mayoría de casos), se crea la estructura de un \maqamb. Se tiene de este modo un conjunto de notas con unos determinados intervalos entre ellas, los cuales, por el tamaño de los yins, cubren habitualmente una octava. Entendido así, un \maqam puede asemejarse al concepto de \emph{escala}, pero es sin embargo más complejo que este e implica más elementos.
+A partir de un conjunto de \ashnas (dos en la gran mayoría de casos), se crea la estructura de un \maqamb. Se tiene de este modo un conjunto de notas con unos determinados intervalos entre ellas, los cuales, por el tamaño de los \ashnasb, cubren habitualmente una octava. Entendido así, un \maqam puede asemejarse al concepto de \emph{escala}, pero es sin embargo más complejo que este e implica más elementos.
 
 Podemos emplear el conjunto de notas de un \maqam a la manera de una escala para, por ejemplo, improvisar unas frases sobre un ritmo, pero ello no estaría en consonancia con el significado que este tiene dentro de la música árabe. En otras palabras, no estaríamos componiendo música árabe, de la misma forma que no estaríamos tocando un \emph{blues} solo por el hecho de utilizar una escala pentatónica.
 
@@ -193,8 +207,6 @@ En esta sección se describe para cada una de estas familias su \maqam más repr
 En la sección \ref{masmaqamaat} ampliaremos el conjunto descrito en esta sección con otros \maqamaat que forman parte de estas familias.
 
 Para cada uno de los \maqamaat aquí descritos, se proporciona la estructura interválica y las notas y \ashnas que lo componen, la tablatura correspondiente a la octava básica, así como un esquema del diapasón del ud en el que se indica la posición de las notas del \maqam en cuestión. La nota tónica se representa en rojo, mientras que las restantes se representan en azul.
-
-El \emph{ghammaz} y la tónica de cada \maqam se representan en el pentagrama con notas de color gris.
 
 Otros aspectos relativos a cada \maqam, tales como el desarrollo melódico o el vocabulario, se detallarán en secciones posteriores.
 

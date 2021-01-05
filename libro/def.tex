@@ -21,8 +21,7 @@
 \usepackage{scalerel}
 \usepackage{caption}
 \usepackage{xcolor}
-
-%\setkeys{Gin}{width=\linewidth}
+\usepackage{enumitem}
 
 \graphicspath{ {../imagenes/} }
 
@@ -39,7 +38,8 @@
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 
 \newcommand{\hflat}{\scalerel*{\includegraphics{semibemol.png}}{B}}
-%\newcommand{\hflat}{\tikz [baseline] \node [anchor=base, inner sep=0pt] {\reflectbox{$\flat$}};}
+\newcommand{\upbow}{\scalerel*{\includegraphics{upbow.png}}{B}}
+\newcommand{\downbow}{\scalerel*{\includegraphics{downbow.png}}{B}}
 \newcommand{\dsharp}{\tikz [baseline] {%
     \clip (-0.2em,-1ex) rectangle (-0.01em,2ex);
     \node[anchor=base, inner sep=0pt] {$\sharp$};}}
@@ -58,6 +58,12 @@
     \href{run:./audio/#1}{\includegraphics[width=.4cm]{play.png} \hspace{.5cm} #2}
   \end{tcolorbox}
 }
+
+\newenvironment{exercise}
+    {
+   \textbf{Ejercicio}
+   }
+   {}
 
 \newcommand{\yins}{\emph{yins} }
 \newcommand{\yinsb}{\emph{yins}}

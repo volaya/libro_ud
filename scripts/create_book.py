@@ -62,12 +62,11 @@ def generate_maqamat_snippets():
         maqamaat = json.load(f)
 
     lilypond_maqam_template = r'''
-    \begin{center}    
+    \begin{center}
     \begin{lilypond}
     \include "arabic.ly"
 
     #(set-global-staff-size 18)
-    #(set-default-paper-size "pa5")
 
     left-bracket-path = #'(
         (moveto 0 0)
@@ -151,7 +150,7 @@ def generate_maqamat_snippets():
             if ijins < len(ajnas)-1 and ajnas[ijins][1].split(" ")[-1] == ajnas[ijins+1][1].split(" ")[0]:
                 jinsnotes = jinsnotes[:-1]
                 paddingright = -5
-                paddingleft = 1                           
+                paddingleft = 1
             else:
                 paddingright = 0
                 paddingleft = 1

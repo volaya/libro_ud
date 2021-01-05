@@ -26,7 +26,7 @@ La manera más prototípica de empezar un \taqsim o una frase dentro de este es 
     notes = \relative {
     	\key do \rast
     	\time 16/4
-        do8\downbow do do do do do do do do, \downbow do'\downbow do do do do do do 
+        do8\downbow do do do do do do do do, \downbow do'\downbow do do do do do do
         \bar "||"
     }
 
@@ -140,7 +140,7 @@ Es frecuente que la frase de apertura utilice las notas por debajo de la tónica
     notes = \relative {
       \key do \rast
       \time 16/4
-        sol,8 la sib do do do do do, do' do do 
+        sol,8 la sib do do do do do, do' do do
         \bar "||"
     }
 
@@ -217,9 +217,9 @@ La primera frase de un \taqsim suele ser breve y presentar el primer \yins del \
       \omit Score.BarLine
       do,8 do' do do do do do do sisb32 do sisb la sisb8 sisb do do re misb16 re do8
       \undo \omit Score.BarLine
-      re misb fa fa misb misb re re 
+      re misb fa fa misb misb re re
       \omit Score.BarLine
-      misb16 re 
+      misb16 re
       \undo \omit Score.BarLine
       do2
       \bar "||"
@@ -340,7 +340,7 @@ Comencemos con una de las opciones más habituales: un descenso a tónica emplea
     notes = \relative {
     	\key do \rast
     	\time 16/4
-        la8 sol fa misb sol fa misb re fa misb \tuplet 3/2 {re16 (misb re)} do4        
+        la8 sol fa misb sol fa misb re fa misb \tuplet 3/2 {re16 (misb re)} do4
         \bar "||"
     }
 
@@ -679,6 +679,44 @@ La siguiente frase se emplea con frecuencia como segundo cierre, aunque su carac
     	\key do \rast
     	\time 16/4
         r8 \tuplet 3/2 {re16 (misb fa)} sol4 \tuplet 3/2 {fa16 (misb re)} do4
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\audioclip{cierredoble2.mp3}{Frase de doble cierre.}
+
+Otro ejemplo más de esta idea:
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \key do \rast
+      \time 16/4
+        fa8 fa misb16 fa misb re misb16 re16 do sisb do4
+        misb16 (re) misb16 (re) misb16 (re) do sisb do4
         \bar "||"
     }
 

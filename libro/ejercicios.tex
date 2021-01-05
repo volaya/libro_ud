@@ -1,9 +1,9 @@
 \label{ejercicios}
 \chapter{Ejercicios y estudios}
 
-Este capítulo presenta una serie de ejercicios con dos objetivos: desarrollar la técnica y afianzar el conocimiento de los distintos \maqamaatb.
+\newcounter{exercise}
 
-El orden en el que aparecen dentro de cada sección refleja aproximadamente su grado de dificultad técnica, siendo los primeros más sencillos.
+Este capítulo presenta una serie de ejercicios con tres objetivos: desarrollar la técnica, interiorizar algunos de los patrones rítmicos más importantes de la música árabe, y afianzar el conocimiento de los distintos \maqamaatb.
 
 Se recomienda practicarlos a velocidad moderada, haciendo especial énfasis en lograr una interpretación clara y una buena pulsación, para después ir trabajando a un \emph{tempo} más elevado.
 
@@ -14,6 +14,167 @@ Se recomienda practicarlos a velocidad moderada, haciendo especial énfasis en l
 Préstese especial atención a la entonación. La partitura contiene la digitación a emplear.
 
 \audioclip{ejercicio_glissando.mp3}{Ejercicio de \emph{glissando}}
+
+\subsection{Ejercicios de tresillos}
+
+Estos ejercicios están pensados para practicar la pulsación en tresillos según un patrón descendente--ascendente--descendente (\downbow \upbow \downbow). Frases similares a las de esta sección aparecerán en otras partes del capítulo con patrones de pulsación distintos, para trabajar en ese caso esas otras variantes.
+
+\section{Ejercicios rítmicos}
+
+Los siguientes ejercicios se basan en los principales ritmos (\emph{iqaa}) árabes, presentando su estructura principal y algunas variaciones rítimicas.
+
+\subsubsection{Ritmo \emph{malfuf}}
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    #(set-global-staff-size 18)
+    notes = \relative {
+      \key do \minor
+      \time 3,3,2 2/4
+        do8. mib8. mib8
+        do8. mib8. mib8
+        do8. mib8. mib8
+        do8. mib8. mib8
+        do8. mib8. mib16 (re)
+        do8. mib8. mib8
+        do8. mib8. mib16 (re)
+        do8. mib8. mib8
+        do16-> do16 do16 mib16-> mib16 mib16 mib8->
+        do8. mib8. mib8
+        do16-> do16 do16 mib16-> mib16 mib16 mib8->
+        do8. mib8. mib8
+        do16-> do16 do16 mib16-> mib16 mib16 mib16-> (re)
+        do8. mib8. mib8
+        do16-> do16 do16 mib16-> mib16 mib16 mib16-> (re)
+        do8. mib8. mib8
+        do16 sol' sol sol lab (sol) fa mib
+        do8. mib8. mib8
+        do16 sol' sol sol lab (sol) fa mib
+        do8. mib8. mib8
+        do16 sol' sol sol lab (sol) fa mib
+        do16 sol' sol sol lab (sol) fa mib
+        do16 sol' sol sol lab (sol) fa mib
+        do8. mib8. mib8
+        do8. mib8. mib8
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\subsubsection{Ritmo \emph{maqsum}}
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    #(set-global-staff-size 18)
+    notes = \relative {
+      \time 4/4
+      \key do \minor
+      	re8 sol r8 sol fa r8 sol r8
+      	re8 sol r8 sol fa fa sol r8
+      	re8 sol r8 sol fa r8 sol r8
+      	re8 sol r8 sol fa fa sol r8
+      	re8 sol sol16 sol sol sol fa8 r8 sol r8
+      	re8 sol sol16 sol sol sol fa8 fa sol r8
+      	re8 sol sol16 sol sol sol fa8 r8 sol r8
+      	re8 sol sol16 sol sol sol la16 (sol) fa8 sol r8
+      	re8 sol r8 sol fa r8 sol r8
+        re8 la'16 (sib) sol (la) fa (sol) mib (fa) re (mib) do (re) sib (do)
+        sol8 sol' r8 sol fa r8 sol r8
+        re8 sol r8 sol fa fa sol r8
+      	re8 sol r8 sol fa r8 sol r8
+        re8 la'16 (sib) sol (la) fa (sol) mib (fa) re (mib) do (re) sib (do)
+        sol4 r2.
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\subsubsection{Ritmo \emph{baladi}}
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    #(set-global-staff-size 18)
+    notes = \relative {
+      \time 4/4
+      \key do \rast
+      	re8 re r8 do re r8 do r8
+      	re8 re r8 do re r8 do r8
+      	re8 re do16 do do8 re do16 do do8 do16 do
+      	re8 re do16 do do8 re do16 do do8 do16 do
+      	re8 re do16 do do8 re misb16 fa misb re do8
+      	re8 re do16 do do8 re misb16 fa misb re do8
+      	re8 re do16 do do8 re fa8:64 misb16 re do8
+      	re8 re do16 do do8 re fa8:64 misb16 re do8
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
 
 \section{Ejercicios por \maqamb}
 
