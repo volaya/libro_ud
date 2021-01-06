@@ -1,4 +1,4 @@
-\documentclass[executivepaper, 11pt]{book}
+\documentclass[executivepaper,12pt]{book}
 \input{def.tex}
 
 \begin{document}

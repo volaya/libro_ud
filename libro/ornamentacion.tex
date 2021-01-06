@@ -1,5 +1,5 @@
-\label{ornamentacion}
 \chapter{Ornamentación}
+\label{ornamentacion}
 
 Como ya sabemos, la música árabe es fundamentalmente melódica, y es en el propio desarrollo de la melodía donde se encuentra su riqueza. Por ello, la ornamentación de las notas que forman parte de esta es un aspecto fundamental, y todo intérprete de ud debe ser capaz de enriquecer una melodía utilizando algunas de las muchas técnicas que existen para ello. La ornamentación no es un elemento opcional; a la hora de interpretar una pieza, el intérprete debe añadir ornamentos, o de lo contrario se considerará que la suya es una ejecución pobre de dicha pieza.
 
@@ -25,7 +25,35 @@ En el caso del ud, los siguientes son algunos de los ornamentos más habituales,
 
 Se trata de una mera repetición de una nota, generalmente utilizando una pulsación descendente y otra ascendente. Con ello se consigue llenar mejor la duración de la nota y al tiempo darle una mayor vitalidad rítmica a la interpretación.
 
-Se realiza con movimiento de púa-contrapúa, es decir, con una pulsación descendente seguida de una ascendente.
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+
+    notes = \relative do{
+    \key do \rast
+        do8 sisb do re misb re do4
+        do8:16 sisb8:16 do8:16 re8:16 misb8:16 re8:16 do4
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
 
 \audioclip{doblenota.mp3}{Ornamentación: doble nota}
 
@@ -42,7 +70,7 @@ Es habitual variar la posición de la \emph{risha} para la realización del tré
     \include "arabic.ly"
 
     notes = \relative do{
-    \key do \minor
+    \key sol \hijaz
         do8 do8:32 re8 re8:32 mib8 mib8:32 fa8 fa8:32 sol8 sol8:32 lab8 lab8:32 si8 si8:32 r4
         si4:32 lab4:32 sol4:32 fa4:32 lab4:32 sol4:32 fa4:32 mib4:32 sol4:32 fa4:32 mib4:32 re4:32 do1
         \bar "||"
@@ -70,15 +98,14 @@ Es habitual variar la posición de la \emph{risha} para la realización del tré
 
 Otra técnica empleada con frecuencia en el ud es la duplicación de la línea melódica utilizando notas una octava por debajo (en cuyo caso recibe el nombre de \emph{qarar}) o por encima (\emph{jawab}).
 
-Riad Al Sunbati empleaba con frecuencia la primera de estas técnicas como parte característica de su estilo.
-
-En el siguiente fragmento se muestra un ejemplo. El primer compás representa la melodía sin ornamento, y el segundo, la misma melodía ornamentada.
+Es frecuente utilizar esta técnica para notas aisladas, en particular cuando se añade la nota una octava inferior y esta se toca mediante una cuerda al aire, de tal manera que no es necesario ningún movimiento adicional de la mano izquierda. Riad Al Sunbati empleaba con frecuencia este recurso como parte característica de su estilo.
 
 \begin{center}
 \begin{lilypond}
     \include "arabic.ly"
 
     notes = \relative do{
+        \key sol \hijaz
         fa4 sol lab si
         fa,8 fa' sol, sol' lab, lab' si, si'
         \bar "||"
@@ -100,7 +127,6 @@ En el siguiente fragmento se muestra un ejemplo. El primer compás representa la
 
 \audioclip{octavas.mp3}{Ornamentación: octavas}
 
-Es frecuente utilizar esta técnica para notas aisladas, en particular cuando se añade la nota una octava inferior y esta se toca mediante una cuerda al aire, de tal manera que no es necesario ningún movimiento adicional de la mano izquierda.
 
 \subsection{Vibrato}
 
@@ -134,7 +160,7 @@ El vibrato puede hacerse con cualquiera de los dedos de la mano izquierda pisand
         \Score
         supportNonIntegerFret = ##t
       }
-      
+
     }
 
     <<
@@ -261,6 +287,9 @@ Una técnica muy utilizada por Farid Al Atrash consiste en puntuar una melodía 
         \tuplet 3/2 {sol\downbow do\downbow do\upbow}
         \tuplet 3/2 {lab\downbow do\downbow do\upbow}
         \tuplet 3/2 {si\downbow do\downbow do\upbow}
+        \tuplet 3/2 {lab\downbow do\downbow do\upbow}
+        \tuplet 3/2 {sol\downbow do\downbow do\upbow}
+        fa,4 r4
         \bar "||"
     }
 
@@ -278,7 +307,7 @@ Una técnica muy utilizada por Farid Al Atrash consiste en puntuar una melodía 
 \end{lilypond}
 \end{center}
 
-\audioclip{ornamento_farid.mp3}{Ornamentación: combinación de ornamentos}
+\audioclip{ornamento_farid.mp3}{Ornamentación: doble pulsación en cuerda inferior}
 
 En este caso, la melodía se toca sobre las cuerdas 2 y 3, y entre las notas de esta se intercalan las notas do de la primera cuerda al aire. Las dos primeras notas de cada tresillo se tocan con pulsaciones descendentes, y la última con pulsación ascendente.
 

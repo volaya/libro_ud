@@ -6,9 +6,8 @@
 \usepackage{fancyhdr}
 \usepackage{geometry}
 \usepackage{paralist}
-\usepackage[raggedright]{titlesec}
 \usepackage{tikz}
-\usetikzlibrary{calc,arrows}
+%\usepackage[margin=0.5in]{geometry}
 \usepackage{ifthen}
 \usepackage[protrusion=true,expansion=true]{microtype}
 \usepackage{titlesec}
@@ -16,12 +15,19 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
-\usepackage{multimedia}
 \usepackage{tcolorbox}
 \usepackage{scalerel}
 \usepackage{caption}
 \usepackage{xcolor}
 \usepackage{enumitem}
+
+%\addtolength{\oddsidemargin}{-.4in}
+\addtolength{\evensidemargin}{-.4in}
+\addtolength{\textwidth}{.4in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textheight}{.8in}
+
+\usetikzlibrary{calc,arrows}
 
 \graphicspath{ {../imagenes/} }
 
@@ -37,6 +43,7 @@
 \newcommand{\hsp}{\hspace{20pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 
+\newcommand{\newexercise}[1]{\stepcounter{exercise}\subsubsection{Ejercicio \arabic{exercise}. #1}}
 \newcommand{\hflat}{\scalerel*{\includegraphics{semibemol.png}}{B}}
 \newcommand{\upbow}{\scalerel*{\includegraphics{upbow.png}}{B}}
 \newcommand{\downbow}{\scalerel*{\includegraphics{downbow.png}}{B}}
@@ -49,7 +56,7 @@
   \begin{center}
   {\Huge \textsc{ #1}}\\
   {\large #2}\\
-  Maqam: {\large #3}
+  {\large Maqam: #3}
   \end{center}
 }
 
@@ -58,12 +65,6 @@
     \href{run:./audio/#1}{\includegraphics[width=.4cm]{play.png} \hspace{.5cm} #2}
   \end{tcolorbox}
 }
-
-\newenvironment{exercise}
-    {
-   \textbf{Ejercicio}
-   }
-   {}
 
 \newcommand{\yins}{\emph{yins} }
 \newcommand{\yinsb}{\emph{yins}}

@@ -9,26 +9,273 @@ Se recomienda practicarlos a velocidad moderada, haciendo especial énfasis en l
 
 \section{Ejercicios técnicos}
 
-\subsubsection{Ejercicio de \emph{glissando}}
+\subsection{Ejercicios de trémolo}
 
-Préstese especial atención a la entonación. La partitura contiene la digitación a emplear.
+\newexercise{}
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \key sol \hijaz
+      \time 4/4
+      do4 do4:32 re4 re4:32 mib4 mib4:32 fa4 fa4:32
+      sol4 sol4:32 lab4 lab4:32 si4 r2.
+      si4:32 lab4:32 sol4:32 fa4:32 lab4:32 sol4:32 fa4:32 mi4:32 sol4:32 fa4:32 mib4:32 re4:32 do2 r2
+        \bar "||"
+    }
 
-\audioclip{ejercicio_glissando.mp3}{Ejercicio de \emph{glissando}}
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\newexercise{}
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+
+    notes = \relative {
+      do'4:32 si4:32 lab4:32 sol4:32 fa4:32 mib4:32 re4:32 do4
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+
+\subsection{Ejercicios de \emph{glissando}}
+
+El aspecto más importante de estos ejercicios es prestar atención a la entonación, en especial la de la segunda nota de las dos que se conectan mediante el \emph{glissando}.
+
+La partitura contiene la digitación a emplear en casa caso.
+
+\newexercise{}
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \override Glissando.breakable = ##t
+      \override Glissando.after-line-breaking = ##t
+      \key sol \hijaz
+      \time 4/4
+      \partial 4. do8 re mib\glissando
+        fa4.-1 mib16 re do r16 do8 re mib\glissando
+        fa4.-1 mib16 re do r16 re8 mib fa\glissando
+        sol4.-3\3 fa16 mib re r16 re8 mib fa\glissando
+        sol4.-3\3 fa16 mib re r16 fa8 sol lab\glissando
+        si4.-1 lab16 sol fa r16 fa8 sol lab\glissando
+        si4.-1 lab16 sol fa r16 sol8 lab si\glissando
+        do4.-3\2 sib16 lab sol r16 sol8 lab si\glissando
+        do4.-3\2 sib16 lab sol r16 do,8 re mib\glissando
+        fa4.-1 mib16 re do r16 do8 re mib\glissando
+        fa4.-1 mib16 re do r16 r4.\glissando
+        \bar "||"
+    }
+
+    \layout {
+      \omit Voice.StringNumber
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
 
 \subsection{Ejercicios de tresillos}
 
-Estos ejercicios están pensados para practicar la pulsación en tresillos según un patrón descendente--ascendente--descendente (\downbow \upbow \downbow). Frases similares a las de esta sección aparecerán en otras partes del capítulo con patrones de pulsación distintos, para trabajar en ese caso esas otras variantes.
+Estos ejercicios están pensados para practicar la pulsación en tresillos según dos patrones: descendente--ascendente--descendente (\downbow \upbow \downbow) y descendente--descendente--ascendente (\downbow \downbow \upbow). Cada uno de ellos se ha de trabajar con ambos tipos de pulsación.
 
-\section{Ejercicios rítmicos}
+\newexercise{}
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
 
-Los siguientes ejercicios se basan en los principales ritmos (\emph{iqaa}) árabes, presentando su estructura principal y algunas variaciones rítimicas.
+    notes = \relative {
+      \override Stem.direction = #down
+      \tuplet 3/2 {sol8-> sol sol}
+      \tuplet 3/2 {sol-> sol sol}
+      \tuplet 3/2 {sol-> sol sol}
+      \tuplet 3/2 {sol-> sol sol}
+    }
 
-\subsubsection{Ritmo \emph{malfuf}}
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\newexercise{}
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \override Stem.direction = #down
+      \tuplet 3/2 {sol8 re re}
+      \tuplet 3/2 {sol re re}
+      \tuplet 3/2 {sol re re}
+      \tuplet 3/2 {sol re re}
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\newexercise{}
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \override Stem.direction = #down
+      \tuplet 3/2 {re8 sol sol}
+      \tuplet 3/2 {re sol sol}
+      \tuplet 3/2 {re sol sol}
+      \tuplet 3/2 {re sol sol}
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\newexercise{}
+
+Recorrer un \maqam alternando sus notas con la doble pulsación de una de ellas (en este caso la nota sol, \emph{ghammaz} de la escala que se recorre). Este ejercicio puede adaptarse a otros \maqamaatb. También puede variarse la nota repetida, utilizando por ejemplo el do de la octava superior, de manera que se aumenta la distancia y el salto de cuerdas necesario.
 
 \begin{center}
 \begin{lilypond}
     \include "arabic.ly"
-    #(set-global-staff-size 18)
+    notes = \relative {
+      \override Stem.direction = #down
+      \tuplet 3/2 {do8 sol' sol}
+      \tuplet 3/2 {re sol sol}
+      \tuplet 3/2 {mib sol sol}
+      \tuplet 3/2 {fa sol sol}
+      \tuplet 3/2 {sol sol sol}
+      \tuplet 3/2 {lab sol sol}
+      \tuplet 3/2 {si sol sol}
+      \tuplet 3/2 {do sol sol}
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+
+\section{Ejercicios rítmicos}
+
+Los siguientes ejercicios se basan en los principales ritmos (\emph{iqaa}) árabes, presentando su estructura principal y algunas variaciones rítmicas.
+
+\newexercise{Ritmo \emph{malfuf}}
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+
     notes = \relative {
       \key do \minor
       \time 3,3,2 2/4
@@ -65,10 +312,6 @@ Los siguientes ejercicios se basan en los principales ritmos (\emph{iqaa}) árab
           \TabStaff
         stringTunings = \stringTuning <do, fa, la, re sol do'>
         }
-       \context {
-          \Staff
-          \remove "Time_signature_engraver"
-        }
       indent = #0
       \context {
         \Score
@@ -83,12 +326,12 @@ Los siguientes ejercicios se basan en los principales ritmos (\emph{iqaa}) árab
 \end{lilypond}
 \end{center}
 
-\subsubsection{Ritmo \emph{maqsum}}
+\newexercise{Ritmo \emph{maqsum}}
 
 \begin{center}
 \begin{lilypond}
     \include "arabic.ly"
-    #(set-global-staff-size 18)
+
     notes = \relative {
       \time 4/4
       \key do \minor
@@ -115,10 +358,6 @@ Los siguientes ejercicios se basan en los principales ritmos (\emph{iqaa}) árab
           \TabStaff
         stringTunings = \stringTuning <do, fa, la, re sol do'>
         }
-       \context {
-          \Staff
-          \remove "Time_signature_engraver"
-        }
       indent = #0
       \context {
         \Score
@@ -133,12 +372,12 @@ Los siguientes ejercicios se basan en los principales ritmos (\emph{iqaa}) árab
 \end{lilypond}
 \end{center}
 
-\subsubsection{Ritmo \emph{baladi}}
+\newexercise{Ritmo \emph{baladi}}
 
 \begin{center}
 \begin{lilypond}
     \include "arabic.ly"
-    #(set-global-staff-size 18)
+
     notes = \relative {
       \time 4/4
       \key do \rast
@@ -157,10 +396,6 @@ Los siguientes ejercicios se basan en los principales ritmos (\emph{iqaa}) árab
       \context {
           \TabStaff
         stringTunings = \stringTuning <do, fa, la, re sol do'>
-        }
-       \context {
-          \Staff
-          \remove "Time_signature_engraver"
         }
       indent = #0
       \context {

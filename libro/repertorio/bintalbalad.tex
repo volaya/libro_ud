@@ -4,7 +4,7 @@
 \begin{lilypond}
 
 \include "arabic.ly"
-#(set-global-staff-size 18)
+
 #(set-default-paper-size "pa5")
 
 song =
@@ -16,27 +16,27 @@ fa4 sol la sib16 la sol fa sol4 (sol16) fa sol la fa misb re do re4
 misb fa sol la16 sol fa misb fa4. sol8 fa16 misb re do re4
 }
 \time 4/4
-sib'16 la (la) sib la re, do re la' sol (sol) la sol do, sisb do 
+sib'16 la (la) sib la re, do re la' sol (sol) la sol do, sisb do
 \mark \markup { \musicglyph #"scripts.coda" }
 re4 misb sol16. fa 32 misb16 re32 do re8 r8
 do8 re16 re (re) re16 re8 do8 re re4
 do8 re16 re (re) re16 do8 do8 re re4
 \time 2/4
-r8 fa8 misb re 
+r8 fa8 misb re
 \repeat volta 2{
-	fa misb sol16. fa32 misb16. re 32 
+	fa misb sol16. fa32 misb16. re 32
 	do8 misb re do misb re fa 16. misb32 re16. do32
 	sisb8 re do sisb
 }
 \alternative{
-	{re8 do misb re 
+	{re8 do misb re
 	do fa misb re}
 	{re' do16 sib la sol fa misb}
 }
 \mark \markup { \musicglyph #"scripts.segno" }
 re8 re16 re (re) re re8
 do8 re fa16 sol r8
-do,8 re16 re (re) re re8 
+do,8 re16 re (re) re re8
 do8 re fa16 sol r8
 \repeat volta 2{
 	fa8 re fa sol la do la sol

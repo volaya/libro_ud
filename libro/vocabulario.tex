@@ -217,6 +217,7 @@ La primera frase de un \taqsim suele ser breve y presentar el primer \yins del \
       \omit Score.BarLine
       do,8 do' do do do do do do sisb32 do sisb la sisb8 sisb do do re misb16 re do8
       \undo \omit Score.BarLine
+      \break
       re misb fa fa misb misb re re
       \omit Score.BarLine
       misb16 re
@@ -593,6 +594,44 @@ Aunque menos frecuente, también es posible apoyarse en el \emph{ghammaz} como n
 \end{center}
 
 \audioclip{cierreghammazinferior.mp3}{Cierre con uso de \emph{ghammaz} en octava inferior.}
+
+La nota inmediatamente por encima de la tónica, especialmente si se encuentra a un semitono de aquella (como sucede en el \maqam Nahawand, empleado en el siguiente ejemplo), puede también utilizarse con carácter de nota sensible, deteniéndose en ella y enfatizándola antes de resolver.
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \key do \rast
+      \time 16/4
+        mib16 fa sol la sol fa re mib4:64\fermata (re32) do re16 re, re'2
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{cierrenotasensiblesuperior.mp3}{Cierre con nota inmediatamente superior a la tónica.}
 
 Ampliando esta idea, otra alternativa habitual es llegar a la tónica mediante un motivo melódico ascendente, desde la octava inferior. El siguiente ejemplo combina un patrón melódico descendente que baja a la octava inferior, con otro ascendente que resuelve desde allí sobre la tónica.
 

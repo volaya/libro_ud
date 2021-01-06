@@ -66,8 +66,6 @@ def generate_maqamat_snippets():
     \begin{lilypond}
     \include "arabic.ly"
 
-    #(set-global-staff-size 18)
-
     left-bracket-path = #'(
         (moveto 0 0)
         (lineto 0 -2)
