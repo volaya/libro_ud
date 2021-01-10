@@ -6,6 +6,7 @@
 \newpage
 \mbox{}
 \setcounter{tocdepth}{2}
+\newcounter{naudioclip}[chapter]
 
 \input{front.tex}
 \begin{mainmatter}

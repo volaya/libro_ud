@@ -21,6 +21,43 @@ Esta forma de entender la interpretación no es exclusiva de la música árabe, 
 
 En el caso del ud, los siguientes son algunos de los ornamentos más habituales, utilizados con mayor o menor profusión según los distintos estilos.
 
+
+\subsection{Apoyaturas}
+
+El uso de notas de adorno es común en el ud, y las apoyaturas breves (\emph{acciacatura}) son muy empleadas e importantes para lograr una sonoridad árabe. Lo habitual es que la primera nota (la nota de adorno) sea más aguda que la segunda (nota principal), y en el caso más frecuente, esta última es una nota al aire, de tal modo que solo es necesario digitar primera sobre el mástil. De no ser así, los dedos han de estar preparados sobre el mástil, digitando las dos notas, y el adorno se produce levantando el dedo correspondiente a la nota de adorno inmediatamente después de pulsar la cuerda.
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+
+    notes = \relative do{
+    \key do \rast
+        re'16 misb re do  re (do8)
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\audioclip{Ornamentación: apoyatura breve}
+
+
 \subsection{Doble nota}
 
 Se trata de una mera repetición de una nota, generalmente utilizando una pulsación descendente y otra ascendente. Con ello se consigue llenar mejor la duración de la nota y al tiempo darle una mayor vitalidad rítmica a la interpretación.
@@ -55,7 +92,7 @@ Se trata de una mera repetición de una nota, generalmente utilizando una pulsac
 \end{lilypond}
 \end{center}
 
-\audioclip{doblenota.mp3}{Ornamentación: doble nota}
+\audioclip{Ornamentación: doble nota}
 
 \subsection{Trémolo}
 
@@ -91,10 +128,10 @@ Es habitual variar la posición de la \emph{risha} para la realización del tré
 \end{center}
 
 
-\audioclip{tremolo.mp3}{Ornamentación: trémolo}
+\audioclip{Ornamentación: trémolo}
 
-\label{octavas}
 \subsection{Octavas}
+\label{octavas}
 
 Otra técnica empleada con frecuencia en el ud es la duplicación de la línea melódica utilizando notas una octava por debajo (en cuyo caso recibe el nombre de \emph{qarar}) o por encima (\emph{jawab}).
 
@@ -125,7 +162,7 @@ Es frecuente utilizar esta técnica para notas aisladas, en particular cuando se
 \end{lilypond}
 \end{center}
 
-\audioclip{octavas.mp3}{Ornamentación: octavas}
+\audioclip{Ornamentación: octavas}
 
 
 \subsection{Vibrato}
@@ -172,7 +209,7 @@ El vibrato puede hacerse con cualquiera de los dedos de la mano izquierda pisand
 
 
 
-\audioclip{vibrato.mp3}{Ornamentación: vibrato}
+\audioclip{Ornamentación: vibrato}
 
 \subsection{\emph{Glissando}}
 
@@ -180,7 +217,7 @@ Al carecer de trastes, el oud permite la ejecución de \emph{glissandos} continu
 
 El \emph{glissando} se emplea tanto para hacer una transición ligada entre dos notas de la melodía como para ornamentar una sola nota, a la que se llega deslizando el dedo desde otra posición, por lo general más grave. Éste efecto es similar a una apoyatura.
 
-\audioclip{glissando.mp3}{Ornamentación: \emph{glissando}}
+\audioclip{Ornamentación: \emph{glissando}}
 
 \subsection{Mordentes y trinos}
 
@@ -188,11 +225,11 @@ El mordente consiste en una alternancia rápida entre una nota, la inmediatament
 
 Generalmente se aplica entre una nota y la situada un semitono o un tono por encima de ella, según sea el caso para que esta última también pertenezca al modo melódico en el que se esté tocando.
 
-\audioclip{mordente.mp3}{Ornamentación: mordente}
+\audioclip{Ornamentación: mordente}
 
 Una forma de mordiente particular muy empleado, y con una sonoridad muy característica del ud y de la música árabe, es aplicar el mordente con un único dedo, deslizando este. El mismo dedo que apoya sobre la cuerda en el mástil para producir la primera nota se desplaza hasta la posición de la segunda nota y vuelve después a la anterior, sin que intervenga en ello ningún otro dedo de la mano izquierda.
 
-\audioclip{mordenteb.mp3}{Ornamentación: mordente con \emph{glissando}}
+\audioclip{Ornamentación: mordente con \emph{glissando}}
 
 Este tipo de mordente deslizado solo se aplica entre una nota y la situada un semitono por encima.
 
@@ -226,7 +263,7 @@ El \emph{gruppetto}, en la forma en que aparece como ornamento en el ud y la mú
 \end{lilypond}
 \end{center}
 
-\audioclip{gruppeto.mp3}{Ornamentación: \emph{gruppeto}}
+\audioclip{Ornamentación: \emph{gruppeto}}
 
 En este ejemplo, la nota re se toca con la cuerda al aire, lo que facilita la digitación y ejecución del \emph{gruppeto}.
 
@@ -261,7 +298,7 @@ La pulsación del motivo melódico admite diversas alternativas. La más habitua
 \end{lilypond}
 \end{center}
 
-\audioclip{grupettob.mp3}{Ornamentación: \emph{grupetto} (pulsación alternativa)}
+\audioclip{Ornamentación: \emph{grupetto} (pulsación alternativa)}
 
 Otra opción habitual es combinarlo con un trémolo, de tal manera que se pulsan todas las notas. El patrón rápido ascendente se correspondería con un trémolo corto de tres notas.
 
@@ -307,7 +344,7 @@ Una técnica muy utilizada por Farid Al Atrash consiste en puntuar una melodía 
 \end{lilypond}
 \end{center}
 
-\audioclip{ornamento_farid.mp3}{Ornamentación: doble pulsación en cuerda inferior}
+\audioclip{Ornamentación: doble pulsación en cuerda inferior}
 
 En este caso, la melodía se toca sobre las cuerdas 2 y 3, y entre las notas de esta se intercalan las notas do de la primera cuerda al aire. Las dos primeras notas de cada tresillo se tocan con pulsaciones descendentes, y la última con pulsación ascendente.
 
@@ -339,7 +376,7 @@ Las notas dobles pueden sustituirse por trémolos de cuatro notas, lo cual crea 
 \end{lilypond}
 \end{center}
 
-\audioclip{tremoloflamenco.mp3}{Ornamentación: tremolo + melodía}
+\audioclip{Ornamentación: tremolo + melodía}
 
 Tanto en uno como en otro caso, las notas de la melodía siguen sonando mientras se toca la doble nota al aire o el trémolo.
 
@@ -393,7 +430,7 @@ El primero es de la pieza \emph{Lamma Bada Yatazanna}:
 \end{lilypond}
 \end{center}
 
-\audioclip{lamma_ornamentos.wav}{\emph{Lamma Bada Yatazanna} con y sin ornamentos}
+\audioclip{\emph{Lamma Bada Yatazanna} con y sin ornamentos}
 
 A continuación, un fragmento de la frase inicial de la canción \emph{Longa Farahfaza}, de Riad Al Sunbati:
 
@@ -441,7 +478,7 @@ A continuación, un fragmento de la frase inicial de la canción \emph{Longa Far
 \end{center}
 
 
-\audioclip{lamma_ornamentos.wav}{\emph{Longa Farahfaza} con y sin ornamentos}
+\audioclip{\emph{Longa Farahfaza} con y sin ornamentos}
 
 \section{La ornamentación y los \maqamaat}
 

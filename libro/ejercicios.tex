@@ -7,7 +7,13 @@ Este capítulo presenta una serie de ejercicios con tres objetivos: desarrollar 
 
 Se recomienda practicarlos a velocidad moderada, haciendo especial énfasis en lograr una interpretación clara y una buena pulsación, para después ir trabajando a un \emph{tempo} más elevado.
 
+\section{Estudios y ejercicios progresivos}
+
+Los siguientes estudios y ejercicios se han adaptado de \emph{Método de oud} de Yamil Bashir, y corresponden a los dos primeros años de estudio del ud.
+
 \section{Ejercicios técnicos}
+
+Los ejercicios de esta sección trabajan
 
 \subsection{Ejercicios de trémolo}
 
@@ -15,12 +21,11 @@ Se recomienda practicarlos a velocidad moderada, haciendo especial énfasis en l
 \begin{center}
 \begin{lilypond}
     \include "arabic.ly"
-    notes = \relative {
-      \key sol \hijaz
-      \time 4/4
-      do4 do4:32 re4 re4:32 mib4 mib4:32 fa4 fa4:32
-      sol4 sol4:32 lab4 lab4:32 si4 r2.
-      si4:32 lab4:32 sol4:32 fa4:32 lab4:32 sol4:32 fa4:32 mi4:32 sol4:32 fa4:32 mib4:32 re4:32 do2 r2
+
+    notes = \relative do{
+    \key sol \hijaz
+        do8 do8:32 re8 re8:32 mib8 mib8:32 fa8 fa8:32 sol8 sol8:32 lab8 lab8:32 si8 si8:32 r4
+        si4:32 lab4:32 sol4:32 fa4:32 lab4:32 sol4:32 fa4:32 mib4:32 sol4:32 fa4:32 mib4:32 re4:32 do1
         \bar "||"
     }
 
@@ -29,15 +34,6 @@ Se recomienda practicarlos a velocidad moderada, haciendo especial énfasis en l
           \TabStaff
         stringTunings = \stringTuning <do, fa, la, re sol do'>
         }
-       \context {
-          \Staff
-          \remove "Time_signature_engraver"
-        }
-      indent = #0
-      \context {
-        \Score
-        supportNonIntegerFret = ##t
-      }
     }
 
     <<
@@ -47,25 +43,59 @@ Se recomienda practicarlos a velocidad moderada, haciendo especial énfasis en l
 \end{lilypond}
 \end{center}
 
+
 \newexercise{}
 \begin{center}
 \begin{lilypond}
     \include "arabic.ly"
 
-    notes = \relative {
-      do'4:32 si4:32 lab4:32 sol4:32 fa4:32 mib4:32 re4:32 do4
+    notes = \relative do{
+        \key do \rast
+        \time 3/4
+        \tuplet 5/4 {do16 do' do do do}
+        \tuplet 5/4 {re, do' do do do}
+        \tuplet 5/4 {misb,16 do' do do do}
+        \tuplet 5/4 {re,16 do'4:32}
+        \tuplet 5/4 {misb,16 do'4:32}
+        \tuplet 5/4 {fa,16 do'4:32}
+        \tuplet 5/4 {misb,16 do'4:32}
+        \tuplet 5/4 {fa,16 do'4:32}
+        \tuplet 5/4 {sol16 do4:32}
+        \tuplet 5/4 {fa,16 do'4:32}
+        \tuplet 5/4 {sol16 do4:32}
+        \tuplet 5/4 {la16 do4:32}
+        \tuplet 5/4 {sol16 do4:32}
+        \tuplet 5/4 {la16 do4:32}
+        \tuplet 5/4 {sisb16 do4:32}
+        do2.
+        \tuplet 5/4 {do16 do4:32}
+        \tuplet 5/4 {sisb16 do4:32}
+        \tuplet 5/4 {la16 do4:32}
+        \tuplet 5/4 {sisb16 do4:32}
+        \tuplet 5/4 {la16 do4:32}
+        \tuplet 5/4 {sol16 do4:32}
+        \tuplet 5/4 {la16 do4:32}
+        \tuplet 5/4 {sol16 do4:32}
+        \tuplet 5/4 {fa,16 do'4:32}
+        \tuplet 5/4 {sol16 do4:32}
+        \tuplet 5/4 {fa,16 do'4:32}
+        \tuplet 5/4 {misb,16 do'4:32}
+        \tuplet 5/4 {fa,16 do'4:32}
+        \tuplet 5/4 {misb,16 do'4:32}
+        \tuplet 5/4 {re,16 do'4:32}
+        do,2.
+        \bar "||"
     }
 
     \layout {
       \context {
-          \TabStaff
-        stringTunings = \stringTuning <do, fa, la, re sol do'>
-        }
-      indent = #0
-      \context {
         \Score
         supportNonIntegerFret = ##t
       }
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
     }
 
     <<
@@ -80,7 +110,7 @@ Se recomienda practicarlos a velocidad moderada, haciendo especial énfasis en l
 
 El aspecto más importante de estos ejercicios es prestar atención a la entonación, en especial la de la segunda nota de las dos que se conectan mediante el \emph{glissando}.
 
-La partitura contiene la digitación a emplear en casa caso.
+La partitura contiene la digitación a emplear en cada caso.
 
 \newexercise{}
 \begin{center}
@@ -131,19 +161,26 @@ La partitura contiene la digitación a emplear en casa caso.
 
 \subsection{Ejercicios de tresillos}
 
-Estos ejercicios están pensados para practicar la pulsación en tresillos según dos patrones: descendente--ascendente--descendente (\downbow \upbow \downbow) y descendente--descendente--ascendente (\downbow \downbow \upbow). Cada uno de ellos se ha de trabajar con ambos tipos de pulsación.
+Estos ejercicios están pensados para practicar la pulsación en tresillos según dos patrones: descendente--ascendente--descendente (\downbow \upbow \downbow) y descendente--descendente--ascendente (\downbow \downbow \upbow). El patron correspondiente se indica en cada caso. Es importante prestar atención a los cambios de cuerda, donde reside en muchos casos la mayor dificultad.
 
 \newexercise{}
 \begin{center}
 \begin{lilypond}
     \include "arabic.ly"
-
     notes = \relative {
       \override Stem.direction = #down
-      \tuplet 3/2 {sol8-> sol sol}
-      \tuplet 3/2 {sol-> sol sol}
-      \tuplet 3/2 {sol-> sol sol}
-      \tuplet 3/2 {sol-> sol sol}
+      \tuplet 3/2 {la,8\downbow re\downbow re\upbow}
+      \tuplet 3/2 {la\downbow re\downbow re\upbow}
+      \tuplet 3/2 {re sol sol}
+      \tuplet 3/2 {re sol sol}
+      \tuplet 3/2 {sol do do}
+      \tuplet 3/2 {sol do do}
+      \tuplet 3/2 {sol do do}
+      \tuplet 3/2 {sol do do}
+      \tuplet 3/2 {re, sol sol}
+      \tuplet 3/2 {re sol sol}
+      \tuplet 3/2 {la, re re}
+      \tuplet 3/2 {la re re}
     }
 
     \layout {
@@ -165,16 +202,26 @@ Estos ejercicios están pensados para practicar la pulsación en tresillos segú
 \end{lilypond}
 \end{center}
 
+
 \newexercise{}
 \begin{center}
 \begin{lilypond}
     \include "arabic.ly"
     notes = \relative {
       \override Stem.direction = #down
-      \tuplet 3/2 {sol8 re re}
+      \tuplet 3/2 {do'8\downbow sol\downbow sol\upbow}
+      \tuplet 3/2 {do\downbow sol\downbow sol\upbow}
       \tuplet 3/2 {sol re re}
       \tuplet 3/2 {sol re re}
+      \tuplet 3/2 {re la la}
+      \tuplet 3/2 {re la la}
+      \tuplet 3/2 {re la la}
+      \tuplet 3/2 {re la la}
+      \tuplet 3/2 {sol' re re}
       \tuplet 3/2 {sol re re}
+      \tuplet 3/2 {do' sol sol}
+      \tuplet 3/2 {do sol sol}
+
     }
 
     \layout {
@@ -196,36 +243,7 @@ Estos ejercicios están pensados para practicar la pulsación en tresillos segú
 \end{lilypond}
 \end{center}
 
-\newexercise{}
-\begin{center}
-\begin{lilypond}
-    \include "arabic.ly"
-    notes = \relative {
-      \override Stem.direction = #down
-      \tuplet 3/2 {re8 sol sol}
-      \tuplet 3/2 {re sol sol}
-      \tuplet 3/2 {re sol sol}
-      \tuplet 3/2 {re sol sol}
-    }
 
-    \layout {
-      \context {
-          \TabStaff
-        stringTunings = \stringTuning <do, fa, la, re sol do'>
-        }
-      indent = #0
-      \context {
-        \Score
-        supportNonIntegerFret = ##t
-      }
-    }
-
-    <<
-      \new Staff << \clef "G_8" \notes>>
-      \new TabStaff <<\notes>>
-    >>
-\end{lilypond}
-\end{center}
 
 \newexercise{}
 
@@ -235,15 +253,66 @@ Recorrer un \maqam alternando sus notas con la doble pulsación de una de ellas 
 \begin{lilypond}
     \include "arabic.ly"
     notes = \relative {
+      \key do \rast
       \override Stem.direction = #down
-      \tuplet 3/2 {do8 sol' sol}
-      \tuplet 3/2 {re sol sol}
+      \tuplet 3/2 {do8\downbow sol'\downbow sol\upbow}
+      \tuplet 3/2 {re\downbow sol\downbow sol\upbow}
       \tuplet 3/2 {mib sol sol}
       \tuplet 3/2 {fa sol sol}
       \tuplet 3/2 {sol sol sol}
       \tuplet 3/2 {lab sol sol}
       \tuplet 3/2 {si sol sol}
       \tuplet 3/2 {do sol sol}
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\newexercise{}
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \key do \minor
+      \time 3/4
+      \override Stem.direction = #down
+      \tuplet 3/2 {do8\downbow do\upbow do\downbow}
+      \tuplet 3/2 {re\downbow re\upbow re\downbow}
+      \tuplet 3/2 {mib mib mib}
+      \tuplet 3/2 {fa fa fa}
+      \tuplet 3/2 {sol sol sol}
+      \tuplet 3/2 {la la la}
+      \tuplet 3/2 {sib sib sib}
+      \tuplet 3/2 {do do do}
+      \tuplet 3/2 {re re re}
+      mib4 r2
+      \tuplet 3/2 {mib8 mib mib}
+      \tuplet 3/2 {re re re}
+      \tuplet 3/2 {do do do}
+      \tuplet 3/2 {sib sib sib}
+      \tuplet 3/2 {la la la}
+      \tuplet 3/2 {sol sol sol}
+      \tuplet 3/2 {fa fa fa}
+      \tuplet 3/2 {mib mib mib}
+      \tuplet 3/2 {re re re}
+      do4 r2
     }
 
     \layout {

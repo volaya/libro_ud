@@ -7,7 +7,6 @@
 \usepackage{geometry}
 \usepackage{paralist}
 \usepackage{tikz}
-%\usepackage[margin=0.5in]{geometry}
 \usepackage{ifthen}
 \usepackage[protrusion=true,expansion=true]{microtype}
 \usepackage{titlesec}
@@ -60,9 +59,10 @@
   \end{center}
 }
 
-\newcommand{\audioclip}[2]{
+\newcommand{\audioclip}[1]{
+  \stepcounter{naudioclip}
   \begin{tcolorbox}
-    \href{run:./audio/#1}{\includegraphics[width=.4cm]{play.png} \hspace{.5cm} #2}
+    \href{run:./audio/\arabic{chapter}.\arabic{naudioclip}.mp3}{\includegraphics[width=.4cm]{play.png} \hspace{.5cm} #1 [\arabic{chapter}.\arabic{naudioclip}.mp3]}
   \end{tcolorbox}
 }
 
