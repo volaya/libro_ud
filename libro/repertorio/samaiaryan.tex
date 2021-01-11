@@ -4,7 +4,6 @@
 \begin{lilypond}
 \include "arabic.ly"
 
-#(set-default-paper-size "pa5")
 song = \relative sol {
 \key re \bayati
 \time 10/8
@@ -66,6 +65,7 @@ re'8 do sib la sol fa misb re do re4 r8
     \Score
     supportNonIntegerFret = ##t
   }
+  indent = #0
   \context {
       \TabStaff
     \tabFullNotation

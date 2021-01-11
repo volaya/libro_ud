@@ -5,8 +5,6 @@
 
 \include "arabic.ly"
 
-#(set-default-paper-size "pa5")
-
 song =
 \relative re {
 \time 2/4
@@ -92,6 +90,7 @@ sol, sib re sol
     \Score
     supportNonIntegerFret = ##t
   }
+  indent = #0
   \context {
       \TabStaff
     \tabFullNotation

@@ -4,7 +4,6 @@
 \begin{lilypond}
 \include "arabic.ly"
 
-#(set-default-paper-size "pa5")
 song = \relative do {
 \key mib \major
 \repeat volta 2{
@@ -71,6 +70,7 @@ sol1\fermata \bar "|."
 
 }
 \layout {
+indent = #0
   \context {
     \Score
     supportNonIntegerFret = ##t

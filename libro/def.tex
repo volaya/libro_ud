@@ -13,12 +13,20 @@
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
-\usepackage{hyperref}
-\usepackage{tcolorbox}
+%\usepackage{tcolorbox}
 \usepackage{scalerel}
 \usepackage{caption}
 \usepackage{xcolor}
 \usepackage{enumitem}
+\usepackage{hyperref}
+ \hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=blue,
+     citecolor=black,
+     urlcolor=cyan,
+     allbordercolors=.
+     }
 
 %\addtolength{\oddsidemargin}{-.4in}
 \addtolength{\evensidemargin}{-.4in}
@@ -61,9 +69,11 @@
 
 \newcommand{\audioclip}[1]{
   \stepcounter{naudioclip}
-  \begin{tcolorbox}
-    \href{run:./audio/\arabic{chapter}.\arabic{naudioclip}.mp3}{\includegraphics[width=.4cm]{play.png} \hspace{.5cm} #1 [\arabic{chapter}.\arabic{naudioclip}.mp3]}
-  \end{tcolorbox}
+  \vspace*{0.2cm}
+  %\begin{tcolorbox}
+  \href{run:./audio/\arabic{chapter}.\arabic{naudioclip}.mp3}{\includegraphics[width=.4cm]{play.png} \hspace{.1cm} #1 [\arabic{chapter}.\arabic{naudioclip}.mp3]}
+  %\end{tcolorbox}
+  \vspace*{0.2cm}
 }
 
 \newcommand{\yins}{\emph{yins} }

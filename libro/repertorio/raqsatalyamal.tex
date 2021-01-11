@@ -1,0 +1,62 @@
+\songheader{Raqsat Al Yamal}{Farid Al Atrash}{Nahawand Do}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+
+song = \relative do {
+\time 2/4
+\key mib \major
+
+\repeat volta 2{
+\mark \markup { \musicglyph #"scripts.segno" }
+re 8 re'16 re dod8 re mib re r8 la16 sib
+do8 sib la sol
+la8. sol16 la sol la fad
+re8 do'16 do si8 do
+re do r8 sol16 la
+sib8 la sol fad
+}
+\alternative{
+	{sol4 la fad sol mib}
+	{sol4 sib4}
+}
+r8 sib16 sib sib8 do
+sib do sib8. la16
+sol8 la16 la la8 sol
+sib sol fad mib
+re mib (mib) fad16 sol
+la8 fad sol mib^"Fine"
+
+re mib (mib) fad16 sol
+la8 fad sol mib
+re re16 re (re) re re8
+do re re4
+do8 re16 re (re) re re8
+do 8 re re4
+do8 re16 re (re) re re8
+do8 re re4
+
+\mark \markup { \musicglyph #"scripts.segno" }
+\bar "|."
+}
+
+\layout {
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  indent = #0
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
+\end{lilypond}
+\end{center}

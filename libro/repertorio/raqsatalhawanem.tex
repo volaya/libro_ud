@@ -1,0 +1,106 @@
+\songheader{Raqsat Al Hawanem}{Tradicional}{Huzam Mi\hflat}
+
+\begin{center}
+\begin{lilypond}
+
+\include "arabic.ly"
+
+    song = \relative do{
+      \key do  #`((2 . ,SEMI-FLAT)
+                  (5 . ,FLAT))
+        \time 2/4
+     \repeat volta 2{
+       do 8 misb 16 misb misb8 fa
+        sol8. fa16 misb8. re16
+        do8 misb16 misb misb8 fa8
+        sol16 lab fa sol misb fa re misb
+        do8 fa16 fa fa8 misb16 sol
+        fa4 r8 misb16 fa
+        sol8. fa16 sol fa fa misb
+        misb8 r4 re16 misb
+        fa sol fa misb misb fa misb re
+        re4 sol16 fa misb re
+        do8 misb16 misb misb8 fa
+        sol16 lab fa sol misb fa re misb
+        do8 lab' lab si
+        sol8. fa16 sol fa fa misb
+        misb8 r8 r4
+     }
+     do8 misb16 misb misb8 fa
+        sol8 r4 sol16 lab
+        si8 lab16 sol lab si sol lab
+        fa8 sol r8 sol
+        r8 sol16 lab sol lab fa sol
+        la8 r4 sol16 lab
+        si do lab sol lab si sol lab
+        fa8 sol r8 sol
+        r8 sol16 lab sol lab fa sol
+        lab sol lab si lab si sol lab
+        si do lab sol lab si sol lab
+        fa8 sol4 misb8
+        sol8. fa16 misb re fa sol
+        misb8 r16 do16 re misb do8
+        sol'16 lab sol fa misb re fa sol
+
+        misb8 r16 do16 re misb do8
+        si'16 lab lab sol sol fad sol lab
+        \tuplet 3/2 {sol fa misb} r16 do16 re misb do8
+        misb16 fa solb fa misb re fa sol32 fa
+        misb8 r16 do16 re misb do8 la'16 solb fa sol fa misb fa solb32 fa
+        misb8 r16 do16 re misb do8
+        misb16 fa sol lab sol fa fa misb
+        misb2
+        \repeat volta2{
+        do16 misb8 misb16 misb8 misb
+        fa16 misb re misb fa8 fa
+        do16 fa8 fa16 fa8 fa
+        sol16 fa misb fa sol8 sol
+        do,16 sol'8 sol16 sol8 sol
+        sol16 lab fa sol lab8 lab
+        r16 lab8 lab16 si lab sol8
+        r16 sol8 sol16 lab sol fa8
+        r16 fa16 misb fa sol fa misb8
+        r16 misb8 misb16 fa misb re8
+        r16 re8 re16 misb re do8
+        r16 misb8 misb16 fa misb re8
+        r16 fa16 misb fa sol fa misb8
+        r16 sol8 sol16 lab sol fa8
+        r16 lab16 sol lab si lab sol8
+        r16 sol8 sol16 lab sol fa8
+        r16 fa16 misb fa sol fa fa misb
+        misb2
+        r16 misb16 fa sol fa sol sol8
+        r16 si16 lab sol sol lab sol fa
+        misb fa misb re misb fa sol8
+        r16 si16 la sol sol fa misb fa
+        sol fa fa misb misb4
+        fa16 sol misb fa sol lab fa sol
+        lab sib sol lab sib do lab sib
+        do re si do re misb do re
+        misb2
+        lab,16 fa' fa misb misb re re do
+        do sib sib la sib la la sol
+        sol lab fa lab sol fa fa misb
+        misb2
+        }
+        \bar "||"
+    }
+\layout {
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  indent = #0
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+}
+
+<<
+  \new Staff << \clef "G_8" \song>>
+  \new TabStaff <<\song>>
+>>
+\end{lilypond}
+\end{center}

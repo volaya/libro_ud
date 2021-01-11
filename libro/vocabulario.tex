@@ -370,6 +370,45 @@ Comencemos con una de las opciones más habituales: un descenso a tónica emplea
 
 \audioclip{Cierre con descenso y motivo melódico.}
 
+Es habitual que el descenso a la tónica se produzca desde las cercanías del \emph{ghammaz} o incluso desde la octava, pero si la frase se encuentra cerca de la tónica, puede saltarse hasta una nota superior y comenzar desde allí. Este es uno de los casos en los que aparecen intervalos amplios dentro de la melodía. En el siguiente ejemplo, en el \maqam Nahawand, se salta desde la tónica al \emph{ghammaz} y desde allí se desciende mediante un patrón melodico, al que sigue un cierre con trémolo.
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \key do \minor
+      \time 16/4
+        do8 do do mib re do
+        \tuplet 3/2 {sol' fa mib} \tuplet 3/2 {fa mib re} \tuplet 3/2  {mib re do} do4 \tuplet 3/2 {do8 re mib}
+        fa4:32 re16 do
+        \bar "||"
+    }
+
+    \layout {
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
+\audioclip{Salto hasta \emph{ghammaz} y cierre con descenso.}
+
 El uso del trémolo para enfatizar un cierre es casi obligado en algunos estilos de ud como el árabe. El cierre más simple con uso de trémolo es un simple descenso a tónica siguiendo las notas del \maqamb.
 
 \begin{center}
@@ -708,6 +747,52 @@ En ocasiones, la \emph{qafla} tiene dos partes, o más bien se puede decir que s
 \end{center}
 
 \audioclip{Dos cierres consecutivos.}
+
+
+Otro ejemplo similar, en este caso en \maqam Nahawand:
+
+\begin{center}
+\begin{lilypond}
+    \include "arabic.ly"
+    notes = \relative {
+      \key do \minor
+      \time 32/4
+      sol'16-> sol sol sol
+      fa-> fa fa fa
+      mib-> mib mib mib
+      re-> re re re
+      do8
+      do16 re re mib mib fa fa sol sol
+      la sol fa mib
+      sol fa mib re
+      do
+        \bar "||"
+    }
+
+    \layout {
+      \omit Voice.StringNumber
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+       \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+    }
+
+    <<
+      \new Staff << \clef "G_8" \notes>>
+      \new TabStaff <<\notes>>
+    >>
+\end{lilypond}
+\end{center}
+
 
 La siguiente frase se emplea con frecuencia como segundo cierre, aunque su caracter es más de ornamentación, y es el cierre previo el que deja la melodía concluida sobre la tónica. Se suele tocar con menos volumen que el de la frase anterior, y es habitual no en el cierre del \taqsimb, sino en el de frases intermedias.
 
