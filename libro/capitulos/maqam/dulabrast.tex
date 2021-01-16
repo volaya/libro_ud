@@ -1,0 +1,54 @@
+\subsubsection{Dulab Rast}
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+
+song = \relative {
+\key do \rast
+\partial 2 r8 sol la sisb
+\repeat volta 2{
+do4 sisb8 la sol la sol fa misb fa misb re do sol' la sisb
+do4 sisb8 la sol la sol fa misb fa misb re do4 re8 misb
+fa sol fa misb misb re re do
+}
+\alternative{
+  {do4 r4 r2 r2 r8 sol' la sib}
+  {
+  \repeat volta 2{
+  do,4 fa8 fa fa4 misb
+    fa8 sol fa sol fa4 sol8 r8
+    r4 misb8 fa misb4 re
+    misb8 fa misb fa misb4 fa8 r8
+    r4 re8 misb8 re4 do
+    re4. fa8 misb re re do
+    }
+    \alternative{
+      {do'4 sib8 la sol fa misb re}
+      {do4 sol do re
+      misb8 fa misb re re misb re do}
+    }
+  }
+}
+
+\bar "|."
+}
+
+\layout {
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+  \context {
+      \TabStaff
+    \tabFullNotation
+    stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+}
+
+<<
+  \new TabStaff <<\song>>
+>>
+
+\end{lilypond}
+\end{center}

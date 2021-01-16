@@ -1,0 +1,156 @@
+\begin{samepage}
+    \begin{center}
+    \begin{lilypond}
+    \include "arabic.ly"
+
+    left-bracket-path = #'(
+        (moveto 0 0)
+        (lineto 0 -2)
+        )
+
+    right-bracket-path = #'(
+        (moveto 0 0)
+        (lineto 0 -2)
+        )
+
+    repeat-spanner-start-markup = \markup {
+        \general-align #Y #CENTER
+        \path #0.25 #left-bracket-path
+        }
+
+    repeat-spanner-stop-markup = \markup {
+         \general-align #Y #CENTER
+         \path #0.25 #right-bracket-path
+
+        }
+
+    scale = \relative do {
+
+    \accidentalStyle forget
+    \cadenzaOn
+    \override TextSpanner.style = #'line
+    \override TextSpanner.font-shape = #'caps
+    \override TextSpanner.bound-details.right.text = \repeat-spanner-stop-markup
+    \override TextSpanner.bound-details.left.text = \repeat-spanner-start-markup
+
+    
+    \once \override TextSpanner.bound-details.right.padding = #-5
+    \once \override TextSpanner.bound-details.left.padding = #1
+    \textSpannerUp
+    \tweak color #grey re1 ^\markup{"  Hijaz re"}
+    \startTextSpan
+    mib fad
+    \stopTextSpan
+    
+    \once \override TextSpanner.bound-details.right.padding = #0
+    \once \override TextSpanner.bound-details.left.padding = #1
+    \textSpannerUp
+    \tweak color #grey sol1 ^\markup{"  Nahawand sol"}
+    \startTextSpan
+    la sib do re
+    \stopTextSpan
+    
+    \bar "|"
+    }
+
+    \layout {
+      indent = #0
+      \context {
+        \Score
+        supportNonIntegerFret = ##t
+      }
+      \context {
+          \TabStaff
+        stringTunings = \stringTuning <do, fa, la, re sol do'>
+        }
+      \context {
+          \Staff
+          \remove "Time_signature_engraver"
+        }
+
+    }
+
+    <<
+      \new Staff << \clef "G_8" \scale \bar "|.">>
+      \new TabStaff << \scale>>
+    >>
+    \end{lilypond}
+    \end{center}
+
+    
+\begin{center}
+\resizebox{.8\textwidth}{!}{
+\begin{tikzpicture}[
+    ynode/.style={scale=.35,inner sep=1pt}]
+  \fretboard
+
+\draw[blue!50, fill=blue!50] (6-0) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (6-0) {\small Do};
+
+\draw[red!50, fill=red!50] (6-4) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (6-4) {\small Re};
+
+\draw[blue!50, fill=blue!50] (6-6) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (6-6) {\small Mi$\flat$};
+
+\draw[blue!50, fill=blue!50] (5-0) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (5-0) {\small Sol};
+
+\draw[blue!50, fill=blue!50] (5-4) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (5-4) {\small La};
+
+\draw[blue!50, fill=blue!50] (5-6) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (5-6) {\small Si$\flat$};
+
+\draw[blue!50, fill=blue!50] (5-10) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (5-10) {\small Do};
+
+\draw[red!50, fill=red!50] (4-0) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (4-0) {\small Re};
+
+\draw[blue!50, fill=blue!50] (4-2) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (4-2) {\small Mi$\flat$};
+
+\draw[blue!50, fill=blue!50] (4-8) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (4-8) {\small Fa$\sharp$};
+
+\draw[blue!50, fill=blue!50] (4-10) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (4-10) {\small Sol};
+
+\draw[blue!50, fill=blue!50] (3-0) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (3-0) {\small La};
+
+\draw[blue!50, fill=blue!50] (3-2) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (3-2) {\small Si$\flat$};
+
+\draw[blue!50, fill=blue!50] (3-6) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (3-6) {\small Do};
+
+\draw[red!50, fill=red!50] (3-10) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (3-10) {\small Re};
+
+\draw[blue!50, fill=blue!50] (2-2) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (2-2) {\small Fa$\sharp$};
+
+\draw[blue!50, fill=blue!50] (2-4) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (2-4) {\small Sol};
+
+\draw[blue!50, fill=blue!50] (2-8) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (2-8) {\small La};
+
+\draw[blue!50, fill=blue!50] (2-10) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (2-10) {\small Si$\flat$};
+
+\draw[blue!50, fill=blue!50] (1-0) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (1-0) {\small Do};
+
+\draw[red!50, fill=red!50] (1-4) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (1-4) {\small Re};
+
+\draw[blue!50, fill=blue!50] (1-6) circle [radius=0.09] node[scale=.30] {};
+\node[ynode] at (1-6) {\small Mi$\flat$};
+
+\end{tikzpicture}
+}
+\end{center}
+\end{samepage}

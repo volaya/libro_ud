@@ -1,0 +1,658 @@
+\chapter{Ornamentación}
+\label{ornamentacion}
+
+Como ya sabemos, la música árabe es fundamentalmente melódica, y es en el propio desarrollo de la melodía donde se encuentra su riqueza. Por ello, la ornamentación de las notas que forman parte de esta es un aspecto fundamental, y todo intérprete de ud debe ser capaz de enriquecer una melodía utilizando algunas de las muchas técnicas que existen para ello. La ornamentación no es un elemento opcional; a la hora de interpretar una pieza, el intérprete debe añadir ornamentos, o de lo contrario se considerará que la suya es una ejecución pobre de dicha pieza.
+
+Según escribió el filósofo al-Farabi en su libro \emph{Kitab al-musiqa al-kabir} (\emph{El gran libro de la música}), uno de los principales tratados sobre la música árabe, escrito en el siglo X, <<los ornamentos deben aportar a la melodía brillo, elegancia, abundancia y belleza>>.
+
+La ornamentación es de especial importancia en las notas de una cierta duración, donde se dispone además de mayor margen para ello. Por carecer de trastes, el ud es un instrumento con poco \emph{sustain}, donde las notas pierden pronto su sonido después de pulsarse, siendo esto más notorio en las cuerdas agudas que no tienen entorchado. Algunas de las técnicas que embellecen las notas de larga duración sirven para compensar ese decaimiento de la sonoridad, y ayudan así a que la interpretación no resulte insípida.
+
+Es importante mencionar que el uso correcto de la ornamentación no consiste unicamente en aprender las técnicas correspondientes, sino también en desarrollar un sentido de la oportunidad que haga saber cuándo y cómo deben aplicarse. Un exceso de ornamentación es tan problemático como una falta de ella. Escuchar la manera en la que músicos de ud más experimentados hacen uso de la ornamentación es la única manera de adquirir un criterio acertado al respecto.
+
+\section{Los ornamentos y la notación}
+
+Es posible escribir la ornamentación utilizando la notación musical habitual, pero no es común hacerlo. La ornamentación la decide el propio interprete en el momento de tocar, y lo habitual es que emplee motivos distintos en una nueva interpretación.
+
+En la música árabe, y en particular en la interpretación de esta con el ud, una partitura representa tan solo la información mínima para dar vida a una pieza, lo que podríamos denominar el esqueleto melódico de esta. Corresponde al músico el complementarla con sus propios elementos interpretativos, y embellecerla con su estilo particular de ornamentación.
+
+Esta forma de entender la interpretación no es exclusiva de la música árabe, y aparece en otras tradiciones musicales, en especial las que se transmiten de forma oral. En la música irlandesa, por ejemplo, las canciones que forman parte del repertorio son conocidas por todos sus músicos, pero solo de esa manera esquemática, con las notas fundamentales que son las que apuntalan la armonía de la pieza, y cada cual añade después la ornamentación según su criterio. No solo existen estilos personales de ornamentación y de interpretación, sino también estilos regionales definidos por cómo sean los adornos que se aplican a la melodía.
+
+\section{Ornamentos habituales}
+
+En el caso del ud, los siguientes son algunos de los ornamentos más habituales, utilizados con mayor o menor profusión según los distintos estilos.
+
+
+\subsection{Apoyaturas}
+
+El uso de notas de adorno es común en el ud, y las apoyaturas breves (\emph{acciacatura}) son muy empleadas e importantes para lograr una sonoridad árabe. Lo habitual es que la primera nota (la nota de adorno) sea más aguda que la segunda (nota principal), y en el caso más frecuente, esta última es una nota al aire, de tal modo que solo es necesario digitar primera sobre el mástil. De no ser así, los dedos han de estar preparados sobre el mástil, digitando las dos notas, y el adorno se produce levantando el dedo correspondiente a la nota de adorno inmediatamente después de pulsar la cuerda.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\key do \rast
+re'16 misb re do  re (do8)
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Ornamentación: apoyatura breve}
+
+\subsection{Doble nota}
+
+Se trata de una mera repetición de una nota, generalmente utilizando una pulsación descendente y otra ascendente. Con ello se consigue llenar mejor la duración de la nota y al tiempo darle una mayor vitalidad rítmica a la interpretación.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\key do \rast
+do8 sisb do re misb re do4
+do8:16 sisb8:16 do8:16 re8:16 misb8:16 re8:16 do4
+\bar "||"
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Ornamentación: doble nota}
+
+\subsection{Trémolo}
+
+El trémolo, \emph{rash} en árabe, es una sucesión rápida de movimientos de púa ascendentes y descendentes sobre una misma nota. Es uno de los ornamentos más característicos del ud en el estilo árabe. Tanto es así, que se asume que cualquier nota de larga duración se tocará en forma de trémolo, aun si se añaden a ella también otro tipo de ornamentos.
+
+El trémolo puede ser corto, en cuyo caso tiene tres notas, o más largo. El trémolo corto, se logra con una tensión repentina de la muñeca, que crea un efecto de ráfaga breve. 
+
+Se indican en la partitura con una barra horizontal doble o triple sobre la nota, respectivamente.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol4:16 r2 sol4:32
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+
+A diferencia del trémolo largo, las notas en el trémolo corto no tienen todas ellas la misma duración. Las dos primeras tienen una duración de la mitad de tiempo que la última. Es decir, que lo anterior equivale a:
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol16 sol sol8
+r2
+sol16 sol sol sol
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+Es habitual variar la posición de la \emph{risha} para la realización del trémolo, situándola más perpendicular a las cuerdas, de forma que el contacto con estas se realice con la parte frontal de la púa.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\key sol \hijaz
+do8 do8:32 re8 re8:32 mib8 mib8:32 fa8 fa8:32 sol8 sol8:32 lab8 lab8:32 si8 si8:32 r4
+si4:32 lab4:32 sol4:32 fa4:32 lab4:32 sol4:32 fa4:32 mib4:32 sol4:32 fa4:32 mib4:32 re4:32 do1
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Ornamentación: trémolo}
+
+\subsection{Octavas}
+\label{octavas}
+
+Otra técnica empleada con frecuencia en el ud es la duplicación de la línea melódica utilizando notas una octava por debajo (en cuyo caso recibe el nombre de \emph{qarar}) o por encima (\emph{jawab}).
+
+Es frecuente utilizar esta técnica para notas aisladas, en particular cuando se añade la nota una octava inferior y esta se toca mediante una cuerda al aire, de tal manera que no es necesario ningún movimiento adicional de la mano izquierda. Riad Al Sunbati empleaba con frecuencia este recurso como parte característica de su estilo.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\key sol \hijaz
+fa4 sol lab si
+fa,8 fa' sol, sol' lab, lab' si, si'
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Ornamentación: octavas}
+
+
+\subsection{Vibrato}
+
+El vibrato es una técnica fundamental en el ud, sin la cual resulta imposible lograr su sonoridad característica.
+
+El vibrato consiste en un oscilación rápida de la altura de la nota, y se produce haciendo vibrar la mano izquierda sobre el mástil repetidamente, una vez que la nota está pulsada.
+
+El movimiento que produce el vibrato se realiza principalmente con el codo, moviendo todo el antebrazo, en especial cuando el vibrato es intenso. No se realiza con la muñeca o los dedos, como es habitual en la guitarra. El movimiento de las yemas de los dedos se produce en la dirección que define la propia cuerda.
+
+El dedo pulgar debe situarse en una posición firme en la parte superior del mástil, con el fin de tener buena sujeción.
+
+El vibrato puede hacerse con cualquiera de los dedos de la mano izquierda pisando la cuerda, pero cuantos más dedos estén apoyados, mayores serán la fuerza que puede aplicarse y la estabilidad del movimiento, y por tanto, mayor la intensidad del vibrato que puede obtenerse.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\key do \rast
+\partial 4 re8 misb8 fa4^\prall fa4^\prall fa4^\prall fa4^\prall
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Ornamentación: vibrato}
+
+\subsection{\emph{Glissando}}
+
+Al carecer de trastes, el oud permite la ejecución de \emph{glissandos} continuos.
+
+El \emph{glissando} se emplea tanto para hacer una transición ligada entre dos notas de la melodía como para ornamentar una sola nota, a la que se llega deslizando el dedo desde otra posición, por lo general más grave. Éste efecto es similar a una apoyatura.
+
+\audioclip{Ornamentación: \emph{glissando}}
+
+\subsection{Mordentes y trinos}
+
+El mordente consiste en una alternancia rápida entre una nota, la inmediatamente superior o inferior, y de nuevo la nota de partida. Es un ornamento muy utilizado en el ud.
+
+Generalmente se aplica entre una nota y la situada un semitono o un tono por encima de ella, según sea el caso para que esta última también pertenezca al modo melódico en el que se esté tocando.
+
+\audioclip{Ornamentación: mordente}
+
+Una forma de mordiente particular muy empleado, y con una sonoridad muy característica del ud y de la música árabe, es aplicar el mordente con un único dedo, deslizando este. El mismo dedo que apoya sobre la cuerda en el mástil para producir la primera nota se desplaza hasta la posición de la segunda nota y vuelve después a la anterior, sin que intervenga en ello ningún otro dedo de la mano izquierda.
+
+\audioclip{Ornamentación: mordente con \emph{glissando}}
+
+Este tipo de mordente deslizado solo se aplica entre una nota y la situada un semitono por encima.
+
+\subsection{\emph{Gruppetto}}
+
+El \emph{gruppetto}, en la forma en que aparece como ornamento en el ud y la música árabe, consiste en la sustitución de la nota por un patrón de cinco notas que utiliza las situadas inmediatamente por encima y por debajo de ella (siempre dentro del modo melódico en que se trabaje al igual que se dijo para el mordente). Si la nota en cuestión la denotamos como B, la anterior como A y la posterior como C, el \emph{gruppetto} tiene la forma BCBAB. Un ejemplo de \emph{gruppetto} es el mostrado a continuación, aplicado sobre la nota mi bemol.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+mib8 \tuplet 3/2 {fa16 mib re} mib8
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Ornamentación: \emph{gruppeto}}
+
+En este ejemplo, la nota re se toca con la cuerda al aire, lo que facilita la digitación y ejecución del \emph{gruppeto}.
+
+Nótese que la primera nota tiene mayor duración, y es la frase ascendente la que representa el adorno como tal.
+
+La pulsación del motivo melódico admite diversas alternativas. La más habitual es tocar la primera nota con un golpe descendente de púa, la primera de las notas cortas con uno ascendente, ligar esta con las siguientes dos, y finalmente tocar la última nota con una nueva pulsación descendente. Es decir:
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\override Stem.direction = #down
+mib8\downbow \tuplet 3/2 {fa16\upbow (mib re)} mib8\downbow
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Ornamentación: \emph{grupetto} (pulsación alternativa)}
+
+Otra opción habitual es combinarlo con un trémolo, de tal manera que se pulsan todas las notas. El patrón rápido ascendente se correspondería con un trémolo corto de tres notas.
+
+\subsection{Combinación de ornamentos}
+
+Los ornamentos pueden combinarse para crear distintos efectos.
+
+Por ejemplo, las tres notas que se tocan como parte de un mordente se pueden hacer sonar con una única pulsación, pero es también habitual utilizar para ello un tremolo corto, de tal modo que cada una tenga su pulsación.
+
+De igual modo, un tremolo largo puede aplicarse sobre un trino para darle más intensidad y presencia.
+
+El tremolo también puede combinarse con el uso de octavas, añadiendo la nota adicional y tocando el trémolo sobre la nota de la melodía, o bien al contrario.
+
+Una técnica muy utilizada por Farid Al Atrash consiste en puntuar una melodía con notas dobles sobre una cuerda inferior tocada al aire. Sirva el siguiente ejemplo.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\override Stem.direction = #down
+\tuplet 3/2 {fa8\downbow do'\downbow do\upbow}
+\tuplet 3/2 {sol\downbow do\downbow do\upbow}
+\tuplet 3/2 {lab\downbow do\downbow do\upbow}
+\tuplet 3/2 {si\downbow do\downbow do\upbow}
+\tuplet 3/2 {lab\downbow do\downbow do\upbow}
+\tuplet 3/2 {sol\downbow do\downbow do\upbow}
+fa,4 r4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Ornamentación: doble pulsación en cuerda inferior}
+
+En este caso, la melodía se toca sobre las cuerdas 2 y 3, y entre las notas de esta se intercalan las notas do de la primera cuerda al aire. Las dos primeras notas de cada tresillo se tocan con pulsaciones descendentes, y la última con pulsación ascendente.
+
+Las notas dobles pueden sustituirse por trémolos de cuatro notas, lo cual crea un efecto similar al del trémolo en la guitarra flamenca.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\tuplet 5/4 {fa16 do' do do do}
+\tuplet 5/4 {sol do do do do}
+\tuplet 5/4 {lab do do do do}
+\tuplet 5/4 {si do do do do}
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Ornamentación: tremolo + melodía}
+
+Tanto en uno como en otro caso, las notas de la melodía siguen sonando mientras se toca la doble nota al aire o el trémolo.
+
+\subsection{Secuencias melódicas}
+
+Aunque no se trata de una técnica como tal, es habitual ornamentar las melodías mediante el uso de secuencias melódicas. Es decir, de patrones breves que se repiten, desplazados a lo largo de las notas de la melodía. Algunos de ellos tienen una sonoridad que es muy característica de la música árabe, y aparecen con frecuencia.
+
+Para ilustrar esto, se muestran a continuación dos ejemplos, con fragmentos transcritos en su forma original y con el uso de una secuencia melódica.
+
+El primero es de la pieza \emph{Lamma Bada Yatazanna}.
+
+Sin ornamentación:
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\time 10/8
+\key mib \major
+\partial 8 sol8 |
+do4 re16 mib fa mib mib re re do do si do4 sol8
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+Con ornamentación:
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\time 10/8
+\key mib \major
+\partial 8 sol8 |
+do4 re16 mib fa mib32 fa mib fa re mib re mib do re do re do si do4 sol8
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{\emph{Lamma Bada Yatazanna}}
+
+A continuación, un fragmento de la frase inicial de la canción \emph{Longa Farahfaza}, de Riad Al Sunbati.
+
+Sin ornamentación:
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\time 2/4
+\key sib \major
+re'4 sib
+sol8 re sol sib
+re mib16 re do8 si
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+Con ornamentación:
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\time 2/4
+\key sib \major
+re'16 mib re do sib do sib la
+sol8 re sol sib
+re mib16 re do8 si
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{\emph{Longa Farahfaza}}
+
+\section{La ornamentación y los \maqamaat}
+
+  El uso correcto de los ornamentos implica conocer en qué ocasiones es pertinente aplicarlos y cuándo no, para mantenerse dentro de las reglas estilísticas definidas por la tradición de la música árabe. Hay una relación directa entre este hecho y los distintos \maqamaat, ya que, igual que un determinado ornamento puede o no ser adecuado en una parte de la melodía, también lo es en función de la nota del \maqam que se toque.
+
+  Por ejemplo, en \emph{maqam} Bayati, el vibrato sobre la tercera nota (fa) es casi obligatorio y suele tratarse de un vibrato fuerte, para enfatizarla lo más posible. Sin embargo, es muy poco común aplicar vibrato a la segunda nota (mi semibemol).
+
+  Cada \maqam, como ya se ha dicho, tiene una serie de notas con mayor importancia, y ello condiciona la forma en que los ornamentos se aplican sobre esas notas y las restantes.
+
+\section{Ejemplo práctico}
+
+Como ejemplo de todo lo anterior, se muestra a continuación un fragmento de la canción \emph{***} en su forma original, y una posible interpretación con los ornamentos también transcritos en la partitura.
+
+***
+
+\thispagestyle{empty}

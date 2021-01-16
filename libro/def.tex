@@ -13,7 +13,7 @@
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
-%\usepackage{tcolorbox}
+\usepackage[all]{nowidow}
 \usepackage{scalerel}
 \usepackage{caption}
 \usepackage{xcolor}
@@ -31,12 +31,10 @@
 %\addtolength{\oddsidemargin}{-.4in}
 \addtolength{\evensidemargin}{-.4in}
 \addtolength{\textwidth}{.4in}
-\addtolength{\topmargin}{-.4in}
-\addtolength{\textheight}{.8in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
 
 \usetikzlibrary{calc,arrows}
-
-\graphicspath{ {../imagenes/} }
 
 \pagestyle{empty}
 \fancyhf{}
@@ -70,9 +68,7 @@
 \newcommand{\audioclip}[1]{
   \stepcounter{naudioclip}
   \vspace*{0.2cm}
-  %\begin{tcolorbox}
-  \href{run:./audio/\arabic{chapter}.\arabic{naudioclip}.mp3}{\includegraphics[width=.4cm]{play.png} \hspace{.1cm} #1 [\arabic{chapter}.\arabic{naudioclip}.mp3]}
-  %\end{tcolorbox}
+  \href{run:./audio/\arabic{chapter}.\arabic{naudioclip}.mp3}{\includegraphics[width=.4cm]{../imagenes/play.png} \hspace{.1cm} #1 [\arabic{chapter}.\arabic{naudioclip}.mp3]}
   \vspace*{0.2cm}
 }
 

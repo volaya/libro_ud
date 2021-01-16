@@ -1,3 +1,4 @@
+import re
 import json
 import os
 from subprocess import call
@@ -43,6 +44,72 @@ allnotes = ["do", "rebsb", "reb", "resb", "re", "mibsb", "mib", "misb", "mi", "f
 
 alternative_names = {"solb":"fad"}
 
+lilypondinput_template=r'''
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+%s
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+'''
+
+lilypondinput_template_notime=r'''
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+%s
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+'''
+
 
 def _notetitle(n):
     title = n.capitalize()
@@ -52,7 +119,9 @@ def _notetitle(n):
     return title
 
 
-snippetsfolder = os.path.join(os.path.dirname(os.path.dirname(__file__)), "libro", "snippets")
+chaptersfolder = os.path.join(os.path.dirname(os.path.dirname(__file__)), "libro", "capitulos")
+maqamfolder = os.path.join(chaptersfolder, "maqam")
+oudfolder = os.path.join(chaptersfolder, "elud")
 
 
 def generate_maqamat_snippets():
@@ -168,7 +237,7 @@ def generate_maqamat_snippets():
                     diagram += (diagram_note_template % (color, color, 6-istring, fret, 6-istring, fret, notetitle))
 
         name = maqam["name"]
-        snippetfile = os.path.join(snippetsfolder, f"{name}.tex")
+        snippetfile = os.path.join(maqamfolder, f"{name}.tex")
         with open(snippetfile, "w") as f:
             f.write(r"\begin{samepage}")
             f.write(lilypond_maqam_template % (lilypond_maqam))
@@ -190,7 +259,7 @@ def generate_full_fretboard():
                 diagram += (diagram_note_template % (color, color, 6-istring, fret, 6-istring, fret, notetitle))
 
 
-    snippetfile = os.path.join(snippetsfolder, f"diapason.tex")
+    snippetfile = os.path.join(oudfolder, f"diapason.tex")
     with open(snippetfile, "w") as f:
         f.write(diagram_template % (diagram))
 
@@ -221,13 +290,33 @@ def generate_maqam_analysis_fretboard():
                         diagram += multicolor_diagram_note_template % (color, 6-istring, fret, 6-istring, fret, alpha, alpha, alpha2)
 
 
-        snippetfile = os.path.join(snippetsfolder, f"analysis_{name}.tex")
+        snippetfile = os.path.join(maqamfolder, f"analysis_{name}.tex")
         with open(snippetfile, "w") as f:
             f.write(diagram_template % (diagram))
 
-os.makedirs(snippetsfolder, exist_ok=True)
+def generate_lilypond_files():
+    def replace(match):
+        match = match.group()
+        return lilypondinput_template % ("\n".join(match.splitlines()[1:-1]))
+    def replace2(match):
+        match = match.group()
+        return lilypondinput_template_notime % ("\n".join(match.splitlines()[1:-1]))
+    for f in os.listdir(chaptersfolder):
+        folder = os.path.join(chaptersfolder, f)
+        inputfile = os.path.join(folder, f"{f}.tex_")
+        if os.path.exists(inputfile):
+            with open(inputfile) as inp:
+                s = inp.read()
+            s = re.sub(r'###notime(.|\n)*?###', replace2, s)
+            s = re.sub(r'###(.|\n)*?###', replace, s)
+            outputfile = os.path.join(folder, f"{f}.tex")
+            with open(outputfile, "w") as out:
+                out.write(s)
+
+
 generate_maqamat_snippets()
-generate_maqam_analysis_fretboard()
-generate_full_fretboard()
+#generate_maqam_analysis_fretboard()
+#generate_full_fretboard()
+generate_lilypond_files()
 run_lilypond()
 run_latex()

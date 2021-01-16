@@ -11,14 +11,17 @@
 \input{front.tex}
 \begin{mainmatter}
 \pagestyle{fancy}
-\input{elud.tex}
-\input{musicaarabe.tex}
-\input{maqam.tex}
-\input{ornamentacion.tex}
-\input{taqsim.tex}
-\input{vocabulario.tex}
-\input{ejercicios.tex}
-\input{repertorio.tex}
+\graphicspath{ {../imagenes/} }
+
+\input{capitulos/elud/elud.tex}
+\input{capitulos/musicaarabe/musicaarabe.tex}
+\input{capitulos/maqam/maqam.tex}
+\input{capitulos/ornamentacion/ornamentacion.tex}
+\input{capitulos/taqsim/taqsim.tex}
+\input{capitulos/vocabulario/vocabulario.tex}
+\input{capitulos/ejercicios/ejercicios.tex}
+\input{capitulos/repertorio/repertorio.tex}
+
 \end{mainmatter}
 \end{document}
 
