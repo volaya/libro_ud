@@ -8,9 +8,9 @@ En este capítulo veremos una colección de frases que pueden considerarse <<col
 
 Por sí solo, el contenido de este capítulo no sirve para elaborar un vocabulario completo y, más importante aún, saber cómo y cuando emplearlo, de la misma manera que un libro que recoja la jerga de un idioma no basta para que un hablante sepa cómo utilizar esta. Es necesaria la exposición a esa jerga en su contexto real, verla puesta en práctica, para inferir a partir de ello su utilización, de la misma manera que es necesario escuchar las frases de este capítulo dentro de sus correspondientes improvisaciones para después ser capaz de incorporarlas en las propias de manera natural. No obstante, una recopilación así de patrones melódicos a la manera de un diccionario resulta útil para disponer de un vocabulario básico y poder de este modo entender mejor esas improvisaciones ajenas, haciendo más productivo el estudio de \taqasim y piezas de otros intérpretes.
 
-Dividiremos los patrones de este capítulo en tres grupos principales: inicios, cierres, y motivos melódicos.
+Dividiremos los patrones de este capítulo en tres grupos principales: inicios, cierres, y secuencias melódicos.
 
-Los ejemplos comentados a continuación se presentan en su  mayoría en los \maqamaat Rast y Nahawand, salvo cuando se indica lo contrario. El objetivo no es solo ofrecer una colección de fragmentos y frases, sino presentar en base a ellos las formas más habituales en las que se presentan como elementos de una pieza, para así ayudar a una mejor comprensión de la estructura de un \taqsim y de otras frases similares.
+Los ejemplos comentados a continuación se presentan en su  mayoría en los \maqamaat Rast y Nahawand, salvo cuando se indica lo contrario. El objetivo no es solo ofrecer una colección de fragmentos y frases, sino presentar en base a ellos las formas más habituales en las que se presentan como elementos de una pieza, para así ayudar a una mejor comprensión de la estructura de un \taqsim y de otras frases similares. Junto a ellos, se incluyen secciones particulares para algunos de los \maqamaat más habituales, con una pequeña colección de frases para cada uno de ellos.
 
 \section{Inicios}
 
@@ -60,7 +60,7 @@ do8\downbow do do do do do do do do, \downbow do'\downbow do do do do do do
 
 Nótese que las distintas pulsaciones sobre la misma cuerda se hacen con una pulsación alterna, pero tanto la pulsación de la cuerda más grave como la de la nota sucesiva una octava por encima se han de hacer con pulsación descendente. Se aplica aquí el principio de que, siempre que se produzca un cambio de cuerda, la primera pulsación sobre esta nueva cuerda ha de ser en sentido descendente.
 
-En lugar de comenzar directamente con la nota tónica, es habitual llegar hasta ella tras una pequeña frase que presente el \yins en cuestión. El siguiente inicio es habitual en el \maqam Bayati:
+En lugar de comenzar directamente con la nota tónica, es habitual llegar hasta ella tras una pequeña frase que presente el \yins en cuestión. El siguiente inicio es prototípico en el \maqam Bayati:
 
 
 \begin{center}
@@ -224,7 +224,7 @@ sol8 fa misb re do sisb do re re, re' re re, re' re re, re'
 
 \audioclip{Inicio llegando a tónica desde octava inferior (Bayati).}
 
-La primera frase de un \taqsim suele ser breve y presentar el primer \yins del \maqam, de tal modo que muchas veces no es apenas más que la combinación de una inicio y un cierre. Veáse el ejemplo siguiente:
+La primera frase de un \taqsim suele ser breve y presentar el primer \yins del \maqam, de tal modo que muchas veces no es apenas más que la combinación de un inicio y un cierre. Veáse el ejemplo siguiente:
 
 
 \begin{center}
@@ -238,6 +238,44 @@ do,8 do' do do do do do do sisb32 do sisb la sisb8 sisb do do re misb16 re do8
 re misb fa fa misb misb re re
 misb16 re
 do2
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+O este otro en \maqam Nahawand, más breve, que aun así sirve para inicar con claridad que el \taqsim se desarrolla en este \maqam:
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+mib16 fa sol8 fa sol fa16 mib \tuplet 3/2 {mib (fa mib)} \tuplet 3/2 {re (mib re)} do4
 \bar "||"
 }
 
@@ -354,6 +392,89 @@ sol8 sol sol sol
 
 
 \audioclip{Inicio ascendente hasta \emph{ghammaz} 2.}
+
+
+\subsection{Inicios en \maqam Rast}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do16 misb32 fa misb re misb16 fa sol la sol fa sol sol sol, sol' sol do,,8
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Inicio en \maqam Rast.}
+
+El siguiente inicio arranca en la octava superior, y se utilizaría para abrir una frase intermedia, una vez que se ha llegado a esa altura en el desarrollo melódico del \taqsimb. No se utilizaría para dar comienza al \taqsim en sí.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+la16 do re do re8 re16 do do,8 do do do4
+la'16 do re do re8 re16 do do,8 do do do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Inicio en \maqam Rast.}
+
 
 \section{Cierres}
 
@@ -657,7 +778,7 @@ Aunque menos frecuente, también es posible apoyarse en el \emph{ghammaz} como n
 \include "arabic.ly"
 notes = \relative {
 \key do \rast
-fa,8 fa'4.:32 sol,8 sol'4.:32 do,8 do'2
+fa,8 fa'4.:32 sol,8 sol'4.:32 do,,8 do'2
 \bar "||"
 }
 
@@ -1120,6 +1241,281 @@ re16 do16 do sisb do4
 
 \audioclip{Cierre en \maqam Rast.}
 
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do'16 sisb sisb
+do sisb sisb la8.
+sol32 (la sol) fa8. misb32 do8
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Cierre en \maqam Rast.}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+fa16 fa fa fa
+sol16 fa misb32 (fa) re (misb) do16 do do, do'4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Cierre en \maqam Rast.}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\tuplet 3/2 {misb16 (fa) sol}
+\tuplet 3/2 {misb16 (fa) sol}
+\tuplet 3/2 {misb16 (fa) sol}
+fa4:32 misb32 (re) do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+El cierre sobre la tónica se da habitualmente sobre el do central del ud, y el do más grave (sexta cuerda al aire) se usa para puntuar aquella. Sin embargo, es posible utilizar toda la extensión del maqam en la octava inferior para cerrar sobre este último, como en el siguiente ejemplo
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do'8 sol 
+misb fa sol fa misb re do re do sisb la sol fa misb re do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Cierre en \maqam Rast.}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol16 la sisb do4
+sol,16  la sisb do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Cierre en \maqam Rast.}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+fa16 fa misb fa fa misb fa8:64 misb16 fa sol la sol fa misb re do
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Cierre en \maqam Rast.}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sisb8 re8:64 do8 misb8:64 re8 fa8:64 misb8 sol8:64 fa4
+sol8 sol8:64 fa8 fa8:64 misb8 misb8:64 re8 re8:64 do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Cierre en \maqam Rast.}
+
 \subsection{Cierres en \maqam Bayati}
 \subsection{Cierres en \maqam Nahawand}
 
@@ -1162,9 +1558,49 @@ sol8 fa sol mib16. (re32) do8 do16 re mib fa sol32 (fa) mib16 fa32 (mib) re16 mi
 
 \audioclip{Cierre en \maqam Nahawand.}
 
-\section{Motivos melódicos}
 
-Los motivos melódicos de esta sección no se asocian, por lo general, a un \maqam determinado, y pueden utilizarse en cualquiera de ellos, sin más que adaptar los intervalos y las notas correspondientes.
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do4 do16 sib8. sib16 lab8. lab16 sol8. sol16 fa8. fa16 mib8. mib16 re8. re16 do8.
+re16 mi fa8 mi sol2:32 sol16 fa mib re do
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Cierre en \maqam Nahawand.}
+
+
+\section{Secuencias melódicos}
+
+Las secuencias melódicos de esta sección no se asocian, por lo general, a un \maqam determinado, y pueden utilizarse en cualquiera de ellos, sin más que adaptar los intervalos y las notas correspondientes.
 
 Se trata simplemente de frases o estructuras melódicas habituales, que por la frecuencia con la que aparecen pueden considerarse como parte de esa expresividad <<coloquial>>, y que son las que permiten al interprete crear una melodía que evoque cierta familiaridad en el oyente.
 

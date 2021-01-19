@@ -13,7 +13,7 @@ FRETS = 11
 
 def run_lilypond():
     os.chdir(BOOKPATH)
-    call([PYTHONPATH, LILYPONBDBOOKPATH, "--pdf", "--output", "output", "libro.lytex"])
+    call([PYTHONPATH, LILYPONBDBOOKPATH, "--loglevel=ERROR", "--pdf", "--output", "output", "libro.lytex"])
 
 
 def run_latex():
@@ -314,7 +314,7 @@ def generate_lilypond_files():
                 out.write(s)
 
 
-generate_maqamat_snippets()
+#generate_maqamat_snippets()
 #generate_maqam_analysis_fretboard()
 #generate_full_fretboard()
 generate_lilypond_files()

@@ -449,7 +449,7 @@ la2 re, sol sol,
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-sol4 la si do si la sol fad mire mi fad sol re sol2
+sol4 la si do si la sol fad mi re mi fad sol re sol2
 \bar "||"
 }
 
@@ -481,7 +481,7 @@ sol4 la si do si la sol fad mire mi fad sol re sol2
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-sol si la do si re do la si sol la fad 
+sol4 si la do si re do la si sol la fad 
 sol mi fad re re fad mi sol fad la sol 
 si la re, mi fad
 sol2 sol,
@@ -509,11 +509,282 @@ sol2 sol,
 \end{center}
 
 
+\newexercise{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol,4 la si do re mi fad sol la si do re
+do si la sol fad mi re do si la sol2
+sol4 si re sol sol,2
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\newexercise{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol,8 si la do si re do mi re fad mi sol fad la sol si la do si re do la si sol
+la fa sol mi fa re mi do re si do la sol4 si8 re sol4 re8 si sol2
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\newexercise{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol,8 si la do si re do mi re fad mi sol fad la sol si la do si re do la si sol
+la fa sol mi fa re mi do re si do la sol4 si8 re sol4 re8 si sol4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\newexercise{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol,8  la si do  si do re mi re mi fad sol fad sol la si la si do re 
+re do si la do si la sol si la sol fad la sol fad mi
+sol fad mi re fad mi re do mi re do si re do si la sol4
+si8 re sol4 re8 si sol2
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\newexercise{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol,8 sol sol sol la la la la si si si si do do do do re re re re
+mi mi mi mi fad fad fad fad sol sol sol sol sol sol sol sol
+fad fad fad fad mi mi mi mi re re re re do do do do si si si si 
+la la la la sol sol sol sol
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\newexercise{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol,4 la8 si do re mi fad sol4 fad8 mi re do si la 
+sol4 si8 re sol4 re8 si sol2
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\newexercise{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol,4 la8 si do16 re mi fad sol4
+sol8 la si do re16 do si la sol4
+re8 sol fad mi re do si la sol4 sol' sol,2
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\newexercise{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\time 2/4
+sol,8 la16 si la8 si16 do si8 do16 re do8 re16 mi re8 mi16 fasd mi8 fasd16 sol
+fasd8 sol16 la sol4
+sol8 fasd16 mi fasd8 mi16 re mi8 re16 do re8 do16 si do8 si16 la si8 la16 sol16
+sol4 sol8 si16 re sol4 sol8 re16 si sol2
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
 
 
 \section{Ejercicios técnicos}
 
-Los ejercicios de esta sección trabajan las principales dificultades técnicas del ud. Buena parte de ellos están relacionadas con las formas de ornamentacion melódica que vimos en el capítulo \ref{ornamentacion}.
+Los ejercicios de esta sección trabajan las principales dificultades técnicas del ud. Buena parte de ellas están relacionadas con las formas de ornamentacion melódica que vimos en el capítulo \ref{ornamentacion}.
 
 \subsection{Ejercicios de trémolo}
 
