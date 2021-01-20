@@ -184,6 +184,36 @@ sol8 fasd16 mi fasd8 mi16 re mi8 re16 do re8 do16 si do8 si16 la si8 la16 sol16
 sol4 sol8 si16 re sol4 sol8 re16 si sol2
 ###
 
+
+\newexercise{}
+
+###
+sol8. la16 sisb8. do16 re8. do16 sisb8. la16
+sol8. do16 sisb8. la16 sol8. fasd16 mi8. re16
+sol8. sol16 fasd8. mi16 re8. do16 sisb8. la16
+sol8. sol16 sol'8. sol16 sol,2
+###
+
+\newexercise{}
+
+###
+sol,4 la8 sisb do16 re mi fasd sol4
+sol8. la16 sisb8 do re16 do sisb la sol16 la sol8
+re8. sol16 fasd8 mi re re16 do sisb8. la16
+sol8. sisb16 re8 sol8 sol,2
+###
+
+\newexercise{}
+
+Además de tocar según lo indicado en la partitura, puede hacerse el ejercicio doblando la nota interior de cada 3 (con duración de corchea). Se haría con una pulsación descendente-ascendente, de manera que para cada trio de notas se tocarían cuatro en un patrón \downbow \downbow \upbow \downbow.
+
+###
+sol16 sol8 la16 sisb sisb8 do16 re re8 do16 sisb sisb8 la16
+sol sol8 do16 sisb sisb8 la16 sol sol8 fasd16 mi mi8 re16
+sol16 sol8 sol16 fasd16 fasd8 mi16 re16 re8 do16 sisb16 sisb8 la16
+sol16 sol8 sisb16 re16 re8 sisb16 sol16 sol8 sol16 sol4
+###
+
 \section{Ejercicios técnicos}
 
 Los ejercicios de esta sección trabajan las principales dificultades técnicas del ud. Buena parte de ellas están relacionadas con las formas de ornamentacion melódica que vimos en el capítulo \ref{ornamentacion}.

@@ -26,12 +26,6 @@ En el caso del ud, los siguientes son algunos de los ornamentos más habituales,
 
 El uso de notas de adorno es común en el ud, y las apoyaturas breves (\emph{acciacatura}) son muy empleadas e importantes para lograr una sonoridad árabe. Lo habitual es que la primera nota (la nota de adorno) sea más aguda que la segunda (nota principal), y en el caso más frecuente, esta última es una nota al aire, de tal modo que solo es necesario digitar primera sobre el mástil. De no ser así, los dedos han de estar preparados sobre el mástil, digitando las dos notas, y el adorno se produce levantando el dedo correspondiente a la nota de adorno inmediatamente después de pulsar la cuerda.
 
-###
-\key do \rast
-re'16 misb re do  re (do8)
-###
-
-\audioclip{Ornamentación: apoyatura breve}
 
 \subsection{Doble nota}
 
