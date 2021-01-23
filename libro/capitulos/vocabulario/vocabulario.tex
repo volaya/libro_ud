@@ -1,5 +1,9 @@
 \chapter{Vocabulario}
 
+\newcounter{phrase}
+\newcounter{beginning}
+\newcounter{ending}
+
 %pagina 715 de Arab Music Theory in the modern period
 
 La música árabe, y en especial en la improvisación, hace uso de frases típicas que forman parte de la tradición.
@@ -396,6 +400,7 @@ sol8 sol sol sol
 
 \subsection{Inicios en \maqam Rast}
 
+\newbeginning{}
 
 \begin{center}
 \begin{lilypond}
@@ -431,9 +436,9 @@ do16 misb32 fa misb re misb16 fa sol la sol fa sol sol sol, sol' sol do,,8
 \end{lilypond}
 \end{center}
 
-
 \audioclip{Inicio en \maqam Rast.}
 
+\newbeginning{}
 El siguiente inicio arranca en la octava superior, y se utilizaría para abrir una frase intermedia, una vez que se ha llegado a esa altura en el desarrollo melódico del \taqsimb. No se utilizaría para dar comienza al \taqsim en sí.
 
 
@@ -472,9 +477,130 @@ la'16 do re do re8 re16 do do,8 do do do4
 \end{lilypond}
 \end{center}
 
+\audioclip{Inicio en \maqam Rast.}
+
+\newbeginning{}
+
+Otro ejemplo similar al anterior.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+r16 sol'16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do do, do' do do do 
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
 
 \audioclip{Inicio en \maqam Rast.}
 
+
+\subsection{Inicios en \maqam Bayati}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+re16 sol la sib do re \tuplet 3/2 {do32 (re do)} sib16 do sib la sib \tuplet 3/2 {la32 sib la} sol16 la sol fa re
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Bayati.}
+
+
+\subsection{Inicios en \maqam Nahawand}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do16 mib fa sol sol sol fa fa fa fa fa4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Nahawand.}
 
 \section{Cierres}
 
@@ -1193,13 +1319,13 @@ misb32 (fa misb re) do4
 \end{lilypond}
 \end{center}
 
-
 \audioclip{Cierre con ascenso previo para crear tensión.}
 
 La sección ascendente es frecuente tocarla acelerando el tempo, para así añadir más tensión al desarrollo.
 
 \subsection{Cierres en \maqam Rast}
 
+\newending{}
 
 \begin{center}
 \begin{lilypond}
@@ -1238,9 +1364,9 @@ re16 do16 do sisb do4
 \end{lilypond}
 \end{center}
 
-
 \audioclip{Cierre en \maqam Rast.}
 
+\newending{}
 
 \begin{center}
 \begin{lilypond}
@@ -1278,9 +1404,9 @@ sol32 (la sol) fa8. misb32 do8
 \end{lilypond}
 \end{center}
 
-
 \audioclip{Cierre en \maqam Rast.}
 
+\newending{}
 
 \begin{center}
 \begin{lilypond}
@@ -1317,9 +1443,9 @@ sol16 fa misb32 (fa) re (misb) do16 do do, do'4
 \end{lilypond}
 \end{center}
 
-
 \audioclip{Cierre en \maqam Rast.}
 
+\newending{}
 
 \begin{center}
 \begin{lilypond}
@@ -1358,8 +1484,11 @@ fa4:32 misb32 (re) do4
 \end{lilypond}
 \end{center}
 
+\audioclip{Cierre en \maqam Rast.}
 
-El cierre sobre la tónica se da habitualmente sobre el do central del ud, y el do más grave (sexta cuerda al aire) se usa para puntuar aquella. Sin embargo, es posible utilizar toda la extensión del maqam en la octava inferior para cerrar sobre este último, como en el siguiente ejemplo
+\newending{}
+
+El cierre sobre la tónica se da habitualmente sobre el do central del ud, y el do más grave (sexta cuerda al aire) se usa para puntuar aquella. Sin embargo, es posible utilizar toda la extensión del maqam en la octava inferior para cerrar sobre este último, como en el siguiente ejemplo.
 
 
 \begin{center}
@@ -1397,9 +1526,9 @@ misb fa sol fa misb re do re do sisb la sol fa misb re do4
 \end{lilypond}
 \end{center}
 
-
 \audioclip{Cierre en \maqam Rast.}
 
+\newending{}
 
 \begin{center}
 \begin{lilypond}
@@ -1436,9 +1565,9 @@ sol,16  la sisb do4
 \end{lilypond}
 \end{center}
 
-
 \audioclip{Cierre en \maqam Rast.}
 
+\newending{}
 
 \begin{center}
 \begin{lilypond}
@@ -1474,9 +1603,9 @@ fa16 fa misb fa fa misb fa8:64 misb16 fa sol la sol fa misb re do
 \end{lilypond}
 \end{center}
 
-
 \audioclip{Cierre en \maqam Rast.}
 
+\newending{}
 
 \begin{center}
 \begin{lilypond}
@@ -1513,12 +1642,14 @@ sol8 sol8:64 fa8 fa8:64 misb8 misb8:64 re8 re8:64 do4
 \end{lilypond}
 \end{center}
 
-
 \audioclip{Cierre en \maqam Rast.}
 
 \subsection{Cierres en \maqam Bayati}
+
 \subsection{Cierres en \maqam Nahawand}
 
+\newending{}
+%simon shaheen
 
 \begin{center}
 \begin{lilypond}
@@ -1555,16 +1686,107 @@ sol8 fa sol mib16. (re32) do8 do16 re mib fa sol32 (fa) mib16 fa32 (mib) re16 mi
 \end{lilypond}
 \end{center}
 
+\audioclip{Cierre en \maqam Nahawand.}
+
+\newending{}
+%Omar Abbad
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do'4 do16 sib8. sib16 lab8. lab16 sol8. sol16 fa8. fa16 mib8. mib16 re8. re16 do8.
+re16 mib fa8 mib sol2:32 sol16 fa mib re do
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
 
 \audioclip{Cierre en \maqam Nahawand.}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\tuplet 3/2 {do8 sol do} \tuplet 3/2 {mib do mib} \tuplet 3/2 {sol mib sol} do4\2\prall
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Nahawand.}
+
+\label{secuenciasmelodicasvocabulario}
+\section{Secuencias melódicas y frases}
+
+Las secuencias melódicas y frases de esta sección no se asocian, por lo general, a un \maqam determinado, y pueden utilizarse en cualquiera de ellos, sin más que adaptar los intervalos y las notas correspondientes.
+
+Se trata simplemente de frases o estructuras melódicas habituales, que por la frecuencia con la que aparecen pueden considerarse como parte de esa expresividad <<coloquial>>, y que son las que permiten al interprete crear una melodía que evoque cierta familiaridad en el oyente.
+
+Éntiendase esta sección como un simple <<diccionario>> de esas expresiones, de interés para enriquecer el vocabulario a la hora de improvisar.
+
+En algunas de las grabaciones correspondientes se incluye no solo la frase en sí, sino un fragmento más amplio en el que se incluyen, para de este modo ponerlas en contexto.
+
+\newphrase{}
+
+Una pequeña frase que aparece con mucha frecuencia, especialmente en las posiciones que permiten el uso de la cuerda al aire.
 
 
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-do4 do16 sib8. sib16 lab8. lab16 sol8. sol16 fa8. fa16 mib8. mib16 re8. re16 do8.
-re16 mi fa8 mi sol2:32 sol16 fa mib re do
+sol16 (la32 sol) fa16 sol sol
 \bar "||"
 }
 
@@ -1595,14 +1817,128 @@ re16 mi fa8 mi sol2:32 sol16 fa mib re do
 \end{center}
 
 
-\audioclip{Cierre en \maqam Nahawand.}
+El siguiente ejemplo es un patrón ascendente que utiliza la frase anterior tanto en la segunda como en la primer cuerda.
 
 
-\section{Secuencias melódicos}
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+mib16 mib fa fa sol (la32 sol) fa16 sol la la sib sib do (re32 do) sib16 do do do do do
+\bar "||"
+}
 
-Las secuencias melódicos de esta sección no se asocian, por lo general, a un \maqam determinado, y pueden utilizarse en cualquiera de ellos, sin más que adaptar los intervalos y las notas correspondientes.
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
 
-Se trata simplemente de frases o estructuras melódicas habituales, que por la frecuencia con la que aparecen pueden considerarse como parte de esa expresividad <<coloquial>>, y que son las que permiten al interprete crear una melodía que evoque cierta familiaridad en el oyente.
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
 
-Éntiendase esta sección como un simple <<diccionario>> de esas expresiones, de interés para enriquecer el vocabulario a la hora de improvisar.
+
+\newphrase{}
+
+Otra frase que también aprovecha las cuerdas al aire.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+re16 sol fa sol la sib32 la sol16 fa sol sol
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Frase \arabic{phrase}.}
+
+\newphrase{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol16 sol sol sol la sib
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+     
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Frase \arabic{phrase}.}
+
+Jugando con las tres frases anteriores, un inicio y un cierre, y añadiendo algunas otras notas para conectar todo ello, podemos ya hacer frases más largas como la siguiente.
+
+***
+
+\audioclip{Ejemplo de combinación de pequeñas frases.}
 

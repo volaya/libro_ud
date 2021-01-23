@@ -1,12 +1,6 @@
-\songheader{Ya Tirah Tiri}{Abu Jalil Al-Qabbani}{Rast Do}
+\songheader{Ya Tira Tiri}{Abu Jalil Al-Qabbani}{Rast Do}
 
-\begin{center}
-\begin{lilypond}
-
-\include "arabic.ly"
-
-song =
-\relative {
+###
 \time 4/4
 \key do \rast
 \repeat volta 2{
@@ -28,26 +22,4 @@ fa4 fa fa misb8 re
 	{misb4 re8 do do misb16 fa sol fa misb re}
 	{misb4 re8 do do2}
 }
-\bar "|."
-}
-
-
-\layout {
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-  indent = #0
-  \context {
-      \TabStaff
-    \tabFullNotation
-    stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-}
-
-<<
-  \new Staff << \clef "G_8" \song>>
-  \new TabStaff <<\song>>
->>
-\end{lilypond}
-\end{center}
+###

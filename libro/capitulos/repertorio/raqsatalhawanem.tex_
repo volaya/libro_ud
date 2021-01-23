@@ -1,10 +1,6 @@
 \songheader{Raqsat Al Hawanem}{Tradicional}{Huzam Mi\hflat}
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative {
+###
       \key do  #`((2 . ,SEMI-FLAT)
                   (5 . ,FLAT))
         \time 2/4
@@ -82,25 +78,4 @@ notes = \relative {
         sol lab fa lab sol fa fa misb
         misb2
         }
-\bar "||"
-}
-
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
-<<
-  \new TabStaff <<\notes>>
->>
-\end{lilypond}
-\end{center}
+###

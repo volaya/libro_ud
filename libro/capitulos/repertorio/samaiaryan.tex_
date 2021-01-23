@@ -1,10 +1,6 @@
 \songheader{Samai Bayati}{Ibrahim al-Ayran}{Bayati Re}
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative {
+###
 \key re \bayati
 \time 10/8
 \set Timing.beamExceptions = #'()
@@ -57,25 +53,4 @@ la'16 sib do sib la8 fa 16 sol fa misb re8
 }
 re'8 do sib la sol fa misb re do re4 r8
 \mark \markup { \musicglyph #"scripts.segno" }
-\bar "||"
-}
-
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
-<<
-  \new TabStaff <<\notes>>
->>
-\end{lilypond}
-\end{center}
+###

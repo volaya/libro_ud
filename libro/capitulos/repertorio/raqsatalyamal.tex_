@@ -1,10 +1,6 @@
 \songheader{Raqsat Al Yamal}{Farid Al Atrash}{Nahawand Sol}
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative {
+###
 \time 2/4
 \key re \hijaz
 
@@ -35,25 +31,4 @@ do8 re16 re (re) re re8
 do 8 re re4
 do8 re16 re (re) re re8
 do8 re re4^"D.C. al Fine"
-\bar "||"
-}
-
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
-<<
-  \new TabStaff <<\notes>>
->>
-\end{lilypond}
-\end{center}
+###

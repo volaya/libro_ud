@@ -1,10 +1,6 @@
 \songheader{Tahmila Suznak}{Sami Chawwa}{Suznak Do}
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative {
+###
 \time 2/4
 \key do  #`((2 . ,SEMI-FLAT)
             (5 . ,FLAT))
@@ -172,25 +168,4 @@ sol sol sol
 sol16 lasb sol fa misb re misb fa
 sol8 sol sol sol^"D.C. al Fine"
 \stopTextSpan
-\bar "||"
-}
-
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
-<<
-  \new TabStaff <<\notes>>
->>
-\end{lilypond}
-\end{center}
+###

@@ -1,10 +1,6 @@
 \songheader{Bint Al Shalabiya}{Anónimo}{Nahawand Do}
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative {
+###
 \time 2/4
 \key mib \major
 r8 do16 re mib8 fa16 sol
@@ -41,25 +37,4 @@ fa4 r8 fa8
  {fa4. mib8 re re do do sol'2. fa8 sol}
  {fa4. mib8 re re do8 sib do4 r4}
 }
-\bar "||"
-}
-
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
-<<
-  \new TabStaff <<\notes>>
->>
-\end{lilypond}
-\end{center}
+###

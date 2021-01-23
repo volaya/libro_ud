@@ -194,6 +194,7 @@ Las notas dobles pueden sustituirse por trémolos de cuatro notas, lo cual crea 
 
 Tanto en uno como en otro caso, las notas de la melodía siguen sonando mientras se toca la doble nota al aire o el trémolo.
 
+\label{secuenciasmelodicasvocabulario}
 \subsection{Secuencias melódicas}
 
 Aunque no se trata de una técnica como tal, es habitual ornamentar las melodías mediante el uso de secuencias melódicas. Es decir, de patrones breves que se repiten, desplazados a lo largo de las notas de la melodía. Algunos de ellos tienen una sonoridad que es muy característica de la música árabe, y aparecen con frecuencia.
@@ -246,6 +247,8 @@ re mib16 re do8 si
 
 \audioclip{\emph{Longa Farahfaza}}
 
+En la sección \ref{secuenciasmelodicasvocabulario} se presenta una pequeña colección de secuencias melódcias y frases empleadas con frecuencia en el ud.
+
 \section{La ornamentación y los \maqamaat}
 
   El uso correcto de los ornamentos implica conocer en qué ocasiones es pertinente aplicarlos y cuándo no, para mantenerse dentro de las reglas estilísticas definidas por la tradición de la música árabe. Hay una relación directa entre este hecho y los distintos \maqamaat, ya que, igual que un determinado ornamento puede o no ser adecuado en una parte de la melodía, también lo es en función de la nota del \maqam que se toque.
@@ -256,8 +259,31 @@ re mib16 re do8 si
 
 \section{Ejemplo práctico}
 
-Como ejemplo de todo lo anterior, se muestra a continuación un fragmento de la canción \emph{***} en su forma original, y una posible interpretación con los ornamentos también transcritos en la partitura.
+Como ejemplo de todo lo anterior, se muestra a continuación una posible interpretación con los ornamentos también transcritos en la partitura, de la canción \emph{Telet Ya Mahla}. La partitura original, sin ornamentos, se encuentra en la sección \ref{repertorio}.
 
-***
+###
+\key do \major
+\repeat volta 2{
+r4 mi4 fa sol
+fa8 mi fa do do4 do
+sol do re mi
+re do8 mi re2
+do4 do8 re do4 mi8 re
+re mi re do do4 sol
+sol' sol8 fa mi4 mi8 re
+re mi re do do2^"Fine"
+}
+mi8 fa sol fa mi fa 
+sol fa mi fa sol4 do,4
+r4 la' la sol 
+fa mi8 fa sol2
+fa8 sol la sol fa mi sol fa mi re fa mi re4
+r4 sol8 re mi fa mi re 
+re mi fa do do2^"D.C. al Fine"
+###
+
+\audioclip{\emph{Telet Ya Mahla} sin ornamentos}
+
+\audioclip{\emph{Telet Ya Mahla} con ornamentos}
 
 \thispagestyle{empty}

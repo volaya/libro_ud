@@ -713,7 +713,7 @@ El análisis gráfico sería como sigue:
 
 \[
     \textcolor{black!50}{\text{\textbf{do re mi}}\flat\ \text{\textbf{fa sol} ({\it Nahawand do})}+} \left\{\begin{array}{lr}
-        \textcolor{blue!50}{\text{\textbf{sol la}}\flat\ \text{\textbf{si}}\flat\ \text{\textbf{do} ({\it Hiyaz sol})}}\\
+        \textcolor{blue!50}{\text{\textbf{sol la}}\flat\ \text{\textbf{si}}\ \text{\textbf{do} ({\it Hiyaz sol})}}\\
         \textcolor{red!50}{\text{\textbf{sol la}}\hflat\ \text{\textbf{si do} ({\it Bayati sol})}}\\
         \textcolor{red!50}{\text{\textbf{do re mi}}\hflat\ \text{\textbf{fa}}\sharp\ \text{\textbf{sol} ({\it Nikriz do})}}\\
         \end{array}\right.

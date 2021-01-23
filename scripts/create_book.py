@@ -301,17 +301,18 @@ def generate_lilypond_files():
     def replace2(match):
         match = match.group()
         return lilypondinput_template_notime % ("\n".join(match.splitlines()[1:-1]))
-    for f in os.listdir(chaptersfolder):
-        folder = os.path.join(chaptersfolder, f)
-        inputfile = os.path.join(folder, f"{f}.tex_")
-        if os.path.exists(inputfile):
-            with open(inputfile) as inp:
-                s = inp.read()
-            s = re.sub(r'###notime(.|\n)*?###', replace2, s)
-            s = re.sub(r'###(.|\n)*?###', replace, s)
-            outputfile = os.path.join(folder, f"{f}.tex")
-            with open(outputfile, "w") as out:
-                out.write(s)
+    for fold in os.listdir(chaptersfolder):
+        folder = os.path.join(chaptersfolder, fold)
+        for f in os.listdir(folder):
+            if f.endswith("tex_"):
+                inputfile = os.path.join(folder, f) 
+                with open(inputfile) as inp:
+                    s = inp.read()
+                s = re.sub(r'###notime(.|\n)*?###', replace2, s)
+                s = re.sub(r'###(.|\n)*?###', replace, s)
+                outputfile = os.path.join(folder, f"{f.split('.')[0]}.tex")
+                with open(outputfile, "w") as out:
+                    out.write(s)
 
 
 #generate_maqamat_snippets()

@@ -1,10 +1,6 @@
 \songheader{Aziza}{Mohammad Abdel Wahab}{Nahawand Do}
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative {
+###
 \key sib \major
 \time 2/4
 \repeat volta 2{
@@ -69,26 +65,4 @@ sol8. sol32 sol sol16 sol sol sol
 sol8. sol32 sol sol8. sol32 fa mib2\fermata
 
 \mark \markup { \musicglyph #"scripts.segno" }
-\bar "||"
-}
-
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
-<<
-  \new TabStaff <<\notes>>
->>
-\end{lilypond}
-\end{center}
-
+###

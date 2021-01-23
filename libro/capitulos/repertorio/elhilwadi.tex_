@@ -1,0 +1,46 @@
+\songheader{El Helwa Di}{Sayed Darwish}{Hiyaz Re}
+
+###
+\key la \hijaz
+\tempo 4 = 120
+la8 re dod re mi4 fa8 mi 
+re4 mi8 re dod4 re8 dod
+sib la dod sib la2
+la8 re dod re mi4 mi4
+mi8 mi la4 mi mi
+fa8 mi re mi fa2
+fa8 fa4 mi8 fa4 fa8 mi
+fa4 sol8 fa mi4 mi8 re
+mi4 fa8 mi re4 re8 dod
+re4 mi8 re dod4 sib
+dod8 dod re4 sib4. sib8
+sib la dod sib la2^"Fine"
+
+la8 re4 re8 re4 r8 re8
+mi re dod sib dod4 r4
+la8 dod4 dod8 dod4 dod
+re8 dod sib la sib4 r4
+la8 sib4 la8 sib4 re8 dod
+dod sib sib la la4 r4
+sol8 la4 sib8 dod4 re8 dod 
+dod sib sib la la4 r4
+
+r8 mi'8 mi mi mi re dod re 
+mi fa mi re mi4 r4
+r8 mi8 mi mi mi re dod re 
+mi fa mi re mi4 r4
+re8 re4 re8 re4. re8
+mi re dod sib dod4. dod8
+re dod sib la sib4 re8 dod
+dod sib sib la la2
+
+\repeat volta 2{
+\tempo 4 = 80
+\key la \bayati
+r8 re8 re sisb do8. sisb16 la4
+la4 la sol la 
+la8 re re sisb do8. sisb16 la4
+la la sol la^"D.C. al Fine"
+}
+
+###

@@ -1,10 +1,6 @@
 \songheader{Zikrayati}{ Mohamed El Qasabgi}{Nahawand Sol}
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative {
+###
 \key mib \major
 \repeat volta 2{
 do4 r8 sol'4 sol sol8 sol4 r8 lab4 sol4 fa8
@@ -65,25 +61,4 @@ sol1\fermata \bar "|."
  sib reb do sib lab sol fa mib
  mib' re do sib lab sol fa mib^"D.C. al Fine"
  }
-\bar "||"
-}
-
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
-<<
-  \new TabStaff <<\notes>>
->>
-\end{lilypond}
-\end{center}
+###

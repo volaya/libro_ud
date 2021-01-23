@@ -1,10 +1,6 @@
 \songheader{Bint Al Balad}{Mohammad Abdel Wahab}{Bayati Re}
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative {
+###
 \time 8/4
 \key re \bayati
 \repeat volta 2{
@@ -69,25 +65,4 @@ r16 fad16 sol la sol fa^"D.C. al Coda" mi fa misb8 re
 \time 4/4
 re4 misb sol16. fa32 misb16 re32 do re16 la' sib do
 re4 r2
-\bar "||"
-}
-
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
-<<
-  \new TabStaff <<\notes>>
->>
-\end{lilypond}
-\end{center}
+###

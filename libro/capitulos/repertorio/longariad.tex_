@@ -1,10 +1,6 @@
 \songheader{Longa Farahfaza}{Riad Al Sunbati}{Nahawand Sol}
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative {
+###
 \time 2/4
 \key sib \major
 \repeat volta 2{
@@ -79,25 +75,4 @@ sol, sib re sol
     {do'16 sib la sol fad8 la sol4}
 }
 \mark \markup { \musicglyph #"scripts.segno" }
-\bar "||"
-}
-
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
-<<
-  \new TabStaff <<\notes>>
->>
-\end{lilypond}
-\end{center}
+###

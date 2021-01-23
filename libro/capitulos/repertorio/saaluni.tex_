@@ -1,10 +1,6 @@
 \songheader{Saaluni Alnaas}{Ziad Rahbani}{Bayati Re}
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative {
+###
 \key re \bayati
 \repeat volta 2{
 re8 la' sol la fa sol la16 sib la sib
@@ -34,25 +30,4 @@ fa8 sib sib do sib fa sib sib16 do
 re4 do sib la
 sol8 la sisb do re4 sol,4
 fa8 sol misb fa re4 misb8 re^"D.D. al Fine"
-\bar "||"
-}
-
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
-<<
-  \new TabStaff <<\notes>>
->>
-\end{lilypond}
-\end{center}
+###
