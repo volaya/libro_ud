@@ -3,6 +3,7 @@
 \newcounter{phrase}
 \newcounter{beginning}
 \newcounter{ending}
+\newcounter{sequence}
 
 %pagina 715 de Arab Music Theory in the modern period
 
@@ -12,9 +13,9 @@ En este capítulo veremos una colección de frases que pueden considerarse <<col
 
 Por sí solo, el contenido de este capítulo no sirve para elaborar un vocabulario completo y, más importante aún, saber cómo y cuando emplearlo, de la misma manera que un libro que recoja la jerga de un idioma no basta para que un hablante sepa cómo utilizar esta. Es necesaria la exposición a esa jerga en su contexto real, verla puesta en práctica, para inferir a partir de ello su utilización, de la misma manera que es necesario escuchar las frases de este capítulo dentro de sus correspondientes improvisaciones para después ser capaz de incorporarlas en las propias de manera natural. No obstante, una recopilación así de patrones melódicos a la manera de un diccionario resulta útil para disponer de un vocabulario básico y poder de este modo entender mejor esas improvisaciones ajenas, haciendo más productivo el estudio de \taqasim y piezas de otros intérpretes.
 
-Dividiremos los patrones de este capítulo en tres grupos principales: inicios, cierres, y secuencias melódicos.
+Dividiremos los patrones de este capítulo en tres grupos principales: inicios, cierres, frases breves y secuencias melódicas.
 
-Los ejemplos comentados a continuación se presentan en su  mayoría en los \maqamaat Rast y Nahawand, salvo cuando se indica lo contrario. El objetivo no es solo ofrecer una colección de fragmentos y frases, sino presentar en base a ellos las formas más habituales en las que se presentan como elementos de una pieza, para así ayudar a una mejor comprensión de la estructura de un \taqsim y de otras frases similares. Junto a ellos, se incluyen secciones particulares para algunos de los \maqamaat más habituales, con una pequeña colección de frases para cada uno de ellos.
+Los ejemplos comentados a continuación se presentan en su  mayoría en los \maqamaat Rast y Nahawand, salvo cuando se indica lo contrario. El objetivo no es solo ofrecer una colección de fragmentos y frases, sino presentar en base a ellos las formas más habituales en las que se presentan como elementos de una pieza, para así ayudar a una mejor comprensión de la estructura de un \taqsim y de otras frases similares. Junto a ellos, y en las dos primeras secciones (inicios y cierres), se incluyen secciones particulares para algunos de los \maqamaat más habituales.
 
 \section{Inicios}
 
@@ -145,6 +146,11 @@ re16 sol la sib do re \tuplet 3/2 {do32 (re do)} sib16 do sib la sib \tuplet 3/2
 ###
 \audioclip{Inicio en \maqam Bayati.}
 
+\newbeginning{}
+###notime
+r16  fa16 misb re misb re re do re re re re
+###
+\audioclip{Inicio en \maqam Bayati.}
 
 \subsection{Inicios en \maqam Nahawand}
 
@@ -422,16 +428,15 @@ re16 mib fa8 mib sol2:32 sol16 fa mib re do
 ###
 \audioclip{Cierre en \maqam Nahawand.}
 
-\label{secuenciasmelodicasvocabulario}
-\section{Secuencias melódicas y frases}
+\label{frases}
+\section{Frases breves}
 
-Las secuencias melódicas y frases de esta sección no se asocian, por lo general, a un \maqam determinado, y pueden utilizarse en cualquiera de ellos, sin más que adaptar los intervalos y las notas correspondientes.
-
-Se trata simplemente de frases o estructuras melódicas habituales, que por la frecuencia con la que aparecen pueden considerarse como parte de esa expresividad <<coloquial>>, y que son las que permiten al interprete crear una melodía que evoque cierta familiaridad en el oyente.
+Esta sección contiene frases breves que aparecen repetidamente en gran numero de \taqasim, y que pueden considerarse como <<clichés>> dentro de la improvisación con el ud.  Por la frecuencia con la que aparecen, pueden considerarse como parte de la expresividad <<coloquial>> de la música árabe, y permiten al interprete crear una melodía que evoque cierta familiaridad en el oyente.
 
 Éntiendase esta sección como un simple <<diccionario>> de esas expresiones, de interés para enriquecer el vocabulario a la hora de improvisar.
 
 En algunas de las grabaciones correspondientes se incluye no solo la frase en sí, sino un fragmento más amplio en el que se incluyen, para de este modo ponerlas en contexto.
+
 
 \newphrase{}
 
@@ -442,7 +447,7 @@ sol16 (la32 sol) fa16 sol sol
 ###
 \audioclip{Frase \arabic{phrase}.}
 
-El siguiente ejemplo es un patrón ascendente que utiliza la frase anterior tanto en la segunda como en la primer cuerda.
+El siguiente ejemplo es un frase ascendente que utiliza el fragmento anterior tanto en la segunda como en la primera cuerda.
 
 ###notime
 mib16 mib fa fa sol (la32 sol) fa16 sol la la sib sib do (re32 do) sib16 do do do do do
@@ -466,9 +471,27 @@ sol16 sol sol sol la sib
 ###
 \audioclip{Frase \arabic{phrase}.}
 
-Jugando con las tres frases anteriores, un inicio y un cierre, y añadiendo algunas otras notas para conectar todo ello, podemos ya hacer frases más largas como la siguiente.
+Jugando con las tres frases anteriores, un inicio y un cierre, y añadiendo algunas otras notas para conectar todo ello, podemos ya hacer frases más largas como la siguiente en \maqam Bayati.
 
 ***
 
 \audioclip{Ejemplo de combinación de pequeñas frases.}
 
+\label{secuenciasmelodicasvocabulario}
+\section{Secuencias melódicas y frases}
+
+Las secuencias melódicas de esta sección no se asocian, por lo general, a un \maqam determinado, y pueden utilizarse en cualquiera de ellos, sin más que adaptar los intervalos y las notas correspondientes. Tambien pueden desplazarse a notas de inicio distintas a las empleadas en la transcripción, manteniéndose dentro del mismo \maqam.
+
+Todas ellas pueden aparecer como parte del desarrollo de una frase más larga, y hacerlo con distinta longitud (el patrón melódico se repite más o menos veces arrancando de distintas notas sucesivas). También pueden emplearse como cierres si se añade un remate al final de la secuencia y se hace terminar esta sobre la tónica del \maqamb. Esto tiene especial sentido en el caso de las secuencias descendentes, pero también las ascendentes pueden emplearse de esta manera.
+
+
+
+\newsequence{}
+###notime
+do16 do la32 la la16
+sisb sisb sol32 sol sol16
+la la fa32 fa fa16
+sol sol misb32 misb misb16
+###
+
+\audioclip{Secuencia \arabic{sequence}.}
