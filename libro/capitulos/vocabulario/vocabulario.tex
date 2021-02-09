@@ -50,7 +50,7 @@ do8\downbow do do do do do do do do, \downbow do'\downbow do do do do do do
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -93,7 +93,7 @@ fa8\downbow misb re do re re re re re re re re re,\downbow re'\downbow re re
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -134,7 +134,7 @@ notes = \relative {
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -155,7 +155,7 @@ Es frecuente que la frase de apertura utilice las notas por debajo de la tónica
 \include "arabic.ly"
 notes = \relative {
 \key do \rast
-  r8 sol,8 la sib do do do do do, do' do do
+  r8 sol,8 la sisb do do do do do, do' do do
 \bar "||"
 }
 
@@ -175,7 +175,7 @@ notes = \relative {
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -216,7 +216,7 @@ sol8 fa misb re do sisb do re re, re' re re, re' re re, re'
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -262,7 +262,7 @@ do2
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -272,6 +272,8 @@ do2
 \end{lilypond}
 \end{center}
 
+
+\audioclip{Primera frase completa.}
 
 O este otro en \maqam Nahawand, más breve, que aun así sirve para inicar con claridad que el \taqsim se desarrolla en este \maqam:
 
@@ -300,7 +302,7 @@ mib16 fa sol8 fa sol fa16 mib \tuplet 3/2 {mib (fa mib)} \tuplet 3/2 {re (mib re
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -313,10 +315,107 @@ mib16 fa sol8 fa sol fa16 mib \tuplet 3/2 {mib (fa mib)} \tuplet 3/2 {re (mib re
 
 \audioclip{Primera frase completa.}
 
-****
-Los patrones anteriores pueden emplearse no solo para arrancar un \taqsimb, sino también para comenzar una frase dentro de este. Hay, sin embargo, algunos patrones que se utilizan habitualmente en este caso, pero que no aparecen como inicio del \taqsimb, tales como los que veremos a continuación.
+Una técnica muy habitual en un \taqsim es tocar una frase breve como las anteriores, formada por un inicio y un cierre, e iniciar la frase siguiente, mas larga, repitiendo el mismo inicio. Esto puede verse en el siguiente ejemplo en \maqam Bayati.
 
-Unos fragmentos de inicio de esta clase son los que arrancan de la tónica y ascienden hasta el \emph{ghammaz}, para allí dar inicio a una frase que se situa sobre el segundo \yins. Los siguientes son algunos ejemplos.
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\key re \bayati
+\partial 16 do,16
+re re' re re re misb32 (re) do16 re
+re,16 re' re re re misb32 (re) do16 re
+re,16 re' re re re r2
+\bar "|"
+\break
+do,16
+re re' re re re misb32 (re) do16 re
+re,16 re' re re re misb32 (re) do16 re
+re, re' misb misb fa fa misb misb8
+fa8 fa8:32 misb16 misb (re) do re re4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Primera frase completa y segunda frase con mismo inicio.}
+
+En ocasiones, esa primera frase no contiene un cierre, sino que se deja inconclusa sobre otra nota del \maqam, creándose un efecto de tensión que se resuelve cuando la segunda frase arranca. Por ejemplo, en el siguiente ejemplo en \maqam Rast, la primera frase se detiene sobre la nota fa.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do
+\bar "|"
+\break
+do
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Primera frase con final inconcluso.}
+
+
+****
+
+
+Los inicios anteriores concluyen todos ellos sobre la tónica. Sin embargo, una frase de inicio puede servir para llegar hasta cualquier otra nota del \maqamb. Un caso particular son los que arrancan de la tónica y ascienden hasta el \emph{ghammaz}, para allí dar inicio a una frase que se situa sobre el segundo \yins. Estos inicios no es habitual utilizarlos para comenzar el \taqsimb, sino como arranque de frases intermedias.
+
+Los siguientes son algunos ejemplos.
 
 
 \begin{center}
@@ -345,7 +444,7 @@ sol8 sol sol sol
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -356,7 +455,7 @@ sol8 sol sol sol
 \end{center}
 
 
-\audioclip{Inicio ascendente hasta \emph{ghammaz} 1.}
+\audioclip{Inicio ascendente hasta \emph{ghammaz}.}
 
 
 \begin{center}
@@ -385,7 +484,7 @@ sol8 sol sol sol
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -396,8 +495,9 @@ sol8 sol sol sol
 \end{center}
 
 
-\audioclip{Inicio ascendente hasta \emph{ghammaz} 2.}
+\audioclip{Inicio ascendente hasta \emph{ghammaz}.}
 
+En general, cualquiera de los inicios de esta sección puede modificarse para desembocar sobre una nota distinta de la tónica o el \emph{ghammaz}, enfatizando esta y continuando desde allí.
 
 \subsection{Inicios en \maqam Rast}
 
@@ -427,7 +527,7 @@ do16 misb32 fa misb re misb16 fa sol la sol fa sol sol sol, sol' sol do,,8
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -440,7 +540,49 @@ do16 misb32 fa misb re misb16 fa sol la sol fa sol sol sol, sol' sol do,,8
 \audioclip{Inicio en \maqam Rast.}
 
 \newbeginning{}
-El siguiente inicio arranca en la octava superior, y se utilizaría para abrir una frase intermedia, una vez que se ha llegado a esa altura en el desarrollo melódico del \taqsimb. 
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do,8 do'16 do8 do16 do8 do16 do8 do16
+do,8 do'16 do8 do16 do8 do16 do8 do16
+do,8 do'16 do8 sisb16 sisb8 la16 sisb8 do16
+do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Rast.}
+
+
+\newbeginning{}
+El siguiente inicio arranca en la octava superior, y se utilizaría para abrir una frase intermedia, una vez que se ha llegado a esa altura en el desarrollo melódico del \taqsimb.
 
 
 \begin{center}
@@ -468,7 +610,7 @@ la'16 do re do re8 re16 do do,8 do do do4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -489,7 +631,7 @@ Otro ejemplo similar al anterior.
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-r16 sol16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do do, do' do do do 
+r16 sol16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do do, do' do do do
 \bar "||"
 }
 
@@ -509,7 +651,7 @@ r16 sol16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do do
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -521,6 +663,44 @@ r16 sol16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do do
 
 \audioclip{Inicio en \maqam Rast.}
 
+\newbeginning{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol,16 sol32 sol sol16 la sisb do re do sisb re do8 do do do
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Rast.}
 
 \subsection{Inicios en \maqam Bayati}
 
@@ -550,7 +730,7 @@ re16 sol la sib do re \tuplet 3/2 {do32 (re do)} sib16 do sib la sib \tuplet 3/2
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -588,7 +768,83 @@ r16  fa16 misb re misb re re do re re re re
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Bayati.}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+re,8 re' re re, re' re re,4 do'8 re misb fa8. misb16 re8 misb re do re re re, re' re
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Bayati.}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+re16 fa8 sol la16 sib32 la sol16 fa sol sol misb fa sol sol sol
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
     }
 }
 
@@ -628,7 +884,7 @@ do16 mib fa sol sol sol fa fa fa fa fa4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -639,6 +895,169 @@ do16 mib fa sol sol sol fa fa fa fa fa4
 \end{center}
 
 \audioclip{Inicio en \maqam Nahawand.}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do8. fa16 mib8 re16 mib32 re
+do8. fa16 mib8 re16 mib32 re
+do8. mib16 re8 re16 do32 si
+do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Nahawand.}
+
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do,16 do' do do do si (do4)
+do16 re mib fa, mib'16 (fa4)
+fa16 mib mib re fa mib mib re re
+do do si (do4)
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Nahawand.}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do'16 re\glissando mib8^\prall re^\prall do sib^\prall do16 do,, do''4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Nahawand.}
+
+
+\subsection{Inicios en \maqam Kurd}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do16 re mib fa fa fa fa fa mib re do re8 re re
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Kurd.}
+
 
 \section{Cierres}
 
@@ -672,7 +1091,7 @@ la8 sol fa misb sol fa misb re fa misb \tuplet 3/2 {re16 (misb re)} do4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -715,7 +1134,7 @@ fa4:32 re16 do
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -756,7 +1175,7 @@ fa4:32 misb4:32 re4:32 do2
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -797,7 +1216,7 @@ la8:64 [sol8:64 fa8:64] sol8:64 [fa8:64 misb8:64] fa8:64 [misb8:64 re8:64] do4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -839,7 +1258,7 @@ do,2
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -880,7 +1299,7 @@ notes = \relative {
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -921,7 +1340,7 @@ do8 re misb fa fa fa fa misb16 fa misb re misb8 re do sisb do4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -962,7 +1381,7 @@ fa,8 fa'4.:32 sol,8 sol'4.:32 do,,8 do'2
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1004,7 +1423,7 @@ mib16 fa sol la sol fa re mib4:64\fermata (re32) do re16 re, re'2
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1045,7 +1464,7 @@ fa8:32 misb8:32 re8:32 do8:32 sisb8:32 la8:32 sol4 sol16 la sib do2
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1087,7 +1506,7 @@ do8 re misb fa4 fa4:32 misb4 misb4:32 re4 re4:32 do
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1136,7 +1555,7 @@ do
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1176,7 +1595,7 @@ r8 \tuplet 3/2 {re16 (misb fa)} sol4 \tuplet 3/2 {fa16 (misb re)} do4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1218,7 +1637,7 @@ misb16 (re) misb16 (re) misb16 (re) do sisb do4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1258,7 +1677,7 @@ r8 do8 re mib fa sol fa sol fa4 mib32 (fa mib re) r4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1283,7 +1702,7 @@ do16 re misb8 re16 misb fa8
 misb16 fa sol8 fa16 sol la8
 sol16 la sisb8 la16 sisb do4
 \bar "|"
-sisb16 do la sisb sol la fa sol 
+sisb16 do la sisb sol la fa sol
 misb fa re misb fa4 fa8:32 misb4 misb8:32 re4 re8:32 do4
 \bar "||"
 }
@@ -1304,7 +1723,7 @@ misb fa re misb fa4 fa8:32 misb4 misb8:32 re4 re8:32 do4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1347,7 +1766,7 @@ misb32 (fa misb re) do4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1392,7 +1811,7 @@ re16 do16 do sisb do4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1432,7 +1851,7 @@ sol32 (la sol) fa8. misb32 do8
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1471,7 +1890,7 @@ sol16 fa misb32 (fa) re (misb) do16 do do, do'4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1512,7 +1931,7 @@ fa4:32 misb32 (re) do4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1533,7 +1952,7 @@ El cierre sobre la tónica se da habitualmente sobre el do central del ud, y el 
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-do'8 sol 
+do'8 sol
 misb fa sol fa misb re do re do sisb la sol fa misb re do4
 \bar "||"
 }
@@ -1554,7 +1973,7 @@ misb fa sol fa misb re do re do sisb la sol fa misb re do4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1593,7 +2012,7 @@ sol,16  la sisb do4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1631,7 +2050,7 @@ fa16 fa misb fa fa misb fa8:64 misb16 fa sol la sol fa misb re do
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1649,7 +2068,7 @@ fa16 fa misb fa fa misb fa8:64 misb16 fa sol la sol fa misb re do
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-sisb8 re8:64 do8 misb8:64 re8 fa8:64 misb8 sol8:64 fa4
+sisb,8 re8:64 do8 misb8:64 re8 fa8:64 misb8 sol8:64 fa4
 sol8 sol8:64 fa8 fa8:64 misb8 misb8:64 re8 re8:64 do4
 \bar "||"
 }
@@ -1670,7 +2089,86 @@ sol8 sol8:64 fa8 fa8:64 misb8 misb8:64 re8 re8:64 do4
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Cierre en \maqam Rast.}
+
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol16 la32 sol sol16 do8:32 la16 sol fa misb re do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Cierre en \maqam Rast.}
+
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+fa8. sol16 fa8 sol
+misb8. fa16 misb8 fa
+re8 re16 misb re8 misb do2
+fa16 misb re do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
     }
 }
 
@@ -1683,6 +2181,84 @@ sol8 sol8:64 fa8 fa8:64 misb8 misb8:64 re8 re8:64 do4
 \audioclip{Cierre en \maqam Rast.}
 
 \subsection{Cierres en \maqam Bayati}
+
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+r16 sib16 (la8) la16  (sol8) sol16 fa8 sol4 sol16 fa (misb) misb4:32 (re16) re, re'4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Cierre en \maqam Bayati.}
+
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol16 sol fa fa misb misb fa4:32 misb32 (fa misb re) do16 re8 re4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Cierre en \maqam Bayati.}
 
 \subsection{Cierres en \maqam Nahawand}
 
@@ -1714,7 +2290,7 @@ sol8 fa sol mib16. (re32) do8 do16 re mib fa sol32 (fa) mib16 fa32 (mib) re16 mi
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1754,7 +2330,7 @@ re16 mib fa8 mib sol2:32 sol16 fa mib re do
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1792,7 +2368,123 @@ notes = \relative {
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Cierre en \maqam Nahawand.}
+
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol8 fa sol lab sol16 sol fa fa mib mib re mib32 re do8 re mib32 fa mib16 mib4:64  (re32) do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Cierre en \maqam Nahawand.}
+
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol8 fa32 mib16 fa8 mib32 re16 mib8 re32 do16 re do8
+lab'16 sol fa sol mib re do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Cierre en \maqam Nahawand.}
+
+
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol8 sol8:32 lab16 (sol) fa4 mib16 (fa) sol fa (mib re) do (re mib re) do (si) do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
     }
 }
 
@@ -1811,8 +2503,9 @@ Esta sección contiene frases breves que aparecen repetidamente en gran numero d
 
 Éntiendase esta sección como un simple <<diccionario>> de esas expresiones, de interés para enriquecer el vocabulario a la hora de improvisar.
 
-En algunas de las grabaciones correspondientes se incluye no solo la frase en sí, sino un fragmento más amplio en el que se incluyen, para de este modo ponerlas en contexto.
+La mayoría de las frases, al ser breves, usan notas que forman parte de un único \yinsb. Por ello, pueden emplearse siempre que el \maqam en el que se toque contenga dicho \yinsb. Esta es una manera muy útil de aprender las frases, de manera que después puedan reutilizarse en diversos contextos melódicos.
 
+En algunas de las grabaciones correspondientes, se incluye no solo la frase en sí, sino un fragmento más amplio que contiene a esta.
 
 \newphrase{}
 
@@ -1843,7 +2536,7 @@ sol16 (la32 sol) fa16 sol sol
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1882,7 +2575,7 @@ mib16 mib fa fa sol (la32 sol) fa16 sol la la sib sib do (re32 do) sib16 do do d
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1923,7 +2616,7 @@ re16 sol fa sol la sib32 la sol16 fa sol sol
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1943,7 +2636,7 @@ re16 sol fa sol la sib32 la sol16 fa sol sol
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-sol16 sol sol sol la sib
+sol16 sol sol sol la32 sib la sol sol16 sol sol sol
 \bar "||"
 }
 
@@ -1963,7 +2656,7 @@ sol16 sol sol sol la sib
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -1975,11 +2668,256 @@ sol16 sol sol sol la sib
 
 \audioclip{Frase \arabic{phrase}.}
 
+Notese que en estas tres frases se enfatiza el uso de la nota que se da con la cuerda al aire, y que en los tres ejemplos se trata de la nota sol. Como ya dijimos, esta nota es de particular importancia, ya que es el \emph{ghammaz} de buena parte de los \maqamaat habituales.
+
 Jugando con las tres frases anteriores, un inicio y un cierre, y añadiendo algunas otras notas para conectar todo ello, podemos ya hacer frases más largas como la siguiente en \maqam Bayati.
 
 ***
 
 \audioclip{Ejemplo de combinación de pequeñas frases.}
+
+\newphrase{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+re'16 mib do re si do lab si sol4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Frase \arabic{phrase}.}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol8
+la16 sib la32 (sib) sol16
+la16 sib la32 (sib) sol16
+la8 la
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Frase \arabic{phrase}.}
+
+\newphrase{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol16 sol32 sol sol16 sol fa sol
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Frase \arabic{phrase}.}
+
+\newphrase{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+la32 (sib) do16 sib sib la la sol sol fa sol
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Frase \arabic{phrase}.}
+
+\newphrase{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sib32 lab sol16 fa fa mib mib re re
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Frase \arabic{phrase}.}
+
+\newphrase{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+r8 \grace re'32 \glissando mib16 \grace re32 \glissando mib16
+do sol do re do sib do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+
+\audioclip{Frase \arabic{phrase}.}
 
 \label{secuenciasmelodicasvocabulario}
 \section{Secuencias melódicas y frases}
@@ -1988,7 +2926,46 @@ Las secuencias melódicas de esta sección no se asocian, por lo general, a un \
 
 Todas ellas pueden aparecer como parte del desarrollo de una frase más larga, y hacerlo con distinta longitud (el patrón melódico se repite más o menos veces arrancando de distintas notas sucesivas). También pueden emplearse como cierres si se añade un remate al final de la secuencia y se hace terminar esta sobre la tónica del \maqamb. Esto tiene especial sentido en el caso de las secuencias descendentes, pero también las ascendentes pueden emplearse de esta manera.
 
+\newsequence{}
 
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+r16 re'16 sib do la sib sol la fa
+do' la sib sol la fa sol misb
+sib' sol la fa sol misb fa re8
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Secuencia \arabic{sequence}.}
 
 \newsequence{}
 
@@ -1996,7 +2973,7 @@ Todas ellas pueden aparecer como parte del desarrollo de una frase más larga, y
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-do16 do la32 la la16
+do'16 do la32 la la16
 sisb sisb sol32 sol sol16
 la la fa32 fa fa16
 sol sol misb32 misb misb16
@@ -2019,7 +2996,260 @@ sol sol misb32 misb misb16
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sib16.:128 la32 sol16 sib la sol
+la16.:128 sol32 fa16 la sol fa
+sol16.:128 fa32 misb16 sol fa misb
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\tuplet 3/2 {re do do}
+\tuplet 3/2 {mib re re}
+\tuplet 3/2 {fa mib mib}
+\tuplet 3/2 {sol fa fa}
+\tuplet 3/2 {la sol sol}
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do16 re mib mib32 mib mib16
+re mib fa fa32 fa fa16
+mib fa sol sol32 sol sol16
+fa sol lab lab32 lab lab16
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+
+\newsequence{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+lab16 lab sol sol fa fa mib mib
+sol sol fa fa mib mib re re
+fa fa mib mib re re do do
+mib mib re re do do sib sib
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+mib'16-> re do do
+re-> do sib sib
+do-> sib lab lab
+sib-> lab sol sol
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do'16 sib lab lab sol sol
+sib lab sol sol fa fa
+lab sol fa fa mib mib
+sol fa mib mib re re
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
     }
 }
 

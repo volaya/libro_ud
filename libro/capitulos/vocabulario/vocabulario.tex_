@@ -55,7 +55,7 @@ Es frecuente que la frase de apertura utilice las notas por debajo de la tónica
 
 ###notime
 \key do \rast
-  r8 sol,8 la sib do do do do do, do' do do
+  r8 sol,8 la sisb do do do do do, do' do do
 ###
 
 \audioclip{Inicio llegando a tónica desde octava inferior.}
@@ -81,6 +81,8 @@ misb16 re
 do2
 ###
 
+\audioclip{Primera frase completa.}
+
 O este otro en \maqam Nahawand, más breve, que aun así sirve para inicar con claridad que el \taqsim se desarrolla en este \maqam:
 
 ###notime
@@ -89,10 +91,43 @@ mib16 fa sol8 fa sol fa16 mib \tuplet 3/2 {mib (fa mib)} \tuplet 3/2 {re (mib re
 
 \audioclip{Primera frase completa.}
 
-****
-Los patrones anteriores pueden emplearse no solo para arrancar un \taqsimb, sino también para comenzar una frase dentro de este. Hay, sin embargo, algunos patrones que se utilizan habitualmente en este caso, pero que no aparecen como inicio del \taqsimb, tales como los que veremos a continuación.
+Una técnica muy habitual en un \taqsim es tocar una frase breve como las anteriores, formada por un inicio y un cierre, e iniciar la frase siguiente, mas larga, repitiendo el mismo inicio. Esto puede verse en el siguiente ejemplo en \maqam Bayati.
 
-Unos fragmentos de inicio de esta clase son los que arrancan de la tónica y ascienden hasta el \emph{ghammaz}, para allí dar inicio a una frase que se situa sobre el segundo \yins. Los siguientes son algunos ejemplos.
+###notime
+\key re \bayati
+\partial 16 do,16
+re re' re re re misb32 (re) do16 re
+re,16 re' re re re misb32 (re) do16 re
+re,16 re' re re re r2
+\bar "|"
+\break
+do,16
+re re' re re re misb32 (re) do16 re
+re,16 re' re re re misb32 (re) do16 re
+re, re' misb misb fa fa misb misb8
+fa8 fa8:32 misb16 misb (re) do re re4
+###
+
+\audioclip{Primera frase completa y segunda frase con mismo inicio.}
+
+En ocasiones, esa primera frase no contiene un cierre, sino que se deja inconclusa sobre otra nota del \maqam, creándose un efecto de tensión que se resuelve cuando la segunda frase arranca. Por ejemplo, en el siguiente ejemplo en \maqam Rast, la primera frase se detiene sobre la nota fa.
+
+###notime
+do
+\bar "|"
+\break
+do
+###
+
+\audioclip{Primera frase con final inconcluso.}
+
+
+****
+
+
+Los inicios anteriores concluyen todos ellos sobre la tónica. Sin embargo, una frase de inicio puede servir para llegar hasta cualquier otra nota del \maqamb. Un caso particular son los que arrancan de la tónica y ascienden hasta el \emph{ghammaz}, para allí dar inicio a una frase que se situa sobre el segundo \yins. Estos inicios no es habitual utilizarlos para comenzar el \taqsimb, sino como arranque de frases intermedias.
+
+Los siguientes son algunos ejemplos.
 
 ###notime
 \key do \rast
@@ -100,7 +135,7 @@ do16 sisb do re misb re misb fa
 sol8 sol sol sol
 ###
 
-\audioclip{Inicio ascendente hasta \emph{ghammaz} 1.}
+\audioclip{Inicio ascendente hasta \emph{ghammaz}.}
 
 ###notime
 \key do \rast
@@ -108,8 +143,9 @@ do16 do re re misb misb fa fa
 sol8 sol sol sol
 ###
 
-\audioclip{Inicio ascendente hasta \emph{ghammaz} 2.}
+\audioclip{Inicio ascendente hasta \emph{ghammaz}.}
 
+En general, cualquiera de los inicios de esta sección puede modificarse para desembocar sobre una nota distinta de la tónica o el \emph{ghammaz}, enfatizando esta y continuando desde allí.
 
 \subsection{Inicios en \maqam Rast}
 
@@ -120,7 +156,17 @@ do16 misb32 fa misb re misb16 fa sol la sol fa sol sol sol, sol' sol do,,8
 \audioclip{Inicio en \maqam Rast.}
 
 \newbeginning{}
-El siguiente inicio arranca en la octava superior, y se utilizaría para abrir una frase intermedia, una vez que se ha llegado a esa altura en el desarrollo melódico del \taqsimb. 
+###notime
+do,8 do'16 do8 do16 do8 do16 do8 do16
+do,8 do'16 do8 do16 do8 do16 do8 do16
+do,8 do'16 do8 sisb16 sisb8 la16 sisb8 do16
+do4
+###
+\audioclip{Inicio en \maqam Rast.}
+
+
+\newbeginning{}
+El siguiente inicio arranca en la octava superior, y se utilizaría para abrir una frase intermedia, una vez que se ha llegado a esa altura en el desarrollo melódico del \taqsimb.
 
 ###notime
 la16 do re do re8 re16 do do,8 do do do4
@@ -133,10 +179,16 @@ la'16 do re do re8 re16 do do,8 do do do4
 Otro ejemplo similar al anterior.
 
 ###notime
-r16 sol16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do do, do' do do do 
+r16 sol16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do do, do' do do do
 ###
 \audioclip{Inicio en \maqam Rast.}
 
+\newbeginning{}
+
+###notime
+sol,16 sol32 sol sol16 la sisb do re do sisb re do8 do do do
+###
+\audioclip{Inicio en \maqam Rast.}
 
 \subsection{Inicios en \maqam Bayati}
 
@@ -152,6 +204,18 @@ r16  fa16 misb re misb re re do re re re re
 ###
 \audioclip{Inicio en \maqam Bayati.}
 
+\newbeginning{}
+###notime
+re,8 re' re re, re' re re,4 do'8 re misb fa8. misb16 re8 misb re do re re re, re' re
+###
+\audioclip{Inicio en \maqam Bayati.}
+
+\newbeginning{}
+###notime
+re16 fa8 sol la16 sib32 la sol16 fa sol sol misb fa sol sol sol
+###
+\audioclip{Inicio en \maqam Bayati.}
+
 \subsection{Inicios en \maqam Nahawand}
 
 \newbeginning{}
@@ -159,6 +223,41 @@ r16  fa16 misb re misb re re do re re re re
 do16 mib fa sol sol sol fa fa fa fa fa4
 ###
 \audioclip{Inicio en \maqam Nahawand.}
+
+\newbeginning{}
+###notime
+do8. fa16 mib8 re16 mib32 re
+do8. fa16 mib8 re16 mib32 re
+do8. mib16 re8 re16 do32 si
+do4
+###
+\audioclip{Inicio en \maqam Nahawand.}
+
+
+\newbeginning{}
+###notime
+do,16 do' do do do si (do4)
+do16 re mib fa, mib'16 (fa4)
+fa16 mib mib re fa mib mib re re
+do do si (do4)
+###
+\audioclip{Inicio en \maqam Nahawand.}
+
+\newbeginning{}
+###notime
+do'16 re\glissando mib8^\prall re^\prall do sib^\prall do16 do,, do''4
+###
+\audioclip{Inicio en \maqam Nahawand.}
+
+
+\subsection{Inicios en \maqam Kurd}
+
+\newbeginning{}
+###notime
+do16 re mib fa fa fa fa fa mib re do re8 re re
+###
+\audioclip{Inicio en \maqam Kurd.}
+
 
 \section{Cierres}
 
@@ -319,7 +418,7 @@ do16 re misb8 re16 misb fa8
 misb16 fa sol8 fa16 sol la8
 sol16 la sisb8 la16 sisb do4
 \bar "|"
-sisb16 do la sisb sol la fa sol 
+sisb16 do la sisb sol la fa sol
 misb fa re misb fa4 fa8:32 misb4 misb8:32 re4 re8:32 do4
 ###
 
@@ -377,7 +476,7 @@ fa4:32 misb32 (re) do4
 El cierre sobre la tónica se da habitualmente sobre el do central del ud, y el do más grave (sexta cuerda al aire) se usa para puntuar aquella. Sin embargo, es posible utilizar toda la extensión del maqam en la octava inferior para cerrar sobre este último, como en el siguiente ejemplo.
 
 ###notime
-do'8 sol 
+do'8 sol
 misb fa sol fa misb re do re do sisb la sol fa misb re do4
 ###
 \audioclip{Cierre en \maqam Rast.}
@@ -397,12 +496,41 @@ fa16 fa misb fa fa misb fa8:64 misb16 fa sol la sol fa misb re do
 
 \newending{}
 ###notime
-sisb8 re8:64 do8 misb8:64 re8 fa8:64 misb8 sol8:64 fa4
+sisb,8 re8:64 do8 misb8:64 re8 fa8:64 misb8 sol8:64 fa4
 sol8 sol8:64 fa8 fa8:64 misb8 misb8:64 re8 re8:64 do4
 ###
 \audioclip{Cierre en \maqam Rast.}
 
+\newending{}
+###notime
+sol16 la32 sol sol16 do8:32 la16 sol fa misb re do4
+###
+\audioclip{Cierre en \maqam Rast.}
+
+\newending{}
+###notime
+fa8. sol16 fa8 sol
+misb8. fa16 misb8 fa
+re8 re16 misb re8 misb do2
+fa16 misb re do4
+###
+\audioclip{Cierre en \maqam Rast.}
+
 \subsection{Cierres en \maqam Bayati}
+
+\newending{}
+###notime
+r16 sib16 (la8) la16  (sol8) sol16 fa8 sol4 sol16 fa (misb) misb4:32 (re16) re, re'4
+###
+
+\audioclip{Cierre en \maqam Bayati.}
+
+\newending{}
+###notime
+sol16 sol fa fa misb misb fa4:32 misb32 (fa misb re) do16 re8 re4
+###
+
+\audioclip{Cierre en \maqam Bayati.}
 
 \subsection{Cierres en \maqam Nahawand}
 
@@ -428,6 +556,26 @@ re16 mib fa8 mib sol2:32 sol16 fa mib re do
 ###
 \audioclip{Cierre en \maqam Nahawand.}
 
+\newending{}
+###notime
+sol8 fa sol lab sol16 sol fa fa mib mib re mib32 re do8 re mib32 fa mib16 mib4:64  (re32) do4
+###
+\audioclip{Cierre en \maqam Nahawand.}
+
+\newending{}
+###notime
+sol8 fa32 mib16 fa8 mib32 re16 mib8 re32 do16 re do8
+lab'16 sol fa sol mib re do4
+###
+\audioclip{Cierre en \maqam Nahawand.}
+
+
+\newending{}
+###notime
+sol8 sol8:32 lab16 (sol) fa4 mib16 (fa) sol fa (mib re) do (re mib re) do (si) do4
+###
+\audioclip{Cierre en \maqam Nahawand.}
+
 \label{frases}
 \section{Frases breves}
 
@@ -435,8 +583,9 @@ Esta sección contiene frases breves que aparecen repetidamente en gran numero d
 
 Éntiendase esta sección como un simple <<diccionario>> de esas expresiones, de interés para enriquecer el vocabulario a la hora de improvisar.
 
-En algunas de las grabaciones correspondientes se incluye no solo la frase en sí, sino un fragmento más amplio en el que se incluyen, para de este modo ponerlas en contexto.
+La mayoría de las frases, al ser breves, usan notas que forman parte de un único \yinsb. Por ello, pueden emplearse siempre que el \maqam en el que se toque contenga dicho \yinsb. Esta es una manera muy útil de aprender las frases, de manera que después puedan reutilizarse en diversos contextos melódicos.
 
+En algunas de las grabaciones correspondientes, se incluye no solo la frase en sí, sino un fragmento más amplio que contiene a esta.
 
 \newphrase{}
 
@@ -467,15 +616,68 @@ re16 sol fa sol la sib32 la sol16 fa sol sol
 \newphrase{}
 
 ###notime
-sol16 sol sol sol la sib
+sol16 sol sol sol la32 sib la sol sol16 sol sol sol
 ###
 \audioclip{Frase \arabic{phrase}.}
+
+Notese que en estas tres frases se enfatiza el uso de la nota que se da con la cuerda al aire, y que en los tres ejemplos se trata de la nota sol. Como ya dijimos, esta nota es de particular importancia, ya que es el \emph{ghammaz} de buena parte de los \maqamaat habituales.
 
 Jugando con las tres frases anteriores, un inicio y un cierre, y añadiendo algunas otras notas para conectar todo ello, podemos ya hacer frases más largas como la siguiente en \maqam Bayati.
 
 ***
 
 \audioclip{Ejemplo de combinación de pequeñas frases.}
+
+\newphrase{}
+
+###notime
+re'16 mib do re si do lab si sol4
+###
+
+\audioclip{Frase \arabic{phrase}.}
+
+###notime
+sol8
+la16 sib la32 (sib) sol16
+la16 sib la32 (sib) sol16
+la8 la
+###
+
+\audioclip{Frase \arabic{phrase}.}
+
+\newphrase{}
+
+###notime
+sol16 sol32 sol sol16 sol fa sol
+###
+
+\audioclip{Frase \arabic{phrase}.}
+
+\newphrase{}
+
+###notime
+la32 (sib) do16 sib sib la la sol sol fa sol
+###
+
+\audioclip{Frase \arabic{phrase}.}
+
+\newphrase{}
+
+###notime
+sib32 lab sol16 fa fa mib mib re re
+###
+
+\audioclip{Frase \arabic{phrase}.}
+
+\newphrase{}
+
+###notime
+r8 \grace re'32 \glissando mib16 \grace re32 \glissando mib16
+do sol do re do sib do4
+###
+
+
+\audioclip{Frase \arabic{phrase}.}
 
 \label{secuenciasmelodicasvocabulario}
 \section{Secuencias melódicas y frases}
@@ -484,14 +686,82 @@ Las secuencias melódicas de esta sección no se asocian, por lo general, a un \
 
 Todas ellas pueden aparecer como parte del desarrollo de una frase más larga, y hacerlo con distinta longitud (el patrón melódico se repite más o menos veces arrancando de distintas notas sucesivas). También pueden emplearse como cierres si se añade un remate al final de la secuencia y se hace terminar esta sobre la tónica del \maqamb. Esto tiene especial sentido en el caso de las secuencias descendentes, pero también las ascendentes pueden emplearse de esta manera.
 
+\newsequence{}
+###notime
+r16 re'16 sib do la sib sol la fa
+do' la sib sol la fa sol misb
+sib' sol la fa sol misb fa re8
+###
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+###notime
+do'16 do la32 la la16
+sisb sisb sol32 sol sol16
+la la fa32 fa fa16
+sol sol misb32 misb misb16
+###
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+###notime
+sib16.:128 la32 sol16 sib la sol
+la16.:128 sol32 fa16 la sol fa
+sol16.:128 fa32 misb16 sol fa misb
+###
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+###notime
+\tuplet 3/2 {re do do}
+\tuplet 3/2 {mib re re}
+\tuplet 3/2 {fa mib mib}
+\tuplet 3/2 {sol fa fa}
+\tuplet 3/2 {la sol sol}
+###
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+###notime
+do16 re mib mib32 mib mib16
+re mib fa fa32 fa fa16
+mib fa sol sol32 sol sol16
+fa sol lab lab32 lab lab16
+###
+
+\audioclip{Secuencia \arabic{sequence}.}
 
 
 \newsequence{}
 ###notime
-do16 do la32 la la16
-sisb sisb sol32 sol sol16
-la la fa32 fa fa16
-sol sol misb32 misb misb16
+lab16 lab sol sol fa fa mib mib
+sol sol fa fa mib mib re re
+fa fa mib mib re re do do
+mib mib re re do do sib sib
+###
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+###notime
+mib'16-> re do do
+re-> do sib sib
+do-> sib lab lab
+sib-> lab sol sol
+###
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+###notime
+do'16 sib lab lab sol sol
+sib lab sol sol fa fa
+lab sol fa fa mib mib
+sol fa mib mib re re
 ###
 
 \audioclip{Secuencia \arabic{sequence}.}

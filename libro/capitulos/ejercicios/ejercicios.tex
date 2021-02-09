@@ -210,10 +210,10 @@ sol4 la sib la sol sib la sol sol la sib la sol sib la sol la2 re, sol fa,
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-re4 mi fa re 
-re fa mi re 
-re mi fa re 
-re fa mi re 
+re4 mi fa re
+re fa mi re
+re mi fa re
+re fa mi re
 mi2 la, re r2
 \bar "||"
 }
@@ -246,9 +246,9 @@ mi2 la, re r2
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-re4 mi fa re 
-re fa mi re 
-re2 sol 
+re4 mi fa re
+re fa mi re
+re2 sol
 sol4 la sib la
 sol sib la sol
 la re, sol la,
@@ -315,7 +315,7 @@ re4 mi fa sol la sib do re do sib la sol fa mi re mi fa la do la fa2 r2
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-re4 fa re sol fa la sol sib la do do la sib sol la fa 
+re4 fa re sol fa la sol sib la do do la sib sol la fa
 sol mi fa re re fa mi sol fa la sol mi fa2r2
 \bar "||"
 }
@@ -348,7 +348,7 @@ sol mi fa re re fa mi sol fa la sol mi fa2r2
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-sol8 la\upbow sib la\upbow 
+sol8 la\upbow sib la\upbow
 sol fa\upbow fa sol\upbow
 fa mi re mi fa4\downbow la8\downbow  do\upbow
 sib8 la sol la sol fa mi fa sol re mi sol fa4 r4
@@ -416,7 +416,7 @@ do8 la sib sol la fa sol mi fa la do la sol4 fa
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-sol4 la si la sol si la sol re mi fad mi re fad mi re sol la si la sol si la sol 
+sol4 la si la sol si la sol re mi fad mi re fad mi re sol la si la sol si la sol
 la2 re, sol sol,
 \bar "||"
 }
@@ -481,8 +481,8 @@ sol4 la si do si la sol fad mi re mi fad sol re sol2
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-sol4 si la do si re do la si sol la fad 
-sol mi fad re re fad mi sol fad la sol 
+sol4 si la do si re do la si sol la fad
+sol mi fad re re fad mi sol fad la sol
 si la re, mi fad
 sol2 sol,
 \bar "||"
@@ -616,7 +616,7 @@ la fa sol mi fa re mi do re si do la sol4 si8 re sol4 re8 si sol4
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-sol,8  la si do  si do re mi re mi fad sol fad sol la si la si do re 
+sol,8  la si do  si do re mi re mi fad sol fad sol la si la si do re
 re do si la do si la sol si la sol fad la sol fad mi
 sol fad mi re fad mi re do mi re do si re do si la sol4
 si8 re sol4 re8 si sol2
@@ -653,7 +653,7 @@ si8 re sol4 re8 si sol2
 notes = \relative {
 sol,8 sol sol sol la la la la si si si si do do do do re re re re
 mi mi mi mi fad fad fad fad sol sol sol sol sol sol sol sol
-fad fad fad fad mi mi mi mi re re re re do do do do si si si si 
+fad fad fad fad mi mi mi mi re re re re do do do do si si si si
 la la la la sol sol sol sol
 \bar "||"
 }
@@ -686,7 +686,7 @@ la la la la sol sol sol sol
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-sol,4 la8 si do re mi fad sol4 fad8 mi re do si la 
+sol,4 la8 si do re mi fad sol4 fad8 mi re do si la
 sol4 si8 re sol4 re8 si sol2
 \bar "||"
 }
@@ -1003,8 +1003,6 @@ do,2.
 
 El aspecto más importante de estos ejercicios es prestar atención a la entonación, en especial la de la segunda nota de las dos que se conectan mediante el \emph{glissando}.
 
-La partitura contiene la digitación a emplear en cada caso.
-
 \newexercise{}
 
 
@@ -1254,9 +1252,84 @@ do4 r2
 
 Algunos ejercicios cromáticos para ejercitar la independencia de los dedos de la mano izquierda.
 
-%https://appliedguitartheory.com/lessons/10-finger-independence-exercises-guitar/
 
 \newexercise{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+dod, sold' re la'\5
+red, fad mi sol
+fad do' sol dod
+sold lad la\5^"etc..." si
+\bar "|"
+\break
+re' si dod sib
+mi la, mib' lab,
+la fad lab fa
+si mi, sib'^"etc..." mib,
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\newexercise{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+dod, sol' do fad
+fad, si' fa si'
+sib, mi' sib mi'
+
+dod' la fa dod
+lab' mi do la\5
+mib' si lab mi
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
 
 
 \section{Ejercicios rítmicos}

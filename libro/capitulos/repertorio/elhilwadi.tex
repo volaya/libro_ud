@@ -1,6 +1,11 @@
 \songheader{El Helwa Di}{Sayed Darwish}{Hiyaz Re}
 
-###transpose la re
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \transpose la re{
+\relative {
 \key la \hijaz
 \tempo 4 = 120
 la8 re dod re mi4 fa8 mi
@@ -43,4 +48,26 @@ la8 re re sisb do8. sisb16 la4
 la la sol la^"D.C. al Fine"
 }
 
-###
+\bar "||"
+}
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}

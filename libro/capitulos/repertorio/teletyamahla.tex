@@ -1,0 +1,49 @@
+\songheader{Telet Ya Mahla Nourha}{Sayed Darwish}{Ayam Do}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\time 4/4
+\key do \major
+
+\repeat volta 2{
+r4 mi4 re do
+re8 mi re do do4 do
+sol do re mi
+re do8 mi re2
+do4 do8 re do4 mi8 re
+re mi re do do4 sol
+sol' sol8 fa mi4 mi8 re
+re mi re do do2^"Fine"
+}
+mi8 fa sol fa mi fa 
+sol fa mi fa sol4 do,4
+r4 la' la sol 
+fa mi8 fa sol2
+fa8 sol la sol fa mi sol fa mi re fa mi re4
+r4 sol8 re mi fa mi re 
+re mi fa do do2^"D.C. al Fine"
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}

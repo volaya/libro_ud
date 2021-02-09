@@ -1,6 +1,6 @@
 \songheader{Lamma badda Yatazanna}{Anónimo}{Nahawand Sol}
 
-###
+###transpose fa do
 \time 10/8
 \set Timing.beamExceptions = #'()
 \set Timing.beatStructure = #'(3 2 2 3)

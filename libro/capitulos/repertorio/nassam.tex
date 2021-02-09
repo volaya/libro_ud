@@ -1,0 +1,76 @@
+\songheader{Nassam Alayna Al Hawa}{Assi \& Mansour Rahbanni}{Kurd La}
+
+\textbf{Estructura: ABCDBACDB}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\key la \kurd
+\repeat volta 2{
+sol8^\markup{\rounded-box \bold A (instrumental)} la sib la la2
+sol8 la sib la la2
+do8 re mi do sib do re sib 
+la sib do sib la4. sol16 la
+sib8 la sol fa mi4. fa16 sol
+la8 sol fa mi re4. mi16 fa
+sol8 fa mi re do sib la sol 
+la sib do sib la4 la16 sib do re
+}
+\break
+\repeat volta 2{
+la'4^\markup{\rounded-box \bold B} sib la sol
+la sib la sol
+la sib do8 re re do
+do sib sib la la fa sol la
+la sol la sib sol4 fa4
+sol8 fa sol la fa mi re4
+sol8 fa fa mi mi re re do
+do sib sib la la2
+}
+\break
+\repeat volta 2{
+la'2^\markup{\rounded-box \bold C} la4 re,4
+sib'8 sol la fa sol2
+sol4 sol sol do,
+la'8 fa sol mi fa2
+mi8 fa sol fa fa mi mi re
+re mi fa mi mi re re do 
+do re mi re re do do sib
+do sib do sib la2
+}
+\break
+\repeat volta 2{
+mi'4^\markup{\rounded-box \bold D} mi mi re
+mi8 re re do sib4 la4
+fa'4 fa fa mi
+sol8 fa fa mi re4 do
+la'4 la2.
+la4 sol2 do4
+do sib do sib
+la8 sib do sib la sol fa mi
+mi re do sib la2
+}
+
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}

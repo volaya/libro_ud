@@ -46,7 +46,7 @@ do8:16 sisb8:16 do8:16 re8:16 misb8:16 re8:16 do4
 
 El trémolo, \emph{rash} en árabe, es una sucesión rápida de movimientos de púa ascendentes y descendentes sobre una misma nota. Es uno de los ornamentos más característicos del ud en el estilo árabe. Tanto es así, que se asume que cualquier nota de larga duración se tocará en forma de trémolo, aun si se añaden a ella también otro tipo de ornamentos.
 
-El trémolo puede ser corto, en cuyo caso tiene tres notas, o más largo. El trémolo corto, se logra con una tensión repentina de la muñeca, que crea un efecto de ráfaga breve. 
+El trémolo puede ser corto, en cuyo caso tiene tres notas, o más largo. El trémolo corto, se logra con una tensión repentina de la muñeca, que crea un efecto de ráfaga breve.
 
 Se indican en la partitura, respectivamente, con una barra horizontal doble o triple sobre la nota.
 
@@ -63,6 +63,8 @@ sol16 sol sol sol
 ###
 
 Es habitual variar la posición de la \emph{risha} para la realización del trémolo, situándola más perpendicular a las cuerdas, de forma que el contacto con estas se realice con la parte frontal de la púa.
+
+El siguiente es un ejemplo del efecto del trémolo, tanto corto como largo.
 
 ###
 \key sol \hijaz
@@ -255,6 +257,8 @@ En la sección \ref{secuenciasmelodicasvocabulario} se presenta una pequeña col
 
   Por ejemplo, en \emph{maqam} Bayati, el vibrato sobre la tercera nota (fa) es casi obligatorio y suele tratarse de un vibrato fuerte, para enfatizarla lo más posible. Sin embargo, es muy poco común aplicar vibrato a la segunda nota (mi semibemol).
 
+  En general, en las notas que utilizan cuartos de tono no suele aplicarse vibrato.
+
   Cada \maqam, como ya se ha dicho, tiene una serie de notas con mayor importancia, y ello condiciona la forma en que los ornamentos se aplican sobre esas notas y las restantes.
 
 \section{Ejemplo práctico}
@@ -273,12 +277,12 @@ re mi re do do4 sol
 sol' sol8 fa mi4 mi8 re
 re mi re do do2^"Fine"
 }
-mi8 fa sol fa mi fa 
+mi8 fa sol fa mi fa
 sol fa mi fa sol4 do,4
-r4 la' la sol 
+r4 la' la sol
 fa mi8 fa sol2
 fa8 sol la sol fa mi sol fa mi re fa mi re4
-r4 sol8 re mi fa mi re 
+r4 sol8 re mi fa mi re
 re mi fa do do2^"D.C. al Fine"
 ###
 

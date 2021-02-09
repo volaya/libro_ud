@@ -1,6 +1,6 @@
 \songheader{Zuruni Kuli Sana}{Sayed Darwish}{Nahawand Do}
 
-###
+###transpose fa do
 \key mib \major
 \partial 2. fa8 sib4 re4
 r8 do8~do sib la la do4~do8

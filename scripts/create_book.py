@@ -99,7 +99,7 @@ notes = \relative {
   \context {
     \TabStaff
     \remove Time_signature_engraver
-     
+
     }
 }
 
@@ -110,6 +110,37 @@ notes = \relative {
 \end{center}
 '''
 
+lilypondinput_template_transpose=r'''
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \transpose %s %s{
+\relative {
+%s
+\bar "||"
+}
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+'''
 
 def _notetitle(n):
     title = n.capitalize()
@@ -301,13 +332,18 @@ def generate_lilypond_files():
     def replace2(match):
         match = match.group()
         return lilypondinput_template_notime % ("\n".join(match.splitlines()[1:-1]))
+    def replace3(match):
+        match = match.group()
+        notea, noteb = match.splitlines()[0].split()[-2:]
+        return lilypondinput_template_transpose % (notea, noteb, "\n".join(match.splitlines()[1:-1]))
     for fold in os.listdir(chaptersfolder):
         folder = os.path.join(chaptersfolder, fold)
         for f in os.listdir(folder):
             if f.endswith("tex_"):
-                inputfile = os.path.join(folder, f) 
+                inputfile = os.path.join(folder, f)
                 with open(inputfile) as inp:
                     s = inp.read()
+                s = re.sub(r'###transpose(.|\n)*?###', replace3, s)
                 s = re.sub(r'###notime(.|\n)*?###', replace2, s)
                 s = re.sub(r'###(.|\n)*?###', replace, s)
                 outputfile = os.path.join(folder, f"{f.split('.')[0]}.tex")

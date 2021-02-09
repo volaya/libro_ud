@@ -4,7 +4,8 @@
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \transpose fa do{
+\relative {
 \key mib \major
 \partial 2. fa8 sib4 re4
 r8 do8~do sib la la do4~do8
@@ -18,6 +19,7 @@ do do sib sib4 fa sol~sol
 sol fa fa mib re4 do
 sib
 \bar "||"
+}
 }
 
 \layout {
