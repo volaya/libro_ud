@@ -471,12 +471,14 @@ Sin ornamentación:
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \transpose fa do{
+\relative {
 \time 10/8
 \key mib \major
 \partial 8 sol8 |
 do4 re16 mib fa mib mib re re do do si do4 sol8
 \bar "||"
+}
 }
 
 \layout {
@@ -506,12 +508,14 @@ Con ornamentación:
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \transpose fa do{
+\relative {
 \time 10/8
 \key mib \major
 \partial 8 sol8 |
 do4 re16 mib fa mib32 fa mib fa re mib re mib do re do re do si do4 sol8
 \bar "||"
+}
 }
 
 \layout {

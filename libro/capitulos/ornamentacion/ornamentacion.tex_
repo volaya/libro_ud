@@ -207,7 +207,7 @@ El primero es de la pieza \emph{Lamma Bada Yatazanna}.
 
 Sin ornamentación:
 
-###
+###transpose fa do
 \time 10/8
 \key mib \major
 \partial 8 sol8 |
@@ -216,7 +216,7 @@ do4 re16 mib fa mib mib re re do do si do4 sol8
 
 Con ornamentación:
 
-###
+###transpose fa do
 \time 10/8
 \key mib \major
 \partial 8 sol8 |

@@ -245,6 +245,8 @@ sib4 la8 sol fa mib re do
 sib4 sol8 la sib4 r4
 ###
 
+\audioclip{\emph{Dulab} Ayam}
+
 \subsection{\Maqam Nahawand}
 
 Equivalente en su estructura interválica a la escala menor armónica.
@@ -279,6 +281,8 @@ mib16 re mib fa mib8 re
 }
 ###
 
+\audioclip{\emph{Dulab} Nahawand}
+
 \subsection{\Maqam Kurd}
 
 Equivalente en su estructura interválica al modo frigio occidental.
@@ -302,6 +306,8 @@ la8 sol fa sol fa mib re4
  \tempo "Rall." do2 re8 mib16 fa mib8 re
 re1
 ###
+
+\audioclip{\emph{Dulab} Kurd}
 
 \subsection{\Maqam Hiyaz}
 
@@ -505,7 +511,7 @@ sol si4 lab8 lab sol sol fa
 fa lab sol si sol4 lab8 fa
 misb re misb fa sol4 sol
 }
-misb4 fa8 sol fa misb re fa 
+misb4 fa8 sol fa misb re fa
 misb2
 ###
 

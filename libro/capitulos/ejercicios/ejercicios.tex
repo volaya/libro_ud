@@ -1250,7 +1250,48 @@ do4 r2
 
 \section{Ejercicios de independencia de dedos}
 
-Algunos ejercicios cromáticos para ejercitar la independencia de los dedos de la mano izquierda.
+Algunos ejercicios cromáticos para ejercitar la independencia de los dedos de la mano izquierda. Se presentan todos en la posición 1 del mástil del ud, pero pueden desplazarse a otras posiciones.
+
+
+\newexercise{}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+dod, re red mi
+fad sol sold la\5
+lad si do dod
+mib mi fa^"etc..." solb
+\bar "|"
+\break
+mi' red re dod
+si sib la lab
+fad fa mi mib
+dod do si^"etc..." sib
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
 
 
 \newexercise{}
@@ -1302,12 +1343,53 @@ si mi, sib'^"etc..." mib,
 \include "arabic.ly"
 notes = \relative {
 dod, sol' do fad
-fad, si' fa si'
-sib, mi' sib mi'
+fad, si fa' si
+sib, mi sib' mi
 
-dod' la fa dod
+dod la fa dod
 lab' mi do la\5
 mib' si lab mi
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\newexercise{}
+
+Un ejercicio que trabaja especialmente los dedos meñique y anular.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+dod, mi red mi dod mi red mi
+fad la\5 sold la\5 fad la\5 sold la\5
+lad dod do dod lad dod do^"etc..." dod
+\bar "|"
+\break
+mi' reb mi dod mi reb mi dod
+si sib si sold si sib si sold
+fad fa fad mib fad fa fad^"etc..." mib
 \bar "||"
 }
 
@@ -1414,11 +1496,11 @@ re8 sol sol16 sol sol sol fa8 fa sol r8
 re8 sol sol16 sol sol sol fa8 r8 sol r8
 re8 sol sol16 sol sol sol la16 (sol) fa8 sol r8
 re8 sol r8 sol fa r8 sol r8
-la'16 (sib) sol (la) fa (sol) mib (fa) re (mib) do (re) sib (do) la (sib)
+la16 (sib) sol (la) fa (sol) mib (fa) re (mib) do (re) sib (do) la (sib)
 sol8 sol' r8 sol fa r8 sol r8
 re8 sol r8 sol fa fa sol r8
 re8 sol r8 sol fa r8 sol r8
-la'16 (sib) sol (la) fa (sol) mib (fa) re (mib) do (re) sib (do) la (sib)
+la16 (sib) sol (la) fa (sol) mib (fa) re (mib) do (re) sib (do) la (sib)
 sol4 r2.
 \bar "||"
 }
