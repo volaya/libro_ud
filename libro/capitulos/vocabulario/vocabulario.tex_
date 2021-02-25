@@ -936,12 +936,21 @@ fa8 \tuplet 3/2 {fa16 mib re} mib8
 
 \audioclip{Secuencia \arabic{sequence}.}
 
-
 \newsequence{}
 ###notime
 lab8 sol16 fa fa16.mib32 re8
 sol8 fa16 mib mib16.re32 do8
 fa8 mib16 re re16.do32 si8
+###
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+###notime
+do'16 sisb16. la32 sol16
+sisb la16. sol32 fa16
+la sol16. fa32 misb16
+sol fa16. misb32 re16
 ###
 
 \audioclip{Secuencia \arabic{sequence}.}

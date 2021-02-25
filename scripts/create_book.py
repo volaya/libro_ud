@@ -44,7 +44,7 @@ allnotes = ["do", "rebsb", "reb", "resb", "re", "mibsb", "mib", "misb", "mi", "f
 
 alternative_names = {"solb":"fad"}
 
-lilypondinput_template=r'''
+lilypondinput_template = r'''
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
@@ -110,7 +110,7 @@ notes = \relative {
 \end{center}
 '''
 
-lilypondinput_template_transpose=r'''
+lilypondinput_template_transpose = r'''
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
@@ -351,7 +351,7 @@ def generate_lilypond_files():
                     out.write(s)
 
 
-#generate_maqamat_snippets()
+generate_maqamat_snippets()
 #generate_maqam_analysis_fretboard()
 #generate_full_fretboard()
 generate_lilypond_files()

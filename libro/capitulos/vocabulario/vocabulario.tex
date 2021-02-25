@@ -1183,6 +1183,44 @@ do16 re mib fa fa fa fa fa mib re do re8 re re
 
 \audioclip{Inicio en \maqam Kurd.}
 
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+re8 do re mib fa4 mib8 re re4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Kurd.}
+
 
 \subsection{Inicios en \maqam Hiyaz}
 
@@ -3485,12 +3523,134 @@ sol8 lab si32 lab si lab si lab si lab lab4 sol
 \audioclip{Frase \arabic{phrase}.}
 
 
+\newphrase{}
+%https://www.youtube.com/watch?v=qDXiEb6bwP8
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+r8 	\grace{re'32} do16 \grace{re32} do16
+sib sib	 sol lab4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\newphrase{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol16. sol32 sol16 sol16 la32 sib sol la sol16 sol
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Frase \arabic{phrase}.}
+
+
 \label{secuenciasmelodicasvocabulario}
 \section{Secuencias melódicas y frases}
 
 Las secuencias melódicas de esta sección no se asocian, por lo general, a un \maqam determinado, y pueden utilizarse en cualquiera de ellos, sin más que adaptar los intervalos y las notas correspondientes. Tambien pueden desplazarse a notas de inicio distintas a las empleadas en la transcripción, manteniéndose dentro del mismo \maqam.
 
 Todas ellas pueden aparecer como parte del desarrollo de una frase más larga, y hacerlo con distinta longitud (el patrón melódico se repite más o menos veces arrancando de distintas notas sucesivas). También pueden emplearse como cierres si se añade un remate al final de la secuencia y se hace terminar esta sobre la tónica del \maqamb. Esto tiene especial sentido en el caso de las secuencias descendentes, pero también las ascendentes pueden emplearse de esta manera.
+
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do'16. sib32 lab16
+sib16. lab32 sol16
+lab16. sol32 fa16
+sol16. fa32 mib16
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
 
 \newsequence{}
 
@@ -3834,10 +3994,10 @@ sol fa mib mib re re
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-fa16 sol lab sol8
-mib16 fa sol fa8
-re16 mib fa mib8
-do16 re mib re8
+\tuplet 3/2{fa16 sol lab} sol8
+\tuplet 3/2{mib16 fa sol} fa8
+\tuplet 3/2{re16 mib fa} mib8
+\tuplet 3/2{do16 re mib} re8
 \bar "||"
 }
 
@@ -3912,7 +4072,6 @@ fa8 \tuplet 3/2 {fa16 mib re} mib8
 
 \audioclip{Secuencia \arabic{sequence}.}
 
-
 \newsequence{}
 
 \begin{center}
@@ -3922,6 +4081,48 @@ notes = \relative {
 lab8 sol16 fa fa16.mib32 re8
 sol8 fa16 mib mib16.re32 do8
 fa8 mib16 re re16.do32 si8
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do'16 sisb16. la32 sol16
+sisb la16. sol32 fa16
+la sol16. fa32 misb16
+sol fa16. misb32 re16
 \bar "||"
 }
 
