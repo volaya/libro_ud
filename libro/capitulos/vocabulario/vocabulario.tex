@@ -2978,6 +2978,47 @@ do,16 fa' fa fa fa fa do, mib' mib mib mib mib do, re' re re re do, do'4
 
 \audioclip{Cierre en \maqam Nahawand.}
 
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+fa16 (mib8) mib16 (re8) re16 (do8)
+fa16 (mib8) mib16 (re8) re16 (do8)
+mib16 (re8) re16 (do8) do16 (si8)
+do16 re mib4 re32 do16
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Cierre en \maqam Nahawand.}
+
 \label{frases}
 \section{Frases breves}
 
@@ -4123,6 +4164,90 @@ do'16 sisb16. la32 sol16
 sisb la16. sol32 fa16
 la sol16. fa32 misb16
 sol fa16. misb32 re16
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+
+\newsequence{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+r16 misb'16 re do do do32 do do16
+re do sisb sisb sisb32 sisb sisb16
+do sisb la la la32 la la16
+sisb la sol sol sol32 sol sol8
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\audioclip{Secuencia \arabic{sequence}.}
+
+\newsequence{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do'16 do do re sisb la sol8
+sisb16 sisb sisb do la sol fa8
+la16 la la sisb sol fa misb8
 \bar "||"
 }
 

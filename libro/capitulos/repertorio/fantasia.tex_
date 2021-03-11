@@ -3,14 +3,14 @@
 ###
 \repeat volta 2{
 \time 2/4
-mib4. re8
+mib'4. re8
 mib8. re16 mib8. re16
 do8 re si do re mib fa sol fa mib re do
-si lab sol re'4. do8
-re8. do16 re8. do16 si do re fa mi8. re16 do8 r8
+si lab sol r8 re'4. do8
+re8. do16 re8. do16 si8 do re fa mi8. re16 do8 r8
 }
-segno
-sol4. mib8 lab4. fa8
+\segno
+sol'4. mib8 lab4. fa8
 lab16 sol fa8
 sol16 fa16 mib8
 fa16 mib re8
@@ -32,31 +32,29 @@ r8 do,4 sib8
 do re sib lasb
 sib do lasb sol
 lasb16 sib8 lasb16 sol8 r8
-segno
 
-mib'4. re8
+mib''4. \segno re8
 mib8. re16 do8 re
 do8 sib do re
-mib16 fa mib re do8
+mib16 fa mib re do8 r8
 r8 do4 sib8
 do8 re sib lasb
 sib do lasb sol
 sol16 lab sib8 (sib16) lab16 sol8
-segno
 
-r8 do8 re misb
+r8 \segno
+do8 re misb
 fa4 misb8 re
 fa8 sol fa misb
-misb8. re16 do8
+misb8. re16 do4
 r8 sol8 fa misb
 re do misb re
 fa misb re do
 do4 sisb16 la sol8
-segno
 
 \time 3/4
 \repeat volta 2{
-	sol4 do do
+	sol4 \segno do do
 	sol4 do do
 	do'2.
 	mi2.
@@ -66,7 +64,7 @@ segno
 	la2.
 	si2.
 	re2.
-	da4 mi red
+	fa4 mi red
 	mi4 r2
 }
 \repeat volta 2{
@@ -87,6 +85,5 @@ segno
 	mi re do
 	do4 r4 do
 	do r2^"Fine"
-
 }
 ###
