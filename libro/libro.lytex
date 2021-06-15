@@ -19,7 +19,7 @@
 \input{capitulos/ornamentacion/ornamentacion.tex}
 \input{capitulos/taqsim/taqsim.tex}
 \input{capitulos/vocabulario/vocabulario.tex}
-\input{capitulos/ejercicios/ejercicios.tex}
+%\input{capitulos/ejercicios/ejercicios.tex}
 \input{capitulos/repertorio/repertorio.tex}
 
 \end{mainmatter}

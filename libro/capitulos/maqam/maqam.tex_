@@ -212,15 +212,71 @@ Para cada uno de los \maqamaat aquí descritos, se proporciona la estructura int
 
 Otros aspectos relativos a cada \maqam, tales como el desarrollo melódico o el vocabulario, se detallarán en secciones posteriores.
 
-Se incluye, por último, una pieza breve para cada \maqamb, que sirve de ejemplo de la sonoridad de este y como ejercicio para familiarizarse con él en el ud.
-
 \subsection{\Maqam Ayam}
 
 Equivalente en su estructura interválica a la escala mayor occidental.
 
 \input{capitulos/maqam/ayam.tex}
 
-El siguiente \emph{dulab} sirve de ejemplo de este \maqamb.
+\subsection{\Maqam Nahawand}
+
+Equivalente en su estructura interválica a la escala menor armónica.
+
+\input{capitulos/maqam/nahawand.tex}
+
+El segundo \yins puede sustituirse por \yins Kurd, en cuyo caso la estructura interválica del \maqam es equivalente al de la escala menor occidental.
+
+\input{capitulos/maqam/nahawandb.tex}
+
+Normalmente, el \yins Kurd se emplea en sentido descendente, y el \yins Hiyaz en el ascendente.
+
+
+\subsection{\Maqam Kurd}
+
+Equivalente en su estructura interválica al modo frigio occidental.
+
+\input{capitulos/maqam/kurd.tex}
+
+\subsection{\Maqam Hiyaz}
+
+Equivalente en su estructura interválica a un modo frigio dominante. Tiene una cierta sonoridad flamenca, por ser esta escala habitual en el flamenco, aunque el desarrollo melódico del \maqam es diferente.
+
+\input{capitulos/maqam/hiyaz.tex}
+
+\subsection{\Maqam Nikriz}
+
+\input{capitulos/maqam/nikriz.tex}
+
+
+\subsection{\Maqam Rast}
+
+El \maqam más importante y extendido de la música árabe. Por su preponderancia, puede considerarse como el equivalente a la escala mayor en la música occidental.
+
+\input{capitulos/maqam/rast.tex}
+
+
+\subsection{\Maqam Bayati}
+
+Junto a Rast, Bayati es el \maqam más popular en la música árabe, y en los estilos folclóricos es incluso más frecuente que aquel.
+
+\input{capitulos/maqam/bayati.tex}
+
+
+\subsection{\Maqam Saba}
+
+Con una sonoridad muy característica, que en la mayoría de oyentes evoca sentimientos de tristeza o sufrimiento. Al contrario que los restantes, es el único \maqam con \yins Saba como primer \yins, por lo que no forma una familia.
+
+\input{capitulos/maqam/saba.tex}
+
+\subsection{\Maqam Huzam}
+
+Aunque existe un \maqam denominado Sikah, su uso es poco frecuente, y el representante más popular de la familia basada en \yins Sikah es \maqam Huzam.
+
+\input{capitulos/maqam/huzam.tex}
+
+\section{Algunos \emph{dulabs} de ejemplo}
+
+Un buena forma de empezar a familiarizarse con los \maqamaat anteriores es a través de \emph{dulabs} que utilicen cada uno de ellos. Recordemos que un dulab es una pieza instrumental breve, y que con frecuencia se eplean para presentar el \maqam alrededor del cual se desarrolla la pieza que después va a tocarse.
 
 \subsubsection{\emph{Dulab} Ayam}
 
@@ -249,20 +305,6 @@ sib4 sol8 la sib4 r4
 
 Nótese que en este \emph{dulab} la tónica se encuentra en si bemol, no en do. Veremos más adelante (sección \ref{transposicion}) que los \maqam no se desplazan a cualquier tónica, como sucede con las escalas occidentales, pero algunos de ellos sí que aparecen sobre varias tónicas. En el caso de \maqam Ayam, es frecuente encontrarlo tanto en do como en si bemol.
 
-\subsection{\Maqam Nahawand}
-
-Equivalente en su estructura interválica a la escala menor armónica.
-
-\input{capitulos/maqam/nahawand.tex}
-
-El segundo \yins puede sustituirse por \yins Kurd, en cuyo caso la estructura interválica del \maqam es equivalente al de la escala menor occidental.
-
-\input{capitulos/maqam/nahawandb.tex}
-
-Normalmente, el \yins Kurd se emplea en sentido descendente, y el \yins Hiyaz en el ascendente.
-
-La siguiente pieza es un ejemplo de este \maqamb.
-
 \subsubsection{\emph{Dulab} Nahawand}
 
 ###
@@ -285,13 +327,6 @@ mib16 re mib fa mib8 re
 
 \audioclip{\emph{Dulab} Nahawand}
 
-\subsection{\Maqam Kurd}
-
-Equivalente en su estructura interválica al modo frigio occidental.
-
-\input{capitulos/maqam/kurd.tex}
-
-He aquí un \emph{dulab} para ilustrar las características de este \maqamb.
 
 \subsubsection{\emph{Dulab} Kurd}
 
@@ -311,13 +346,6 @@ re1
 
 \audioclip{\emph{Dulab} Kurd}
 
-\subsection{\Maqam Hiyaz}
-
-Equivalente en su estructura interválica a un modo frigio dominante. Tiene una cierta sonoridad flamenca, por ser esta escala habitual en el flamenco, aunque el desarrollo melódico del \maqam es diferente.
-
-\input{capitulos/maqam/hiyaz.tex}
-
-El siguiente es el \emph{dulab} más popular en este \maqamb.
 
 \subsubsection{\emph{Dulab} Hiyaz}
 
@@ -356,11 +384,6 @@ do mib re2
 
 \audioclip{\emph{Dulab} Hiyaz}
 
-\subsection{\Maqam Nikriz}
-
-\input{capitulos/maqam/nikriz.tex}
-
-El siguiente es un \emph{dulab} tradicional en este \maqamb.
 
 \subsubsection{\emph{Dulab} Nikriz}
 
@@ -380,14 +403,6 @@ fad8. mib16 fa8 sol8
 ###
 
 \audioclip{\emph{Dulab} Nikriz}
-
-\subsection{\Maqam Rast}
-
-El \maqam más importante y extendido de la música árabe. Por su preponderancia, puede considerarse como el equivalente a la escala mayor en la música occidental.
-
-\input{capitulos/maqam/rast.tex}
-
-El siguiente \emph{dulab} en el \maqam Rast es uno de los más populares:
 
 \subsubsection{\emph{Dulab} Rast}
 
@@ -421,14 +436,6 @@ fa sol fa misb misb re re do
 
 \audioclip{\emph{Dulab} Rast}
 
-\subsection{\Maqam Bayati}
-
-Junto a Rast, Bayati es el \maqam más popular en la música árabe, y en los estilos folclóricos es incluso más frecuente que aquel.
-
-\input{capitulos/maqam/bayati.tex}
-
-Como ejemplo, el siguiente \emph{dulab} es una pieza tradicional escrita en el \maqam Bayati.
-
 \subsubsection{\emph{Dulab} Bayati}
 
 ###
@@ -459,13 +466,6 @@ re4 r4
 
 \audioclip{\emph{Dulab} Bayati}
 
-\subsection{\Maqam Saba}
-
-Con una sonoridad muy característica, que en la mayoría de oyentes evoca sentimientos de tristeza o sufrimiento. Al contrario que los restantes, es el único \maqam con \yins Saba como primer \yins, por lo que no forma una familia.
-
-\input{capitulos/maqam/saba.tex}
-
-El siguiente es un \emph{dulab} tradicional en este \maqamb.
 
 \subsubsection{\emph{Dulab} Saba}
 
@@ -491,14 +491,6 @@ re fa fa16 misb8 re16 re4 r4
 
 \audioclip{\emph{Dulab} Saba}
 
-\subsection{\Maqam Huzam}
-
-Aunque existe un \maqam denominado Sikah, su uso es poco frecuente, y el representante más popular de la familia basada en \yins Sikah es \maqam Huzam.
-
-\input{capitulos/maqam/huzam.tex}
-
-El siguiente es un \emph{dulab} en este \maqamb.
-
 \subsubsection{\emph{Dulab} Huzam}
 
 ###
@@ -520,6 +512,8 @@ misb2
 ###
 
 \audioclip{\emph{Dulab} Huzam}
+
+
 
 \section{Más \maqamaatb}
 \label{masmaqamaat}
