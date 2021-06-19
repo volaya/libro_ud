@@ -14,11 +14,11 @@ En este capítulo, describiremos la primera de estas acepciones y detallaremos q
 
 El estudio de los \maqam ha de comenzarse por sus partes constituyentes: los denominados \ashnas (en singular, \yinsb)
 
-El \yins es la unidad melódica fundamental en la música árabe. Un \yins es un grupo de notas, generalmente cuatro, con una estructura interválica determinada. Existen también algunos \ashnas de tres y de cinco notas. Puede entenderse un \yins como un pequeña escala, en el sentido que esta tiene en la música occidental.
+El \yins es la unidad melódica fundamental en la música árabe. Un \yins es un grupo de notas, generalmente cuatro, con una estructura interválica determinada. Existen también algunos \ashnas de tres y de cinco notas. Puede entenderse un \yins como una pequeña escala, en el sentido que esta tiene en la música occidental.
 
 La combinación de dos \ashnas (o en algunos casos más de dos) dará lugar a un \maqamb, como en breve veremos.
 
-Aunque el número de \ashnas posibles es muy elevado, se considera que nueve son los principales Estos son, a su vez, aquellos a partir de los cuales se construyen los \maqamaat más habituales.
+Aunque el número de \ashnas posibles es muy elevado, se considera que nueve son los principales. Estos son, a su vez, aquellos a partir de los cuales se construyen los \maqamaat más habituales.
 
 Cinco de estos \ashnas emplean intervalos múltiplos de un tono o un semitono, y generan, por tanto, \maqamaat compatibles con la escala cromática occidental. Son los mostrados a continuación.
 
@@ -86,7 +86,7 @@ Cinco de estos \ashnas emplean intervalos múltiplos de un tono o un semitono, y
 
 \end{lilypond}
 
-Los restantes, mostrados seguidamente, contienen intervalos de 3/4 de tono.
+Los restantes, mostrados seguidamente, contienen intervalos de tres cuartos de tono.
 
 \begin{lilypond}
     \include "arabic.ly"
@@ -146,7 +146,7 @@ Los restantes, mostrados seguidamente, contienen intervalos de 3/4 de tono.
 
 \audioclip{Nueve \ashnas principales}
 
-Nótese que, aunque el intervalo mínimo que se considera en el sistema tonal árabe es de un cuarto de tono, este intervalo no aparece en ninguno de los anteriores \ashnas. En la práctica, el menor intervalo entre dos notas sigue siendo el medio tono, y el intervalo que se emplea para introducir la microtonalidad y las notas que no forman parte de la escala cromática occidental es el de 3/4 de tono.
+Nótese que, aunque el intervalo mínimo que se considera en el sistema tonal árabe es de un cuarto de tono, este intervalo no aparece en ninguno de los anteriores \ashnas. En la práctica, el menor intervalo entre dos notas sigue siendo el medio tono, y el intervalo que se emplea para introducir la microtonalidad y las notas que no forman parte de la escala cromática occidental es el de tres cuartos de tono.
 
 A la hora de presentar los principales \ashnasb, puede verse que cada uno de ellos se ha escrito arrancando a partir de una nota particular, que no es la misma para todos ellos. Eso es así debido a que cada \yins tiene una nota tónica que resulta más habitual, y aunque es posible trasponerlo a otra nota distinta, en la práctica eso no sucede más que con una serie reducida de ellas.
 
@@ -191,7 +191,9 @@ Los otros elementos que componen un \maqam son los siguientes:
 \item \textbf{Notas de mayor relevancia}. De las notas que componen el \maqam, algunas deben resaltarse frente a las demás como parte de la melodía. Entre ellas, se encuentra en primer lugar la nota tónica, y tras ella la conocida como \emph{ghammaz}, generalmente situada en el arranque del segundo \yins del \maqamb.
 \item \textbf{Motivos melodicos}. Cada \maqam tiene asociado una serie de frases y patrones que le dan su propia personalidad. Estos clichés y motivos melódicos hacen reconocible el \maqam más allá de su estructura interválica.
 \item \textbf{Desarrollo melódico}. La manera en que la melodía evoluciona a traves de las notas del \maqam está definida  y no es arbitraria. Es decir, no basta con combinar de cualquier manera esas notas que lo componen, aun si el resultado es estéticamente agradable.
-\item \textbf{Modulación}. La modulación es una parte fundamental de la música árabe. Una melodía que no modula de un \maqam a otro durante su desarrollo se considera excesivamente simple. Las modulaciones que son posibles a partir de un determinado \maqam están establecidas por el uso tradicional de estas, y es necesario conocerlas.
+\item \textbf{Modulación}. La modulación es una parte fundamental de la música árabe. Una melodía que no modula de un \maqam a otro durante su desarrollo se considera excesivamente simple. Las modulaciones que son posibles a partir de un determinado \maqam están establecidas por el uso tradicional de estas, y es necesario conocerlas. 
+
+Para entender esto, pueden pensarse estas modulaciones como el equivalente a las cadencias de acordes que aparecen en la música occidental. Para los acordes que se forman con las notas de una determinada escala, ciertas progresiones son más habituales en según que estilos (la progresion ii-V-I en el jazz, la cadencia andaluza en el flamenco, etc.).
 \end{itemize}
 
 De las anteriores, la modulación es la característica más definitoria de un \maqam y la que verdaderamente lo diferencia.
