@@ -19,6 +19,8 @@ Dividiremos los patrones de este capítulo en tres grupos principales: inicios, 
 
 Los ejemplos comentados a continuación se presentan en su  mayoría en los \maqamaat Rast y Nahawand, salvo cuando se indica lo contrario. El objetivo no es solo ofrecer una colección de fragmentos y frases, sino presentar en base a ellos las formas más habituales en las que se presentan como elementos de una pieza, para así ayudar a una mejor comprensión de la estructura de un \taqsim y de otras frases similares. Junto a ellos, y en las dos primeras secciones (inicios y cierres), se incluyen secciones particulares para algunos de los \maqamaat más habituales.
 
+Aunque estas frases se presentan en unas notas determinadas (las más habituales de cada \maqamb), pueden por supuesto emplearse sobre otras distintas, bien sea por tocarse el \maqam arrancando en otra nota, o bien como frases sobre un \yins que no es el primero del maqam en cuestión. Por ejemplo, en un \taqsim en el \maqam Nahawand en do, podremos emplear las frases de inicio que aquí se presentan para el \maqam Hiyaz. Tratándose de inicios, lo más habitual es que cubran unicamente el primer \yinsb, que en este caso sería Hiyaz en re. Si transponemos las frases a Hiyaz en sol (en la afinación habitual del ud árabe bastaría desplazar la digitación a una cuerda inferior), podremos usar esos patrones para arrancar las frases intermedias del \taqsim que desarrollan el segundo \yins del \maqam Nahawan en do (\yins Hiyaz en sol).
+
 \section{Inicios}
 
 En esta sección se recogen fragmentos con los que es habitual comenzar un \taqsimb, y que siven de presentación de su \maqamb. La apertura y cierre de un \taqsim son las partes que más se prestan al uso de <<formulas>> predefinidas, y donde el conocimiento de estas es más necesario.
@@ -318,6 +320,70 @@ do16 re mib4\glissando fad4\glissando mib8 re16 re, re' re re
 ###
 \audioclip{Inicio en \maqam Hiyaz.}
 
+\newbeginning{}
+###notime
+re16 mib fad sol sol sol sol sol sol sol sol sol fad sol la sib la sol fad sol mib re re4
+###
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+###notime
+\tuplet 3/2 { la,16 (sib do)} re4\fermata
+\tuplet 3/2 {la16 (sib do)} re re re re re4\fermata
+re8 mib fad sol16 fad fad fad fad mib4 
+\tuplet 3/2 {la,16 (sib do)} re re4
+###
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+###notime
+re,16 re' re re re re re, re' re re re4. do16 mib re mib8 re16 do mib re mib8 re16
+do mib re \glissando fad4 mib16 mib re re do re8 re4
+###
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+###notime
+re,16 re' re re re re re mib32 re do16 re re re re re re mib32 re do16 re re re re8 mib fad mib re16 mib32 re do16 re4
+###
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+###notime
+re,8 re' re re re re mib4 re2
+re,8 re' re re re re fad4 mib4 re2
+###
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+###notime
+re,8 re'4.
+do8 re mib re fad mib fad4
+mib64 fad mib fad mib4 re2
+###
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+###notime
+mib32 re do16 re re, re' re 
+mib32 re do16 re re, re' re 
+mib32 re do16 re re mib fad4:32 
+mib32 re do16 re re re, re' re re
+###
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+###notime
+sol,16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re mib4 re2
+sol,16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re fad re mib4 re2
+###
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+###notime
+re16 do re fad re re mib (re) re4:32
+###
+\audioclip{Inicio en \maqam Hiyaz.}
 
 \section{Cierres}
 
@@ -696,6 +762,21 @@ mib16 (re8) re16 (do8) do16 (si8)
 do16 re mib4 re32 do16
 ###
 \audioclip{Cierre en \maqam Nahawand.}
+
+\subsection{Cierres en \maqam Hiyaz}
+
+\newending{}
+###notime
+re16 mib fad sol fad mib re do re re,
+###
+\audioclip{Cierre en \maqam Hiyaz.}
+
+\newending{}
+###notime
+la4:32 sol32 fad re mib4:32
+re'32 do sib la sol fad mib re do re4
+###
+\audioclip{Cierre en \maqam Hiyaz.}
 
 \label{secuenciasmelodicasvocabulario}
 \section{Secuencias melódicas}
