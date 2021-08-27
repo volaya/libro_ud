@@ -6,7 +6,7 @@ from collections import defaultdict
 
 LILYPONDPATH = r"C:\Program Files (x86)\LilyPond\usr\bin"
 PYTHONPATH = os.path.join(LILYPONDPATH, "python.exe")
-LILYPONBDBOOKPATH = os.path.join(LILYPONDPATH, "lilypond-book.py")
+LILYPONBDBOOKPATH = os.path.join(LILYPONDPATH, "lilypond-book")
 BOOKPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "libro")
 
 FRETS = 11
@@ -219,13 +219,13 @@ def generate_maqamat_snippets():
 
     <<
       \new Staff << \clef "G_8" \scale \bar "|.">>
-      \new TabStaff << \scale>>
     >>
     \end{lilypond}
     \end{center}
 
     '''
 
+#\new TabStaff << \scale>>
     lilypond_jins_template = r'''
     \once \override TextSpanner.bound-details.right.padding = #%i
     \once \override TextSpanner.bound-details.left.padding = #%i
@@ -351,9 +351,9 @@ def generate_lilypond_files():
                     out.write(s)
 
 
-generate_maqamat_snippets()
+#generate_maqamat_snippets()
 #generate_maqam_analysis_fretboard()
 #generate_full_fretboard()
-generate_lilypond_files()
+#generate_lilypond_files()
 run_lilypond()
 run_latex()
