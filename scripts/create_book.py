@@ -6,7 +6,7 @@ from collections import defaultdict
 
 LILYPONDPATH = r"C:\Program Files (x86)\LilyPond\usr\bin"
 PYTHONPATH = os.path.join(LILYPONDPATH, "python.exe")
-LILYPONBDBOOKPATH = os.path.join(LILYPONDPATH, "lilypond-book")
+LILYPONBDBOOKPATH = os.path.join(LILYPONDPATH, "lilypond-book.py")
 BOOKPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "libro")
 
 FRETS = 11
@@ -142,6 +142,7 @@ notes = \transpose %s %s{
 \end{center}
 '''
 
+
 def _notetitle(n):
     title = n.capitalize()
     title = title.replace("sb", r"\hflat")
@@ -156,7 +157,6 @@ oudfolder = os.path.join(chaptersfolder, "elud")
 
 
 def generate_maqamat_snippets():
-
     maqamaatfile = os.path.join(os.path.dirname(__file__), "maqamaat.json")
     with open(maqamaatfile) as f:
         maqamaat = json.load(f)
@@ -351,9 +351,9 @@ def generate_lilypond_files():
                     out.write(s)
 
 
-#generate_maqamat_snippets()
-#generate_maqam_analysis_fretboard()
-#generate_full_fretboard()
-#generate_lilypond_files()
+generate_maqamat_snippets()
+generate_maqam_analysis_fretboard()
+generate_full_fretboard()
+generate_lilypond_files()
 run_lilypond()
 run_latex()
