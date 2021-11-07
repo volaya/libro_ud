@@ -11,7 +11,7 @@ La música árabe, y en especial en la improvisación, hace uso de frases típic
 
 En este capítulo veremos una colección de frases que pueden considerarse <<coloquiales>>, y cuyo conocimiento es es una herramienta fundamental para lograr que una improvisación suene natural y genuina, dentro de lo que dicta la tradición.
 
-Por sí solo, el contenido de este capítulo no sirve para elaborar un vocabulario completo y, más importante aún, saber cómo y cuando emplearlo, de la misma manera que un libro que recoja la jerga de un idioma no basta para que un hablante sepa cómo utilizar esta. Es necesaria la exposición a esa jerga en su contexto real, verla puesta en práctica, para inferir a partir de ello su utilización, de la misma manera que es necesario escuchar frases como las de este capítulo dentro de sus correspondientes improvisaciones para después ser capaz de incorporarlas en las propias de manera natural. No obstante, una recopilación así de patrones melódicos a la manera de un diccionario resulta útil para disponer de un vocabulario básico y poder de este modo entender mejor esas improvisaciones ajenas, haciendo más productivo el estudio de \taqasim y piezas de otros intérpretes.
+Por sí solo, el contenido de este capítulo no sirve para elaborar un vocabulario completo y, más importante aún, saber cómo y cuando emplearlo, de la misma manera que un libro que recoja la jerga de un idioma no basta para que un hablante sepa cómo utilizar esta. Es necesaria la exposición a esa jerga en su contexto real, verla puesta en práctica, para inferir a partir de ello su utilización, de la misma manera que es necesario escuchar las frases de este capítulo dentro de sus correspondientes improvisaciones para después ser capaz de incorporarlas en las propias de manera natural. No obstante, una recopilación así de patrones melódicos a la manera de un diccionario resulta útil para disponer de un vocabulario básico y poder de este modo entender mejor esas improvisaciones ajenas, haciendo más productivo el estudio de \taqasim y piezas de otros intérpretes.
 
 No deben entenderse estos fragmentos como frases que han de tocarse literalmente y sin ningún cambio respecto a lo que aquí se presenta. Al contrario, deben servir como base para que cada cual elabore sus propios motivos melódicos y dé así forma a su estilo. Y, por supuesto, incluso en el caso de tocar la melodía de la frase tal y como se recoge, se puede (y se debe) añadir la ornamentación correspondiente.
 
@@ -19,6 +19,7 @@ Dividiremos los patrones de este capítulo en tres grupos principales: inicios, 
 
 Los ejemplos comentados a continuación se presentan en su  mayoría en los \maqamaat Rast y Nahawand, salvo cuando se indica lo contrario. El objetivo no es solo ofrecer una colección de fragmentos y frases, sino presentar en base a ellos las formas más habituales en las que se presentan como elementos de una pieza, para así ayudar a una mejor comprensión de la estructura de un \taqsim y de otras frases similares. Junto a ellos, y en las dos primeras secciones (inicios y cierres), se incluyen secciones particulares para algunos de los \maqamaat más habituales.
 
+Aunque estas frases se presentan en unas notas determinadas (las más habituales de cada \maqamb), pueden por supuesto emplearse sobre otras distintas, bien sea por tocarse el \maqam arrancando en otra nota, o bien como frases sobre un \yins que no es el primero del maqam en cuestión. Por ejemplo, en un \taqsim en el \maqam Nahawand en do, podremos emplear las frases de inicio que aquí se presentan para el \maqam Hiyaz. Tratándose de inicios, lo más habitual es que cubran unicamente el primer \yinsb, que en este caso sería Hiyaz en re. Si transponemos las frases a Hiyaz en sol (en la afinación habitual del ud árabe bastaría desplazar la digitación a una cuerda inferior), podremos usar esos patrones para arrancar las frases intermedias del \taqsim que desarrollan el segundo \yins del \maqam Nahawan en do (\yins Hiyaz en sol).
 
 \section{Inicios}
 
@@ -633,7 +634,6 @@ do4
 
 \audioclip{Inicio en \maqam Rast.}
 
-
 \newbeginning{}
 El siguiente inicio arranca en la octava superior, y se utilizaría para abrir una frase intermedia, una vez que se ha llegado a esa altura en el desarrollo melódico del \taqsimb.
 
@@ -1027,6 +1027,125 @@ sisb8:32 do8:32 re8:32 re16 re re4
 
 \audioclip{Inicio en \maqam Bayati.}
 
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+r8 \grace misb32 (re16) do re misb fa8 \grace sol32 (fa16)
+misb8 \grace fa32 (misb16) re4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Bayati.}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+re16 re re re re re
+do re misb fa \tuplet 3/2 {misb32 (fa misb }) (re16)
+do re misb fa \tuplet 3/2 {misb32 (fa misb }) (re16)
+do re misb fa \tuplet 3/2 {misb32 (fa misb }) (re16) re8 re re re
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Bayati.}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+re16 re re re re re re4
+do16 re fa4
+sol16 fa misb re misb misb misb8 re8 re16 do re re4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Bayati.}
 
 \subsection{Inicios en \maqam Nahawand}
 
@@ -1355,11 +1474,10 @@ re16 mib fad sol sol sol sol sol sol sol sol sol fad sol la sib la sol fad sol m
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative {
-la,16 (sib do) re4\fermata
-la16 (sib do) re re re re re4\fermata
-re8 mib fad sol16 fad fad fad fad mib4 
-la,16 (sib do) re re4
-mib re re4
+\tuplet 3/2 { la,16 (sib do)} re4\fermata
+\tuplet 3/2 {la16 (sib do)} re re re re re4\fermata
+re8 mib fad sol16 fad fad fad fad mib4
+\tuplet 3/2 {la,16 (sib do)} re re4
 \bar "||"
 }
 
@@ -1390,7 +1508,6 @@ mib re re4
 \end{center}
 
 \audioclip{Inicio en \maqam Hiyaz.}
-
 
 \newbeginning{}
 
@@ -1431,6 +1548,240 @@ do mib re \glissando fad4 mib16 mib re re do re8 re4
 
 \audioclip{Inicio en \maqam Hiyaz.}
 
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+re,16 re' re re re re re mib32 re do16 re re re re re re mib32 re do16 re re re re8 mib fad mib re16 mib32 re do16 re4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+re,8 re' re re re re mib4 re2
+re,8 re' re re re re fad4 mib4 re2
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+re,8 re'4.
+do8 re mib re fad mib fad4
+mib64 fad mib fad mib4 re2
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+mib32 re do16 re re, re' re
+mib32 re do16 re re, re' re
+mib32 re do16 re re mib fad4:32
+mib32 re do16 re re re, re' re re
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol,16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re mib4 re2
+sol,16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re fad re mib4 re2
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+re16 do re fad re re mib (re) re4:32
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Inicio en \maqam Hiyaz.}
 
 \section{Cierres}
 
@@ -2553,6 +2904,49 @@ fa16 misb re do4
 
 \audioclip{Cierre en \maqam Rast.}
 
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\tuplet 3/2 { fa16( misb re) }
+\tuplet 3/2 { fa16( misb re) }
+\tuplet 3/2 { fa16( misb re) }
+\tuplet 3/2 { fa16( misb re) }
+fa4:32 misb32 re misb4:32 re32 do8
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Cierre en \maqam Rast.}
+
+
 \subsection{Cierres en \maqam Bayati}
 
 \newending{}
@@ -3185,6 +3579,244 @@ do16 re mib4 re32 do16
 \end{center}
 
 \audioclip{Cierre en \maqam Nahawand.}
+
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\tuplet 3/2 { mib32 fa sol} fa16 mib8
+\tuplet 3/2 {re32 mib fa} mib16  re8
+mib16 re do32 si do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Cierre en \maqam Nahawand.}
+
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\partial 8 {\tuplet 3/2 { re16 mib fa } } sol4:32
+\tuplet 3/2 { sol16 lab si} do4:32
+re16 do si lab sol fa mib re do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+do'8 sol sol32 (lab sib lab sol4) \grace lab32 (sol16) \grace lab32 (sol16)
+fa fa mib mib re do4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Cierre en \maqam Nahawand.}
+
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+sol8  sol16:64 fa8 sol16:64 mib8 sol16:64 do,16
+sol'16 sol sol sol sol sol8 sol16:64 fa8 sol16:64 mib8 sol16:64 re16
+sol sol mib sol sol fa sol sol mib sol sol fa sol sol mib4:32 re4:32 mib32 re do8
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Cierre en \maqam Nahawand.}
+
+
+\subsection{Cierres en \maqam Hiyaz}
+
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+re16 mib fad sol fad mib re do re re,
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Cierre en \maqam Hiyaz.}
+
+\newending{}
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+la4:32 sol32 fad re mib4:32
+re'32 do sib la sol fad mib re do re4
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    defaultBarType = ""
+    supportNonIntegerFret = ##t
+  }
+  \context {
+    \TabStaff
+    \remove Time_signature_engraver
+
+    }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
+
+\audioclip{Cierre en \maqam Hiyaz.}
 
 \label{secuenciasmelodicasvocabulario}
 \section{Secuencias melódicas}
