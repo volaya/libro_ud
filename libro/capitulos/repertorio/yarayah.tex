@@ -1,0 +1,98 @@
+\songheader{Ya Rayah}{Amrani Abderrahmane}{Nahawand Re}
+
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative {
+\time 2/4
+\partial 8 la,8
+\repeat volta 2{
+re8. la'8 sol16 fa8
+r8 r16 fa8 mi16 re8
+r8 re16 dod re8 mi
+fa sol la fa
+sib la16 sol8 fa16 mi8
+r8 r16 mi8 re16 dod8
+r8 r16 dod8 sib16 la8
+r8 r16 sol'8 fa16 mi8
+r16 fa16 mi re dod8 la
+dod re mi fa
+sol fa sol fa
+}
+\alternative{
+	{la8 sol16 sol8 fa16 fa8
+	fa16 mi re mi re dod
+	sib re dod sib la8 la}
+	{la'8 sol16 fa8 mi16 re8
+	r8 re16 mi fa sol la fa}
+}
+
+re8. re8. la'8
+la8 la la la
+la16 (la8) sol
+la sol16 fa mi re mi8
+(mi8) sol16 fa mi re mi8
+r8 sol sol sol
+sol sol la sib
+dod sib16 la8 r16 la8
+la8 sol fa16 mi re8
+(re8) re16 dod sib dod re8
+(re16) re8. la'8 la
+la la la la
+(la16) la8. sol8 la
+sol16 fa mi re mi4
+sol16 fa mi re mi4
+sol8 sol sol sol
+sol la sib dod
+sib16 la8 r16 la8 la
+sol8 fa16 mi re4
+re16 dod si dod re4
+
+la'8 re4 re8
+re re fa8. mi16
+(mi8) re do sib
+la sol r8 sol16 fad
+sol la sib la sol8 sol
+(sol) do do4
+do8 mi re8. do16
+(do8) sib la sol
+fa16 mi re8 r8 re16 mi
+fa sol la fa re8 r8
+la'8 re4 re8
+re re fa8. mi16
+(mi8) re do si
+la sol r8 sol fad
+sol la sib la sol8 sol
+(sol) do do4
+do8 mi re8. do16
+(do8) sib la sol
+la8 la16 sol la sol fa mi
+re8 re16 dod re fa la sib
+la2
+re8 r8 r4
+
+
+\bar "||"
+}
+
+\layout {
+  \omit Voice.StringNumber
+  \context {
+      \TabStaff
+      \tabFullNotation
+      stringTunings = \stringTuning <do, fa, la, re sol do'>
+    }
+  indent = #0
+  \context {
+    \Score
+    supportNonIntegerFret = ##t
+  }
+}
+
+<<
+  \new TabStaff <<\notes>>
+>>
+\end{lilypond}
+\end{center}
