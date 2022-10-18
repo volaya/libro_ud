@@ -4,16 +4,14 @@ import os
 from subprocess import call
 from collections import defaultdict
 
-LILYPONDPATH = r"C:\Program Files (x86)\LilyPond\usr\bin"
-PYTHONPATH = os.path.join(LILYPONDPATH, "python.exe")
-LILYPONBDBOOKPATH = os.path.join(LILYPONDPATH, "lilypond-book.py")
+LILYPONBDBOOKPATH =  "lilypond-book"
 BOOKPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "libro")
 
 FRETS = 11
 
 def run_lilypond():
     os.chdir(BOOKPATH)
-    call([PYTHONPATH, LILYPONBDBOOKPATH, "--loglevel=ERROR", "--pdf", "--output", "output", "libro.lytex"])
+    call([LILYPONBDBOOKPATH, "--loglevel=ERROR", "--pdf", "--output", "output", "libro.lytex"])
 
 
 def run_latex():
