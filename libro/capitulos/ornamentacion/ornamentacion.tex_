@@ -1,7 +1,7 @@
 \chapter{Ornamentación}
 \label{ornamentacion}
 
-Como ya sabemos, la música árabe es fundamentalmente melódica, y es en el propio desarrollo de la melodía donde se encuentra su riqueza. Por ello, la ornamentación de las notas que forman parte de esta es un aspecto fundamental, y todo intérprete de ud debe ser capaz de enriquecer una melodía utilizando algunas de las muchas técnicas que existen para ello. La ornamentación no es un elemento opcional; a la hora de interpretar una pieza, el intérprete debe añadir ornamentos, o de lo contrario se considerará que la suya es una ejecución pobre de dicha pieza.
+Como ya sabemos, la música árabe es fundamentalmente melódica, y es en el propio desarrollo de la melodía donde se encuentra su riqueza. Por ello, la ornamentación de las notas que forman parte de esta es un aspecto fundamental, y todo intérprete de ud debe ser capaz de enriquecer una melodía utilizando algunas de las muchas técnicas que existen para ello. La ornamentación no es un elemento opcional; a la hora de interpretar una pieza, el intérprete debe añadir ornamentos. De lo contrario, se considerará que la suya es una ejecución pobre de dicha pieza.
 
 Según escribió el filósofo al-Farabi en su libro \emph{Kitab al-musiqa al-kabir} (\emph{El gran libro de la música}), uno de los principales tratados sobre la música árabe, escrito en el siglo X, <<los ornamentos deben aportar a la melodía brillo, elegancia, abundancia y belleza>>.
 
@@ -13,7 +13,7 @@ Es importante mencionar que el uso correcto de la ornamentación no consiste uni
 
 Es posible escribir la ornamentación utilizando la notación musical habitual, pero no es común hacerlo. La ornamentación la decide el propio interprete en el momento de tocar, y lo habitual es que emplee motivos distintos en una nueva interpretación.
 
-En la música árabe, y en particular en la interpretación de esta con el ud, una partitura representa tan solo la información mínima para dar vida a una pieza, lo que podríamos denominar el esqueleto melódico de esta. Corresponde al músico el complementarla con sus propios elementos interpretativos, y embellecerla con su estilo particular de ornamentación.
+En la música árabe, y en particular en la interpretación de esta con el ud, una partitura representa tan solo la información mínima para dar vida a una pieza, lo que podríamos denominar el esqueleto melódico de esta. Corresponde al músico el complementarla con sus propios elementos interpretativos y embellecerla con su estilo particular de ornamentación.
 
 Esta forma de entender la interpretación no es exclusiva de la música árabe, y aparece en otras tradiciones musicales, en especial las que se transmiten de forma oral. En la música irlandesa, por ejemplo, las canciones que forman parte del repertorio son conocidas por todos sus músicos, pero solo de esa manera esquemática, con las notas fundamentales que son las que apuntalan la armonía de la pieza, y cada cual añade después la ornamentación según su criterio. No solo existen estilos personales de ornamentación y de interpretación, sino también estilos regionales definidos por cómo sean los adornos que se aplican a la melodía.
 
@@ -46,7 +46,7 @@ do8:16 sisb8:16 do8:16 re8:16 misb8:16 re8:16 do4
 
 El trémolo, \emph{rash} en árabe, es una sucesión rápida de movimientos de púa ascendentes y descendentes sobre una misma nota. Es uno de los ornamentos más característicos del ud en el estilo árabe. Tanto es así, que se asume que cualquier nota de larga duración se tocará en forma de trémolo, aun si se añaden a ella también otro tipo de ornamentos.
 
-El trémolo puede ser corto, en cuyo caso tiene tres notas, o más largo. El trémolo corto, se logra con una tensión repentina de la muñeca, que crea un efecto de ráfaga breve.
+El trémolo puede ser corto, en cuyo caso tiene tres notas, o más largo. El trémolo corto se logra con una tensión repentina de la muñeca, que crea un efecto de ráfaga breve.
 
 Se indican en la partitura, respectivamente, con una barra horizontal doble o triple sobre la nota.
 
@@ -63,14 +63,6 @@ sol16 sol sol sol
 ###
 
 Es habitual variar la posición de la \emph{risha} para la realización del trémolo, situándola más perpendicular a las cuerdas, de forma que el contacto con estas se realice con la parte frontal de la púa.
-
-El siguiente es un ejemplo del efecto del trémolo, tanto corto como largo.
-
-###
-\key sol \hijaz
-do8 do8:32 re8 re8:32 mib8 mib8:32 fa8 fa8:32 sol8 sol8:32 lab8 lab8:32 si8 si8:32 r4
-si4:32 lab4:32 sol4:32 fa4:32 lab4:32 sol4:32 fa4:32 mib4:32 sol4:32 fa4:32 mib4:32 re4:32 do1
-###
 
 \audioclip{Ornamentación: trémolo}
 
@@ -125,7 +117,7 @@ Generalmente se aplica entre una nota y la situada un semitono o un tono por enc
 
 \audioclip{Ornamentación: mordente}
 
-Una forma de mordiente particular muy empleado, y con una sonoridad muy característica del ud y de la música árabe, es aplicar el mordente con un único dedo, deslizando este. El mismo dedo que apoya sobre la cuerda en el mástil para producir la primera nota se desplaza hasta la posición de la segunda nota y vuelve después a la anterior, sin que intervenga en ello ningún otro dedo de la mano izquierda.
+Una forma de mordente particular muy empleado, y con una sonoridad muy característica del ud y de la música árabe, es aplicar el mordente con un único dedo, deslizando este. El mismo dedo que apoya sobre la cuerda en el mástil para producir la primera nota se desplaza hasta la posición de la segunda nota y vuelve después a la anterior, sin que intervenga en ello ningún otro dedo de la mano izquierda.
 
 \audioclip{Ornamentación: mordente con \emph{glissando}}
 
@@ -210,7 +202,7 @@ Sin ornamentación:
 ###transpose fa do
 \time 10/8
 \key mib \major
-\partial 8 sol8 |
+\partial 8 sol'8 |
 do4 re16 mib fa mib mib re re do do si do4 sol8
 ###
 
@@ -219,19 +211,19 @@ Con ornamentación:
 ###transpose fa do
 \time 10/8
 \key mib \major
-\partial 8 sol8 |
+\partial 8 sol'8 |
 do4 re16 mib fa mib32 fa mib fa re mib re mib do re do re do si do4 sol8
 ###
 
 \audioclip{\emph{Lamma Bada Yatazanna}}
 
-A continuación, un fragmento de la frase inicial de la canción \emph{Longa Farahfaza}, de Riad Al Sunbati.
+A continuación, un fragmento de la frase inicial del tema \emph{Longa Farahfaza}, de Riad Al Sunbati.
 
 Sin ornamentación:
 
 ###
 \time 2/4
-\key sib \major
+\key sol \minor
 re'4 sib
 sol8 re sol sib
 re mib16 re do8 si
@@ -241,7 +233,7 @@ Con ornamentación:
 
 ###
 \time 2/4
-\key sib \major
+\key sol \minor
 re'16 mib re do sib do sib la
 sol8 re sol sib
 re mib16 re do8 si
@@ -249,11 +241,11 @@ re mib16 re do8 si
 
 \audioclip{\emph{Longa Farahfaza}}
 
-En la sección \ref{secuenciasmelodicasvocabulario} se presenta una pequeña colección de secuencias melódcias y frases empleadas con frecuencia en el ud.
+En la sección \ref{secuenciasmelodicasvocabulario} se presenta una pequeña colección de secuencias melódicas y frases empleadas con frecuencia en el ud.
 
 \section{La ornamentación y los \maqamaat}
 
-  El uso correcto de los ornamentos implica conocer en qué ocasiones es pertinente aplicarlos y cuándo no, para mantenerse dentro de las reglas estilísticas definidas por la tradición de la música árabe. Hay una relación directa entre este hecho y los distintos \maqamaat, ya que, igual que un determinado ornamento puede o no ser adecuado en una parte de la melodía, también lo es en función de la nota del \maqam que se toque.
+  El uso correcto de los ornamentos implica conocer en qué ocasiones es pertinente aplicarlos y cuándo no, para mantenerse dentro de las reglas estilísticas definidas por la tradición de la música árabe. Hay una relación directa entre este hecho y los distintos \maqamaatb, ya que, igual que un determinado ornamento puede o no ser adecuado en una parte de la melodía, también lo es en función de la nota del \maqam que se toque.
 
   Por ejemplo, en \emph{maqam} Bayati, el vibrato sobre la tercera nota (fa) es casi obligatorio y suele tratarse de un vibrato fuerte, para enfatizarla lo más posible. Sin embargo, es muy poco común aplicar vibrato a la segunda nota (mi semibemol).
 

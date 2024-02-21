@@ -4,7 +4,7 @@
 Uno de los elementos fundamentales para entender la música árabe es el \maqamb. Entendemos bajo esta denominación dos conceptos distintos:
 
 \begin{itemize}
-\item Cada uno de los modos melódicos existentes en la música árabe, que en una primera aproximación pueden equipararse a las escalas de la música occidental (aunque veremos que son conceptos diferentes y el \maqam es una idea más amplia)
+\item Cada uno de los modos melódicos existentes en la música árabe, que en una primera aproximación pueden equipararse a las escalas de la música occidental (aunque veremos que son conceptos diferentes y el \maqam es una idea más amplia).
 \item El sistema tonal que caracteriza la sonoridad y estructura de la música árabe, compuesto por el conjunto de modos melódicos y su forma de uso. Hablamos así de <<el \maqam árabe>> para referirnos al marco teórico y práctico sobre el que se construye esta música.
 \end{itemize}
 
@@ -150,9 +150,9 @@ Nótese que, aunque el intervalo mínimo que se considera en el sistema tonal á
 
 A la hora de presentar los principales \ashnasb, puede verse que cada uno de ellos se ha escrito arrancando a partir de una nota particular, que no es la misma para todos ellos. Eso es así debido a que cada \yins tiene una nota tónica que resulta más habitual, y aunque es posible trasponerlo a otra nota distinta, en la práctica eso no sucede más que con una serie reducida de ellas.
 
-La razón de este hecho es de caracter histórico, y tiene que ver con la propia configuración de instrumentos tales como el ud. Determinadas tónicas dan lugar a conjuntos de notas más sencillos de tocar o con mejor sonoridad (por ejemplo, con mayor cantidad de notas en cuerdas al aire), y ello condiciona su uso más frecuente frente a otras. No es un fenómeno exclusivo de la música árabe. La guitarra condiciona que las tonalidades de la y mi sean más habituales en el \emph{blues} (por ser estas las notas de las dos cuerdas más graves), mientras que el violín es responsable de que una gran parte de las piezas tradicionales irlandesas estén en tono de re, entre otros ejemplos.
+La razón de este hecho es de carácter histórico, y tiene que ver con la propia configuración de instrumentos tales como el ud. Determinadas tónicas dan lugar a conjuntos de notas más sencillos de tocar o con mejor sonoridad (por ejemplo, con mayor cantidad de notas en cuerdas al aire), y ello condiciona su uso más frecuente frente a otras. No es un fenómeno exclusivo de la música árabe. La guitarra condiciona que las tonalidades de la y mi sean más habituales en el \emph{blues} (por ser estas las notas de las dos cuerdas más graves), mientras que el violín es responsable de que una gran parte de las piezas tradicionales irlandesas estén en tono de re, entre otros ejemplos.
 
-Para los \ashnas anteriores, las siguientes son las tónicas más habituales, incluyendo las ya mostradas anteriormente.
+Para los \ashnas anteriores, las siguientes son las tónicas más habituales, incluyendo las ya mostradas previamente.
 
 \begin{center}
 \begin{minipage}{.4\textwidth}
@@ -189,9 +189,9 @@ Los otros elementos que componen un \maqam son los siguientes:
 
 \begin{itemize}
 \item \textbf{Notas de mayor relevancia}. De las notas que componen el \maqam, algunas deben resaltarse frente a las demás como parte de la melodía. Entre ellas, se encuentra en primer lugar la nota tónica, y tras ella la conocida como \emph{ghammaz}, generalmente situada en el arranque del segundo \yins del \maqamb.
-\item \textbf{Motivos melodicos}. Cada \maqam tiene asociado una serie de frases y patrones que le dan su propia personalidad. Estos clichés y motivos melódicos hacen reconocible el \maqam más allá de su estructura interválica.
+\item \textbf{Motivos melódicos}. Cada \maqam tiene asociado una serie de frases y patrones que le dan su propia personalidad. Estos clichés y motivos melódicos hacen reconocible el \maqam más allá de su estructura interválica.
 \item \textbf{Desarrollo melódico}. La manera en que la melodía evoluciona a traves de las notas del \maqam está definida  y no es arbitraria. Es decir, no basta con combinar de cualquier manera esas notas que lo componen, aun si el resultado es estéticamente agradable.
-\item \textbf{Modulación}. La modulación es una parte fundamental de la música árabe. Una melodía que no modula de un \maqam a otro durante su desarrollo se considera excesivamente simple. Las modulaciones que son posibles a partir de un determinado \maqam están establecidas por el uso tradicional de estas, y es necesario conocerlas. 
+\item \textbf{Modulación}. La modulación es una parte fundamental de la música árabe. Una melodía que no modula de un \maqam a otro durante su desarrollo se considera excesivamente simple. Las modulaciones que son posibles a partir de un determinado \maqam están establecidas por el uso tradicional de estas, y es necesario conocerlas.
 \end{itemize}
 
 De las anteriores, la modulación es la característica más definitoria de un \maqam y la que verdaderamente lo diferencia.
@@ -208,7 +208,7 @@ En esta sección se describe para cada una de estas familias su \maqam más repr
 
 En la sección \ref{masmaqamaat} ampliaremos el conjunto descrito en esta sección con otros \maqamaat que forman parte de estas familias.
 
-Para cada uno de los \maqamaat aquí descritos, se proporciona la estructura interválica y las notas y \ashnas que lo componen, la tablatura correspondiente a la octava básica, así como un esquema del diapasón del ud en el que se indica la posición de las notas del \maqam en cuestión. La nota tónica se representa en rojo, mientras que las restantes se representan en azul.
+Para cada uno de los \maqamaat aquí descritos, se proporciona la estructura interválica y las notas y \ashnas que lo componen, así como un esquema del diapasón del ud en el que se indica la posición de las notas del \maqam en cuestión. La nota tónica se representa en rojo, mientras que las restantes se representan en azul.
 
 Otros aspectos relativos a cada \maqam, tales como el desarrollo melódico o el vocabulario, se detallarán en secciones posteriores.
 
@@ -229,7 +229,6 @@ El segundo \yins puede sustituirse por \yins Kurd, en cuyo caso la estructura in
 \input{capitulos/maqam/nahawandb.tex}
 
 Normalmente, el \yins Kurd se emplea en sentido descendente, y el \yins Hiyaz en el ascendente.
-
 
 \subsection{\Maqam Kurd}
 
@@ -276,7 +275,7 @@ Aunque existe un \maqam denominado Sikah, su uso es poco frecuente, y el represe
 
 \section{Algunos \emph{dulabs} de ejemplo}
 
-Un buena forma de empezar a familiarizarse con los \maqamaat anteriores es a través de \emph{dulabs} que utilicen cada uno de ellos. Recordemos que un dulab es una pieza instrumental breve, y que con frecuencia se eplean para presentar el \maqam alrededor del cual se desarrolla la pieza que después va a tocarse.
+Un buena forma de empezar a familiarizarse con los \maqamaat anteriores es a través de \emph{dulabs} que utilicen cada uno de ellos. Recordemos que un \emph{dulab} es una pieza instrumental breve, y que con frecuencia se emplea para presentar el \maqam alrededor del cual se desarrolla la pieza que después va a tocarse.
 
 \subsubsection{\emph{Dulab} Ayam}
 
@@ -284,7 +283,7 @@ Un buena forma de empezar a familiarizarse con los \maqamaat anteriores es a tra
 \key sib \major
 \time 2/4
 \repeat volta 2{
-sib4 fa sol8 la sib4
+sib'4 fa sol8 la sib4
 }
 sib4 re do sib8 la
 sol fa sol la sib4 r4
@@ -332,7 +331,7 @@ mib16 re mib fa mib8 re
 
 ###
 \key re \kurd
-la8 sib la sol la4 sib4
+la'8 sib la sol la4 sib4
 do re do sib
 la8 sib la sol fa4 sol
 fa8 sol fa mib re2
@@ -388,10 +387,10 @@ do mib re2
 \subsubsection{\emph{Dulab} Nikriz}
 
 ###
-\key re \minor
+\key re \hijaz
 \time 2/4
 \repeat volta 3 {
-sol8. fad16 sol8 la
+sol'8. fad16 sol8 la
 sib8. la16 sol8 mib
 fad8. mib16 fa8 sol8
 }
@@ -408,7 +407,7 @@ fad8. mib16 fa8 sol8
 
 ###
 \key do \rast
-\partial 2 r8 sol la sisb
+\partial 2 r8 sol' la sisb
 \repeat volta 2{
 do4 sisb8 la sol la sol fa misb fa misb re do sol' la sisb
 do4 sisb8 la sol la sol fa misb fa misb re do4 re8 misb
@@ -562,22 +561,20 @@ Aunque \maqam Hiyaz tiene su tónica en re, \maqam Hiyaz Kar aparece principalme
 \subsubsection{\Maqam Bayati Shuri}
 \input{capitulos/maqam/bayatishuri.tex}
 
-\subsection{Familia de \yins Sikah}
-
 \section{Transposición}
 \label{transposicion}
 
-Los anteriores \maqamaat se han presentado con su tónica respectiva situada en la nota desde la que arranca por norma general el primer \yins de cada uno de ellos (salvo excepciones como Hiyaz Kar, que aparece con mayor frecuencia con la tónica en do). De la misma manera que una escala en la música tradicional puede transponerse y comenzar en cualquiera de las 12 notas de la escala cromática, un \maqam podría también componerse a partir de cualquiera de ellas (o incluso de cualquiera de las 24 del sistema tonal árabe). Esto, sin embargo, ocurre con poca frecuencia. Los \maqamaat no son tan <<moviles>> como lo son las escalas, y la mayoría no aparecen más que en la forma que aquí se ha presentado. En caso de aparecer sobre otras notas, estas son notas relevantes de algún otro \maqamb, y se llega a ellos modulando desde este, como veremos en breve.
+Los anteriores \maqamaat se han presentado con su tónica respectiva situada en la nota desde la que arranca por norma general el primer \yins de cada uno de ellos (salvo excepciones como Hiyaz Kar, que aparece con mayor frecuencia con la tónica en do). De la misma manera que una escala en la música tradicional puede transponerse y comenzar en cualquiera de las 12 notas de la escala cromática, un \maqam podría también componerse a partir de cualquiera de ellas (o incluso de cualquiera de las 24 del sistema tonal árabe). Esto, sin embargo, ocurre con poca frecuencia. Los \maqamaat no son tan <<móviles>> como lo son las escalas, y la mayoría no aparecen más que en la forma que aquí se ha presentado. En caso de aparecer sobre otras notas, estas son notas relevantes de algún otro \maqamb, y se llega a ellos modulando desde este, como veremos en breve.
 
 Aquellos \maqamaat que aparecen con cierta frecuencia sobre otras tónicas acostumbran a tener nombres distintos. Por ejemplo, el \maqam Nahawand con la tónica en sol se conoce como \emph{Farafaza}. Sin embargo, a pesar de su estructura interválica idéntica, el resto de elementos del \maqam tales como su \emph{sayr} o sus frases características no son necesariamente las mismas, y en ocasiones se ha de considerar como un \maqam distinto.
 
-A efectos prácticos, se pueden considerar los \maqamaat como <<anclados>> en una nota característica de cada cual, y solo en algunas ocasiones se utilizan sobre una tónica distinta, en la mayoría de casos no como \maqam principal de la pieza, sino llegando a ellos tras una modulación (vease \ref{modulacion}).
+A efectos prácticos, se pueden considerar los \maqamaat como <<anclados>> en una nota característica de cada cual, y solo en algunas ocasiones se utilizan sobre una tónica distinta, en la mayoría de casos no como \maqam principal de la pieza, sino llegando a ellos tras una modulación (véase \ref{modulacion}).
 
 Como consecuencia de esto, hay un gran número de notas de las 24 del sistema tonal árabe que no se utilizan en la práctica. Con las notas si\hflat\ y mi\hflat\ pueden tocarse todos los \maqamaat que hemos visto, así como la mayor parte de los que, por ser su uso poco frecuente, no se detallan aquí.
 
-Un \maqam no solo no se desplaza libremente de una nota a otra, sino que en cierta forma viene condicionado a una determinada octava. Si recordamos lo explicado en su momento acerca del sistema tonal árabe, hablábamos entonces de cómo una misma nota en distintas octavas tenía un nombre distinto, y de cómo el rango que cubrían esos nombre (y que representa el esperado para el desarrollo de una melodía) no era tan amplio como el del propio ud. Esto indica que un \maqam tiene un lugar dentro del rango del ud, y que fuera de él no tiene el mismo sentido (a diferencia de una escala en la música occidental, que tiene igual significado tocado en un registro un otro del instrumento, siendo que los intervalos son lo único que tiene importancia).
+Un \maqam no solo no se desplaza libremente de una nota a otra, sino que en cierta forma viene condicionado a una determinada octava. Si recordamos lo explicado en su momento acerca del sistema tonal árabe, hablábamos entonces de cómo una misma nota en distintas octavas tenía un nombre distinto, y de cómo el rango que cubrían esos nombres (y que representa el esperado para el desarrollo de una melodía) no era tan amplio como el del propio ud. Esto indica que un \maqam tiene un lugar dentro del rango del ud, y que fuera de él no tiene el mismo sentido (a diferencia de una escala en la música occidental, que tiene igual significado tocado en un registro un otro del instrumento, siendo que los intervalos son lo único que tiene importancia).
 
-Por ejemplo, \maqam Rast ha de arrancar de la nota Rast (do central del ud), y no del do situado en la cuerda más grave tocada al aire. La octava inferior, esa que arranca en la cuerda grave, se puede emplear para añadir notas pedal o puede entrarse en ella durante el desarrollo mélodico, pero este se ha de producir mayoritariamente sobre la siguiente octava, la central del diapasón, que constituye el emplazamiento en el que, podríamos decir, el \maqam está concebido.
+Por ejemplo, \maqam Rast ha de arrancar de la nota Rast (do central del ud), y no del do situado en la cuerda más grave tocada al aire. La octava inferior, esa que arranca en la cuerda grave, se puede emplear para añadir notas pedal o puede entrarse en ella durante el desarrollo melódico, pero este se ha de producir mayoritariamente sobre la siguiente octava, la central del diapasón, que constituye el emplazamiento en el que, podríamos decir, el \maqam está concebido.
 
 \section{Desarrollo melódico}
 \label{desarrollo_melodico}
@@ -601,9 +598,9 @@ La modulación es parte fundamental de la música árabe y del uso de un \maqamb
 
 La modulación entre \maqamaat viene determinada por lo que se conoce como el \emph{sayr} de cada \maqam. El \emph{sayr} dicta la manera en la que, arrancando desde un determinado \maqam, la melodía utiliza este, visita otros \maqamaat distintos, y regresa generalmente al original para concluir en él la pieza.
 
-El \emph{sayr} de un \maqam no expresa sino las combinaciones y <<rutas>> melódicas más habituales que se originan a partir de este. Recoge una forma de <<cadencia>> entre los distintos \maqamaat relacionados con el de partida, y con un significado práctico en cierta forma semejante al de una cadencia de acordes: una sucesión predefinida, característica y reconocible, que da identidad a la pieza construída sobre un determinado \maqamb. El \emph{sayr} de un \maqam es, para un oyente de música árabe, tan reconocible y prototípico como lo es en su contexto la progresión de acordes clásica de un \emph{blues}, la cadencia andaluza en el flamenco, o la progresion ii-V-I en el jazz.
+El \emph{sayr} de un \maqam no expresa sino las combinaciones y <<rutas>> melódicas más habituales que se originan a partir de este. Recoge una forma de <<cadencia>> entre los distintos \maqamaat relacionados con el de partida, y con un significado práctico en cierta forma semejante al de una cadencia de acordes: una sucesión predefinida, característica y reconocible, que da identidad a la pieza construida sobre un determinado \maqamb. El \emph{sayr} de un \maqam es, para un oyente de música árabe, tan reconocible y prototípico como lo es en su contexto la progresión de acordes clásica de un \emph{blues}, la cadencia andaluza en el flamenco, o la progresión ii-V-I en el jazz.
 
-El \emph{sayr} de un \maqam se sigue tanto en las composiciones como en las improvisaciones, y en estas últimas, tanto en las piezas completas (como por ejemplo un \taqsimb) como en las partes improvisadas. Por ejemplo, en los segmentos solistas dentro de una \emph{tahmila}, el intérprete puede hacer modulaciones para despues regresar al \maqam original, en el que concluye la pieza.
+El \emph{sayr} de un \maqam se sigue tanto en las composiciones como en las improvisaciones, y en estas últimas, tanto en las piezas completas (como por ejemplo un \taqsimb) como en las partes improvisadas. Por ejemplo, en los segmentos solistas dentro de una \emph{tahmila}, el intérprete puede hacer modulaciones para después regresar al \maqam original, en el que concluye la pieza.
 
 Las modulaciones entre \maqamaat son principalmente de tres tipos:
 
@@ -613,13 +610,16 @@ Las modulaciones entre \maqamaat son principalmente de tres tipos:
 \item De un \maqam a otro cuya tónica es parte del \maqam original. Se enfatiza dicha nota para que asuma el protagonismo tonal de la melodía, y a partir de ahí se establece un nuevo \maqam sobre ella. Por ejemplo, modular de Rast en do a Huzam en mi semibemol. Este caso es menos habitual que los anteriores.
 \end{itemize}
 
-Teniendo en cuenta cómo se produce el desarrollo melódico dentro de un \maqam (melodías que se situan en un único \yins durante periodos largos, y que solo se desplazan al siguiente después de haberse expresado abundantemente en ese reducido contexto melódico, como vimos en el apartado anterior), es interesante concebir las modulaciones no como un <<recorrido>> entre \maqamaatb, sino entre \ashnasb. Las modulaciones pueden entenderse así como recorridos a través de un conjunto de \ashnasb, produciéndose la mayoría de esos cambios en los correspondientes \emph{ghammaz} y notas tónicas.
+Teniendo en cuenta cómo se produce el desarrollo melódico dentro de un \maqam (melodías que se sitúan en un único \yins durante periodos largos, y que solo se desplazan al siguiente después de haberse expresado abundantemente en ese reducido contexto melódico, como vimos en el apartado anterior), es interesante concebir las modulaciones no como un <<recorrido>> entre \maqamaatb, sino entre \ashnasb. Las modulaciones pueden entenderse así como recorridos a través de un conjunto de \ashnasb, produciéndose la mayoría de esos cambios en los correspondientes \emph{ghammaz} y notas tónicas.
 
-Puesto que el \emph{ghammaz} de la mayor parte de los principales \maqamaatb, según hemos visto, se situa sobre la nota sol (en particular para los \maqamaat con tónica en do y re), esta nota tiene una importancia fundamental como nota pivote a la hora de introucir modulaciones en una pieza.
+Puesto que el \emph{ghammaz} de la mayor parte de los principales \maqamaatb, según hemos visto, se sitúa sobre la nota sol (en particular para los \maqamaat con tónica en do y re), esta nota tiene una importancia fundamental como nota pivote a la hora de introducir modulaciones en una pieza.
 
 Al llegar a la octava, puede utilizarse de nuevo el \yins original (el primero del \maqamb), pero también uno distinto que forme parte del \emph{sayr} del \maqamb. La ausencia de armonía permite que pueda prescindirse de la equivalencia en la octava. En el regreso hacia la nota origen para cerrar la pieza, se recuperará el primer \yins del \maqam de partida, en la octava original.
 
 Si en la improvisación se tiene en consideración este enfoque basado en \yins como unidades básicas, resulta también más natural entender el desarrollo melódico. Avanzar de un \yins a otro es un cambio más relevante, visto de esta manera, que si consideramos todas las notas del \maqam como parte de una escala, y requiere por ello un esquema de desarrollo melódico distinto.
+
+
+\iffalse
 
 Podemos entender mejor estas ideas analizando algunos ejemplos. El \emph{sayr} mostrado en todos ellos puede considerarse dentro de lo típico para cada uno de los \maqamaat utilizados, de manera que sirve también como guía para conocer los \emph{sayr} más habituales.
 
@@ -631,7 +631,7 @@ Atendiendo a los \yins que se utilizan, podemos dividir el \taqsim en las siguie
 
 \begin{itemize}
 \item \textbf{Sección 1 (0:00 - 0:25)}: Presentación del \maqamb. Énfasis en la tónica do. Principalmente en el primer \yins (Rast en do), con algunas notas del segundo (en este caso, Nahawand en sol). La frase introductoria se cierra sobre la tónica.
-\item \textbf{Sección 2 (0:00 - 1:00)}: Primera frase. Énfasis sobre el \emph{ghammaz} y en su mayor parte sobre Nahawand en sol. Se usan como pedales en una octava inferior tanto la tónica (do en la sexta cuerda al aire) como el \emph{ghammaz} (sol en la quinta cuerda). La frase tiene caracter descendente.
+\item \textbf{Sección 2 (0:00 - 1:00)}: Primera frase. Énfasis sobre el \emph{ghammaz} y en su mayor parte sobre Nahawand en sol. Se usan como pedales en una octava inferior tanto la tónica (do en la sexta cuerda al aire) como el \emph{ghammaz} (sol en la quinta cuerda). La frase tiene carácter descendente.
 \item \textbf{Sección 3 (0:00 - 1:00)}: Final de la primera frase, que en este caso cubre los dos \ashnas del \maqam Rast (Rast en do y Rast en sol), y anticipa la siguiente sección.
 \item \textbf{Sección 4 (0:00 - 1:00)}: Frase breve que arranca en Rast en sol y desciende a Rast en do. Presenta la frase que sigue (en su estructura y en su modo melódico).
 \item \textbf{Sección 5 (0:00 - 1:00)}: Comienzo de la última frase que toma la estructura de la anterior y la desarrolla. Enfásis en do sobre la primera cuerda y el \yins Rast en sol.
@@ -673,8 +673,8 @@ Veamos ahora un \taqsim en el \maqam Bayati:
 \item \textbf{Sección 2 (0:00 - 1:00)}: Énfasis sobre el \emph{ghammaz} y en su mayor parte sobre Nahawand en sol.
 \item \textbf{Sección 3 (0:00 - 1:00)}: Final de la primera frase, que en este caso cubre los dos \ashnas del \maqam Rast (Rast en do y Rast en sol).
 \item \textbf{Sección 4 (0:00 - 1:00)}: Frase breve que arranca en el \yins Rast en sol y desciende a Rast en do.
-\item \textbf{Sección 5 (0:00 - 1:00)}: Enfásis en do sobre la primera cuerda y el \yins Rast en sol.
-\item \textbf{Sección 6 (0:00 - 1:00)}: Modulacion a \yins Hiyaz en sol (es decir, \maqam Suznak). Antes de entrar en él, hay un par de notas que pertenecen a Nahawand en sol. Regreso al \yins Rast en sol en la última parte.
+\item \textbf{Sección 5 (0:00 - 1:00)}: Énfasis en do sobre la primera cuerda y el \yins Rast en sol.
+\item \textbf{Sección 6 (0:00 - 1:00)}: Modulación a \yins Hiyaz en sol (es decir, \maqam Suznak). Antes de entrar en él, hay un par de notas que pertenecen a Nahawand en sol. Regreso al \yins Rast en sol en la última parte.
 \item \textbf{Cierre (0:00 - 1:00)}: Descendente, recorriendo primero el \yins Rast en sol y después rast en do.
 \end{itemize}
 
@@ -736,6 +736,8 @@ El análisis gráfico sería como sigue:
 \input{capitulos/maqam/analysis_taqsimnahawand.tex}
 
 En los ejemplos anteriores, las modulaciones tienen una cierta duración, y la melodía permanece en cada \yins durante un tiempo considerable. Esto es así para facilitar el análisis, y por usarse estos ejemplos con carácter didáctico. Aunque es habitual que suceda de la misma manera en composiciones e improvisaciones, también lo es que las modulaciones sean rápidas y el \yins cambie con más frecuencia que en estas piezas que se han presentado aquí.
+
+\fi
 
 \subsection{El aprendizaje de los \maqamaat}
 

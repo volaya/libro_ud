@@ -5,7 +5,7 @@
 \begin{lilypond}
 \include "arabic.ly"
 notes = \transpose fa do{
-\relative {
+\relative do{
 \key mib \major
 \partial 2. fa8 sib4 re4
 r8 do8~do sib la la do4~do8
@@ -22,22 +22,8 @@ sib
 }
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+\new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}

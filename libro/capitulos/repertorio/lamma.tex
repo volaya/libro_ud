@@ -5,7 +5,7 @@
 \begin{lilypond}
 \include "arabic.ly"
 notes = \transpose fa do{
-\relative {
+\relative do{
 \time 10/8
 \set Timing.beamExceptions = #'()
 \set Timing.beatStructure = #'(3 2 2 3)
@@ -29,22 +29,8 @@ fa4 sol8 mib mib16 re re do do si do4 r8
 }
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+\new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}

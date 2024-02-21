@@ -1,5 +1,6 @@
 \chapter{Vocabulario}
 
+\label{vocabulario}
 \newcounter{phrase}
 \newcounter{beginning}
 \newcounter{ending}
@@ -29,21 +30,19 @@ La manera más prototípica de empezar un \taqsim o una frase dentro de este es 
 
 ###notime
 \key do \rast
-\time 16/4
 do8\downbow do do do do do do do do, \downbow do'\downbow do do do do do do
 ###
 
 \audioclip{Inicio con nota tónica.}
 
-Nótese que las distintas pulsaciones sobre la misma cuerda se hacen con una   pulsación alterna, pero tanto la pulsación de la cuerda más grave como la de la nota sucesiva una octava por encima se han de hacer con pulsación descendente. Se aplica aquí el principio de que, siempre que se produzca un cambio de cuerda, la primera pulsación sobre esta nueva cuerda ha de ser en sentido descendente.
+Nótese que las distintas pulsaciones sobre la misma cuerda se hacen con una pulsación alterna, pero tanto la pulsación de la cuerda más grave como la de la nota sucesiva una octava por encima se han de hacer con pulsación descendente. Se aplica aquí el principio de que, siempre que se produzca un cambio de cuerda, la primera pulsación sobre esta nueva cuerda ha de ser en sentido descendente.
 
-En el apartado \ref{ritmotaqsim} se habló de la componente rítmica de un \taqsimb. Para cada una de sus frases y secciones, el <<pulso>> que mencionabamos entonces vendrá en general definido por el del patrón con el que arranca dicha frase. Modificando este, podemos dar un aire distinto a una sección.
+En el apartado \ref{ritmotaqsim} se habló de la componente rítmica de un \taqsimb. Para cada una de sus frases y secciones, el <<pulso>> que mencionábamos entonces vendrá en general definido por el del patrón con el que arranca dicha frase. Modificando este, podemos dar un aire distinto a una sección.
 
-Por ejemplo, el inicio sencillo mostrado anteriormente tiene un sentir rítmico muy distinto si se cambia la acentuación y el uso de la nota pedal, como en el el siguiente ejemplo:
+Por ejemplo, el inicio sencillo mostrado anteriormente tiene un sentir rítmico muy distinto si se cambia la acentuación y el uso de la nota pedal, como en el siguiente ejemplo:
 
 ###notime
 \key do \rast
-\time 16/4
 do8\downbow do do do do do do do do, \downbow do'\downbow do do do do do do
 ###
 
@@ -73,7 +72,7 @@ Es frecuente que la frase de apertura utilice las notas por debajo de la tónica
 
 ###notime
 \key do \rast
-  r8 sol,8 la sisb do do do do do, do' do do
+  r8 sol8 la sisb do do do do do, do' do do
 ###
 
 \audioclip{Inicio llegando a tónica desde octava inferior.}
@@ -82,7 +81,7 @@ En el caso de \maqam Bayati, a pesar de que su segundo \yins es \yins Nahawand e
 
 ###notime
 \key re \bayati
-sol8 fa misb re do sisb do re re, re' re re, re' re re, re'
+sol'8 fa misb re do sisb do re re, re' re re, re' re re, re'
 ###
 
 \audioclip{Inicio llegando a tónica desde octava inferior (Bayati).}
@@ -113,7 +112,7 @@ Una técnica muy habitual en un \taqsim es tocar una frase breve como las anteri
 
 ###notime
 \key re \bayati
-\partial 16 do,16
+\partial 16 do16
 re re' re re re misb32 (re) do16 re
 re,16 re' re re re misb32 (re) do16 re
 re,16 re' re re re r2
@@ -131,7 +130,7 @@ fa8 fa8:32 misb16 misb (re) do re re4
 En ocasiones, esa primera frase no contiene un cierre, sino que se deja inconclusa sobre otra nota del \maqam, creándose un efecto de tensión que se resuelve cuando la segunda frase arranca. Por ejemplo, en el siguiente ejemplo en \maqam Rast, la primera frase se detiene sobre la nota fa.
 
 ###notime
-\time 2/4
+\key do \rast
 do,16 do' do do do do do do
 do,16 do' do do do sisb32 sisb sisb16 do32 do do16 re16 re misb misb fa
 \override TextSpanner.bound-details.left.text = "rit."
@@ -173,12 +172,14 @@ Cualquiera de los inicios de esta sección puede modificarse para desembocar sob
 
 \newbeginning{}
 ###notime
+\key do \rast
 do16 misb32 fa misb re misb16 fa sol la sol fa sol sol sol, sol' sol do,,8
 ###
 \audioclip{Inicio en \maqam Rast.}
 
 \newbeginning{}
 ###notime
+\key do \rast
 do,8 do'16 do8 do16 do8 do16 do8 do16
 do,8 do'16 do8 do16 do8 do16 do8 do16
 do,8 do'16 do8 sisb16 sisb8 la16 sisb8 do16
@@ -190,7 +191,8 @@ do4
 El siguiente inicio arranca en la octava superior, y se utilizaría para abrir una frase intermedia, una vez que se ha llegado a esa altura en el desarrollo melódico del \taqsimb.
 
 ###notime
-la16 do re do re8 re16 do do,8 do do do4
+\key do \rast
+la'16 do re do re8 re16 do do,8 do do do4
 la'16 do re do re8 re16 do do,8 do do do4
 ###
 \audioclip{Inicio en \maqam Rast.}
@@ -200,14 +202,16 @@ la'16 do re do re8 re16 do do,8 do do do4
 Otro ejemplo similar al anterior.
 
 ###notime
-r16 sol16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do do, do' do do do
+\key do \rast
+r16 sol'16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do do, do' do do do
 ###
 \audioclip{Inicio en \maqam Rast.}
 
 \newbeginning{}
 
 ###notime
-sol,16 sol32 sol sol16 la sisb do re do sisb re do8 do do do
+\key re \bayati
+sol16 sol32 sol sol16 la sisb do re do sisb re do8 do do do
 ###
 \audioclip{Inicio en \maqam Rast.}
 
@@ -215,30 +219,35 @@ sol,16 sol32 sol sol16 la sisb do re do sisb re do8 do do do
 
 \newbeginning{}
 ###notime
+\key re \bayati
 re16 sol la sib do re \tuplet 3/2 {do32 (re do)} sib16 do sib la sib \tuplet 3/2 {la32 sib la} sol16 la sol fa re
 ###
 \audioclip{Inicio en \maqam Bayati.}
 
 \newbeginning{}
 ###notime
+\key re \bayati
 re16 fa16 misb re do sisb do re re re re re
 ###
 \audioclip{Inicio en \maqam Bayati.}
 
 \newbeginning{}
 ###notime
+\key re \bayati
 re,8 re' re re, re' re re,4 do'8 re misb fa8. misb16 re8 misb re do re re re, re' re
 ###
 \audioclip{Inicio en \maqam Bayati.}
 
 \newbeginning{}
 ###notime
+\key re \bayati
 re16 fa8 sol la16 sib32 la sol16 fa sol sol misb fa sol sol sol
 ###
 \audioclip{Inicio en \maqam Bayati.}
 
 \newbeginning{}
 ###notime
+\key re \bayati
 re16 re re re re4\fermata
 re16 misb fa8 fa32 misb8 misb32 fa8 fa32 misb8 misb32 fa4:32 misb16 re re4
 ###
@@ -246,6 +255,7 @@ re16 misb fa8 fa32 misb8 misb32 fa8 fa32 misb8 misb32 fa4:32 misb16 re re4
 
 \newbeginning{}
 ###notime
+\key re \bayati
 do16 re re re re re4\fermata
 misb32 (re) do16 sisb sisb la la sol la sisb do re re re re4
 ###
@@ -253,6 +263,7 @@ misb32 (re) do16 sisb sisb la la sol la sisb do re re re re4
 
 \newbeginning{}
 ###notime
+\key re \bayati
 re16 re re re re re re fa32 (misb re16) re re re re re re
 fa32 (misb re16) re re fa32 (misb re16) re re re re
 sisb8:32 do8:32 re8:32 re16 re re4
@@ -261,6 +272,7 @@ sisb8:32 do8:32 re8:32 re16 re re4
 
 \newbeginning{}
 ###notime
+\key re \bayati
 r8 \grace misb32 (re16) do re misb fa8 \grace sol32 (fa16)
 misb8 \grace fa32 (misb16) re4
 ###
@@ -268,6 +280,7 @@ misb8 \grace fa32 (misb16) re4
 
 \newbeginning{}
 ###notime
+\key re \bayati
 re16 re re re re re
 do re misb fa \tuplet 3/2 {misb32 (fa misb }) (re16)
 do re misb fa \tuplet 3/2 {misb32 (fa misb }) (re16)
@@ -277,6 +290,7 @@ do re misb fa \tuplet 3/2 {misb32 (fa misb }) (re16) re8 re re re
 
 \newbeginning{}
 ###notime
+\key re \bayati
 re16 re re re re re re4
 do16 re fa4
 sol16 fa misb re misb misb misb8 re8 re16 do re re4
@@ -336,7 +350,6 @@ re8 do re mib fa4 mib8 re re4
 
 \newbeginning{}
 ###notime
-\time 3/4
 r16 do16 re re re re do, (re) re'16 re re re re4
 do16 re mib4\glissando fad4\glissando mib8 re16 re, re' re re
 ###
@@ -350,7 +363,7 @@ re16 mib fad sol sol sol sol sol sol sol sol sol fad sol la sib la sol fad sol m
 
 \newbeginning{}
 ###notime
-\tuplet 3/2 { la,16 (sib do)} re4\fermata
+\tuplet 3/2 {la16 (sib do)} re4\fermata
 \tuplet 3/2 {la16 (sib do)} re re re re re4\fermata
 re8 mib fad sol16 fad fad fad fad mib4
 \tuplet 3/2 {la,16 (sib do)} re re4
@@ -385,6 +398,7 @@ mib64 fad mib fad mib4 re2
 ###
 \audioclip{Inicio en \maqam Hiyaz.}
 
+
 \newbeginning{}
 ###notime
 mib32 re do16 re re, re' re
@@ -396,7 +410,7 @@ mib32 re do16 re re re, re' re re
 
 \newbeginning{}
 ###notime
-sol,16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re mib4 re2
+sol16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re mib4 re2
 sol,16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re fad re mib4 re2
 ###
 \audioclip{Inicio en \maqam Hiyaz.}
@@ -404,6 +418,12 @@ sol,16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re fad 
 \newbeginning{}
 ###notime
 re16 do re fad re re mib (re) re4:32
+###
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+###notime
+re,8 re'2 fad16 mib re mib (re8 re2)
 ###
 \audioclip{Inicio en \maqam Hiyaz.}
 
@@ -415,7 +435,7 @@ Comencemos con una de las opciones más habituales: un descenso a tónica emplea
 
 ###notime
 \key do \rast
-la8 sol fa misb sol fa misb re fa misb \tuplet 3/2 {re16 (misb re)} do4
+la'8 sol fa misb sol fa misb re fa misb \tuplet 3/2 {re16 (misb re)} do4
 ###
 
 \audioclip{Cierre con descenso y motivo melódico.}
@@ -444,7 +464,7 @@ El siguiente cierre combina el trémolo con un motivo melódico:
 
 ###notime
 \key do \rast
-la8:64 [sol8:64 fa8:64] sol8:64 [fa8:64 misb8:64] fa8:64 [misb8:64 re8:64] do4
+la'8:64 [sol8:64 fa8:64] sol8:64 [fa8:64 misb8:64] fa8:64 [misb8:64 re8:64] do4
 ###
 
 \audioclip{Cierre con trémolo y motivo melódico.}
@@ -453,7 +473,7 @@ El uso de la tónica una octava por debajo es un recurso frecuente para dar soli
 
 ###notime
 \key do \rast
-sol8 (la16 sol) fa4 fa8 (sol16\3 fa) misb4 misb8 (fa16 misb) re4 re8 (misb16 re) do4
+sol'8 (la16 sol) fa4 fa8 (sol16 fa) misb4 misb8 (fa16 misb) re4 re8 (misb16 re) do4
 do,2
 ###
 
@@ -509,7 +529,7 @@ En ocasiones, la \emph{qafla} tiene dos partes, o más bien se puede decir que s
 
 ###notime
 \key do \rast
-sol8 (la16 sol) fa4 fa8 (sol16\3 fa) misb4 misb8 (fa16 misb) re4 re8 (misb16 re) do4
+sol'8 (la16 sol) fa4 fa8 (sol16 fa) misb4 misb8 (fa16 misb) re4 re8 (misb16 re) do4
 do8 re misb fa4 fa4:32 misb4 misb4:32 re4 re4:32 do
 ###
 
@@ -519,7 +539,7 @@ Otro ejemplo similar, en este caso en \maqam Nahawand:
 
 ###notime
 \key do \minor
-sol16-> sol sol sol
+sol'16-> sol sol sol
 fa-> fa fa fa
 mib-> mib mib mib
 re-> re re re
@@ -531,7 +551,7 @@ do
 ###
 
 
-La siguiente frase se emplea con frecuencia como segundo cierre, aunque su caracter es más de ornamentación, y es el cierre previo el que deja la melodía concluida sobre la tónica. Se suele tocar con menos volumen que el de la frase anterior, y es habitual no en el cierre del \taqsimb, sino en el de frases intermedias.
+La siguiente frase se emplea con frecuencia como segundo cierre, aunque su carácter es más de ornamentación, y es el cierre previo el que deja la melodía concluida sobre la tónica. Se suele tocar con menos volumen que el de la frase anterior, y es habitual no en el cierre del \taqsimb, sino en el de frases intermedias.
 
 ###notime
 \key do \rast
@@ -624,6 +644,7 @@ fa4:32 misb32 (re) do4
 El cierre sobre la tónica se da habitualmente sobre el do central del ud, y el do más grave (sexta cuerda al aire) se usa para puntuar aquella. Sin embargo, es posible utilizar toda la extensión del maqam en la octava inferior para cerrar sobre este último, como en el siguiente ejemplo.
 
 ###notime
+\key do \rast
 do'8 sol
 misb fa sol fa misb re do re do sisb la sol fa misb re do4
 ###
@@ -631,7 +652,7 @@ misb fa sol fa misb re do re do sisb la sol fa misb re do4
 
 \newending{}
 ###notime
-sol16 la sisb do4
+sol'16 la sisb do4
 sol,16  la sisb do4
 ###
 \audioclip{Cierre en \maqam Rast.}
@@ -644,14 +665,14 @@ fa16 fa misb fa fa misb fa8:64 misb16 fa sol la sol fa misb re do
 
 \newending{}
 ###notime
-sisb,8 re8:64 do8 misb8:64 re8 fa8:64 misb8 sol8:64 fa4
+sisb8 re8:64 do8 misb8:64 re8 fa8:64 misb8 sol8:64 fa4
 sol8 sol8:64 fa8 fa8:64 misb8 misb8:64 re8 re8:64 do4
 ###
 \audioclip{Cierre en \maqam Rast.}
 
 \newending{}
 ###notime
-sol16 la32 sol sol16 do8:32 la16 sol fa misb re do4
+sol'16 la32 sol sol16 do8:32 la16 sol fa misb re do4
 ###
 \audioclip{Cierre en \maqam Rast.}
 
@@ -679,14 +700,14 @@ fa4:32 misb32 re misb4:32 re32 do8
 
 \newending{}
 ###notime
-r16 sib16 (la8) la16  (sol8) sol16 fa8 sol4 sol16 fa (misb) misb4:32 (re16) re, re'4
+r16 sib'16 (la8) la16  (sol8) sol16 fa8 sol4 sol16 fa (misb) misb4:32 (re16) re, re'4
 ###
 
 \audioclip{Cierre en \maqam Bayati.}
 
 \newending{}
 ###notime
-sol16 sol fa fa misb misb fa4:32 misb32 (fa misb re) do16 re8 re4
+sol'16 sol fa fa misb misb fa4:32 misb32 (fa misb re) do16 re8 re4
 ###
 
 \audioclip{Cierre en \maqam Bayati.}
@@ -719,7 +740,7 @@ misb4:32 fa4:32 fa16 misb fa sol re4 misb32 (re) do16 re re4
 
 \newending{}
 ###notime
-sol16 la fa sol sol sol fa4:32 (re16) re, re'4
+sol'16 la fa sol sol sol fa4:32 (re16) re, re'4
 ###
 
 \audioclip{Cierre en \maqam Bayati.}
@@ -729,7 +750,7 @@ sol16 la fa sol sol sol fa4:32 (re16) re, re'4
 \newending{}
 %simon shaheen
 ###notime
-sol8 fa sol mib16. (re32) do8 do16 re mib fa sol32 (fa) mib16 fa32 (mib) re16 mib32 (re) do8
+sol'8 fa sol mib16. (re32) do8 do16 re mib fa sol32 (fa) mib16 fa32 (mib) re16 mib32 (re) do8
 \tuplet 3/2 {re16 (mib fa)} mib (fa) mib8 mib32 (re) do8
 ###
 \audioclip{Cierre en \maqam Nahawand.}
@@ -744,7 +765,7 @@ re16 mib fa8 mib sol2:32 sol16 fa mib re do
 
 \newending{}
 ###notime
-\tuplet 3/2 {do8 sol do} \tuplet 3/2 {mib do mib} \tuplet 3/2 {sol mib sol} do4\2\prall
+\tuplet 3/2 {do8 sol do} \tuplet 3/2 {mib do mib} \tuplet 3/2 {sol mib sol} do4\prall
 ###
 \audioclip{Cierre en \maqam Nahawand.}
 
@@ -831,7 +852,7 @@ sol sol mib sol sol fa sol sol mib sol sol fa sol sol mib4:32 re4:32 mib32 re do
 
 \newending{}
 ###notime
-re16 mib fad sol fad mib re do re re,
+re'16 mib fad sol fad mib re do re re,
 ###
 \audioclip{Cierre en \maqam Hiyaz.}
 

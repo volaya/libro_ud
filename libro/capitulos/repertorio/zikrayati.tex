@@ -4,7 +4,7 @@
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 \key mib \major
 \repeat volta 2{
 do4 r8 sol'4 sol sol8 sol4 r8 lab4 sol4 fa8
@@ -68,22 +68,8 @@ sol1\fermata \bar "|."
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}

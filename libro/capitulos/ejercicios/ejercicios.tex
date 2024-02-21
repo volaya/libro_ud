@@ -17,27 +17,13 @@ Los siguientes estudios y ejercicios se han adaptado de \emph{Método de oud} de
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 do,1 fa la re sol do
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -49,27 +35,13 @@ do,1 fa la re sol do
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 fa,1 la re sol do do sol re la fa
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -81,27 +53,13 @@ fa,1 la re sol do do sol re la fa
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 fa,2 la re sol do sol re la fa sol' fa,1
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -113,27 +71,13 @@ fa,2 la re sol do sol re la fa sol' fa,1
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 fa,2 la fa re' re sol sol re sol do sol re la re fa,1 fa2 la fa la re sol re sol sol do sol do do sol re la fa sol' sol1
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -145,27 +89,13 @@ fa,2 la fa re' re sol sol re sol do sol re la re fa,1 fa2 la fa la re sol re sol
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 fa,4 sol' re sol fa, la fa sol' re sol re sol do sol do sol fa, la fa sol' fa,2 r2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -177,27 +107,13 @@ fa,4 sol' re sol fa, la fa sol' re sol re sol do sol do sol fa, la fa sol' fa,2 
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol4 la sib la sol sib la sol sol la sib la sol sib la sol la2 re, sol fa,
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -209,7 +125,7 @@ sol4 la sib la sol sib la sol sol la sib la sol sib la sol la2 re, sol fa,
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 re4 mi fa re
 re fa mi re
 re mi fa re
@@ -218,22 +134,8 @@ mi2 la, re r2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -245,7 +147,7 @@ mi2 la, re r2
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 re4 mi fa re
 re fa mi re
 re2 sol
@@ -255,22 +157,8 @@ la re, sol la,
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -282,27 +170,13 @@ la re, sol la,
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 re4 mi fa sol la sib do re do sib la sol fa mi re mi fa la do la fa2 r2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -314,28 +188,14 @@ re4 mi fa sol la sib do re do sib la sol fa mi re mi fa la do la fa2 r2
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 re4 fa re sol fa la sol sib la do do la sib sol la fa
 sol mi fa re re fa mi sol fa la sol mi fa2r2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -347,7 +207,7 @@ sol mi fa re re fa mi sol fa la sol mi fa2r2
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol8 la\upbow sib la\upbow
 sol fa\upbow fa sol\upbow
 fa mi re mi fa4\downbow la8\downbow  do\upbow
@@ -355,22 +215,8 @@ sib8 la sol la sol fa mi fa sol re mi sol fa4 r4
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -382,28 +228,14 @@ sib8 la sol la sol fa mi fa sol re mi sol fa4 r4
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 re8 fa mi sol fa la sol sib la do do la sib4 la
 do8 la sib sol la fa sol mi fa la do la sol4 fa
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -415,28 +247,14 @@ do8 la sib sol la fa sol mi fa la do la sol4 fa
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol4 la si la sol si la sol re mi fad mi re fad mi re sol la si la sol si la sol
 la2 re, sol sol,
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -448,27 +266,13 @@ la2 re, sol sol,
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol4 la si do si la sol fad mi re mi fad sol re sol2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -480,7 +284,7 @@ sol4 la si do si la sol fad mi re mi fad sol re sol2
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol4 si la do si re do la si sol la fad
 sol mi fad re re fad mi sol fad la sol
 si la re, mi fad
@@ -488,22 +292,8 @@ sol2 sol,
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -515,29 +305,15 @@ sol2 sol,
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol,4 la si do re mi fad sol la si do re
 do si la sol fad mi re do si la sol2
 sol4 si re sol sol,2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -549,28 +325,14 @@ sol4 si re sol sol,2
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol,8 si la do si re do mi re fad mi sol fad la sol si la do si re do la si sol
 la fa sol mi fa re mi do re si do la sol4 si8 re sol4 re8 si sol2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -582,28 +344,14 @@ la fa sol mi fa re mi do re si do la sol4 si8 re sol4 re8 si sol2
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol,8 si la do si re do mi re fad mi sol fad la sol si la do si re do la si sol
 la fa sol mi fa re mi do re si do la sol4 si8 re sol4 re8 si sol4
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -615,7 +363,7 @@ la fa sol mi fa re mi do re si do la sol4 si8 re sol4 re8 si sol4
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol,8  la si do  si do re mi re mi fad sol fad sol la si la si do re
 re do si la do si la sol si la sol fad la sol fad mi
 sol fad mi re fad mi re do mi re do si re do si la sol4
@@ -623,22 +371,8 @@ si8 re sol4 re8 si sol2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -650,7 +384,7 @@ si8 re sol4 re8 si sol2
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol,8 sol sol sol la la la la si si si si do do do do re re re re
 mi mi mi mi fad fad fad fad sol sol sol sol sol sol sol sol
 fad fad fad fad mi mi mi mi re re re re do do do do si si si si
@@ -658,22 +392,8 @@ la la la la sol sol sol sol
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -685,28 +405,14 @@ la la la la sol sol sol sol
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol,4 la8 si do re mi fad sol4 fad8 mi re do si la
 sol4 si8 re sol4 re8 si sol2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -718,29 +424,15 @@ sol4 si8 re sol4 re8 si sol2
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol,4 la8 si do16 re mi fad sol4
 sol8 la si do re16 do si la sol4
 re8 sol fad mi re do si la sol4 sol' sol,2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -752,7 +444,7 @@ re8 sol fad mi re do si la sol4 sol' sol,2
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 \time 2/4
 sol,8 la16 si la8 si16 do si8 do16 re do8 re16 mi re8 mi16 fasd mi8 fasd16 sol
 fasd8 sol16 la sol4
@@ -761,22 +453,8 @@ sol4 sol8 si16 re sol4 sol8 re16 si sol2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -789,7 +467,7 @@ sol4 sol8 si16 re sol4 sol8 re16 si sol2
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol8. la16 sisb8. do16 re8. do16 sisb8. la16
 sol8. do16 sisb8. la16 sol8. fasd16 mi8. re16
 sol8. sol16 fasd8. mi16 re8. do16 sisb8. la16
@@ -797,22 +475,8 @@ sol8. sol16 sol'8. sol16 sol,2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -824,7 +488,7 @@ sol8. sol16 sol'8. sol16 sol,2
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol,4 la8 sisb do16 re mi fasd sol4
 sol8. la16 sisb8 do re16 do sisb la sol16 la sol8
 re8. sol16 fasd8 mi re re16 do sisb8. la16
@@ -832,22 +496,8 @@ sol8. sisb16 re8 sol8 sol,2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -861,7 +511,7 @@ Además de tocar según lo indicado en la partitura, puede hacerse el ejercicio 
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 sol16 sol8 la16 sisb sisb8 do16 re re8 do16 sisb sisb8 la16
 sol sol8 do16 sisb sisb8 la16 sol sol8 fasd16 mi mi8 re16
 sol16 sol8 sol16 fasd16 fasd8 mi16 re16 re8 do16 sisb16 sisb8 la16
@@ -869,22 +519,8 @@ sol16 sol8 sisb16 re16 re8 sisb16 sol16 sol8 sol16 sol4
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -902,29 +538,15 @@ Los ejercicios de esta sección trabajan las principales dificultades técnicas 
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 \key sol \hijaz
 do8 do8:32 re8 re8:32 mib8 mib8:32 fa8 fa8:32 sol8 sol8:32 lab8 lab8:32 si8 si8:32 r4
 si4:32 lab4:32 sol4:32 fa4:32 lab4:32 sol4:32 fa4:32 mib4:32 sol4:32 fa4:32 mib4:32 re4:32 do1
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -938,7 +560,7 @@ si4:32 lab4:32 sol4:32 fa4:32 lab4:32 sol4:32 fa4:32 mib4:32 sol4:32 fa4:32 mib4
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 \key do \rast
 \time 3/4
 \tuplet 5/4 {do16 do' do do do}
@@ -976,22 +598,8 @@ do,2.
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -1009,7 +617,7 @@ El aspecto más importante de estos ejercicios es prestar atención a la entonac
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 \override Glissando.breakable = ##t
 \override Glissando.after-line-breaking = ##t
 \key sol \hijaz
@@ -1028,22 +636,8 @@ fa4.-1 mib16 re do r16 r4.\glissando
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -1061,7 +655,7 @@ Estos ejercicios están pensados para practicar la pulsación en tresillos segú
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 \override Stem.direction = #down
 \tuplet 3/2 {la,8\downbow re\downbow re\upbow}
 \tuplet 3/2 {la\downbow re\downbow re\upbow}
@@ -1078,22 +672,8 @@ notes = \relative {
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -1107,7 +687,7 @@ notes = \relative {
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 \override Stem.direction = #down
 \tuplet 3/2 {do'8\downbow sol\downbow sol\upbow}
 \tuplet 3/2 {do\downbow sol\downbow sol\upbow}
@@ -1124,22 +704,8 @@ notes = \relative {
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -1155,7 +721,7 @@ Recorrer un \maqam alternando sus notas con la doble pulsación de una de ellas 
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 \key do \rast
 \override Stem.direction = #down
 \tuplet 3/2 {do8\downbow sol'\downbow sol\upbow}
@@ -1169,22 +735,8 @@ notes = \relative {
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -1198,7 +750,7 @@ notes = \relative {
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 \key do \minor
 \time 3/4
 \override Stem.direction = #down
@@ -1225,22 +777,8 @@ do4 r2
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -1259,7 +797,7 @@ Algunos ejercicios cromáticos para ejercitar la independencia de los dedos de l
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 dod, re red mi
 fad sol sold la\5
 lad si do dod
@@ -1273,22 +811,8 @@ dod do si^"etc..." sib
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -1300,7 +824,7 @@ dod do si^"etc..." sib
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 dod, sold' re la'\5
 red, fad mi sol
 fad do' sol dod
@@ -1314,22 +838,8 @@ si mi, sib'^"etc..." mib,
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -1341,7 +851,7 @@ si mi, sib'^"etc..." mib,
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 dod, sol' do fad
 fad, si fa' si
 sib, mi sib' mi
@@ -1352,22 +862,8 @@ mib' si lab mi
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -1381,7 +877,7 @@ Un ejercicio que trabaja especialmente los dedos meñique y anular.
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 dod, mi red mi dod mi red mi
 fad la\5 sold la\5 fad la\5 sold la\5
 lad dod do dod lad dod do^"etc..." dod
@@ -1393,22 +889,8 @@ fad fa fad mib fad fa fad^"etc..." mib
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -1424,7 +906,7 @@ Los siguientes ejercicios se basan en los principales ritmos (\emph{iqaa}) árab
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 \key do \minor
 \time 3,3,2 2/4
 do8. mib8. mib8
@@ -1455,22 +937,8 @@ do8. mib8. mib8
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -1484,7 +952,7 @@ do8. mib8. mib8
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 \time 4/4
 \key do \minor
 re8 sol r8 sol fa r8 sol r8
@@ -1505,22 +973,8 @@ sol4 r2.
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -1534,7 +988,7 @@ sol4 r2.
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 \time 4/4
 \key do \rast
 re8 re r8 do re r8 do r8
@@ -1548,22 +1002,8 @@ re8 re do16 do do8 re fa8:64 misb16 re do8
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}

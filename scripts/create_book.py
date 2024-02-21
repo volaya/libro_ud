@@ -4,14 +4,17 @@ import os
 from subprocess import call
 from collections import defaultdict
 
-LILYPONBDBOOKPATH =  "lilypond-book"
-BOOKPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "libro")
+LILYPONBDBOOKPATH = "lilypond-book"
+BOOKPATH = os.path.join(os.path.abspath(
+    os.path.dirname(os.path.dirname(__file__))), "libro")
 
 FRETS = 11
 
+
 def run_lilypond():
     os.chdir(BOOKPATH)
-    call([LILYPONBDBOOKPATH, "--loglevel=ERROR", "--pdf", "--output", "output", "libro.lytex"])
+    call([LILYPONBDBOOKPATH, "--loglevel=ERROR",
+         "--pdf", "--output", "output", "libro.lytex"])
 
 
 def run_latex():
@@ -40,69 +43,43 @@ multicolor_diagram_note_template = r"\fill[%s] (%s-%s) -- ($(%s-%s) + (%s:.09)$)
 allnotes = ["do", "rebsb", "reb", "resb", "re", "mibsb", "mib", "misb", "mi", "fasb", "fa", "solbsb", "solb",
             "solsb", "sol", "labsb", "lab", "lasb", "la", "sibsb", "sib", "sisb", "si", "dosb"]
 
-alternative_names = {"solb":"fad"}
+alternative_names = {"solb": "fad"}
 
 lilypondinput_template = r'''
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do{
 %s
 \bar "||"
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+  \new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
 '''
 
-lilypondinput_template_notime=r'''
+lilypondinput_template_notime = r'''
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
-notes = \relative {
+notes = \relative do {
 %s
-\bar "||"
-}
-
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    defaultBarType = ""
-    supportNonIntegerFret = ##t
-  }
-  \context {
-    \TabStaff
-    \remove Time_signature_engraver
-
-    }
 }
 
 <<
-  \new TabStaff <<\notes>>
+  \new Staff
+  <<
+    \clef "G_8"
+    \omit Staff.BarLine
+    \omit Staff.TimeSignature
+    \time 100/4
+    \notes
+    \revert Staff.BarLine.stencil
+    \bar "||"
+  >>
 >>
 \end{lilypond}
 \end{center}
@@ -113,28 +90,14 @@ lilypondinput_template_transpose = r'''
 \begin{lilypond}
 \include "arabic.ly"
 notes = \transpose %s %s{
-\relative {
+\relative do{
 %s
 \bar "||"
 }
 }
 
-\layout {
-  \omit Voice.StringNumber
-  \context {
-      \TabStaff
-      \tabFullNotation
-      stringTunings = \stringTuning <do, fa, la, re sol do'>
-    }
-  indent = #0
-  \context {
-    \Score
-    supportNonIntegerFret = ##t
-  }
-}
-
 <<
-  \new TabStaff <<\notes>>
+\new Staff <<\clef "G_8" \notes>>
 >>
 \end{lilypond}
 \end{center}
@@ -149,7 +112,8 @@ def _notetitle(n):
     return title
 
 
-chaptersfolder = os.path.join(os.path.dirname(os.path.dirname(__file__)), "libro", "capitulos")
+chaptersfolder = os.path.join(os.path.dirname(
+    os.path.dirname(__file__)), "libro", "capitulos")
 maqamfolder = os.path.join(chaptersfolder, "maqam")
 oudfolder = os.path.join(chaptersfolder, "elud")
 
@@ -223,7 +187,7 @@ def generate_maqamat_snippets():
 
     '''
 
-#\new TabStaff << \scale>>
+# \new TabStaff << \scale>>
     lilypond_jins_template = r'''
     \once \override TextSpanner.bound-details.right.padding = #%i
     \once \override TextSpanner.bound-details.left.padding = #%i
@@ -242,7 +206,8 @@ def generate_maqamat_snippets():
         ajnas = maqam["ajnas"]
         for ijins, jins in enumerate(ajnas):
             jinsnotes = jins[1].split(" ")
-            maqamnotes.extend(["".join([c for c in n if c.isalpha()]) for n in jinsnotes])
+            maqamnotes.extend(["".join([c for c in n if c.isalpha()])
+                              for n in jinsnotes])
             if ijins < len(ajnas)-1 and ajnas[ijins][1].split(" ")[-1] == ajnas[ijins+1][1].split(" ")[0]:
                 jinsnotes = jinsnotes[:-1]
                 paddingright = -5
@@ -251,7 +216,7 @@ def generate_maqamat_snippets():
                 paddingright = 0
                 paddingleft = 1
             lilypond_maqam += (lilypond_jins_template %
-                (paddingright, paddingleft, f"{jinsnotes[0]}", jins[0], " ".join(jinsnotes[1:])))
+                               (paddingright, paddingleft, f"{jinsnotes[0]}", jins[0], " ".join(jinsnotes[1:])))
         for istring, string in enumerate(strings):
             idx = allnotes.index(string)
             for fret in range(FRETS):
@@ -263,7 +228,8 @@ def generate_maqamat_snippets():
                         notetitle = _notetitle(note)
                     else:
                         notetitle = _notetitle(alternative_names.get(note))
-                    diagram += (diagram_note_template % (color, color, 6-istring, fret, 6-istring, fret, notetitle))
+                    diagram += (diagram_note_template % (color, color,
+                                6-istring, fret, 6-istring, fret, notetitle))
 
         name = maqam["name"]
         snippetfile = os.path.join(maqamfolder, f"{name}.tex")
@@ -285,12 +251,13 @@ def generate_full_fretboard():
             if not note.endswith("sb"):
                 color = "blue!50"
                 notetitle = _notetitle(note)
-                diagram += (diagram_note_template % (color, color, 6-istring, fret, 6-istring, fret, notetitle))
-
+                diagram += (diagram_note_template % (color, color,
+                            6-istring, fret, 6-istring, fret, notetitle))
 
     snippetfile = os.path.join(oudfolder, f"diapason.tex")
     with open(snippetfile, "w") as f:
         f.write(diagram_template % (diagram))
+
 
 def generate_maqam_analysis_fretboard():
     file = os.path.join(os.path.dirname(__file__), "analysis.json")
@@ -316,20 +283,23 @@ def generate_maqam_analysis_fretboard():
                     for i, color in enumerate(colors):
                         alpha = i / len(colors) * 360
                         alpha2 = (i + 1) / len(colors) * 360
-                        diagram += multicolor_diagram_note_template % (color, 6-istring, fret, 6-istring, fret, alpha, alpha, alpha2)
-
+                        diagram += multicolor_diagram_note_template % (
+                            color, 6-istring, fret, 6-istring, fret, alpha, alpha, alpha2)
 
         snippetfile = os.path.join(maqamfolder, f"analysis_{name}.tex")
         with open(snippetfile, "w") as f:
             f.write(diagram_template % (diagram))
 
+
 def generate_lilypond_files():
     def replace(match):
         match = match.group()
         return lilypondinput_template % ("\n".join(match.splitlines()[1:-1]))
+
     def replace2(match):
         match = match.group()
         return lilypondinput_template_notime % ("\n".join(match.splitlines()[1:-1]))
+
     def replace3(match):
         match = match.group()
         notea, noteb = match.splitlines()[0].split()[-2:]
