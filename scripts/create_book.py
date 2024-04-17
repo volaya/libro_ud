@@ -68,7 +68,7 @@ lilypondinput_template_notime = r'''
 notes = \relative do {
 %s
 }
-
+\bar "||"
 <<
   \new Staff
   <<

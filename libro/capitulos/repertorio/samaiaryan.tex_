@@ -5,7 +5,7 @@
 \time 10/8
 \set Timing.beamExceptions = #'()
 \set Timing.beatStructure = #'(3 2 2 3)
-sol4^"Jana 1" fa8 misb re16 misb fa sol misb fa re4 do8
+sol'4^"Jana 1" fa8 misb re16 misb fa sol misb fa re4 do8
 fa16 misb re do sisb la sol la' sol la misb sol fa misb re4 r8
 do4 re8 re4 la'16 sib la sol fa8. do16 re misb
 fa4 misb8 fa4 sol16 fa sol8 misb4 re8

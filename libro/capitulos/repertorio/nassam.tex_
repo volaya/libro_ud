@@ -4,7 +4,7 @@
 ###
 \key la \kurd
 \repeat volta 2{
-sol8^\markup{\rounded-box \bold A (instrumental)} la sib la la2
+sol'8^\markup{\rounded-box \bold A (instrumental)} la sib la la2
 sol8 la sib la la2
 do8 re mi do sib do re sib
 la sib do sib la4. sol16 la

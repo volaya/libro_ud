@@ -3,7 +3,7 @@
 ###transpose la re
 \key la \hijaz
 \tempo 4 = 120
-la8 re dod re mi4 fa8 mi
+la'8 re dod re mi4 fa8 mi
 re4 mi8 re dod4 re8 dod
 sib la dod sib la2
 la8 re dod re mi4 mi4

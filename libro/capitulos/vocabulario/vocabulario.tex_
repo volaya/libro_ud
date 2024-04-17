@@ -404,14 +404,18 @@ mib64 fad mib fad mib4 re2
 mib32 re do16 re re, re' re
 mib32 re do16 re re, re' re
 mib32 re do16 re re mib fad4:32
-mib32 re do16 re re re, re' re re
+mib32 re do16 re re re, re' re
 ###
 \audioclip{Inicio en \maqam Hiyaz.}
 
 \newbeginning{}
 ###notime
 sol16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re mib4 re2
-sol,16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re fad re mib4 re2
+###
+
+\newbeginning{}
+###notime
+sol16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re fad re mib4 re2
 ###
 \audioclip{Inicio en \maqam Hiyaz.}
 
@@ -423,7 +427,13 @@ re16 do re fad re re mib (re) re4:32
 
 \newbeginning{}
 ###notime
-re,8 re'2 fad16 mib re mib (re8 re2)
+re,8 re'2 fad16 mib re mib re8 (re2)
+###
+\audioclip{Inicio en \maqam Hiyaz.}
+
+\newbeginning{}
+###notime
+sol8 la sib do re mib re2
 ###
 \audioclip{Inicio en \maqam Hiyaz.}
 
@@ -771,20 +781,20 @@ re16 mib fa8 mib sol2:32 sol16 fa mib re do
 
 \newending{}
 ###notime
-sol8 fa sol lab sol16 sol fa fa mib mib re mib32 re do8 re mib32 fa mib16 mib4:64  (re32) do4
+sol'8 fa sol lab sol16 sol fa fa mib mib re mib32 re do8 re mib32 fa mib16 mib4:64  (re32) do4
 ###
 \audioclip{Cierre en \maqam Nahawand.}
 
 \newending{}
 ###notime
-sol8 fa32 mib16 fa8 mib32 re16 mib8 re32 do16 re do8
+sol'8 fa32 mib16 fa8 mib32 re16 mib8 re32 do16 re do8
 lab'16 sol fa sol mib re do4
 ###
 \audioclip{Cierre en \maqam Nahawand.}
 
 \newending{}
 ###notime
-sol8 sol8:32 lab16 (sol) fa4 mib16 (fa) sol fa (mib re) do (re mib re) do (si) do4
+sol'8 sol8:32 lab16 (sol) fa4 mib16 (fa) sol fa (mib re) do (re mib re) do (si) do4
 ###
 \audioclip{Cierre en \maqam Nahawand.}
 
@@ -796,7 +806,7 @@ mib4:32 re4:32 do16 sol la si do do, do'4
 
 \newending{}
 ###notime
-sol8 sol8 sol16 lab sib lab sol fa mib re do si do4
+sol'8 sol8 sol16 lab sib lab sol fa mib re do si do4
 ###
 \audioclip{Cierre en \maqam Nahawand.}
 
@@ -841,7 +851,7 @@ fa fa mib mib re do4
 
 \newending{}
 ###notime
-sol8  sol16:64 fa8 sol16:64 mib8 sol16:64 do,16
+sol'8  sol16:64 fa8 sol16:64 mib8 sol16:64 do,16
 sol'16 sol sol sol sol sol8 sol16:64 fa8 sol16:64 mib8 sol16:64 re16
 sol sol mib sol sol fa sol sol mib sol sol fa sol sol mib4:32 re4:32 mib32 re do8
 ###
@@ -858,7 +868,7 @@ re'16 mib fad sol fad mib re do re re,
 
 \newending{}
 ###notime
-la4:32 sol32 fad re mib4:32
+la'4:32 sol32 fad re mib4:32
 re'32 do sib la sol fad mib re do re4
 ###
 \audioclip{Cierre en \maqam Hiyaz.}
@@ -869,7 +879,6 @@ re'32 do sib la sol fad mib re do re4
 Las secuencias melódicas de esta sección no se asocian, por lo general, a un \maqam determinado, y pueden utilizarse en cualquiera de ellos, sin más que adaptar los intervalos y las notas correspondientes. Tambien pueden desplazarse a notas de inicio distintas a las empleadas en la transcripción, manteniéndose dentro del mismo \maqam.
 
 Todas ellas pueden aparecer como parte del desarrollo de una frase más larga, y hacerlo con distinta longitud (el patrón melódico se repite más o menos veces arrancando de distintas notas sucesivas). También pueden emplearse como cierres si se añade un remate al final de la secuencia y se hace terminar esta sobre la tónica del \maqamb. Esto tiene especial sentido en el caso de las secuencias descendentes, pero también las ascendentes pueden emplearse de esta manera.
-
 
 \audioclip{Secuencia \arabic{sequence}.}
 
@@ -902,7 +911,7 @@ sol sol misb32 misb misb16
 
 \newsequence{}
 ###notime
-sib16.:128 la32 sol16 sib la sol
+sib'16.:128 la32 sol16 sib la sol
 la16.:128 sol32 fa16 la sol fa
 sol16.:128 fa32 misb16 sol fa misb
 ###
@@ -933,7 +942,7 @@ fa sol lab lab32 lab lab16
 
 \newsequence{}
 ###notime
-lab16 lab sol sol fa fa mib mib
+lab'16 lab sol sol fa fa mib mib
 sol sol fa fa mib mib re re
 fa fa mib mib re re do do
 mib mib re re do do sib sib
@@ -973,7 +982,7 @@ sol fa mib mib re re
 
 \newsequence{}
 ###notime
-sib8 \tuplet 3/2 {sib16 lab sol}
+sib'8 \tuplet 3/2 {sib16 lab sol}
 lab8 \tuplet 3/2 {lab16 sol fa}
 sol8 \tuplet 3/2 {sol16 fa mib}
 fa8 \tuplet 3/2 {fa16 mib re} mib8
@@ -983,7 +992,7 @@ fa8 \tuplet 3/2 {fa16 mib re} mib8
 
 \newsequence{}
 ###notime
-lab8 sol16 fa fa16.mib32 re8
+lab'8 sol16 fa fa16.mib32 re8
 sol8 fa16 mib mib16.re32 do8
 fa8 mib16 re re16.do32 si8
 ###
