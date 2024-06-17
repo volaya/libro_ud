@@ -192,8 +192,8 @@ El siguiente inicio arranca en la octava superior, y se utilizaría para abrir u
 
 ###notime
 \key do \rast
-la'16 do re do re8 re16 do do,8 do do do4
-la'16 do re do re8 re16 do do,8 do do do4
+la'16 do re do re8 re16 do do,8 do do do8~do4\fermata
+la'16 do re do re8 re16 do do,8 do do do8~do4\fermata
 ###
 \audioclip{Inicio en \maqam Rast.}
 
@@ -203,14 +203,14 @@ Otro ejemplo similar al anterior.
 
 ###notime
 \key do \rast
-r16 sol'16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do do, do' do do do
+\partial 4 r16 sol'16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do do, do' do do do do
 ###
 \audioclip{Inicio en \maqam Rast.}
 
 \newbeginning{}
 
 ###notime
-\key re \bayati
+\key do \rast
 sol16 sol32 sol sol16 la sisb do re do sisb re do8 do do do
 ###
 \audioclip{Inicio en \maqam Rast.}
@@ -220,7 +220,7 @@ sol16 sol32 sol sol16 la sisb do re do sisb re do8 do do do
 \newbeginning{}
 ###notime
 \key re \bayati
-re16 sol la sib do re \tuplet 3/2 {do32 (re do)} sib16 do sib la sib \tuplet 3/2 {la32 sib la} sol16 la sol fa re
+r16 re16 sol la sib do re \tuplet 3/2 {do32 (re do)} sib16 do sib la sib \tuplet 3/2 {la32 sib la} sol16 la sol fa re8
 ###
 \audioclip{Inicio en \maqam Bayati.}
 
@@ -256,7 +256,7 @@ re16 misb fa8 fa32 misb8 misb32 fa8 fa32 misb8 misb32 fa4:32 misb16 re re4
 \newbeginning{}
 ###notime
 \key re \bayati
-do16 re re re re re4\fermata
+r16 do16 re re re re re4\fermata
 misb32 (re) do16 sisb sisb la la sol la sisb do re re re re4
 ###
 \audioclip{Inicio en \maqam Bayati.}
@@ -265,18 +265,11 @@ misb32 (re) do16 sisb sisb la la sol la sisb do re re re re4
 ###notime
 \key re \bayati
 re16 re re re re re re fa32 (misb re16) re re re re re re
-fa32 (misb re16) re re fa32 (misb re16) re re re re
+fa32 (misb re16) re re fa32 (misb re16) re re re
 sisb8:32 do8:32 re8:32 re16 re re4
 ###
 \audioclip{Inicio en \maqam Bayati.}
 
-\newbeginning{}
-###notime
-\key re \bayati
-r8 \grace misb32 (re16) do re misb fa8 \grace sol32 (fa16)
-misb8 \grace fa32 (misb16) re4
-###
-\audioclip{Inicio en \maqam Bayati.}
 
 \newbeginning{}
 ###notime
@@ -293,7 +286,7 @@ do re misb fa \tuplet 3/2 {misb32 (fa misb }) (re16) re8 re re re
 \key re \bayati
 re16 re re re re re re4
 do16 re fa4
-sol16 fa misb re misb misb misb8 re8 re16 do re re4
+sol16 fa misb re misb misb misb8 re8 re16 do re re~re4
 ###
 \audioclip{Inicio en \maqam Bayati.}
 
@@ -329,21 +322,6 @@ do do si (do4)
 do'16 re\glissando mib8^\prall re^\prall do sib^\prall do16 do,, do''4
 ###
 \audioclip{Inicio en \maqam Nahawand.}
-
-
-\subsection{Inicios en \maqam Kurd}
-
-\newbeginning{}
-###notime
-do16 re mib fa fa fa fa fa mib re do re8 re re
-###
-\audioclip{Inicio en \maqam Kurd.}
-
-\newbeginning{}
-###notime
-re8 do re mib fa4 mib8 re re4
-###
-\audioclip{Inicio en \maqam Kurd.}
 
 
 \subsection{Inicios en \maqam Hiyaz}
@@ -450,7 +428,7 @@ la'8 sol fa misb sol fa misb re fa misb \tuplet 3/2 {re16 (misb re)} do4
 
 \audioclip{Cierre con descenso y motivo melódico.}
 
-Es habitual que el descenso a la tónica se produzca desde las cercanías del \emph{ghammaz} o incluso desde la octava, pero si la frase se encuentra cerca de la tónica, puede saltarse hasta una nota superior y comenzar desde allí. Este es uno de los casos en los que aparecen intervalos amplios dentro de la melodía. En el siguiente ejemplo, en el \maqam Nahawand, se salta desde la tónica al \emph{ghammaz} y desde allí se desciende mediante un patrón melodico, al que sigue un cierre con trémolo.
+Es habitual que el descenso a la tónica se produzca desde las cercanías del \emph{ghammaz} o incluso desde la octava, pero si la frase se encuentra cerca de la tónica, puede saltarse hasta una nota superior y comenzar desde allí. Este es uno de los casos en los que aparecen intervalos amplios dentro de la melodía. En el siguiente ejemplo, en el \maqam Nahawand, se salta desde la tónica al \emph{ghammaz} y desde allí se desciende mediante un patrón melódico, al que sigue un cierre con trémolo.
 
 ###notime
 \key do \minor
@@ -519,7 +497,7 @@ fa,8 fa'4.:32 sol,8 sol'4.:32 do,,8 do'2
 La nota inmediatamente por encima de la tónica, especialmente si se encuentra a un semitono de aquella (como sucede en el \maqam Kurd, empleado en el siguiente ejemplo), puede también utilizarse con carácter de nota sensible, deteniéndose en ella y enfatizándola antes de resolver.
 
 ###notime
-\key do \rast
+\key re \kurd
 \time 16/4
 mib16 fa sol la sol fa re mib4:64\fermata (re32) do re16 re, re'2
 ###

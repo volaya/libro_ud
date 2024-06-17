@@ -160,148 +160,44 @@ Por su especial relevancia, es interesante tratar con detalle los fragmentos que
 
 La manera más prototípica de empezar un \taqsim o una frase dentro de este es simplemente repetir la nota tónica u otra de sus notas a la que se quiera dar relevancia. Habitualmente, se utiliza también la nota tónica en una octava inferior, intercalándola entre las repeticiones de la anterior.
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 do8\downbow do do do do do do do do, \downbow do'\downbow do do do do do do
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 Nótese que las distintas pulsaciones sobre la misma cuerda se hacen con una pulsación alterna, pero tanto la pulsación de la cuerda más grave como la de la nota sucesiva una octava por encima se han de hacer con pulsación descendente. Se aplica aquí el principio de que, siempre que se produzca un cambio de cuerda, la primera pulsación sobre esta nueva cuerda ha de ser en sentido descendente.
 
 En lugar de comenzar directamente con la nota tónica, es habitual llegar hasta ella tras una pequeña frase que presente el \yins en cuestión. El siguiente inicio es prototípico en el \maqam Bayati:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key re \bayati
 fa8\downbow misb re do re re re re re re re re re,\downbow re'\downbow re re
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 El siguiente es un ejemplo similar en \maqam Rast, que en este caso no llega a la tónica sino a la cuarta nota del \maqam (fa). Puede emplearse para arrancar una frase intermedia de un \taqsimb, en la que quiera enfatizarse esta nota.
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
   do,8 do' re misb misb fa misb re misb fa fa fa fa fa fa fa
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+ ###
 
 Es frecuente que la frase de apertura utilice las notas por debajo de la tónica, como en el siguiente ejemplo:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
   r8 sol8 la sisb do do do do do, do' do do
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 En el caso de \maqam Bayati, a pesar de que su segundo \yins es \yins Nahawand en sol, se suele utilizar en la octava inferior \yins Rast en sol (es decir, con si\hflat\ en lugar de si$\flat$). El siguiente es un ejemplo de arranque en \maqam Bayati utilizando notas por debajo de la tónica.
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key re \bayati
 sol'8 fa misb re do sisb do re re, re' re re, re' re re, re'
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 La primera frase de un \taqsim suele ser breve y presentar el primer \yins del \maqam, de tal modo que muchas veces no es apenas más que la combinación de un inicio y un cierre. Véase el ejemplo siguiente:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 do,8 do' do do do do do do sisb32 do sisb la sisb8 sisb do do re misb16 re do8
 \bar "|"
@@ -309,57 +205,17 @@ do,8 do' do do do do do do sisb32 do sisb la sisb8 sisb do do re misb16 re do8
 re misb fa fa misb misb re re
 misb16 re
 do2
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 O este otro en \maqam Nahawand, más breve, que aun así sirve para iniciar con claridad que el \taqsim se desarrolla en este \maqam:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 mib16 fa sol8 fa sol fa16 mib \tuplet 3/2 {mib (fa mib)} \tuplet 3/2 {re (mib re)} do4
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 Una técnica muy habitual en un \taqsim es tocar una frase breve como las anteriores, formada por un inicio y un cierre, e iniciar la frase siguiente, mas larga, repitiendo el mismo inicio. Esto puede verse en el siguiente ejemplo en \maqam Bayati.
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key re \bayati
 \partial 16 do16
 re re' re re re misb32 (re) do16 re
@@ -372,31 +228,11 @@ re re' re re re misb32 (re) do16 re
 re,16 re' re re re misb32 (re) do16 re
 re, re' misb misb fa fa misb misb8
 fa8 fa8:32 misb16 misb (re) do re re4
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 En ocasiones, esa primera frase no contiene un cierre, sino que se deja inconclusa sobre otra nota del \maqam, creándose un efecto de tensión que se resuelve cuando la segunda frase arranca. Por ejemplo, en el siguiente ejemplo en \maqam Rast, la primera frase se detiene sobre la nota fa.
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 do,16 do' do do do do do do
 do,16 do' do do do sisb32 sisb sisb16 do32 do do16 re16 re misb misb fa
@@ -409,79 +245,23 @@ do,16 do' do do do do do do
 do,16 do' do do do sisb32 sisb sisb16 do32 do \bar "|"
 do16 re16 re misb misb fa fa
 misb misb re re16 misb32 re do16 re re misb misb fa fa sol sol fa^"etc." fa misb
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 Los inicios anteriores concluyen todos ellos sobre la tónica. Sin embargo, una frase de inicio puede servir para llegar hasta cualquier otra nota del \maqamb. Un caso particular son los que arrancan de la tónica y ascienden hasta el \emph{ghammaz}, para allí dar inicio a una frase que se sitúa sobre el segundo \yins. Estos inicios no es habitual utilizarlos para comenzar el \taqsimb, sino como arranque de frases intermedias.
 
 Los siguientes son algunos ejemplos:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 do16 sisb do re misb re misb fa
 sol8 sol sol sol
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
+###
 
-
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 do16 do re re misb misb fa fa
 sol8 sol sol sol
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 Cualquiera de los inicios de esta sección puede modificarse para desembocar sobre una nota distinta de la tónica o el \emph{ghammaz}, enfatizando esta y continuando desde allí.
 
@@ -492,313 +272,89 @@ Esta sección contiene fragmentos empleados para concluir una frase o un \taqsim
 
 Comencemos con una de las opciones más habituales: un descenso a tónica empleando un motivo melódico. Por ejemplo:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 la'8 sol fa misb sol fa misb re fa misb \tuplet 3/2 {re16 (misb re)} do4
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 Es habitual que el descenso a la tónica se produzca desde las cercanías del \emph{ghammaz} o incluso desde la octava, pero si la frase se encuentra cerca de la tónica, puede saltarse hasta una nota superior y comenzar desde allí. Este es uno de los casos en los que aparecen intervalos amplios dentro de la melodía. En el siguiente ejemplo, en el \maqam Nahawand, se salta desde la tónica al \emph{ghammaz} y desde allí se desciende mediante un patrón melódico, al que sigue un cierre con trémolo.
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \minor
 do8 do do mib re do
 \tuplet 3/2 {sol' fa mib} \tuplet 3/2 {fa mib re} \tuplet 3/2  {mib re do} do4 \tuplet 3/2 {do8 re mib}
 fa4:32 re16 do
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 El uso del trémolo para enfatizar un cierre es casi obligado en algunos estilos de ud como el árabe. El cierre más simple con uso de trémolo es un simple descenso a tónica siguiendo las notas del \maqamb.
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 fa4:32 misb4:32 re4:32 do2
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 El siguiente cierre combina el trémolo con un motivo melódico:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 la'8:64 [sol8:64 fa8:64] sol8:64 [fa8:64 misb8:64] fa8:64 [misb8:64 re8:64] do4
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 El uso de la tónica una octava por debajo es un recurso frecuente para dar solidez a un remate.
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 sol'8 (la16 sol) fa4 fa8 (sol16 fa) misb4 misb8 (fa16 misb) re4 re8 (misb16 re) do4
 do,2
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 El siguiente ejemplo en \maqam Bayati usa octavas y trémolo conjuntamente:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key re \bayati
 [re16 misb fa] [sol fa sol] fa,16 fa'4:32 sol,16 sol'4:32 misb8.:64 re32 do re4
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 Aun si el patrón es descendente, muchos cierres usan la nota inmediatamente inferior a la tónica como nota sensible desde la que resolver y concluir la \emph{qafla}, en dirección ascendente. El siguiente es un ejemplo de ello:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 do8 re misb fa fa fa fa misb16 fa misb re misb8 re do sisb do4
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 Aunque menos frecuente, también es posible apoyarse en el \emph{ghammaz} como nota previa antes de la tónica, que luego resuelve sobre esta. El siguiente ejemplo combina esto con el uso de trémolo y octavas.
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 fa,8 fa'4.:32 sol,8 sol'4.:32 do,,8 do'2
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 La nota inmediatamente por encima de la tónica, especialmente si se encuentra a un semitono de aquella (como sucede en el \maqam Kurd, empleado en el siguiente ejemplo), puede también utilizarse con carácter de nota sensible, deteniéndose en ella y enfatizándola antes de resolver.
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key re \kurd
 \time 16/4
 mib16 fa sol la sol fa re mib4:64\fermata (re32) do re16 re, re'2
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 Ampliando esta idea, otra alternativa habitual es llegar a la tónica mediante un motivo melódico ascendente, desde la octava inferior. El siguiente ejemplo combina un patrón melódico descendente que baja a la octava inferior, con otro ascendente que resuelve desde allí sobre la tónica.
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 fa8:32 misb8:32 re8:32 do8:32 sisb8:32 la8:32 sol4 sol16 la sib do2
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 En ocasiones, la \emph{qafla} tiene dos partes, o más bien se puede decir que se unen dos remates consecutivos, ambos acabando sobre la tónica. Por ejemplo:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 sol'8 (la16 sol) fa4 fa8 (sol16 fa) misb4 misb8 (fa16 misb) re4 re8 (misb16 re) do4
 do8 re misb fa4 fa4:32 misb4 misb4:32 re4 re4:32 do
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 Otro ejemplo similar, en este caso en \maqam Nahawand:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \minor
 sol'16-> sol sol sol
 fa-> fa fa fa
@@ -809,113 +365,33 @@ do16 re re mib mib fa fa sol sol
 la sol fa mib
 sol fa mib re
 do
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 
 La siguiente frase se emplea con frecuencia como segundo cierre, aunque su carácter es más de ornamentación, y es el cierre previo el que deja la melodía concluida sobre la tónica. Se suele tocar con menos volumen que el de la frase anterior, y es habitual no en el cierre del \taqsimb, sino en el de frases intermedias.
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 r8 \tuplet 3/2 {re16 (misb fa)} sol4 \tuplet 3/2 {fa16 (misb re)} do4
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 Otro ejemplo más de esta idea:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 fa8 fa misb16 fa misb re misb16 re16 do sisb do4
 misb16 (re) misb16 (re) misb16 (re) do sisb do4
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 Respecto a la duración de la última nota del remate, lo habitual es dejar esta sonando. Sin embargo, en el cierre de frases interiores de un \taqsim pueden emplearse finales secos, tras los que normalmente comienza rápido la siguiente frase. Estos cierres pueden ocurrir sobre la tónica, pero también sobre otras notas del \maqamb. Por ejemplo, la siguiente frase en \maqam Nahawand se cierra sobre la nota re.
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 r8 do8 re mib fa sol fa sol fa4 mib32 (fa mib re) r4
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 En el estilo árabe, como ya se ha dicho, el cierre que da fin al \taqsim ha de ser intenso, con un cierto carácter de apoteosis. Para ello, es necesario que exista una tensión melódica antes de llegar al remate, y esta se debe crear progresivamente en las frases previas. Una forma habitual de hacer esto es recorrer el \maqam de manera ascendente con algún patrón melódico, para después descender y concluir sobre la tónica. Por ejemplo:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 do16 re misb8 re16 misb fa8
 misb16 fa sol8 fa16 sol la8
@@ -923,60 +399,27 @@ sol16 la sisb8 la16 sisb do4
 \bar "|"
 sisb16 do la sisb sol la fa sol
 misb fa re misb fa4 fa8:32 misb4 misb8:32 re4 re8:32 do4
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 Otra posibilidad sobre esta misma idea:
 
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
+###notime
 \key do \rast
 do8 re misb re misb fa misb fa sol fa sol la4
 sisb8 sisb la la sol sol fa fa misb misb fa4:32
 misb32 (fa misb re) do4
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
+###
 
 La sección ascendente es frecuente tocarla acelerando el tempo, para así añadir más tensión al desarrollo.
 
 \section{Un \emph{taqsim} de ejemplo}
+\label{taqsim_ejemplo}
 
-Como ejemplo práctico de lo anterior, se transcribe a continuación un \taqsim clásico de Riad Al Sunbati en Hiyaz re, acompañado de anotaciones que explican su desarrollo. La transcripción se presenta dividida en frases. La partitura al completo puede encontrarse al final del capítulo \ref{repertorio}.
+Como ejemplo práctico de lo anterior, se transcribe a continuación un \taqsim clásico de Riad Al Sunbati en Bayati re, acompañado de anotaciones que explican su desarrollo. La transcripción se presenta dividida en frases. La partitura al completo puede encontrarse al final del capítulo \ref{repertorio}.
 
-El \taqsim comienza estableciendo el \maqamb, desarrollándose sobre las notas del primer \yins (\yins Hiyaz re)
+El \taqsim comienza estableciendo el \maqamb, desarrollándose sobre las notas del primer \yins (\yins Bayati re).
+
+****
 
 
 

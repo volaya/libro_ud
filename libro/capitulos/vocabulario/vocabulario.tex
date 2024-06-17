@@ -476,8 +476,8 @@ El siguiente inicio arranca en la octava superior, y se utilizaría para abrir u
 \include "arabic.ly"
 notes = \relative do {
 \key do \rast
-la'16 do re do re8 re16 do do,8 do do do4
-la'16 do re do re8 re16 do do,8 do do do4
+la'16 do re do re8 re16 do do,8 do do do8~do4\fermata
+la'16 do re do re8 re16 do do,8 do do do8~do4\fermata
 }
 \bar "||"
 <<
@@ -507,7 +507,7 @@ Otro ejemplo similar al anterior.
 \include "arabic.ly"
 notes = \relative do {
 \key do \rast
-r16 sol'16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do do, do' do do do
+\partial 4 r16 sol'16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do do, do' do do do do
 }
 \bar "||"
 <<
@@ -534,7 +534,7 @@ r16 sol'16 sol sol do do re re misb misb re re do do re32 misb re do sisb16 do d
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative do {
-\key re \bayati
+\key do \rast
 sol16 sol32 sol sol16 la sisb do re do sisb re do8 do do do
 }
 \bar "||"
@@ -564,7 +564,7 @@ sol16 sol32 sol sol16 la sisb do re do sisb re do8 do do do
 \include "arabic.ly"
 notes = \relative do {
 \key re \bayati
-re16 sol la sib do re \tuplet 3/2 {do32 (re do)} sib16 do sib la sib \tuplet 3/2 {la32 sib la} sol16 la sol fa re
+r16 re16 sol la sib do re \tuplet 3/2 {do32 (re do)} sib16 do sib la sib \tuplet 3/2 {la32 sib la} sol16 la sol fa re8
 }
 \bar "||"
 <<
@@ -700,7 +700,7 @@ re16 misb fa8 fa32 misb8 misb32 fa8 fa32 misb8 misb32 fa4:32 misb16 re re4
 \include "arabic.ly"
 notes = \relative do {
 \key re \bayati
-do16 re re re re re4\fermata
+r16 do16 re re re re re4\fermata
 misb32 (re) do16 sisb sisb la la sol la sisb do re re re re4
 }
 \bar "||"
@@ -729,7 +729,7 @@ misb32 (re) do16 sisb sisb la la sol la sisb do re re re re4
 notes = \relative do {
 \key re \bayati
 re16 re re re re re re fa32 (misb re16) re re re re re re
-fa32 (misb re16) re re fa32 (misb re16) re re re re
+fa32 (misb re16) re re fa32 (misb re16) re re re
 sisb8:32 do8:32 re8:32 re16 re re4
 }
 \bar "||"
@@ -750,33 +750,6 @@ sisb8:32 do8:32 re8:32 re16 re re4
 
 \audioclip{Inicio en \maqam Bayati.}
 
-\newbeginning{}
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
-\key re \bayati
-r8 \grace misb32 (re16) do re misb fa8 \grace sol32 (fa16)
-misb8 \grace fa32 (misb16) re4
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
-\audioclip{Inicio en \maqam Bayati.}
 
 \newbeginning{}
 
@@ -817,7 +790,7 @@ notes = \relative do {
 \key re \bayati
 re16 re re re re re re4
 do16 re fa4
-sol16 fa misb re misb misb misb8 re8 re16 do re re4
+sol16 fa misb re misb misb misb8 re8 re16 do re re~re4
 }
 \bar "||"
 <<
@@ -949,61 +922,6 @@ do'16 re\glissando mib8^\prall re^\prall do sib^\prall do16 do,, do''4
 \end{center}
 
 \audioclip{Inicio en \maqam Nahawand.}
-
-
-\subsection{Inicios en \maqam Kurd}
-
-\newbeginning{}
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
-do16 re mib fa fa fa fa fa mib re do re8 re re
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
-\audioclip{Inicio en \maqam Kurd.}
-
-\newbeginning{}
-
-\begin{center}
-\begin{lilypond}
-\include "arabic.ly"
-notes = \relative do {
-re8 do re mib fa4 mib8 re re4
-}
-\bar "||"
-<<
-  \new Staff
-  <<
-    \clef "G_8"
-    \omit Staff.BarLine
-    \omit Staff.TimeSignature
-    \time 100/4
-    \notes
-    \revert Staff.BarLine.stencil
-    \bar "||"
-  >>
->>
-\end{lilypond}
-\end{center}
-
-\audioclip{Inicio en \maqam Kurd.}
 
 
 \subsection{Inicios en \maqam Hiyaz}
@@ -1252,13 +1170,14 @@ sol16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re mib4 
 \end{lilypond}
 \end{center}
 
+
 \newbeginning{}
 
 \begin{center}
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative do {
-sol,16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re fad re mib4 re2
+sol16 sib do re re re re re re re, re' re re, re' re re, re' re mib mib re fad re mib4 re2
 }
 \bar "||"
 <<
@@ -1389,7 +1308,7 @@ la'8 sol fa misb sol fa misb re fa misb \tuplet 3/2 {re16 (misb re)} do4
 
 \audioclip{Cierre con descenso y motivo melódico.}
 
-Es habitual que el descenso a la tónica se produzca desde las cercanías del \emph{ghammaz} o incluso desde la octava, pero si la frase se encuentra cerca de la tónica, puede saltarse hasta una nota superior y comenzar desde allí. Este es uno de los casos en los que aparecen intervalos amplios dentro de la melodía. En el siguiente ejemplo, en el \maqam Nahawand, se salta desde la tónica al \emph{ghammaz} y desde allí se desciende mediante un patrón melodico, al que sigue un cierre con trémolo.
+Es habitual que el descenso a la tónica se produzca desde las cercanías del \emph{ghammaz} o incluso desde la octava, pero si la frase se encuentra cerca de la tónica, puede saltarse hasta una nota superior y comenzar desde allí. Este es uno de los casos en los que aparecen intervalos amplios dentro de la melodía. En el siguiente ejemplo, en el \maqam Nahawand, se salta desde la tónica al \emph{ghammaz} y desde allí se desciende mediante un patrón melódico, al que sigue un cierre con trémolo.
 
 
 \begin{center}
@@ -1602,7 +1521,7 @@ La nota inmediatamente por encima de la tónica, especialmente si se encuentra a
 \begin{lilypond}
 \include "arabic.ly"
 notes = \relative do {
-\key do \rast
+\key re \kurd
 \time 16/4
 mib16 fa sol la sol fa re mib4:64\fermata (re32) do re16 re, re'2
 }
@@ -2798,7 +2717,6 @@ re'32 do sib la sol fad mib re do re4
 Las secuencias melódicas de esta sección no se asocian, por lo general, a un \maqam determinado, y pueden utilizarse en cualquiera de ellos, sin más que adaptar los intervalos y las notas correspondientes. Tambien pueden desplazarse a notas de inicio distintas a las empleadas en la transcripción, manteniéndose dentro del mismo \maqam.
 
 Todas ellas pueden aparecer como parte del desarrollo de una frase más larga, y hacerlo con distinta longitud (el patrón melódico se repite más o menos veces arrancando de distintas notas sucesivas). También pueden emplearse como cierres si se añade un remate al final de la secuencia y se hace terminar esta sobre la tónica del \maqamb. Esto tiene especial sentido en el caso de las secuencias descendentes, pero también las ascendentes pueden emplearse de esta manera.
-
 
 \audioclip{Secuencia \arabic{sequence}.}
 
