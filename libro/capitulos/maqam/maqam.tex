@@ -1,6 +1,7 @@
 \chapter{El \maqam}
 \label{maqam}
 
+\pagestyle{fancyplain}
 Uno de los elementos fundamentales para entender la música árabe es el \maqamb. Entendemos bajo esta denominación dos conceptos distintos:
 
 \begin{itemize}
@@ -735,6 +736,39 @@ Las modulaciones entre \maqamaat son principalmente de tres tipos:
 \item De un \maqam a otro cuya tónica es parte del \maqam original. Se enfatiza dicha nota para que asuma el protagonismo tonal de la melodía, y a partir de ahí se establece un nuevo \maqam sobre ella. Por ejemplo, modular de Rast en do a Huzam en mi semibemol. Este caso es menos habitual que los anteriores.
 \end{itemize}
 
+Las modulaciones deben sonar naturales y fluidas, y para ello pueden llevarse a cabo de distintas maneras:
+
+\begin{itemize}
+
+\item Partiendo de la primera nota del \yinsb. Principalmente utilizando el \emph{ghammaz}, se pone esta nota como eje de la melodía, y a partir de ahí se arranca con un \yins distinto del actual.
+
+\item Utilizando una frase como patrón. Se define una frase breve que utilice las notas del \yins actual, repitiéndola para asentarla en el desarrollo melódico, y a continuación se pasa a tocar esa misma frase pero con los intervalos que corresponden al nuevo \yinsb. Por ejemplo, si dentro de un \taqsim en Rast en do queremos modular a \maqam Suznak en do, lo cual significaría cambiar el segundo \yins de Rast en sol a Hiyaz en sol, la siguiente frase nos permitiría realizar esa modulación.
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative do{
+\key do \rast
+sol'8 sol la la sisb sisb la la
+sol sol la la sisb sisb la la
+sol sol lab lab si si lab lab
+\bar "||"
+}
+
+<<
+  \new Staff <<\clef "G_8" \notes>>
+>>
+\end{lilypond}
+\end{center}
+
+
+Y a partir de ahí continuaríamos el desarrollo melódico en \yins Hiyaz
+
+\item Cambio directo de \yins. Aprovechando un cambio de sección dentro del desarrollo de la pieza, se arranca con otro \yins distinto al actual. Este cambio de sección puede tener lugar tras una pausa en un \taqsim (veremos que las pausas y silencios son una pieza fundamental en el recorrido de un \taqsimb), o bien al comenzar una nueva \emph{jana} tras el estribillo o \emph{taslim} en una pieza que tenga tal estructura, como por ejemplo una \emph{longa} o un \emph{samai}.
+
+\end{itemize}
+
 Teniendo en cuenta cómo se produce el desarrollo melódico dentro de un \maqam (melodías que se sitúan en un único \yins durante periodos largos, y que solo se desplazan al siguiente después de haberse expresado abundantemente en ese reducido contexto melódico, como vimos en el apartado anterior), es interesante concebir las modulaciones no como un <<recorrido>> entre \maqamaatb, sino entre \ashnasb. Las modulaciones pueden entenderse así como recorridos a través de un conjunto de \ashnasb, produciéndose la mayoría de esos cambios en los correspondientes \emph{ghammaz} y notas tónicas.
 
 Puesto que el \emph{ghammaz} de la mayor parte de los principales \maqamaatb, según hemos visto, se sitúa sobre la nota sol (en particular para los \maqamaat con tónica en do y re), esta nota tiene una importancia fundamental como nota pivote a la hora de introducir modulaciones en una pieza.
@@ -757,18 +791,41 @@ El aprendizaje de los \ashnas debe incluir no solo su estructura interválica o 
 
 \subsection{\emph{Sayr} de algunos \emph{maqamaat}}
 
-Se presentan a continuación algunos \emph{sayr} típicos para los \maqamaat más habituales. Se describen como una cadena lineal de \ashnasb, según lo explicado anteriormente, pero debe entenderse esto como un simple ejemplo de entre muchas alternativas posibles. El desarrollo de la melodía no es necesariamente algo lineal, y el orden aquí presentado puede alterarse.
+Se presentan a continuación algunos \emph{sayr} típicos para los \maqamaat más habituales. Se describen como una cadena lineal de \ashnasb, según lo explicado anteriormente, pero deben entenderse como simples ejemplos de entre muchas alternativas posibles. El desarrollo de la melodía no es necesariamente algo lineal, y el orden aquí presentado puede alterarse, de tal manera que un \emph{sayr} puede entenderse más como una estructura ramificada que como un recorrido lineal. O como esos libros juveniles que permiten elegir la trama en ciertos puntos, de tal manera que el lector (o el intérprete o compositor en este caso) ha de tomar decisiones pero no con absoluta libertad, sino sobre un conjunto limitado de posibilidades definidas de antemano.
 
 Los \yins que se muestran son los más frecuentes, pero las modulaciones podrían llevar a otros distintos, teniéndose así un desarrollo más exótico. Los ejemplos que se recogen en esta sección cubren las posibilidades más comunes, que son a su vez las que deben conocerse y estudiarse en primer lugar.
 
 Cada elemento representa un \yinsb, identificado por su nombre y la nota de partida (con el sufijo \emph{8va} cuando esta nota de arranque está en la octava superior y no en la octava original en la que comienza el \maqamb).
 
+\subsubsection{\Maqam Nahawand}
+
+Nahawand do $\Rightarrow$ Hiyaz sol $\Rightarrow$ Bayati sol $\Rightarrow$ Nahawand do $\Rightarrow$ Nikriz do $\Rightarrow$ Hiyaz do $\Rightarrow$ Nahawand do
+
+Es decir, un recorrido en el que se emplean \maqam Nahawand y \maqam Nawa Athar.
+
 \subsubsection{\Maqam Hiyaz}
 
-Hiyaz re / Nahawand sol / Rast sol / Hijaz re (8va) / Nahawand sol / Hiyaz re
+Hiyaz re $\Rightarrow$ Nahawand sol $\Rightarrow$ Rast sol $\Rightarrow$ Hiyaz re (8va) $\Rightarrow$ Nahawand sol $\Rightarrow$ Hiyaz re
 
-Hiyaz re / Bayati re / Nahawand sol / Hijaz re (8va) / Nahawand sol / Hiyaz re
+Hiyaz re $\Rightarrow$ Bayati re $\Rightarrow$ Nahawand sol $\Rightarrow$ Hiyaz re (8va) $\Rightarrow$ Nahawand sol $\Rightarrow$ Hiyaz re
 ****
+\subsubsection{\Maqam Rast}
 
+
+\subsubsection{\Maqam Bayati}
+
+La modulación más habitual en \maqam Bayati utiliza este junto con \maqam Bayati Shuri.
+
+Bayati re $\Rightarrow$ Nahawand sol $\Rightarrow$ Rast sol $\Rightarrow$ Hiyaz sol $\Rightarrow$ Bayati re
+
+Otra modulación frecuente es la siguiente:
+
+Bayati re $\Rightarrow$ Nahawand sol $\Rightarrow$ Bayati re $\Rightarrow$ Saba re $\Rightarrow$ Ayam Si$\flat$ $\Rightarrow$ Saba re $\Rightarrow$ Bayati re
+
+Es decir, combinando \maqam Bayati y \maqam Saba.
+
+A partir de \maqam Saba en re es común introducir una modulación a \maqam Hiyaz en re.
+
+Estas modulaciones, como se ha dicho, pueden combinarse, y en una pieza más larga pueden desarrollarse de manera consecutiva los dos \emph{sayr} anteriores.
 
 \thispagestyle{empty}

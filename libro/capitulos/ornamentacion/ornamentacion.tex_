@@ -1,6 +1,8 @@
 \chapter{Ornamentación}
 \label{ornamentacion}
 
+\pagestyle{fancyplain}
+
 Como ya sabemos, la música árabe es principalmente melódica, y es en el propio desarrollo de la melodía donde se encuentra su riqueza. Por ello, la ornamentación de las notas que forman parte de esta es un aspecto fundamental, y todo intérprete de ud debe ser capaz de enriquecer una melodía utilizando algunas de las muchas técnicas que existen para ello.
 
 La ornamentación no es un elemento opcional; a la hora de interpretar una pieza, el intérprete debe añadir ornamentos. La ornamentación en la música árabe no es un complemento, sino una parte integral de la música en sí, tan relevante como lo son las propias notas que componen la pieza.
@@ -15,9 +17,13 @@ Es importante mencionar que el uso correcto de la ornamentación no consiste uni
 
 Es posible escribir la ornamentación utilizando la notación musical habitual, pero no es común hacerlo. La ornamentación la decide el propio interprete en el momento de tocar, y lo habitual es que emplee motivos distintos en una nueva interpretación.
 
-En la música árabe, y en particular en la interpretación de esta con el ud, una partitura representa tan solo la información mínima para dar vida a una pieza, lo que podríamos denominar el esqueleto melódico de esta. Corresponde al músico el complementarla con sus propios elementos interpretativos y embellecerla con su estilo particular de ornamentación.
+En la música árabe, una partitura representa tan solo la información mínima para dar vida a una pieza, lo que podríamos denominar el esqueleto melódico de esta. Corresponde al músico el complementarla con sus propios elementos interpretativos y embellecerla con su estilo particular de ornamentación.
 
-De esta manera, la misma partitura sirve para cualquiera de los instrumentos habituales, ya que a partir de ella cada instrumentista puede añadir la ornamentación correspondiente a su instrumento particular.
+La partitura cumple la función del texto en una obra de teatro, que indica al actor las frases que debe decir, pero no (salvo indicaciones puntuales) el lenguaje corporal o la entonación.
+
+Puesto que la música árabe no es polifónica y carece de armonía, la partitura de una pieza es única y compartida por todos los instrumentistas. Al no añadirse indicación ninguna referente a la ornamentación, la misma partitura sirve para cualquiera de los instrumentos habituales, y es a partir de ella que cada músico añade la ornamentación correspondiente a su instrumento particular.
+
+Aunque en la música occidental, en especial en la música clásica, también hay lugar para que el interprete añada su propia identidad en la interpretación, el margen que permite es más reducido, o al menos no es necesario añadir esos elementos. En la música árabe por el contrario, es obligatorio no seguir la partitura de manera literal, sino construir sobre ella una interpretación más rica y elaborada.
 
 Esta forma de entender la interpretación no es exclusiva de la música árabe, y aparece en otras tradiciones musicales, en especial las que se transmiten de forma oral. Las piezas que forman parte del repertorio son conocidas por todos sus músicos, pero solo de esa manera esquemática, con las notas fundamentales que son las que apuntalan la armonía y la melodía, y cada cual añade después la ornamentación según su criterio. No solo existen estilos personales de ornamentación y de interpretación, sino también estilos regionales definidos por cómo sean los adornos que se aplican a la melodía.
 
@@ -35,7 +41,7 @@ El uso de notas de adorno es común en el ud, y las apoyaturas breves (\emph{acc
 
 Se trata de una mera repetición de una nota, generalmente utilizando una pulsación descendente y otra ascendente. Con ello se consigue llenar mejor la duración de la nota y al tiempo darle una mayor vitalidad rítmica a la interpretación.
 
-en la partitura, se indica mediante una barra corta horizontal sobre la nota
+En la partitura, se indica mediante una barra corta horizontal sobre la nota
 
 ###
 \key do \rast
