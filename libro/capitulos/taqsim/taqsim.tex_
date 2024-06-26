@@ -129,7 +129,7 @@ La repetición de frases puede ser:
 \begin{compactitem}
 \item Repetición literal de una frase. Puede darse inmediatamente (una frase breve repetida varias veces), o bien con una cierta separación. En este segundo caso, es habitual el empezar con el mismo fragmento una frase corta del \taqsim y una posterior más larga que desarrolle la idea con mayor extensión. La primera serviría a modo de resumen previo de la segunda.
 \item Repetición de la misma secuencia de notas, con un distinto patrón rítmico.
-\item Repetición del mismo patrón rítmico con una distinta secuencia de notas. Un caso particular de esto es el uso de secuencias melódicas que se trasportan a distintas notas iniciales.
+\item Repetición del mismo patrón rítmico con una distinta secuencia de notas. Un caso particular de esto es el uso de secuencias melódicas que se transportan a distintas notas iniciales.
 \end{compactitem}
 
 Como regla general, un \taqsim debe tener algunas <<ideas principales>> (rítmicas, melódicas, de ornamentación, etc), que se han de repetir y ser fácilmente identificables, y una colección de otras notas que sirvan de amalgama para conectar esas ideas que aparecen a lo largo del \taqsimb, y que serán las que se encarguen de darle su identidad y significado.
@@ -208,7 +208,7 @@ misb16 re
 do2
 ###
 
-O este otro en \maqam Nahawand, más breve, que aun así sirve para iniciar con claridad que el \taqsim se desarrolla en este \maqam:
+O este otro en \maqam Nahawand, más breve, que aun así sirve para indicar con claridad que el \taqsim se desarrolla en este \maqam:
 
 ###notime
 mib16 fa sol8 fa sol fa16 mib \tuplet 3/2 {mib (fa mib)} \tuplet 3/2 {re (mib re)} do4

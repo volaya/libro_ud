@@ -267,8 +267,6 @@ El segundo \yins puede sustituirse por \yins Rast.
 
 \input{capitulos/maqam/bayatib.tex}
 
-Normalmente, el \yins Kurd se emplea en sentido descendente, y el \yins Hiyaz en el ascendente.
-
 \subsection{\Maqam Nikriz}
 
 \input{capitulos/maqam/nikriz.tex}
@@ -283,7 +281,7 @@ Equivalente en su estructura interválica al modo frigio occidental.
 
 \subsection{\Maqam Saba}
 
-Con una sonoridad muy característica, que en la mayoría de oyentes evoca sentimientos de tristeza o sufrimiento. Al contrario que los restantes, es el único \maqam con \yins Saba como primer \yins, por lo que no forma una familia.
+Con una sonoridad muy característica, que en la mayoría de oyentes evoca sentimientos de tristeza o sufrimiento. Es el único \maqam con \yins Saba como primer \yinsb, por lo que, a diferencia de los restantes aquí mostrados, no forma una familia.
 
 \input{capitulos/maqam/saba.tex}
 
@@ -590,7 +588,7 @@ A efectos prácticos, se pueden considerar los \maqamaat como <<anclados>> en un
 
 Como consecuencia de esto, hay un gran número de notas de las 24 del sistema tonal árabe que no se utilizan en la práctica. Con las notas si\hflat\ y mi\hflat\ pueden tocarse todos los \maqamaat que hemos visto, así como la mayor parte de los que, por ser su uso poco frecuente, no se detallan aquí.
 
-Un \maqam no solo no se desplaza libremente de una nota a otra, sino que en cierta forma viene condicionado a una determinada octava. Si recordamos lo explicado en su momento acerca del sistema tonal árabe, hablábamos entonces de cómo una misma nota en distintas octavas tenía un nombre distinto, y de cómo el rango que cubrían esos nombres (y que representa el esperado para el desarrollo de una melodía) no era tan amplio como el del propio ud. Esto indica que un \maqam tiene un lugar dentro del rango del ud, y que fuera de él no tiene el mismo sentido (a diferencia de una escala en la música occidental, que tiene igual significado tocado en un registro un otro del instrumento, siendo que los intervalos son lo único que tiene importancia).
+Un \maqam no solo no se desplaza libremente de una nota a otra, sino que en cierta forma viene condicionado a una determinada octava. Si recordamos lo explicado en su momento acerca del sistema tonal árabe, hablábamos entonces de cómo una misma nota en distintas octavas tenía un nombre distinto, y de cómo el rango que cubrían esos nombres (y que representa el esperado para el desarrollo de una melodía) no era tan amplio como el del propio ud. Esto indica que un \maqam tiene un lugar dentro del rango del ud, y que fuera de él no tiene el mismo sentido (a diferencia de una escala en la música occidental, que tiene igual significado tocado en un registro u otro del instrumento, siendo que los intervalos son lo único que tiene importancia).
 
 Por ejemplo, \maqam Rast ha de arrancar de la nota Rast (do central del ud), y no del do situado en la cuerda más grave tocada al aire. La octava inferior, esa que arranca en la cuerda grave, se puede emplear para añadir notas pedal o puede entrarse en ella durante el desarrollo melódico, pero este se ha de producir mayoritariamente sobre la siguiente octava, la central del diapasón, que constituye el emplazamiento en el que, podríamos decir, el \maqam está concebido.
 
@@ -634,7 +632,9 @@ Las modulaciones deben sonar naturales y fluidas, y para ello pueden llevarse a 
 
 \item Partiendo de la primera nota del \yinsb. Principalmente utilizando el \emph{ghammaz}, se pone esta nota como eje de la melodía, y a partir de ahí se arranca con un \yins distinto del actual.
 
-\item Utilizando una frase como patrón. Se define una frase breve que utilice las notas del \yins actual, repitiéndola para asentarla en el desarrollo melódico, y a continuación se pasa a tocar esa misma frase pero con los intervalos que corresponden al nuevo \yinsb. Por ejemplo, si dentro de un \taqsim en Rast en do queremos modular a \maqam Suznak en do, lo cual significaría cambiar el segundo \yins de Rast en sol a Hiyaz en sol, la siguiente frase nos permitiría realizar esa modulación.
+\item Utilizando una frase como patrón. Se define una frase breve que utilice las notas del \yins actual, repitiéndola para asentarla en el desarrollo melódico, y a continuación se pasa a tocar esa misma frase pero con los intervalos que corresponden al nuevo \yinsb. Por ejemplo, si dentro de un \taqsim en Rast en do queremos modular a \maqam Suznak en do, lo cual significaría cambiar el segundo \yins de Rast en sol a Hiyaz en sol, la siguiente frase nos permitiría realizar esa modulación. A partir de ahí continuaríamos el desarrollo melódico en \yins Hiyaz
+
+\end{itemize}
 
 ###
 \key do \rast
@@ -643,7 +643,7 @@ sol sol la la sisb sisb la la
 sol sol lab lab si si lab lab
 ###
 
-Y a partir de ahí continuaríamos el desarrollo melódico en \yins Hiyaz
+\begin{itemize}
 
 \item Cambio directo de \yins. Aprovechando un cambio de sección dentro del desarrollo de la pieza, se arranca con otro \yins distinto al actual. Este cambio de sección puede tener lugar tras una pausa en un \taqsim (veremos que las pausas y silencios son una pieza fundamental en el recorrido de un \taqsimb), o bien al comenzar una nueva \emph{jana} tras el estribillo o \emph{taslim} en una pieza que tenga tal estructura, como por ejemplo una \emph{longa} o un \emph{samai}.
 
@@ -679,16 +679,18 @@ Cada elemento representa un \yinsb, identificado por su nombre y la nota de part
 
 \subsubsection{\Maqam Nahawand}
 
-Nahawand do $\Rightarrow$ Hiyaz sol $\Rightarrow$ Bayati sol $\Rightarrow$ Nahawand do $\Rightarrow$ Nikriz do $\Rightarrow$ Hiyaz do $\Rightarrow$ Nahawand do
+Nahawand do $\Rightarrow$ Hiyaz sol $\Rightarrow$ Kurd sol $\Rightarrow$ Nahawand do $\Rightarrow$ Nikriz do $\Rightarrow$ Hiyaz sol $\Rightarrow$ Nahawand do
 
 Es decir, un recorrido en el que se emplean \maqam Nahawand y \maqam Nawa Athar.
+
+Nahawand do $\Rightarrow$ Hiyaz sol $\Rightarrow$ Bayati sol $\Rightarrow$ Nahawand do (8va) $\Rightarrow$ Hiyaz sol $\Rightarrow$ Nahawand do
 
 \subsubsection{\Maqam Hiyaz}
 
 Hiyaz re $\Rightarrow$ Nahawand sol $\Rightarrow$ Rast sol $\Rightarrow$ Hiyaz re (8va) $\Rightarrow$ Nahawand sol $\Rightarrow$ Hiyaz re
 
 Hiyaz re $\Rightarrow$ Bayati re $\Rightarrow$ Nahawand sol $\Rightarrow$ Hiyaz re (8va) $\Rightarrow$ Nahawand sol $\Rightarrow$ Hiyaz re
-****
+
 \subsubsection{\Maqam Rast}
 
 
@@ -696,7 +698,7 @@ Hiyaz re $\Rightarrow$ Bayati re $\Rightarrow$ Nahawand sol $\Rightarrow$ Hiyaz 
 
 La modulación más habitual en \maqam Bayati utiliza este junto con \maqam Bayati Shuri.
 
-Bayati re $\Rightarrow$ Nahawand sol $\Rightarrow$ Rast sol $\Rightarrow$ Hiyaz sol $\Rightarrow$ Bayati re
+Bayati re $\Rightarrow$ Nahawand sol $\Rightarrow$ Rast sol $\Rightarrow$ Bayati re (8va) $\Rightarrow$ Hiyaz sol $\Rightarrow$ Bayati re
 
 Otra modulación frecuente es la siguiente:
 
