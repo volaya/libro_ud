@@ -218,14 +218,12 @@ Una técnica muy habitual en un \taqsim es tocar una frase breve como las anteri
 
 ###notime
 \key re \bayati
-\partial 16 do16
-re re' re re re misb32 (re) do16 re
 re,16 re' re re re misb32 (re) do16 re
-re,16 re' re re re r2
+re,16 re' re re re misb32 (re) do16 re
+re,16 re' re re (re4) r1
 \bar "|"
 \break
-do,16
-re re' re re re misb32 (re) do16 re
+re,16 re' re re re misb32 (re) do16 re
 re,16 re' re re re misb32 (re) do16 re
 re, re' misb misb fa fa misb misb8
 fa8 fa8:32 misb16 misb (re) do re re4
@@ -285,7 +283,7 @@ Es habitual que el descenso a la tónica se produzca desde las cercanías del \e
 \key do \minor
 do8 do do mib re do
 \tuplet 3/2 {sol' fa mib} \tuplet 3/2 {fa mib re} \tuplet 3/2  {mib re do} do4 \tuplet 3/2 {do8 re mib}
-fa4:32 re16 do
+fa4:32 mib16 (re) do4
 ###
 
 El uso del trémolo para enfatizar un cierre es casi obligado en algunos estilos de ud como el árabe. El cierre más simple con uso de trémolo es un simple descenso a tónica siguiendo las notas del \maqamb.
@@ -314,14 +312,14 @@ El siguiente ejemplo en \maqam Bayati usa octavas y trémolo conjuntamente:
 
 ###notime
 \key re \bayati
-[re16 misb fa] [sol fa sol] fa,16 fa'4:32 sol,16 sol'4:32 misb8.:64 re32 do re4
+r16 [re16 misb fa] [sol fa sol] fa,16 fa'4:32 sol,16 sol'4:32 misb8.:64 re32 do re4
 ###
 
 Aun si el patrón es descendente, muchos cierres usan la nota inmediatamente inferior a la tónica como nota sensible desde la que resolver y concluir la \emph{qafla}, en dirección ascendente. El siguiente es un ejemplo de ello:
 
 ###notime
 \key do \rast
-do8 re misb fa fa fa fa misb16 fa misb re misb8 re do sisb do4
+r8 do8 re misb fa fa fa fa misb16 fa misb re misb8 re do sisb do4
 ###
 
 Aunque menos frecuente, también es posible apoyarse en el \emph{ghammaz} como nota previa antes de la tónica, que luego resuelve sobre esta. El siguiente ejemplo combina esto con el uso de trémolo y octavas.

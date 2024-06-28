@@ -129,7 +129,7 @@ La repetición de frases puede ser:
 \begin{compactitem}
 \item Repetición literal de una frase. Puede darse inmediatamente (una frase breve repetida varias veces), o bien con una cierta separación. En este segundo caso, es habitual el empezar con el mismo fragmento una frase corta del \taqsim y una posterior más larga que desarrolle la idea con mayor extensión. La primera serviría a modo de resumen previo de la segunda.
 \item Repetición de la misma secuencia de notas, con un distinto patrón rítmico.
-\item Repetición del mismo patrón rítmico con una distinta secuencia de notas. Un caso particular de esto es el uso de secuencias melódicas que se trasportan a distintas notas iniciales.
+\item Repetición del mismo patrón rítmico con una distinta secuencia de notas. Un caso particular de esto es el uso de secuencias melódicas que se transportan a distintas notas iniciales.
 \end{compactitem}
 
 Como regla general, un \taqsim debe tener algunas <<ideas principales>> (rítmicas, melódicas, de ornamentación, etc), que se han de repetir y ser fácilmente identificables, y una colección de otras notas que sirvan de amalgama para conectar esas ideas que aparecen a lo largo del \taqsimb, y que serán las que se encarguen de darle su identidad y significado.
@@ -328,7 +328,7 @@ do2
 \end{center}
 
 
-O este otro en \maqam Nahawand, más breve, que aun así sirve para iniciar con claridad que el \taqsim se desarrolla en este \maqam:
+O este otro en \maqam Nahawand, más breve, que aun así sirve para indicar con claridad que el \taqsim se desarrolla en este \maqam:
 
 
 \begin{center}
@@ -362,14 +362,12 @@ Una técnica muy habitual en un \taqsim es tocar una frase breve como las anteri
 \include "arabic.ly"
 notes = \relative do {
 \key re \bayati
-\partial 16 do16
-re re' re re re misb32 (re) do16 re
 re,16 re' re re re misb32 (re) do16 re
-re,16 re' re re re r2
+re,16 re' re re re misb32 (re) do16 re
+re,16 re' re re (re4) r1
 \bar "|"
 \break
-do,16
-re re' re re re misb32 (re) do16 re
+re,16 re' re re re misb32 (re) do16 re
 re,16 re' re re re misb32 (re) do16 re
 re, re' misb misb fa fa misb misb8
 fa8 fa8:32 misb16 misb (re) do re re4
@@ -529,7 +527,7 @@ notes = \relative do {
 \key do \minor
 do8 do do mib re do
 \tuplet 3/2 {sol' fa mib} \tuplet 3/2 {fa mib re} \tuplet 3/2  {mib re do} do4 \tuplet 3/2 {do8 re mib}
-fa4:32 re16 do
+fa4:32 mib16 (re) do4
 }
 \bar "||"
 <<
