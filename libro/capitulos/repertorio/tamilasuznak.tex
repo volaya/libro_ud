@@ -1,4 +1,4 @@
-\songheader{Tahmila Suznak}{Sami Chawwa}{Suznak Do}
+\songheader{Tahmila Suznak}{Sami Shawwa}{Suznak Do}
 
 
 \begin{center}
@@ -9,6 +9,7 @@ notes = \relative do{
 \key do  #`((2 . ,SEMI-FLAT)
             (5 . ,FLAT))
 
+\repeat volta 2{
 lab'16 sol lab si lab8 sol
 sol16 fa sol lab sol8 fa
 fa16 misb fa sol fa8 misb
@@ -23,155 +24,22 @@ la sol16 fa misb re misb fa
 sol8 fa16 misb re do re misb
 fa8 misb16 re do8 sol'
 sol8 fa16 sol fa8 misb
-re32 misb fa8. (fa16) misb32 re do8^"Fine" \bar "|."
-
+re2^"Fine"
 do4 misb8 fa misb re misb fa misb re misb fa
 sol16 lab sol fa misb fa misb re
-\override TextSpanner.bound-details.left.text = "Solo"
-do8
-\startTextSpan
-sol' do, sol' sol, sol' fa sol lab sol16 fa misb re misb fa
-\stopTextSpan
-sol8 fa16 misb re do re misb fa8 misb16 re re misb do re
-misb fa sol misb32 fa sol8 sol16 sol
-do8 sol16 sol (sol) fa sol8
-r16 lab32 sib sol lab fa sol misb16 re misb fa
-r16 sol32 lab fa sol misb fa re16 do re misb
-fa16 sol misb re do8 sol'
-sol fa16 sol fa8 misb
-fa32 sol lab8 sol16 fa8. misb32 re
+}
+\alternative{
+    {do2}
+    {
+        \repeat volta 2{
+        do8^\markup \italic "Improvisación. Repetir n veces" r4. r2
+        r8 misb misb misb
+        fa8. misb16 re do misb fa \bar ":|."
+        }
+    }
+}
+do8 lab'16 lab lab8 lab^"D.C al Fine"
 
-\override TextSpanner.bound-details.left.text = "Grupo"
-do4
-\startTextSpan
-misb8 fa misb re misb fa
-misb re  misb fa
-sol16 lab sol fa misb fa misb re
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Solo"
-do8
-\startTextSpan
-misb16 misb misb8 misb
-fa8. misb16 re do fa sol
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Grupo"
-misb8
-\startTextSpan
-misb16 misb misb8 misb fa8. misb16 re do fa sol
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Solo"
-misb8
-\startTextSpan
-sol16 la sib8 la16 sol
-sib lab sol sol fa misb sol8
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Grupo"
-misb8
-\startTextSpan
-misb16 misb misb8 misb fa8. misb16 re do fa sol
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Solo"
-misb8
-\startTextSpan
-sol16 do re8 si
-do8 si16 lab sol fa sol lab
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Grupo"
-misb8
-\startTextSpan
-misb16 misb misb8 misb fa8. misb16 re do fa sol
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Solo"
-misb8
-\startTextSpan
-fa fa fa
-fa8. misb16 re do re misb
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Grupo"
-fa8
-\startTextSpan
-fa fa fa
-fa8. misb16 re do re misb
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Solo"
-fa8
-\startTextSpan
-la16 sib do8 si16 lab
-sib16. lab32 sol16 lab sol fa sol lab
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Grupo"
-fa8
-\startTextSpan
-fa fa fa
-fa16 sol fa misb re do re misb
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Solo"
-fa8
-\startTextSpan
-sol sol sol
-sol16. lasb32 sol16 fa misb re misb fa
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Grupo"
-sol8
-\startTextSpan
-sol sol sol
-sol16 lasb sol fa misb re misb fa
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Solo"
-sol8
-\startTextSpan
-sol16 lasb si do si lasb
-si16. lasb32 sol16 lab sol fa lab8
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Grupo"
-sol8
-\startTextSpan
-sol sol sol
-sol16 lasb sol fa misb re misb fa
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Solo"
-sol8
-\startTextSpan
-sib16 do re do do sib
-do8 sib16  do sib lasb do8
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Grupo"
-sol8
-\startTextSpan
-sol sol sol
-sol16 lasb sol fa misb re misb fa
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Solo"
-sol8
-\startTextSpan
-sib dob sib
-dob16. sib32 lasb16 sib lasb sol sib8
-\stopTextSpan
-
-\override TextSpanner.bound-details.left.text = "Grupo"
-sol8
-\startTextSpan
-sol sol sol
-sol16 lasb sol fa misb re misb fa
-sol8 sol sol sol^"D.C. al Fine"
-\stopTextSpan
 \bar "||"
 }
 

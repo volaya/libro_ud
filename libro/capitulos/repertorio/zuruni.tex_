@@ -1,16 +1,17 @@
 \songheader{Zuruni Kuli Sana}{Sayed Darwish}{Ayam Do}
 
 ###transpose fa do
-\key mib \major
-\partial 2. fa8 sib4 re4
+\key fa \major
+\partial 8 fa8
+sib4 re4
 r8 do8~do sib la la do4~do8
 sib sib la sol4. la16 sib
 do8 sib la sol fa4 sib16 la sib do
 sib8 sib~sib fa sib4 re
 r8 do8~do sib la la do4~do8
 sib sib la sol4. la16 sib
-do sib la sol fa4 re'~re4
-do do sib sib4 fa sol~sol
-sol fa fa mib re4 do
+do8 sib la sol fa4 re'4.
+do4 sib8 sib4. sol4
+fa4 mi8 re4 do
 sib
 ###

@@ -1,0 +1,25 @@
+\songheader{Kuando el rey Nimrod}{Tradicional sefadí}{Hiyaz Re}
+
+###
+\time 4/4
+\key re \hijaz
+re8 re16 re fad8 sol la2
+sol8. fad16 mib8 fad re4 re8. re16
+re8 re fab sol la4 la8 do
+sib la sol fad16 la sol4 sol
+re'8 do 16 do sib8 re do4. sib8
+re8. do16 sib8 la sol4 sol8 sol 16 sol
+do8 sib la sol fad8. (mib16 re8 mib)
+sol8 fad mib fad re4 re
+\repeat volta 2{
+  \time 3/4
+  r8 re'8 re re mib16 (re do sib)
+  do8 do do do re16 (do sib la)
+  \time 4/4
+  sib8 sib la sol fad8. (mib16) re8 (mib)
+}
+\alternative {
+    {sol8. fad16 mib8 fad re4 (re')}
+    {sol,8. fad16 mib8 fad re2}
+}
+###
