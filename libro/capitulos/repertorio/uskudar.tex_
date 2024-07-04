@@ -1,0 +1,29 @@
+\songheader{Üsküdar'a gideriken}{Tradicional turca}{Nahawand Re}
+
+\footnotetext[0]{Aparece también en el repertorio árabe como Ya Banat Iskandaria}
+
+###
+\time 4/4
+\key re \minor
+\repeat volta 2{
+  la'8 sib8 la sol fa mi fa sol la sib la sol fa mi re4
+  la'8 sib la sol fa mi fa sol la4. sib8 do sib la4
+  la8 sib8 la sol fa mi fa sol la sib la sol fa mi re4
+  mi8 sol fa mi mi re re dod re4. la'8 re,2
+}
+re4. la'8 la4 la sib8 la sib do la4 la
+sol sol8 sol fa4 sol
+la8 la16 sib la8 sol fa mi re dod
+re4. la'8 la4 la
+sib8 la sib do la4 la
+sol sol8 sol fa4 sol
+la8 la16 sib la8 sol fa sol la4
+re,4. fa8 mi4 sol
+la8 sib la sol fa mi re4
+mi8 sol fa mi mi re re dod
+mi4. mi8 mi4 mi
+re4. mi8 fa4 sol
+la8 sib la sol fa mi re4
+mi8 sol fa mi mi re re dod
+re1
+###
