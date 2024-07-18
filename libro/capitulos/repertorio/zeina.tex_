@@ -1,0 +1,59 @@
+\songheader{Zeina}{Mohammed Abdel Wahab}{Hiyaz Re}
+
+###
+\time 4/4
+\key re \hijaz
+re8 mib do mib r16 re8 do sib la16 re8 mib do mid re fa8 mi4
+re8 mib do mib r16 re8 do sib la16 re8 mib do mid re sol8 re4
+\repeat volta 2{
+    mib8 \segno do re mib sol sol16 fad mib8 fa
+    mib16 re do8 mib16 re mib fad re2
+    mib8 do re mib sol sol16 fad mib8 fad
+    mib16 re do8 mib16 re mib fad re2
+    mib8 fad sol4. sol16 fad mib8 mib16 fad
+    sol4 sol4. sol16 fad mib fad mib8
+    la8 sib la sol fad fad16 sol la8 la16 sol
+    fad8 la sol fad mib fad16 sol la sib do re
+    sib4 la8 sol fad fad16 sol la8 la16 sol
+    fad8 la sol fad mib fad16 sol la sib do re
+    re8 do si sol16 do16 (do16) sib la8 fad8 re
+    la' sol fad re16 sol16 (sol16) fa mib8 re la
+    mib'16 re do8 fad16 mib re8 sol16 fad mib8 la16 sol fad8
+    sol16 fad mib sol fad mib mib re re4 r4^"Fine"
+}
+\time 2/4
+\repeat volta 2{
+  re4 fad8 mib
+  re4 sol8 fad
+  mib4 la8 sol
+  fad mib re do
+  re4 fad8 mib
+  re4 sol8 fad
+  mib4 sib'8 sol
+  la re16 re re8 re
+  re,4 fad8 mib
+  re4 sol8 fad
+  mib4 la8 sol
+  fad mib re do
+  re4 fad8 mib
+  re4  fad8 sol
+  la fad mib fad
+  mib re16 mib re4
+  re'4 do8 sib
+  do2
+  do4 sib8 la
+  sib2
+  sib4 la8 sol
+  la2
+  la8 si do si16 la
+  si2
+  re4 do8 sib
+  do2
+  do4 sib8 la
+  sib2
+  sib4 la8 sol
+  la2
+  la8 sol fad mib
+  re2^"D.S al Fine"
+}
+###

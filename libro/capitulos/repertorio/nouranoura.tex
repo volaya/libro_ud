@@ -1,0 +1,23 @@
+\songheader{Noura Noura}{Farid Al Atrash}{Bayati Re}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative do{
+\time 4/4
+\key re \bayati
+
+re8. sol sol8 re r sol r
+re re16 misb re8 misb fa4 sol8 misb
+fa4 sol8 misb re do16 sisb la8 sisb16 do
+re8 re16 misb re8 misb fa4 sol8 misb
+
+\bar "||"
+}
+
+<<
+  \new Staff <<\clef "G_8" \notes>>
+>>
+\end{lilypond}
+\end{center}

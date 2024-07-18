@@ -1,0 +1,20 @@
+\songheader{Foq Al Nahal}{Tradicional iraquí}{Hiyaz Re}
+
+###
+\time 4/4
+\repeat volta 2 {
+    \key re \hijaz
+    r4 re8 sol sol4 sol
+    fad8 sol la sol sol4 fad8 sol
+    la sib la sol la sol fad mi
+    fad2 sol8 fad mi re
+}
+la'8 sol sol fad fad mi mi re
+mi4. fad8 sol fad mi re
+la' sol sol fad fad mi mi re
+re mi fad sol la fad sol4
+r8 sib sib la la sol sol fad
+r8 la la sol sol fad fad mi
+r8 sol sol fad fad mi mi re
+re mi fad sol la fad sol4
+###

@@ -1,0 +1,32 @@
+\songheader{Ya Shadi Al Han}{Sayed Darwish}{Rast Do}
+
+
+\begin{center}
+\begin{lilypond}
+\include "arabic.ly"
+notes = \relative do{
+\time 4/4
+\key do \rast
+do4 do do \tuplet 3/2 {do8 sisb la}
+sol4 la8 sisb la2
+sisb4 la8 sol do4 sol4
+r8 re''4 do8 re do do sisb
+do sisb sisb la sisb do la4
+sol4 sol8 la sisb4. la8
+do la la sol sol sol la8. sol16
+fa4 lab sol si lab sol fa
+misb re misb fa sol fa sol4
+r8 do,4 fa8 misb4 re
+do8 re misb fa sol la sisb do
+r8 sol4 fa8 misb8. re16 do8 r8
+sol4 la sisb re
+do8 fa re fa misb8. re16 do4
+
+\bar "||"
+}
+
+<<
+  \new Staff <<\clef "G_8" \notes>>
+>>
+\end{lilypond}
+\end{center}
