@@ -3,10 +3,38 @@
 ###
 \time 4/4
 \key re \bayati
-
-re8. sol sol8 re r sol r
-re re16 misb re8 misb fa4 sol8 misb
+re8 re16 misb re8 misb fa4 sol8 misb
 fa4 sol8 misb re do16 sisb la8 sisb16 do
 re8 re16 misb re8 misb fa4 sol8 misb
-
+fa4 sol8 misb re re16 re la' sib la sol
+fa8 fa sol16 la sol fa misb8 misb fa16 sol fa mib
+re8 fa16 sol fa8 misb re do re4
+re8 re16 misb re8 misb fa4 sol8 misb
+fa4 sol8 misb re do16 sisb la8 sisb16 do
+re8 re16 misb re8 misb fa4 sol8 misb
+fa4 sol8 misb re fa16 misb re8 fa16 sol
+la8 la16 la la8 sib la sol la sib
+do re do sib la sol16 la fa sol misb fa
+re8 sol16 sol sol8 la sol fa sol la
+sib do sib la sol sol16 sol la sib la sol
+re8 la'16 la la8 sib la sol la sib
+do re do sib la sol16 la fa sol mib fa
+re8 sol16 sol sol8 la sol fa sol la
+sib do sib la sol sol16 sol la sib la sol
+fa8 fa sol16 la sol fa misb8 misb fa16 sol fa misb
+re8 do fa fa fa fa fa misb
+fa4 sol2 sol8 fa16 misb
+re8 la'16 la la8 sib la sol la sib
+do re do sib la sol16 la fa sol misb fa
+re8 sol16 sol sol8 la sol fa sol la
+sib do sib la sol sol16 sol sol8 sol16 sol
+sol8 la16 sol fad8 sol la la16 la la8 la16 la
+la8 sisb sol la sisb8 sisb16 sisb sisb8 sisb16 sisb
+sisb8 do la sisb do re re do
+do sib sib la la sol sol fa
+fa sol la16 sib la sol sol8 sol la16 sib la sol
+fa8 fa sol16 la sol fa misb8 misb fa16 sol fa misb
+re8 do fa fa fa fa fa misb
+fa4 sol2 sol8 fa16 misb
+re4 r4 r2
 ###

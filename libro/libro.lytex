@@ -22,6 +22,10 @@
 %\input{capitulos/ejercicios/ejercicios.tex}
 \input{capitulos/repertorio/repertorio.tex}
 
+\cleardoublepage
+
+\tableofcontents
+
 \end{mainmatter}
 \end{document}
 

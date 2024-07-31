@@ -664,26 +664,37 @@ El aprendizaje de los \ashnas debe incluir no solo su estructura interválica o 
 
 Se presentan a continuación algunos \emph{sayr} típicos para los \maqamaat más habituales. Se describen como una cadena lineal de \ashnasb, según lo explicado anteriormente, pero deben entenderse como simples ejemplos de entre muchas alternativas posibles. El desarrollo de la melodía no es necesariamente algo lineal, y el orden aquí presentado puede alterarse, de tal manera que un \emph{sayr} puede entenderse más como una estructura ramificada que como un recorrido lineal. O como esos libros juveniles que permiten elegir la trama en ciertos puntos, de tal manera que el lector (o el intérprete o compositor en este caso) ha de tomar decisiones pero no con absoluta libertad, sino sobre un conjunto limitado de posibilidades definidas de antemano.
 
-Los \yins que se muestran son los más frecuentes, pero las modulaciones podrían llevar a otros distintos, teniéndose así un desarrollo más exótico. Los ejemplos que se recogen en esta sección cubren las posibilidades más comunes, que son a su vez las que deben conocerse y estudiarse en primer lugar.
+Los \yins que se muestran son los más frecuentes, pero las modulaciones podrían llevar a otros distintos, teniéndose así un desarrollo más exótico. Los ejemplos que se recogen en esta sección cubren algunas de las posibilidades más comunes.
 
 Cada elemento representa un \yinsb, identificado por su nombre y la nota de partida (con el sufijo \emph{8va} cuando esta nota de arranque está en la octava superior y no en la octava original en la que comienza el \maqamb).
 
 \subsubsection{\Maqam Nahawand}
 
-Nahawand do $\Rightarrow$ Hiyaz sol $\Rightarrow$ Kurd sol $\Rightarrow$ Nahawand do $\Rightarrow$ Nikriz do $\Rightarrow$ Hiyaz sol $\Rightarrow$ Nahawand do
+Nahawand do $\Rightarrow$ Hiyaz sol $\Rightarrow$ Kurd sol $\Rightarrow$ Nahawand do $\Rightarrow$ Nikriz do $\Rightarrow$ Hiyaz sol
+
+$\Rightarrow$ Nahawand do
 
 Es decir, un recorrido en el que se emplean \maqam Nahawand y \maqam Nawa Athar.
 
-Nahawand do $\Rightarrow$ Hiyaz sol $\Rightarrow$ Bayati sol $\Rightarrow$ Nahawand do (8va) $\Rightarrow$ Hiyaz sol $\Rightarrow$ Nahawand do
+Nahawand do $\Rightarrow$ Hiyaz sol $\Rightarrow$ Bayati sol $\Rightarrow$ Nahawand do (8va) $\Rightarrow$ Hiyaz sol
+
+$\Rightarrow$ Nahawand do
 
 \subsubsection{\Maqam Hiyaz}
 
 Hiyaz re $\Rightarrow$ Nahawand sol $\Rightarrow$ Rast sol $\Rightarrow$ Hiyaz re (8va) $\Rightarrow$ Nahawand sol $\Rightarrow$ Hiyaz re
 
-Hiyaz re $\Rightarrow$ Bayati re $\Rightarrow$ Nahawand sol $\Rightarrow$ Hiyaz re (8va) $\Rightarrow$ Nahawand sol $\Rightarrow$ Hiyaz re
+Hiyaz re $\Rightarrow$ Bayati re $\Rightarrow$ Nahawand sol $\Rightarrow$ Hiyaz re (8va) $\Rightarrow$ Nahawand sol
+
+$\Rightarrow$ Hiyaz re
 
 \subsubsection{\Maqam Rast}
 
+La modulación más habitual usa \maqam Suznak. Un ejemplo de \emph{sayr} sería el siguiente.
+
+Rast do $\Rightarrow$ Rast sol $\Rightarrow$ Rast do (8va) $\Rightarrow$ Nahawand sol $\Rightarrow$ Rast do $\Rightarrow$ Hiyaz sol
+
+$\Rightarrow$ Rast do
 
 \subsubsection{\Maqam Bayati}
 
@@ -693,7 +704,9 @@ Bayati re $\Rightarrow$ Nahawand sol $\Rightarrow$ Rast sol $\Rightarrow$ Bayati
 
 Otra modulación frecuente es la siguiente:
 
-Bayati re $\Rightarrow$ Nahawand sol $\Rightarrow$ Bayati re $\Rightarrow$ Saba re $\Rightarrow$ Ayam Si$\flat$ $\Rightarrow$ Saba re $\Rightarrow$ Bayati re
+Bayati re $\Rightarrow$ Nahawand sol $\Rightarrow$ Bayati re $\Rightarrow$ Saba re $\Rightarrow$ Ayam Si$\flat$ $\Rightarrow$ Saba re
+
+$\Rightarrow$ Bayati re
 
 Es decir, combinando \maqam Bayati y \maqam Saba.
 
