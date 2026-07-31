@@ -228,26 +228,219 @@ figcaption {
   font-size: 0.95rem;
 }
 
-/* Elementos del índice slideout mejorados */
+/* ===== MENÚ LATERAL MODERNO ===== */
+
+/* Botones laterales apilados */
 #toindex {
-  background: var(--color-text);
+  position: fixed;
+  top: 20px;
+  left: 0;
+  z-index: 110;
+  width: 64px;
+  height: 64px;
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+#toindex:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+}
+
+#slideout_chapter,
+#slideout_general {
+  position: fixed;
+  left: 0;
+  z-index: 110;
+  width: 64px;
+  height: 64px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
 }
 
 #slideout_chapter {
-  background: #333333;
+  top: 92px;
 }
 
 #slideout_general {
-  background: #666666;
-  color: var(--color-text);
+  top: 164px;
 }
 
+#toindex a {
+  color: inherit;
+}
+
+/* Ocultar TODOS los botones cuando hay un menú abierto */
+body.menu-open #toindex,
+body.menu-open #slideout_chapter,
+body.menu-open #slideout_general {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#slideout_chapter::before,
+#slideout_general::before {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+#slideout_chapter::before {
+  content: '≡';
+}
+
+#slideout_general::before {
+  content: '☰';
+}
+
+#slideout_chapter:hover,
+#slideout_general:hover {
+  width: 80px;
+  background: #222;
+}
+
+#slideout_chapter.active,
+#slideout_general.active {
+  background: #000;
+  box-shadow: 4px 4px 16px rgba(0,0,0,0.3);
+}
+
+/* Paneles laterales */
 #slideout_inner_chapter,
 #slideout_inner_general {
-  background: var(--color-bg-card);
-  color: var(--color-text);
-  box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: min(340px, 88vw);
+  height: 100vh;
+  height: 100dvh;
+  background: #fff;
+  color: #000;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  padding: 4rem 1.5rem 6rem 5rem;
+  border-right: 3px solid #000;
+  box-shadow: none;
+  pointer-events: none;
+  z-index: 200;
+}
+
+#slideout_inner_chapter.open,
+#slideout_inner_general.open {
+  transform: translateX(0);
+  pointer-events: auto;
+  z-index: 999;
+}
+
+/* Botón cerrar */
+.menu-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  background: #000;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Overlay */
+#menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+#menu-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Cuerpo bloqueado cuando menú abierto */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Listas del menú */
+#generated-toc ul,
+#slideout_inner_general ul {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+#generated-toc ul ul,
+#slideout_inner_general ul ul {
+  padding-left: 1.5rem;
+}
+
+#generated-toc > ul > li,
+#slideout_inner_general > ul > li {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0.6rem 0;
+}
+
+#generated-toc li li,
+#slideout_inner_general li li {
+  border-bottom: none;
+  padding: 0.35rem 0;
+}
+
+#generated-toc a,
+#slideout_inner_general a {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+#generated-toc a:hover,
+#slideout_inner_general a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Títulos dentro de paneles */
+#slideout_inner_general > p > b {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+  color: #666;
 }
 
 /* Responsive */
@@ -282,14 +475,24 @@ figcaption {
 
   #slideout_chapter,
   #slideout_general {
-    width: 60px;
-    font-size: 0.7rem;
+    width: 56px;
+    height: 56px;
+    font-size: 0.6rem;
+  }
+
+  #slideout_general {
+    top: 84px;
+  }
+
+  #slideout_chapter::before,
+  #slideout_general::before {
+    font-size: 1.25rem;
   }
 
   #slideout_inner_chapter,
   #slideout_inner_general {
-    width: 260px;
-    padding: 15px;
+    width: 85vw;
+    padding: 3rem 1.25rem 5rem;
   }
 }
 
