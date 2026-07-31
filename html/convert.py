@@ -8,6 +8,7 @@ import re
 import subprocess
 import html as htmlmod
 import shutil
+from PIL import Image
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_DIR = os.path.join(BASE_DIR, '..', 'libro')
@@ -90,6 +91,7 @@ def read_inputs(fp, seen=None):
 
 
 def compile_lilypond(code, out_png, workdir):
+    """Compila un bloque de LilyPond a PNG y lo recorta. Devuelve True si OK."""
     job = os.path.splitext(out_png)[0]
     ly_name = os.path.basename(job)
     ly = os.path.join(workdir, ly_name + '.ly')
@@ -97,12 +99,11 @@ def compile_lilypond(code, out_png, workdir):
         fh.write(code)
     run(['lilypond', '--png', '-dresolution=200', '-o',
          os.path.join(workdir, ly_name), ly], cwd=workdir)
-    # LilyPond puede devolver un código de error non-zero aun habiendo
-    # generado el PNG (por warnings), así que comprobamos el fichero.
     produced = os.path.join(workdir, ly_name + '.png')
     result = os.path.exists(produced)
     if result:
         shutil.copy(produced, out_png)
+        trim_lilypond_png(out_png)
     for ext in ('.ly', '.png', '.pdf', '-1.png', '-systems.tex',
                 '-systems.count', '-systems.texi'):
         p = os.path.join(workdir, ly_name + ext)
@@ -114,68 +115,12 @@ def compile_lilypond(code, out_png, workdir):
     return result
 
 
-
-def preproc(content, base_name):
-    workdir = os.path.join(IMG_DIR, '_work')
-    os.makedirs(workdir, exist_ok=True)
-    score_counter = [0]
-
-    def lily_sub(m):
-        score_counter[0] += 1
-        code = m.group(1)
-        # Usar guión medio en el nombre para evitar problemas con pandoc
-        # (que interpreta _ como subíndice en modo LaTeX).
-        png_name = 'lilypond-{}-{:03d}.png'.format(base_name, score_counter[0])
-        png_path = os.path.join(IMG_DIR, png_name)
-        if compile_lilypond(code, png_path, workdir):
-            return '@@IMG@@../img/{}@@ENDIMG@@'.format(png_name)
-        return ''
-    content = re.sub(r'\\begin\{lilypond\}([\s\S]*?)\\end\{lilypond\}',
-                     lily_sub, content)
-
-    tikz_counter = [0]
-
-    def tikz_sub(m):
-        tikz_counter[0] += 1
-        code = m.group(1)
-        png_name = 'tikz-{}-{:03d}.png'.format(base_name, tikz_counter[0])
-        png_path = os.path.join(IMG_DIR, png_name)
-        if compile_tikz(code, png_path, workdir):
-            return '@@IMG@@../img/{}@@ENDIMG@@'.format(png_name)
-        return ''
-    content = re.sub(r'\\begin\{tikzpicture\}([\s\S]*?)\\end\{tikzpicture\}',
-                     tikz_sub, content)
-    # Los bloques compilados suelen estar dentro de \begin{center}...\end{center}
-    # o \begin{samepage}...\end{samepage}; si solo contienen marcadores, esos
-    # entornos quedan vacíos y confunden a pandoc. Los eliminamos.
-    content = re.sub(r'\\begin\{center\}\s*(@@IMG@@[^@]*@@ENDIMG@@)\s*\\end\{center\}',
-                     r'\1', content)
-    content = re.sub(r'\\begin\{samepage\}', '', content)
-    content = re.sub(r'\\end\{samepage\}', '', content)
-    return content
-
-
-def replace_custom_commands(content):
-    content = content.replace(r'\hflat', '\u266D\u00BD')
-    content = re.sub(r'\\dsharp\b', '\u266F', content)
-    content = re.sub(r'\\upbow\b', '\u2191', content)
-    content = re.sub(r'\\downbow\b', '\u2193', content)
-    emph_cmds = ['yins', 'yinsb', 'Yins', 'ashnas', 'ashnasb', 'maqamaat',
-                 'maqamaatb', 'maqam', 'maqamb', 'Maqam', 'taqsim', 'taqsimb',
-                 'taqasim', 'taqasimb']
-    for cmd in emph_cmds:
-        content = re.sub(r'\\' + cmd + r'\b',
-                         r'\\emph{' + cmd + '}', content)
-    return content
-
-
 def compile_tikz(code, out_png, workdir):
     name = os.path.splitext(os.path.basename(out_png))[0]
     tex = os.path.join(workdir, name + '.tex')
     body = code
-    # Sustituir comandos LaTeX personalizados que pueden aparecer dentro de
-    # tikzpicture (no definidos en el preámbulo standalone).
-    body = body.replace(r'\hflat', r'$\raisebox{-.1ex}{\textsf{\tiny b}\hspace{-.3em}}$')
+    body = body.replace(r'\hflat',
+                        r'$\raisebox{-.1ex}{\textsf{\tiny b}\hspace{-.3em}}$')
     body = body.replace(r'\dsharp', r'$\sharp$')
     body = re.sub(r'\\emph\{([^}]*)\}', r'\1', body)
     body = re.sub(r'\\textsc\{([^}]*)\}', r'\1', body)
@@ -207,6 +152,7 @@ def compile_tikz(code, out_png, workdir):
             cand = os.path.join(workdir, name + '.png')
         if os.path.exists(cand):
             shutil.copy(cand, out_png)
+            trim_simple_png(out_png)
             result = True
     for ext in ('.tex', '.pdf', '.aux', '.log', '-1.png', '.png'):
         p = os.path.join(workdir, name + ext)
@@ -218,114 +164,162 @@ def compile_tikz(code, out_png, workdir):
     return result
 
 
+def trim_simple_png(png_path):
+    """Recorta bordes blancos de una PNG genérica (para tikz)."""
+    try:
+        from PIL import Image, ImageOps
+    except ImportError:
+        return
+    img = Image.open(png_path).convert('RGBA')
+    inverted = Image.new('RGB', img.size, (0, 0, 0))
+    inverted.paste(img.convert('RGB'), mask=img.split()[-1])
+    inv = ImageOps.invert(inverted)
+    bbox = inv.getbbox()
+    if bbox and bbox != (0, 0, img.size[0], img.size[1]):
+        img = img.crop(bbox)
+        img.save(png_path, 'PNG')
+
+
+def preproc(content, base_name):
+    workdir = os.path.join(IMG_DIR, '_work')
+    os.makedirs(workdir, exist_ok=True)
+    score_counter = [0]
+
+    def lily_sub(m):
+        score_counter[0] += 1
+        code = m.group(1)
+        png_name = 'lilypond-{}-{:03d}.png'.format(base_name, score_counter[0])
+        png_path = os.path.join(IMG_DIR, png_name)
+        if compile_lilypond(code, png_path, workdir):
+            return '@@IMG@@../img/{}@@ENDIMG@@'.format(png_name)
+        return ''
+    content = re.sub(r'\\begin\{lilypond\}([\s\S]*?)\\end\{lilypond\}',
+                     lily_sub, content)
+
+    tikz_counter = [0]
+
+    def tikz_sub(m):
+        tikz_counter[0] += 1
+        code = m.group(1)
+        png_name = 'tikz-{}-{:03d}.png'.format(base_name, tikz_counter[0])
+        png_path = os.path.join(IMG_DIR, png_name)
+        if compile_tikz(code, png_path, workdir):
+            return '@@IMG@@../img/{}@@ENDIMG@@'.format(png_name)
+        return ''
+    content = re.sub(r'\\begin\{tikzpicture\}([\s\S]*?)\\end\{tikzpicture\}',
+                     tikz_sub, content)
+    content = re.sub(r'\\begin\{center\}\s*(@@IMG@@[^@]*@@ENDIMG@@)\s*\\end\{center\}',
+                     r'\1', content)
+    content = re.sub(r'\\begin\{samepage\}', '', content)
+    content = re.sub(r'\\end\{samepage\}', '', content)
+    return content
+
+
+def replace_custom_commands(content):
+    content = content.replace(r'\hflat', '\u266D\u00BD')
+    content = content.replace(r'\dsharp', '\u266F')
+    content = re.sub(r'\\upbow\b', '\u2191', content)
+    content = re.sub(r'\\downbow\b', '\u2193', content)
+    emph_cmds = ['yins', 'yinsb', 'Yins', 'ashnas', 'ashnasb', 'maqamaat',
+                 'maqamaatb', 'maqam', 'maqamb', 'Maqam', 'taqsim', 'taqsimb',
+                 'taqasim', 'taqasimb']
+    for cmd in emph_cmds:
+        content = re.sub(r'\\' + cmd + r'\b',
+                         r'\\emph{' + cmd + '}', content)
+    return content
+
 def postproc(h):
     h = htmlmod.unescape(h)
 
-    # Convertir los marcadores de imagen (lilypond/tikz) a etiquetas <img>.
-    # Pandoc los habrá envuelto en <p>; los extraemos.
     def marker_img(m):
         src = m.group(1)
-        return ('<img src="{}" '
-                'style="display:block;margin:1em auto;max-width:100%;" />'
-                ).format(src)
-    # Tras pandoc, los marcadores pueden quedar como texto dentro de <p>:
-    # "@@IMG@@../img/xxx.png@@ENDIMG@@"
+        return '<img src="{}" style="display:block;margin:1em auto;max-width:100%;" />'.format(src)
+
     h = re.sub(r'@@IMG@@([^@]+\.png)@@ENDIMG@@', marker_img, h)
 
-    # Arreglar rutas de imágenes estáticas generadas por pandoc.
-    # Pandoc convierte \includegraphics{nombre} en <img src="nombre.png" />
-    # sin prefijo de directorio; las imágenes están en ../img/.
     def fix_static_img(m):
         tag = m.group(0)
         src = m.group(1)
-        # Solo arreglar si no tiene ya un directorio (../img/ o http)
         if src.startswith(('../', 'http', '/', 'data:')):
             return tag
         new_src = '../img/' + src
         return tag.replace('src="%s"' % src, 'src="%s"' % new_src)
+
     h = re.sub(r'<img[^>]*src="([^"]+)"[^>]*/>', fix_static_img, h)
 
     def song(m):
         return ('<div class="songheader" style="text-align:center;margin:1.5em 0;">'
                 '<h2 style="margin:0;">{0}</h2>'
                 '<p style="margin:0;">{1}</p>'
-                '<p style="margin:0;"><em>Maqam: {2}</em></p>'
-                '</div>').format(m.group(1), m.group(2), m.group(3))
+                '<p style="margin:0;"><em>Maqam: {2}</em></p></div>').format(
+                    m.group(1), m.group(2), m.group(3))
+
     h = re.sub(r'\\songheader\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}', song, h)
 
     def img(m):
         path = m.group(2)
-        m2 = re.search(r'width=([0-9.]+)\\textwidth', m.group(1) or '')
+        m2 = re.search(r'width=([0-9.]+)\\textwidth', m.group(1))
         if m2:
             w = str(round(float(m2.group(1)) * 100)) + '%'
         else:
             w = '100%'
         fname = os.path.basename(path)
-        return ('<img src="../img/{0}" width="{1}" '
-                'style="display:block;margin:1em auto;" />').format(fname, w)
+        return '<img src="../img/{0}" width="{1}" style="display:block;margin:1em auto;" />'.format(fname, w)
+
     h = re.sub(r'\\includegraphics\[([^\]]*)\]\{([^}]+)\}', img, h)
     h = re.sub(r'\\includegraphics\{([^}]+)\}',
-               r'<img src="../img/\1" style="display:block;margin:1em auto;" />',
-               h)
+               '<img src="../img/\1" style="display:block;margin:1em auto;" />', h)
 
     h = re.sub(r'\\audioclip\{[^}]*\}', '', h)
-    h = re.sub(r'\\textsc\{([^}]*)\}',
-               r'<span style="font-variant:small-caps;">\1</span>', h)
+    h = re.sub(r'\\textsc\{([^}]*)\}', r'<span style="font-variant:small-caps;">\1</span>', h)
     h = re.sub(r'\\ref\{[^}]*\}', '', h)
     h = re.sub(r'\\label\{[^}]*\}', '', h)
-    h = h.replace('\\266D', '\u266D')
-    h = h.replace('\\2191', '\u2191')
-    h = h.replace('\\2193', '\u2193')
+    h = h.replace('\266D', '♭').replace('\2191', '↑').replace('\2193', '↓')
+
     return h
 
 
-def main():
-    os.makedirs(CHAPTERS_DIR, exist_ok=True)
-    os.makedirs(IMG_DIR, exist_ok=True)
-
-    if os.path.isdir(IMAGENES_DIR):
-        for fname in os.listdir(IMAGENES_DIR):
-            if fname.lower().endswith(('.png', '.jpg', '.jpeg', '.gif')):
-                shutil.copy2(os.path.join(IMAGENES_DIR, fname),
-                             os.path.join(IMG_DIR, fname))
-
-    for relpath, title in CHAPTERS:
-        tex_path = os.path.join(INPUT_DIR, relpath)
-        if not os.path.exists(tex_path):
-            print('SKIP (no existe): ' + tex_path)
-            continue
-        base_name = os.path.splitext(os.path.basename(relpath))[0]
-        print('Procesando capítulo: {} ({})'.format(title, base_name))
-
-        expanded = read_inputs(tex_path)
-        expanded = preproc(expanded, base_name)
-        expanded = replace_custom_commands(expanded)
-
-        tmp_tex = os.path.join(IMG_DIR, '_work', base_name + '_preproc.tex')
-        os.makedirs(os.path.dirname(tmp_tex), exist_ok=True)
-        with open(tmp_tex, 'w', encoding='utf-8') as fh:
-            fh.write(expanded)
-        out_html = os.path.join(CHAPTERS_DIR, base_name + '.html')
-        ok, _o, _e = run(['pandoc', '--from', 'latex', '--to', 'html5',
-                          '--standalone', '--template', TEMPLATE,
-                          '--metadata', 'title=' + title,
-                          '--output', out_html, tmp_tex])
-        if not ok:
-            print('  ERROR pandoc: ' + _e[:500])
-            continue
-        with open(out_html, encoding='utf-8') as fh:
-            h = fh.read()
-        h = postproc(h)
-        with open(out_html, 'w', encoding='utf-8') as fh:
-            fh.write(h)
-        print('  OK: ' + out_html)
-
-    workdir = os.path.join(IMG_DIR, '_work')
-    if os.path.isdir(workdir):
-        shutil.rmtree(workdir, ignore_errors=True)
-    print('\nConversión completada.')
 
 
-if __name__ == '__main__':
-    main()
+def trim_lilypond_png(png_path):
+    """Recorta el banner 'engraved by lilypond' y espacios en blanco de una PNG."""
+    try:
+        from PIL import Image
+    except ImportError:
+        return
+    img = Image.open(png_path).convert('RGBA')
+    w, h = img.size
+
+    # 1. Recortar bordes blancos exteriores con getbbox (invirtiendo colores).
+    inverted = Image.new('RGB', img.size, (0, 0, 0))
+    inverted.paste(img.convert('RGB'), mask=img.split()[-1])  # usar alpha como mask
+    from PIL import ImageOps
+    inv = ImageOps.invert(inverted)
+    bbox = inv.getbbox()
+    if bbox:
+        img = img.crop(bbox)
+        w, h = img.size
+
+    # 2. Recortar el texto 'engraved by lilypond' en la base.
+    #    El texto grisáceo aparece en la última fracción de la imagen.
+    #    Analizamos la zona inferior píxel a píxel.
+    cut_h = max(int(h * 0.10), 1)
+    bottom = img.crop((0, h - cut_h, w, h))
+    pix = bottom.load()
+    cut_from = None
+    for y in range(cut_h - 1, -1, -1):
+        all_white = True
+        for x in range(0, w, 3):
+            px = pix[x, y]
+            if px[0] < 250 or px[1] < 250 or px[2] < 252:
+                all_white = False
+                break
+        if not all_white:
+            cut_from = y
+            break
+    if cut_from is not None and cut_from < cut_h - 2:
+        keep = h - cut_h + cut_from
+        img = img.crop((0, 0, w, keep))
+    img.save(png_path, 'PNG')
+
 

@@ -1,0 +1,386 @@
+/* ============================================
+   TEMA ÁRABE MONOCROMÁTICO
+   ============================================ */
+
+/* Variables de color - solo blanco y negro */
+:root {
+  --color-bg: #FFFFFF;
+  --color-bg-card: #FFFFFF;
+  --color-text: #000000;
+  --color-text-light: #333333;
+  --color-accent: #000000;
+  --color-accent-dark: #000000;
+  --color-gold: #666666;
+  --color-gold-light: #999999;
+  --color-border: #CCCCCC;
+  --color-link: #000000;
+  --color-link-hover: #333333;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+  --font-body: 'Open Sans', 'Segoe UI', sans-serif;
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-display: 'Tangerine', Georgia, serif;
+  --max-width: 800px;
+  --radius: 0px;
+}
+
+/* Reset mejorado */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: 0;
+  background-image: url('../patterns/islamic-pattern.svg');
+  background-size: 400px 400px;
+  background-attachment: fixed;
+  background-position: top center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Contenedor principal */
+.main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  line-height: 1.3;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  color: var(--color-accent-dark);
+  border-bottom: 3px solid var(--color-text);
+  padding-bottom: 0.8em;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-text);
+  padding-bottom: 0.4em;
+  margin-top: 2.8em;
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: var(--color-text-light);
+  margin-top: 2.2em;
+}
+
+h4 {
+  font-size: 1.35rem;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+p {
+  margin-bottom: 1.4em;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Enlaces */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* Listas */
+ul, ol {
+  padding-left: 1.8em;
+  margin-bottom: 1.4em;
+}
+
+li {
+  margin-bottom: 0.6em;
+}
+
+/* Separadores decorativos */
+hr {
+  border: none;
+  text-align: center;
+  margin: 3em 0;
+  height: auto;
+}
+
+hr::before {
+  content: '— — —';
+  color: var(--color-gold);
+  font-size: 1.2rem;
+  letter-spacing: 0.5em;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em auto;
+  background: var(--color-bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 0.75em 1em;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+th {
+  background: var(--color-text);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Código */
+pre, code {
+  font-family: 'Consolas', 'Monaco', monospace;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+  line-height: 1.6;
+  border-left: 3px solid var(--color-text);
+}
+
+/* Imágenes */
+img {
+  display: block;
+  margin: 1.5em auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Imágenes de partituras */
+img[src*="lilypond-maqam"] {
+  max-width: 75%;
+}
+
+/* Imágenes de diapasones */
+img[src*="tikz-maqam"] {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Figuras con caption */
+figure {
+  margin: 2em 0;
+  text-align: center;
+}
+
+figure img {
+  margin: 0 auto 0.8em;
+}
+
+figcaption {
+  font-style: italic;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+/* Elementos del índice slideout mejorados */
+#toindex {
+  background: var(--color-text);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+#slideout_chapter {
+  background: #333333;
+}
+
+#slideout_general {
+  background: #666666;
+  color: var(--color-text);
+}
+
+#slideout_inner_chapter,
+#slideout_inner_general {
+  background: var(--color-bg-card);
+  color: var(--color-text);
+  box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1rem;
+    background-attachment: scroll;
+  }
+
+  .main {
+    padding: 1.5rem 1rem 3rem;
+    margin: 1rem 0.5rem;
+    max-width: 100%;
+    border: none;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  img[src*="lilypond-maqam"] {
+    max-width: 100%;
+  }
+
+  #slideout_chapter,
+  #slideout_general {
+    width: 60px;
+    font-size: 0.7rem;
+  }
+
+  #slideout_inner_chapter,
+  #slideout_inner_general {
+    width: 260px;
+    padding: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Accesibilidad: alto contraste */
+@media (prefers-contrast: high) {
+  :root {
+    --color-text: #000000;
+    --color-gold: #000000;
+  }
+
+  body {
+    background: #FFFFFF;
+  }
+
+  a {
+    color: #0000EE;
+  }
+}
+
+/* Focus visible */
+a:focus,
+button:focus {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+/* Elementos especiales */
+blockquote {
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  border-left: 4px solid var(--color-text);
+  background: rgba(0, 0, 0, 0.03);
+  font-style: italic;
+  color: var(--color-text-light);
+}
+
+/* Énfasis en términos árabes */
+em, i {
+  color: var(--color-accent-dark);
+  font-style: italic;
+}
+
+strong, b {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Títulos de sección decorativos */
+h2[id]::before {
+  content: '◆ ';
+  color: var(--color-text);
+  font-size: 0.9em;
+}
+
+/* Animaciones sutiles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main > * {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
