@@ -13,8 +13,8 @@
   --color-gold: #666666;
   --color-gold-light: #999999;
   --color-border: #CCCCCC;
-  --color-link: #000000;
-  --color-link-hover: #333333;
+  --color-link: #0000EE;
+  --color-link-hover: #0000AA;
   --color-shadow: rgba(0, 0, 0, 0.08);
   --font-body: 'Open Sans', 'Segoe UI', sans-serif;
   --font-heading: Georgia, 'Times New Roman', serif;
@@ -80,22 +80,46 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  color: var(--color-accent);
+  color: var(--color-text);
   border-bottom: 2px solid var(--color-text);
   padding-bottom: 0.4em;
   margin-top: 2.8em;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+h2::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  font-size: 0.9em;
+  color: var(--color-text);
 }
 
 h3 {
   font-size: 1.6rem;
-  color: var(--color-text-light);
+  color: var(--color-text);
   margin-top: 2.2em;
+  padding-left: 1.2rem;
+  border-left: 3px solid var(--color-text);
 }
 
 h4 {
   font-size: 1.35rem;
-  color: var(--color-text-light);
+  color: var(--color-text);
+  padding-left: 1.5rem;
+  position: relative;
   font-style: italic;
+}
+
+h4::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  font-size: 0.7em;
+  color: var(--color-text);
 }
 
 p {
