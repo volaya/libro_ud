@@ -252,6 +252,13 @@ figcaption {
   font-size: 0.95rem;
 }
 
+.attribution {
+  font-size: 0.8rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 0.3em;
+}
+
 /* ===== MENÚ LATERAL MODERNO ===== */
 
 /* Botones laterales apilados */
